@@ -1,0 +1,147 @@
+/* Debug front-end */
+#system-debug #system-debug a h3 {
+  font-weight: bold;
+}
+#system-debug .label,
+#system-debug .badge {
+  background-color: #999;
+}
+#system-debug .label-important,
+#system-debug .badge-important {
+  background-color: #b94a48;
+}
+#system-debug .label-warning,
+#system-debug .badge-warning {
+  background-color: #f89406;
+}
+#system-debug .label-success,
+#system-debug .badge-success {
+  background-color: #468847;
+}
+#system-debug .dbg-profile-list .label {
+  display: inline-block;
+  min-width: 80px;
+  text-align: right;
+}
+@keyframes progress-bar-stripes {
+  0% {
+    background-position: 40px 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+@keyframes progress-bar-stripes {
+  0% {
+    background-position: 40px 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+#system-debug .progress .bar + .bar {
+  box-shadow: 1px 0 0 rgba(0, 0, 0, 0.15) inset, 0 -1px 0 rgba(0, 0, 0, 0.15) inset;
+}
+#system-debug .progress {
+  background-color: #f7f7f7;
+  background-image: linear-gradient(to bottom, #f5f5f5, #f9f9f9);
+  background-repeat: repeat-x;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+  height: 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+#system-debug .progress .bar {
+  background-color: #0e90d2;
+  background-image: linear-gradient(to bottom, #149bdf, #0480be);
+  background-repeat: repeat-x;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15) inset;
+  box-sizing: border-box;
+  color: #fff;
+  float: left;
+  font-size: 12px;
+  height: 100%;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  transition: width 0.6s ease 0s;
+  width: 0;
+}
+#system-debug .progress .bar + .bar {
+  box-shadow: 1px 0 0 rgba(0, 0, 0, 0.15) inset, 0 -1px 0 rgba(0, 0, 0, 0.15) inset;
+}
+#system-debug .progress-striped .bar {
+  background-color: #149bdf;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+}
+#system-debug .progress.active .bar {
+  animation: 2s linear 0s normal none infinite running progress-bar-stripes;
+}
+#system-debug .progress-danger .bar,
+#system-debug .progress .bar-danger {
+  background-color: #dd514c;
+  background-image: linear-gradient(to bottom, #ee5f5b, #c43c35);
+  background-repeat: repeat-x;
+}
+#system-debug .progress-danger.progress-striped .bar,
+#system-debug .progress-striped .bar-danger {
+  background-color: #ee5f5b;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+#system-debug .progress-success .bar,
+#system-debug .progress .bar-success {
+  background-color: #5eb95e;
+  background-image: linear-gradient(to bottom, #62c462, #57a957);
+  background-repeat: repeat-x;
+}
+#system-debug .progress-success.progress-striped .bar,
+#system-debug .progress-striped .bar-success {
+  background-color: #62c462;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+#system-debug .progress-info .bar,
+#system-debug .progress .bar-info {
+  background-color: #4bb1cf;
+  background-image: linear-gradient(to bottom, #5bc0de, #339bb9);
+  background-repeat: repeat-x;
+}
+#system-debug .progress-info.progress-striped .bar,
+#system-debug .progress-striped .bar-info {
+  background-color: #5bc0de;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+#system-debug .progress-warning .bar,
+#system-debug .progress .bar-warning {
+  background-color: #faa732;
+  background-image: linear-gradient(to bottom, #fbb450, #f89406);
+  background-repeat: repeat-x;
+}
+#system-debug .progress-warning.progress-striped .bar,
+#system-debug .progress-striped .bar-warning {
+  background-color: #fbb450;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+#system-debug .accordion {
+  margin-bottom: 18px;
+}
+#system-debug .accordion-group {
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  margin-bottom: 2px;
+}
+#system-debug .accordion-heading {
+  border-bottom: 0 none;
+}
+#system-debug .accordion-heading .accordion-toggle {
+  display: block;
+  padding: 8px 15px;
+}
+#system-debug .accordion-toggle {
+  cursor: pointer;
+}
+#system-debug .accordion-inner {
+  border-top: 1px solid #e5e5e5;
+  padding: 9px 15px;
+}
+/* Systeme debug template */
