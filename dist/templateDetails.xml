@@ -15,7 +15,7 @@
 		<hr />
 		<h1 style="text-align:left;">C3rb - RGAA - haaaa!</h1>
 		<p style="text-align:left">Created by <a href="http://www.c3rb.org" target="_blank">C3rb Informatique | c3rb.org</a>.<br />
-		Ruzafa Mikaël / Andurand Ariane / Espié Vincent / Cabrol Cyril
+		Ruzafa Mikael / Andurand Arianne / Espié Vincent / Cabrol Cyril
 	</p>
 	<hr />
 	]]></description>
@@ -62,8 +62,12 @@
 	<config>
 		<fields name="params">
 			<fieldset name="basic">
-				<field name="sitetitle" type="text" default="TPL_RGAAC3RB_FIELD_SITETITLE_DEFAULT" label="TPL_RGAAC3RB_FIELD_SITETITLE_LABEL" description="TPL_BEEZ3_FIELD_LOGO_DESC" />
-			</fieldset>  
+				<field name="tmpltitlechoice" type="radio" label="TPL_RGAAC3RB_CHECK_TMPLTITCHOISE_LABEL" default="0">
+				    <option value="0">JNO</option>
+				    <option value="1">JYES</option>
+				</field>
+			</fieldset>
+			  
 			<fieldset name="advanced">
 				<field name="tmplhelp" type="radio" label="TPL_RGAAC3RB_CHECK_TMPLHELP_LABEL" default="0">
 				    <option value="0">JNO</option>
