@@ -1,3 +1,14 @@
+/* Template joomla */
+/* Article */
+dl.article-info dd:after {
+  content: " | ";
+}
+dl.article-info dd {
+  display: inline-block;
+}
+dl.article-info dd:last-child:after {
+  content: "";
+}
 /* Debug front-end */
 #system-debug #system-debug a h3 {
   font-weight: bold;
