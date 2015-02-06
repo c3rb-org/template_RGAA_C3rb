@@ -185,7 +185,7 @@ defined( '_JEXEC' ) or die;
 				<section role="main">
 				<!-- Le contenu principal injecte par joomla -->
 				<jdoc:include type="component" />
-				</setion>
+				</section>
 				<!-- Fin Le contenu principal injecte par joomla -->
 				<div class="clearfix"></div>
 
@@ -257,8 +257,7 @@ defined( '_JEXEC' ) or die;
 
 				
 			</div>
-		</div>
-	</div>
+
 
 <jdoc:include type="modules" name="debug" style="none" />
 
@@ -289,30 +288,3 @@ if($config->debug == 1) : ?>
 <?php endif;?>
 </body>
 </html>
-
-
-
-
-
-
-
-
-<!-- 
-pense à ajouter :
-
-$('.hasTooltip').tooltip() 
-
-si class hasTooltip
-
-dans ton template joomla 3
-
-voir si utile les popovers
-<?php /*  
-Insertion de module -->
-<?php if ($this->countModules('position-1')): ?>
-	<div class="row">
-		<jdoc:include type="modules" name="position-1" style="CrbXhtml" /> 
-	</div>
-<?php endif; ?> 
-*/ ?>
-
