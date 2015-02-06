@@ -15,6 +15,7 @@ defined( '_JEXEC' ) or die;
 	$bssize				= $params->get('bootstrap_size');					// Taille bootstrap dans l'admin
 	$headerlvl 			= $params->get('headerLevel');						// Niveau de titre du module choisi dans l'admin
 	$tmplpath 			= $this->baseurl.'/templates/'.$this->template;     // adresse du template
+
 	$config 			= new JConfig();
 	$doc->setGenerator('');	 												// on supprime le generator content="Joomla! - Open Source Content Management" pour plus de securite
 // Parametre du template
@@ -85,7 +86,6 @@ defined( '_JEXEC' ) or die;
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/general.css" type="text/css" /><!-- style de system joomla (ex : les boutons) -->
 	</head>
 	<body>
-	
 		<!-- début du template -->
 		<div class="container">
 			<div class="row">
@@ -144,13 +144,13 @@ defined( '_JEXEC' ) or die;
 				<?php 
 				$nbmod =  $this->countModules('position-4');
 				if ($nbmod): ?>
-				<aside>
+				
 					<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 						<div class="row">
 							<jdoc:include type="modules" name="position-4" style="CrbXhtml" nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
 						</div>
 					</div>
-				</aside>
+				
 				<?php endif; ?>
 		
 				<!-- Fin Col gauche -->
@@ -220,11 +220,11 @@ defined( '_JEXEC' ) or die;
 				$nbmod =  $this->countModules('position-5');
 				if ($nbmod): ?>
 				<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-					<aside>	
+					
 						<div class="row">
 							<jdoc:include type="modules" name="position-5" style="CrbXhtml" nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
 						</div>
-					</aside>
+					
 				</div>
 				<?php endif; ?> 
 				<!-- Fin Col de droite -->
