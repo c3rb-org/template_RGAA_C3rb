@@ -10,14 +10,18 @@ defined( '_JEXEC' ) or die;
 	$menu 				= $app->getMenu();									// Info menu
 	$active 			= $app->getMenu()->getActive();						// Item actif du menu
 	$params 			= $app->getTemplate(true)->params;					// Parametre du template
+	$titlesite			= $app->get('sitename');
 	$pageclass 			= $params->get('pageclass_sfx');					// Suffixe de class de la page
 	$bssize				= $params->get('bootstrap_size');					// Taille bootstrap dans l'admin
+	$headerlvl 			= $params->get('headerLevel');						// Niveau de titre du module choisi dans l'admin
 	$tmplpath 			= $this->baseurl.'/templates/'.$this->template;     // adresse du template
-	$tmplname			= $this->template;
 	$config 			= new JConfig();
 	$doc->setGenerator('');	 												// on supprime le generator content="Joomla! - Open Source Content Management" pour plus de securite
 // Parametre du template
-	$paramtmpl_debug	= $params->get('tmplhelp');
+	// Basics
+	$paramtmpl_tmpltitlechoice 	= $params->get('tmpltitlechoice');
+	// Avance
+	$paramtmpl_debug			= $params->get('tmplhelp');
 
 // Le Framework
 	//Jquery joomla
@@ -81,38 +85,48 @@ defined( '_JEXEC' ) or die;
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/general.css" type="text/css" /><!-- style de system joomla (ex : les boutons) -->
 	</head>
 	<body>
-
+	
 		<!-- début du template -->
 		<div class="container">
 			<div class="row">
-				<!-- Bloc top -->		
-				<?php
-				$nbmod =  $this->countModules('position-1');
-				if ($nbmod): ?>
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<div class="row">
-							<jdoc:include type="modules" name="position-1" style="CrbXhtml" nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
+				<header>
+				<?php if ($paramtmpl_tmpltitlechoice == 1) : ?>
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<?php else : ?>
+				<div class="sr-only">
+				<?php endif ?>
+				<h1><?php echo $titlesite; ?></h1>
+				</div>
+					<!-- Bloc top -->		
+					<?php
+					$nbmod =  $this->countModules('position-1');
+					if ($nbmod): ?>
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="row">
+								<jdoc:include type="modules" name="position-1" style="CrbXhtml" nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
+							</div>
+						</div>	
+					<?php endif; ?> 
+					<?php 				
+					$nbmod =  $this->countModules('position-2');
+					if ($nbmod): ?>
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="row">
+								<jdoc:include type="modules" name="position-2" style="CrbXhtml" nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
+							</div>
 						</div>
-					</div>	
-				<?php endif; ?> 
-				<?php 				
-				$nbmod =  $this->countModules('position-2');
-				if ($nbmod): ?>
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<div class="row">
-							<jdoc:include type="modules" name="position-2" style="CrbXhtml" nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
+					<?php endif; ?> 
+					<?php 
+					$nbmod =  $this->countModules('position-3');
+					if ($nbmod): ?>
+						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+							<div class="row">
+								<jdoc:include type="modules" name="position-3" style="CrbXhtml" nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
+							</div>
 						</div>
-					</div>
-				<?php endif; ?> 
-				<?php 
-				$nbmod =  $this->countModules('position-3');
-				if ($nbmod): ?>
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-						<div class="row">
-							<jdoc:include type="modules" name="position-3" style="CrbXhtml" nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
-						</div>
-					</div>
-				<?php endif; ?>
+					<?php endif; ?>
+				</header>
+			</div>
 				<!-- Fin bloc top -->
 
 				<!-- Calcul taille colonne centrale (gauche / centre / droite) -->
@@ -124,21 +138,26 @@ defined( '_JEXEC' ) or die;
         				$colbs = $colbs - 3;
         		 	?>
 				<!-- Fin calcul taille colonne centrale (gauche / centre / droite) -->
+		<div class="row">
 				
 				<!-- Col gauche -->
 				<?php 
 				$nbmod =  $this->countModules('position-4');
 				if ($nbmod): ?>
+				<aside>
 					<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
 						<div class="row">
 							<jdoc:include type="modules" name="position-4" style="CrbXhtml" nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
 						</div>
 					</div>
+				</aside>
 				<?php endif; ?>
+		
 				<!-- Fin Col gauche -->
 
 				<!-- Col centre -->
-				<div class="col-xs-12 col-sm-<?php echo $colbs; ?> col-md-<?php echo $colbs; ?> col-lg-<?php echo $colbs; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
+		<div class="col-xs-12 col-sm-<?php echo $colbs; ?> col-md-<?php echo $colbs; ?> col-lg-<?php echo $colbs; ?>" >
+			
 				<?php if ($this->countModules('position-6')): ?>
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 						<div class="row">
@@ -163,8 +182,10 @@ defined( '_JEXEC' ) or die;
 				<?php endif; ?> 
 
 				<div class="clearfix"></div>
+				<section role="main">
 				<!-- Le contenu principal injecte par joomla -->
 				<jdoc:include type="component" />
+				</setion>
 				<!-- Fin Le contenu principal injecte par joomla -->
 				<div class="clearfix"></div>
 
@@ -189,22 +210,27 @@ defined( '_JEXEC' ) or die;
 						</div>
 					</div>
 				<?php endif; ?>
-
-				</div>
+			
+		</div> 
 				<!-- Fin Col centre -->
 
 				<!-- Col de droite -->
+			
 				<?php 
 				$nbmod =  $this->countModules('position-5');
 				if ($nbmod): ?>
-					<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+				<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+					<aside>	
 						<div class="row">
 							<jdoc:include type="modules" name="position-5" style="CrbXhtml" nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
 						</div>
-					</div>
+					</aside>
+				</div>
 				<?php endif; ?> 
 				<!-- Fin Col de droite -->
 				<div class="clearfix"></div>
+		</div>
+
 
 				<?php if ($this->countModules('position-12')): ?>
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

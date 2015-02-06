@@ -20,14 +20,15 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 	$modstyle			= $attribs['style'];					// Style du module choisi dans l'admin
 	$modposname			= $attribs['name'];						// Nom de la position du module choisi dans l'admin
 	$paramtmpl_debug	= $attribs['debug'];
-	
-	$datacontent =
+	$headerLvl 			= $params->get('header_tag');
+	$datacontent 		=
 	"
 					Nbre de module dans la position : <span class='label label-info'>$nbmod</span><br />
 					Taille bootstrap dans l\'admin : <span class='label label-info'>$modbssize</span><br />
 					Style du module : <span class='label label-info'>$modstyle</span><br />
 					Nom de la positiondu module : <span class='label label-info'>$modposname</span>
 	"
+	
 	?>
 
 	<?php if ($modbssize != 0) : ?>
@@ -36,14 +37,19 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<?php endif; ?>
 			<div id="Mod<?php echo $module->id; ?>" class="moduletable <?php echo htmlspecialchars($params->get('moduleclass_sfx')); ?> ">
-				<!-- Titre du module -->
-				<?php if ($module->showtitle) : ?> 
-					<h3><span id="label<?php echo $module->id; ?>"><?php echo JText::_( $module->title ); ?></span></h3>
-				<?php endif; ?>
-				<!-- Content du module -->
-				<div class="modcontent">    
-					<?php echo $module->content; ?>
-				</div>
+				<aside role="">
+					<!-- Titre du module -->
+					<?php if ($module->showtitle) : ?> 
+						<<?php echo $headerLvl; ?>><span id="label<?php echo $module->id; ?>"><?php echo JText::_( $module->title ); ?></span></<?php echo $headerLvl;  ?>>
+					<?php else : ?>
+						<<?php echo $headerLvl; ?> class="sr-only"><span id="label<?php echo $module->id; ?>"><?php echo JText::_( $module->title ); ?></span></<?php echo $headerLvl;  ?>>	
+					<?php endif; ?>
+					
+					<!-- Content du module -->
+					<div class="modcontent"> 
+						<?php echo $module->content; ?>
+					</div>
+				</aside>
 			</div>
 			<?php if ($paramtmpl_debug == 1) : ?>	
 			<a tabindex="0" class="btn btn-sm btn-warning" role="button" data-html="true" data-toggle="popover" data-placement="bottom" data-trigger="focus" title="Paramètre du template" 
@@ -69,7 +75,7 @@ function modChrome_CrbXhtmlElastic($module, &$params, &$attribs) {
 				<div class="col-xs-12 col-sm-<?php echo $colbsauto; ?> col-md-<?php echo $colbsauto; ?> col-lg-<?php echo $colbsauto; ?>">
 					<!-- Titre du module -->
 					<?php if ($module->showtitle) : ?> 
-						<h3><span id="label<?php echo $module->id; ?>"><?php echo JText::_( $module->title ); ?></span></h3>
+						<<?php echo $headerLvl;  ?>><span id="label<?php echo $module->id; ?>"><?php echo JText::_( $module->title ); ?></span></<?php echo $headerLvl; ?>>
 					<?php endif; ?>
 					<!-- Content du module -->
 					<div class="modcontent">    
