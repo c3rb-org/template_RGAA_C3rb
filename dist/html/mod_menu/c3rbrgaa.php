@@ -12,8 +12,6 @@ defined('_JEXEC') or die;
 // Note. It is important to remove spaces between elements.
 ?>
 <?php // The menu class is deprecated. Use nav instead. ?>
-
-<nav role="navigation" aria-labelledby="label<?php echo $module->id;?>">
 	<ol class="nav nav-pills menu<?php echo $class_sfx;?>"<?php
 		$tag = '';
 
@@ -109,4 +107,3 @@ defined('_JEXEC') or die;
 		}
 	}
 	?></ol>
-</nav>
