@@ -16,7 +16,7 @@ defined( '_JEXEC' ) or die;
 	$headerlvl 			= $params->get('headerLevel');						// Niveau de titre du module choisi dans l'admin
 	$tmplpath 			= $this->baseurl.'/templates/'.$this->template;     // adresse du template
 
-	$config 			= new JConfig();
+	$config 			= new JConfig(); 
 	$doc->setGenerator('');	 												// on supprime le generator content="Joomla! - Open Source Content Management" pour plus de securite
 // Parametre du template
 	// Basics
@@ -28,7 +28,8 @@ defined( '_JEXEC' ) or die;
 	//Jquery joomla
 	JHTML::_('jquery.framework');
 	// Bootstrap joomla
-	//JHTML::_('bootstrap.framework'); version 2.3.2 de bootstrap (obsolete)
+	JHtml::_('bootstrap.framework'); //On charge bootstrap 
+	unset($doc->_scripts[$this->baseurl . '/media/jui/js/bootstrap.min.js']); // Et on le supprime du coeur (egalement pour les comp. externe)
 
 // Les Metas du site
 	// Bootstrap
@@ -89,7 +90,7 @@ defined( '_JEXEC' ) or die;
 		<!-- début du template -->
 		<div class="container">
 			<div class="row">
-				<header>
+				<header role="banner">
 				<?php if ($paramtmpl_tmpltitlechoice == 1) : ?>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<?php else : ?>
@@ -125,6 +126,7 @@ defined( '_JEXEC' ) or die;
 							</div>
 						</div>
 					<?php endif; ?>
+				<div class="clearfix"></div>
 				</header>
 			</div>
 				<!-- Fin bloc top -->
@@ -286,5 +288,6 @@ if($config->debug == 1) : ?>
 	<script src="<?php echo $tmplpath; ?>/js/stacktable.min.js" defer></script>
 	<script src="<?php echo $tmplpath; ?>/js/template.min.js" type="text/javascript" defer></script>
 <?php endif;?>
+
 </body>
 </html>
