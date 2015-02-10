@@ -94,7 +94,9 @@ if (($moduletype == 'mod_articles_archive') || ($moduletype == 'mod_users_latest
 				<?php if ($activeasidemod == 1 ): ?>
 				<aside role="<?php echo $asidemod; ?>">
 				<?php endif ?>
-				
+				<?php if ($moduletype == 'mod_menu') {
+					echo '<nav role="navigation" aria-labelledby="label<?php echo $module->id;?>">';
+				} ?>
 					<!-- Titre du module -->
 					<?php if ($module->showtitle) : ?> 
 						<<?php echo $headerLvl; ?>><span id="label<?php echo $module->id; ?>"><?php echo JText::_( $module->title ); ?></span></<?php echo $headerLvl;  ?>>
@@ -106,6 +108,9 @@ if (($moduletype == 'mod_articles_archive') || ($moduletype == 'mod_users_latest
 					<div class="modcontent"> 
 						<?php echo $module->content; ?>
 					</div>
+				<?php if ($moduletype == 'mod_menu') {
+					echo '</nav>';
+				} ?>
 				<?php if ($activeasidemod == 1 ): ?>
 				</aside>
 				<?php endif ?>
