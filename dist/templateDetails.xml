@@ -69,7 +69,11 @@
 			</fieldset>
 			  
 			<fieldset name="advanced">
-				<field name="tmplhelp" type="radio" label="TPL_RGAAC3RB_CHECK_TMPLHELP_LABEL" default="0">
+				<field name="tmplmodhelp" type="radio" label="TPL_RGAAC3RB_CHECK_TMPLMODHELP_LABEL" default="0">
+				    <option value="0">JNO</option>
+				    <option value="1">JYES</option>
+				</field>
+				<field name="tmplhtmlhelp" type="radio" label="TPL_RGAAC3RB_CHECK_TMPLHTMLHELP_LABEL" default="0">
 				    <option value="0">JNO</option>
 				    <option value="1">JYES</option>
 				</field>

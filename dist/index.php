@@ -22,7 +22,8 @@ defined( '_JEXEC' ) or die;
 	// Basics
 	$paramtmpl_tmpltitlechoice 	= $params->get('tmpltitlechoice');
 	// Avance
-	$paramtmpl_debug			= $params->get('tmplhelp');
+	$paramtmpl_debug			= $params->get('tmplmodhelp');
+	$paramtmpl_html				= $params->get('tmplhtmlhelp');
 
 // Le Framework
 	//Jquery joomla
@@ -86,6 +87,9 @@ defined( '_JEXEC' ) or die;
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/system.css" type="text/css" /><!-- style de system joomla (ex : les message joomla) -->
 		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/general.css" type="text/css" /><!-- style de system joomla (ex : les boutons) -->
 	</head>
+	<?php if ( $paramtmpl_html == 1) {
+		echo '<div class="debughtml">';
+	} ?>
 	<body>
 		<!-- début du template -->
 		<div class="container">

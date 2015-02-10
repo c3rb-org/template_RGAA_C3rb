@@ -11,144 +11,156 @@ dl.article-info dd:last-child:after {
 }
 /* Debug front-end */
 /* Html5 debug */
-section:before {
-  content: "<Section>";
-  background: red;
-  color: white;
-}
-body:before {
+body .debughtml:before {
   content: "<Body>";
   background: red;
   color: white;
 }
-section,
-body {
+body .debughtml {
   border: 1px solid red;
   padding: 1px;
   margin: 1px;
 }
-section h1:before,
-body h1:before {
+body .debughtml h1:before {
   content: "<H1>";
   background: red;
   color: white;
 }
-section h2:before,
-body h2:before {
+body .debughtml h2:before {
   content: "<H2>";
   background: red;
   color: white;
 }
-section[role="main"] {
+.debughtml section:before {
+  content: "<Section>";
+  background: red;
+  color: white;
+}
+.debughtml section {
+  border: 1px solid red;
+  padding: 1px;
+  margin: 1px;
+}
+.debughtml section h1:before {
+  content: "<H1>";
+  background: red;
+  color: white;
+}
+.debughtml section h2:before {
+  content: "<H2>";
+  background: red;
+  color: white;
+}
+.debughtml section[role="main"] {
   background: repeating-linear-gradient(45deg, #ffffff, #ffffff 10px, #f0f0f0 10px, #f0f0f0 20px);
 }
-header[role="banner"]:before {
+.debughtml header[role="banner"]:before {
   content: "<header role='banner'>";
 }
-section[role="main"]:before {
+.debughtml section[role="main"]:before {
   content: "<section role='main'>";
 }
-article:before {
+.debughtml article:before {
   content: "<Article>";
   background: blue;
   color: white;
 }
-article {
+.debughtml article {
   border: 1px solid blue;
   padding: 1px;
   margin: 1px;
 }
-article h1:before {
+.debughtml article h1:before {
   content: "<H1>";
   background: blue;
   color: white;
 }
-article h2:before {
+.debughtml article h2:before {
   content: "<H2>";
   background: blue;
   color: white;
 }
-footer:before {
+.debughtml footer:before {
   content: "<Footer>";
   background: green;
   color: white;
 }
-footer {
+.debughtml footer {
   border: 1px solid green;
   padding: 1px;
   margin: 1px;
 }
-header:before {
+.debughtml header:before {
   content: "<Header>";
   background: black;
   color: white;
 }
-header {
+.debughtml header {
   border: 1px solid black;
   padding: 1px;
   margin: 1px;
 }
-header h1:before {
+.debughtml header h1:before {
   content: "<H1>";
   background: black;
   color: white;
 }
-header h2:before {
+.debughtml header h2:before {
   content: "<H2>";
   background: black;
   color: white;
 }
-nav:before {
+.debughtml nav:before {
   content: "<Nav>";
   background: gray;
   color: white;
 }
-nav {
+.debughtml nav {
   border: 1px solid gray;
   padding: 1px;
   margin: 1px;
 }
-nav h1:before {
+.debughtml nav h1:before {
   content: "<H1>";
   background: gray;
   color: white;
 }
-nav h2:before {
+.debughtml nav h2:before {
   content: "<H2>";
   background: gray;
   color: white;
 }
-aside:before {
+.debughtml aside:before {
   content: "<Aside>";
   background: gray;
   color: white;
 }
-aside {
+.debughtml aside {
   border: 1px solid gray;
   padding: 1px;
   margin: 1px;
 }
-aside h1:before {
+.debughtml aside h1:before {
   content: "<H1>";
   background: grey;
   color: white;
 }
-aside h2:before {
+.debughtml aside h2:before {
   content: "<H2>";
   background: grey;
   color: white;
 }
-address:before {
+.debughtml address:before {
   content: "<address>";
   background: pink;
   color: white;
 }
-address {
+.debughtml address {
   border: 1px solid pink;
   padding: 1px;
   margin: 1px;
 }
-.sr-only {
+.debughtml .sr-only {
   position: relative;
   width: auto;
   height: auto;
