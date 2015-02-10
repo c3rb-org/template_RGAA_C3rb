@@ -16,15 +16,37 @@ section:before {
   background: red;
   color: white;
 }
-section {
+body:before {
+  content: "<Body>";
+  background: red;
+  color: white;
+}
+section,
+body {
   border: 1px solid red;
   padding: 1px;
   margin: 1px;
 }
-section h1:before {
+section h1:before,
+body h1:before {
   content: "<H1>";
   background: red;
   color: white;
+}
+section h2:before,
+body h2:before {
+  content: "<H2>";
+  background: red;
+  color: white;
+}
+section[role="main"] {
+  background: repeating-linear-gradient(45deg, #ffffff, #ffffff 10px, #f0f0f0 10px, #f0f0f0 20px);
+}
+header[role="banner"]:before {
+  content: "<header role='banner'>";
+}
+section[role="main"]:before {
+  content: "<section role='main'>";
 }
 article:before {
   content: "<Article>";
@@ -38,6 +60,11 @@ article {
 }
 article h1:before {
   content: "<H1>";
+  background: blue;
+  color: white;
+}
+article h2:before {
+  content: "<H2>";
   background: blue;
   color: white;
 }
@@ -66,6 +93,11 @@ header h1:before {
   background: black;
   color: white;
 }
+header h2:before {
+  content: "<H2>";
+  background: black;
+  color: white;
+}
 nav:before {
   content: "<Nav>";
   background: gray;
@@ -75,6 +107,16 @@ nav {
   border: 1px solid gray;
   padding: 1px;
   margin: 1px;
+}
+nav h1:before {
+  content: "<H1>";
+  background: gray;
+  color: white;
+}
+nav h2:before {
+  content: "<H2>";
+  background: gray;
+  color: white;
 }
 aside:before {
   content: "<Aside>";
@@ -91,6 +133,11 @@ aside h1:before {
   background: grey;
   color: white;
 }
+aside h2:before {
+  content: "<H2>";
+  background: grey;
+  color: white;
+}
 address:before {
   content: "<address>";
   background: pink;
@@ -100,6 +147,11 @@ address {
   border: 1px solid pink;
   padding: 1px;
   margin: 1px;
+}
+.sr-only {
+  position: relative;
+  width: auto;
+  height: auto;
 }
 #system-debug #system-debug a h3 {
   font-weight: bold;
