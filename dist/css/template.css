@@ -10,6 +10,97 @@ dl.article-info dd:last-child:after {
   content: "";
 }
 /* Debug front-end */
+/* Html5 debug */
+section:before {
+  content: "<Section>";
+  background: red;
+  color: white;
+}
+section {
+  border: 1px solid red;
+  padding: 1px;
+  margin: 1px;
+}
+section h1:before {
+  content: "<H1>";
+  background: red;
+  color: white;
+}
+article:before {
+  content: "<Article>";
+  background: blue;
+  color: white;
+}
+article {
+  border: 1px solid blue;
+  padding: 1px;
+  margin: 1px;
+}
+article h1:before {
+  content: "<H1>";
+  background: blue;
+  color: white;
+}
+footer:before {
+  content: "<Footer>";
+  background: green;
+  color: white;
+}
+footer {
+  border: 1px solid green;
+  padding: 1px;
+  margin: 1px;
+}
+header:before {
+  content: "<Header>";
+  background: black;
+  color: white;
+}
+header {
+  border: 1px solid black;
+  padding: 1px;
+  margin: 1px;
+}
+header h1:before {
+  content: "<H1>";
+  background: black;
+  color: white;
+}
+nav:before {
+  content: "<Nav>";
+  background: gray;
+  color: white;
+}
+nav {
+  border: 1px solid gray;
+  padding: 1px;
+  margin: 1px;
+}
+aside:before {
+  content: "<Aside>";
+  background: gray;
+  color: white;
+}
+aside {
+  border: 1px solid gray;
+  padding: 1px;
+  margin: 1px;
+}
+aside h1:before {
+  content: "<H1>";
+  background: grey;
+  color: white;
+}
+address:before {
+  content: "<address>";
+  background: pink;
+  color: white;
+}
+address {
+  border: 1px solid pink;
+  padding: 1px;
+  margin: 1px;
+}
 #system-debug #system-debug a h3 {
   font-weight: bold;
 }
