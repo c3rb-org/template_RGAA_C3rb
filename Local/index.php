@@ -94,7 +94,7 @@ defined( '_JEXEC' ) or die;
 		<!-- début du template -->
 		<div class="container">
 			<div class="row">
-				<header role="banner">
+				<header aria-label="<?php echo $titlesite; ?>" role="banner">
 				<?php if ($paramtmpl_tmpltitlechoice == 1) : ?>
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<?php else : ?>
