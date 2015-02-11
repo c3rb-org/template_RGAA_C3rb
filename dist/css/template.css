@@ -1,5 +1,6 @@
 /* Template joomla */
-/* Article */
+/* com_content */
+/* article */
 dl.article-info dd:after {
   content: " | ";
 }
@@ -7,6 +8,13 @@ dl.article-info dd {
   display: inline-block;
 }
 dl.article-info dd:last-child:after {
+  content: "";
+}
+/* mod_articles_category */
+.article-info-mod-cat span:after {
+  content: " | ";
+}
+.article-info-mod-cat span:last-child:after {
   content: "";
 }
 /* Debug front-end */
@@ -59,6 +67,27 @@ body .debughtml h2:before {
 }
 .debughtml section[role="main"]:before {
   content: "<section role='main'>";
+}
+.debughtml nav[role="navigation"]:before {
+  content: "<nav role='navigation'>";
+}
+.debughtml aside[role="search"]:before {
+  content: "<aside role='search'>";
+}
+.debughtml aside[role="complementary"]:before {
+  content: "<aside role='complementary'>";
+}
+.debughtml aside[role="note"]:before {
+  content: "<aside role='note'>";
+}
+.debughtml aside[role="presentation"]:before {
+  content: "<aside role='presentation'>";
+}
+.debughtml article[role="article"]:before {
+  content: "<article role='article'>";
+}
+.debughtml article[role="main"]:before {
+  content: "<article role='main'>";
 }
 .debughtml article:before {
   content: "<Article>";

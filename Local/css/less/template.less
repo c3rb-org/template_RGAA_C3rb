@@ -1,8 +1,13 @@
 /* Template joomla */
-/* Article */
+/* com_content */
+/* article */
 dl.article-info dd:after {content: " | "}
 dl.article-info dd {display: inline-block;} 
 dl.article-info dd:last-child:after {content: ""} 
+
+/* mod_articles_category */
+.article-info-mod-cat span:after {content: " | "}
+.article-info-mod-cat span:last-child:after {content: ""} 
 
 
 /* Debug front-end */
@@ -15,6 +20,7 @@ body .debughtml  {
 	  h1:before {content: "<H1>"; background: red; color: white; }
 	  h2:before {content: "<H2>"; background: red; color: white; }
 	}
+
 .debughtml {
 	section:before {content: "<Section>"; background: red; color: white;}
 	section {
@@ -33,9 +39,16 @@ body .debughtml  {
 	  #F0F0F0 20px
 		) 
 	  }
-
 	header[role="banner"]:before {content: "<header role='banner'>"}
 	section[role="main"]:before {content: "<section role='main'>"}
+	nav[role="navigation"]:before {content: "<nav role='navigation'>"}
+	aside[role="search"]:before {content: "<aside role='search'>"}
+	aside[role="complementary"]:before {content: "<aside role='complementary'>"}
+	aside[role="note"]:before {content: "<aside role='note'>"}
+	aside[role="presentation"]:before {content: "<aside role='presentation'>"}
+	article[role="article"]:before {content: "<article role='article'>"}
+	article[role="main"]:before {content: "<article role='main'>"}
+
 
 	article:before   {content: "<Article>"; background: blue; color: white}
 	article   {
@@ -59,7 +72,6 @@ body .debughtml  {
 	  h1:before {content: "<H1>"; background: black; color: white}
 	  h2:before {content: "<H2>"; background: black; color: white}
 	}
-
 	nav:before   {content: "<Nav>"; background: gray; color: white}
 	nav       {
 	  border: 1px solid gray;
@@ -85,6 +97,7 @@ body .debughtml  {
 	}
 	.sr-only {position: relative; width: auto; height: auto;   }
 }
+
 #system-debug { 
 	#system-debug a h3 {
 		font-weight: bold; 
