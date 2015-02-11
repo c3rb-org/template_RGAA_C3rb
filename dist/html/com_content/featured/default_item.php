@@ -21,7 +21,7 @@ $info    = $this->item->params->get('info_block_position', 0);
 	|| ((strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != '0000-00-00 00:00:00' )) : ?>
 	<div class="system-unpublished">
 <?php endif; ?>
-<article>
+
 <header>
 <?php if ($params->get('show_title')) : ?>
 	<h1 class="item-title" itemprop="name">
@@ -261,4 +261,4 @@ $info    = $this->item->params->get('info_block_position', 0);
 <?php endif; ?>
 
 <?php echo $this->item->event->afterDisplayContent; ?>
-</article>
+

@@ -95,7 +95,7 @@ if (($moduletype == 'mod_articles_archive') || ($moduletype == 'mod_users_latest
 				<aside role="<?php echo $asidemod; ?>">
 				<?php endif ?>
 				<?php if ($moduletype == 'mod_menu') {
-					echo '<nav role="navigation" aria-labelledby="label<?php echo $module->id;?>">';
+					echo '<nav role="navigation" aria-labelledby="label'.$module->id.'">';
 				} ?>
 					<!-- Titre du module -->
 					<?php if ($module->showtitle) : ?> 

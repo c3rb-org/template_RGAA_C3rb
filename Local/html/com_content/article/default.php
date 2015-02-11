@@ -30,7 +30,7 @@ $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_da
 		<h1><?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
 	</div>
 	<?php else : ?>
-		<h1 class="sr-only"><?php echo $this->escape($this->params->get('page_heading')); ?> ou article ?</h1>
+		<h1 class="sr-only"><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
 	<?php endif;
 if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->paginationposition && $this->item->paginationrelative)
 {
@@ -44,7 +44,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 		<div class="clearfix"> </div>
 	<?php endif; ?>
 	<?php if ($params->get('show_title') || $params->get('show_author')) : ?>
-<article>
+<article role="main">
 	<header>
 	<div class="page-header">
 	<?php if ($this->params->get('show_page_heading') == 0) : ?>

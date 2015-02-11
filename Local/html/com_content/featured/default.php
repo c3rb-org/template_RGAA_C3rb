@@ -27,6 +27,7 @@ JHtml::_('behavior.caption');
 
 <?php $leadingcount = 0; ?>
 <?php if (!empty($this->lead_items)) : ?>
+<article role="main">
 <div class="items-leading clearfix">
 	<?php foreach ($this->lead_items as &$item) : ?>
 		<div class="leading-<?php echo $leadingcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?> clearfix" 
@@ -41,6 +42,7 @@ JHtml::_('behavior.caption');
 		?>
 	<?php endforeach; ?>
 </div>
+</article>
 <?php endif; ?>
 <?php
 	$introcount = (count($this->intro_items));
@@ -48,7 +50,7 @@ JHtml::_('behavior.caption');
 ?>
 <?php if (!empty($this->intro_items)) : ?>
 	<?php foreach ($this->intro_items as $key => &$item) : ?>
-
+		<article>	
 		<?php
 		$key = ($key - $leadingcount) + 1;
 		$rowcount = (((int) $key - 1) % (int) $this->columns) + 1;
@@ -71,6 +73,7 @@ JHtml::_('behavior.caption');
 
 		</div>
 		<?php endif; ?>
+		</article>
 
 	<?php endforeach; ?>
 <?php endif; ?>
