@@ -42,9 +42,9 @@ defined( '_JEXEC' ) or die;
 // Le CSS
 	// Si on est en debug on vas chercher les elements non minifie.
 	if($config->debug == 1) {
-		$doc->addStyleSheet( ''. $tmplpath .'/css/bootstrap.css ' );
-		$doc->addStyleSheet( ''. $tmplpath .'/css/font-awesome.css ' );
-		$doc->addStyleSheet( ''. $tmplpath .'/css/template.css ' );
+		$doc->addStyleSheet( ''. $tmplpath .'/css/bootstrap.css');
+		$doc->addStyleSheet( ''. $tmplpath .'/css/font-awesome.css');
+		$doc->addStyleSheet( ''. $tmplpath .'/css/template.css');
 	}
 	//Sinon on vas chercher du minifier.
 	else {
@@ -92,6 +92,9 @@ defined( '_JEXEC' ) or die;
 	} ?>
 	<body>
 		<!-- début du template -->
+		<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+		les font-awesome bug!
+		<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
 		<div class="container">
 			<div class="row">
 				<header aria-label="<?php echo $titlesite; ?>" role="banner">
@@ -188,10 +191,10 @@ defined( '_JEXEC' ) or die;
 				<?php endif; ?> 
 
 				<div class="clearfix"></div>
-				<section role="main">
+				<main role="main">
 				<!-- Le contenu principal injecte par joomla -->
 				<jdoc:include type="component" />
-				</section>
+				</main>
 				<!-- Fin Le contenu principal injecte par joomla -->
 				<div class="clearfix"></div>
 
@@ -260,7 +263,7 @@ defined( '_JEXEC' ) or die;
 					</div>
 				<?php endif; ?>
 				<!-- Bloc bas -->
-
+				<?php require_once 'html/font.test.full.php'; ?>
 				
 			</div>
 
