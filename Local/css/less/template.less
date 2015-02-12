@@ -8,8 +8,16 @@ dl.article-info dd:last-child:after {content: ""}
 /* mod_articles_category */
 .article-info-mod-cat span:after {content: " | "}
 .article-info-mod-cat span:last-child:after {content: ""} 
+/* mod_banner */
+.banneritem {overflow: hidden;}
+
+/* Accessibility */
+a[target="_blank"]:after {border: 1px solid #FFFFFF; font-family: "Glyphicons Halflings"; content: "\e164"; }
 
 
+/* My bootstrap */
+ul.unstyled {list-style-type: none;  padding: 0px}
+ 
 /* Debug front-end */
 /* Html5 debug */
 body .debughtml:before  {content: "<Body>"; background: red; color: white;}
@@ -23,14 +31,15 @@ body .debughtml  {
 
 .debughtml {
 	section:before {content: "<Section>"; background: red; color: white;}
-	section {
+	main:before {content: "<main>"; background: red; color: white;}
+	section, main {
 	  border: 1px solid red;
-	  padding: 1px;
+	  padding: 1px; 
 	  margin: 1px;
 	  h1:before {content: "<H1>"; background: red; color: white; }
 	  h2:before {content: "<H2>"; background: red; color: white; }
 	}
-	section[role="main"]{
+	section[role="main"], main[role="main"] {
 	  background: repeating-linear-gradient(
 	  45deg,
 	  #FFFFFF,
@@ -41,6 +50,7 @@ body .debughtml  {
 	  }
 	header[role="banner"]:before {content: "<header role='banner'>"}
 	section[role="main"]:before {content: "<section role='main'>"}
+	main[role="main"]:before {content: "<main role='main'>"}
 	nav[role="navigation"]:before {content: "<nav role='navigation'>"}
 	aside[role="search"]:before {content: "<aside role='search'>"}
 	aside[role="complementary"]:before {content: "<aside role='complementary'>"}

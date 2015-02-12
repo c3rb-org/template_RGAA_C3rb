@@ -17,6 +17,21 @@ dl.article-info dd:last-child:after {
 .article-info-mod-cat span:last-child:after {
   content: "";
 }
+/* mod_banner */
+.banneritem {
+  overflow: hidden;
+}
+/* Accessibility */
+a[target="_blank"]:after {
+  border: 1px solid #FFFFFF;
+  font-family: "Glyphicons Halflings";
+  content: "\e164";
+}
+/* My bootstrap */
+ul.unstyled {
+  list-style-type: none;
+  padding: 0px;
+}
 /* Debug front-end */
 /* Html5 debug */
 body .debughtml:before {
@@ -44,22 +59,31 @@ body .debughtml h2:before {
   background: red;
   color: white;
 }
-.debughtml section {
+.debughtml main:before {
+  content: "<main>";
+  background: red;
+  color: white;
+}
+.debughtml section,
+.debughtml main {
   border: 1px solid red;
   padding: 1px;
   margin: 1px;
 }
-.debughtml section h1:before {
+.debughtml section h1:before,
+.debughtml main h1:before {
   content: "<H1>";
   background: red;
   color: white;
 }
-.debughtml section h2:before {
+.debughtml section h2:before,
+.debughtml main h2:before {
   content: "<H2>";
   background: red;
   color: white;
 }
-.debughtml section[role="main"] {
+.debughtml section[role="main"],
+.debughtml main[role="main"] {
   background: repeating-linear-gradient(45deg, #ffffff, #ffffff 10px, #f0f0f0 10px, #f0f0f0 20px);
 }
 .debughtml header[role="banner"]:before {
@@ -67,6 +91,9 @@ body .debughtml h2:before {
 }
 .debughtml section[role="main"]:before {
   content: "<section role='main'>";
+}
+.debughtml main[role="main"]:before {
+  content: "<main role='main'>";
 }
 .debughtml nav[role="navigation"]:before {
   content: "<nav role='navigation'>";
