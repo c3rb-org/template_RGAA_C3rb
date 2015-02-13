@@ -83,12 +83,13 @@ defined( '_JEXEC' ) or die;
 		<meta name="msapplication-TileImage" content="/templates/images/template/favicon/mstile-144x144.png">
 		<meta name="msapplication-config" content="/templates/images/template/favicon/browserconfig.xml">
 		
-		<!-- Fin favicon -->
-		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/system.css" type="text/css" /><!-- style de system joomla (ex : les message joomla) -->
-		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/general.css" type="text/css" /><!-- style de system joomla (ex : les boutons) -->
+		<!-- Fin favicon 
+		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/system.css" type="text/css" />
+		<link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/general.css" type="text/css" />
+	-->
 	</head>
 	<?php if ( $paramtmpl_html == 1) {
-		echo '<div class="debughtml">';
+		echo '<div class="debughtml">'; 
 	} ?>
 	<body>
 		<!-- début du template -->
@@ -263,12 +264,13 @@ defined( '_JEXEC' ) or die;
 					</div>
 				<?php endif; ?>
 				<!-- Bloc bas -->
-				<?php require_once 'html/font.test.full.php'; ?>
 				
 			</div>
 
 
 <jdoc:include type="modules" name="debug" style="none" />
+<?php //require_once 'html/bootstrap.test.full.php'; ?>
+<?php //require_once 'html/font.test.full.php'; ?>
 
 <!-- Elements d'aide au template -->
 <?php if ($paramtmpl_debug == 1) {
