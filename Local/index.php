@@ -96,6 +96,7 @@ defined( '_JEXEC' ) or die;
 		<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 		les font-awesome bug!
 		<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+		test
 		<div class="container">
 			<div class="row">
 				<header aria-label="<?php echo $titlesite; ?>" role="banner">
