@@ -24,6 +24,8 @@ defined( '_JEXEC' ) or die;
 	$paramtmpl_debug			= $params->get('tmplmodhelp');
 	$paramtmpl_html				= $params->get('tmplhtmlhelp');
 
+	$test = 1;
+	
 // Le Framework
 	//Jquery joomla
 	JHTML::_('jquery.framework');
