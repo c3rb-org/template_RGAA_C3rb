@@ -26,7 +26,7 @@ echo 'TEST CYC';
 	// Avance
 	$paramtmpl_debug			= $params->get('tmplmodhelp');
 	$paramtmpl_html				= $params->get('tmplhtmlhelp');
-
+	
 // Le Framework
 	//Jquery joomla
 	JHTML::_('jquery.framework');
