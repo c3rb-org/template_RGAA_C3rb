@@ -15,6 +15,7 @@ defined( '_JEXEC' ) or die;
 	$bssize				= $params->get('bootstrap_size');					// Taille bootstrap dans l'admin
 	$headerlvl 			= $params->get('headerLevel');						// Niveau de titre du module choisi dans l'admin
 	$tmplpath 			= $this->baseurl.'/templates/'.$this->template;     // adresse du template
+
 	$config 			= new JConfig(); 
 	$doc->setGenerator('');	 												// on supprime le generator content="Joomla! - Open Source Content Management" pour plus de securite
 // Parametre du template
@@ -95,6 +96,7 @@ defined( '_JEXEC' ) or die;
 		<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 		les font-awesome bug!
 		<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+		test
 		<div class="container">
 			<div class="row">
 				<header aria-label="<?php echo $titlesite; ?>" role="banner">
