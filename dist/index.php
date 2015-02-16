@@ -16,6 +16,8 @@ defined( '_JEXEC' ) or die;
 	$headerlvl 			= $params->get('headerLevel');						// Niveau de titre du module choisi dans l'admin
 	$tmplpath 			= $this->baseurl.'/templates/'.$this->template;     // adresse du template
 
+echo 'TEST CYC';	
+	
 	$config 			= new JConfig(); 
 	$doc->setGenerator('');	 												// on supprime le generator content="Joomla! - Open Source Content Management" pour plus de securite
 // Parametre du template
@@ -24,7 +26,7 @@ defined( '_JEXEC' ) or die;
 	// Avance
 	$paramtmpl_debug			= $params->get('tmplmodhelp');
 	$paramtmpl_html				= $params->get('tmplhtmlhelp');
-
+	
 // Le Framework
 	//Jquery joomla
 	JHTML::_('jquery.framework');
