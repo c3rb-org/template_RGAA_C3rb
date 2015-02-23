@@ -32,8 +32,13 @@ echo 'TEST CYC';
 	JHTML::_('jquery.framework');
 	// Bootstrap joomla
 	JHtml::_('bootstrap.framework'); //On charge bootstrap 
-	unset($doc->_scripts[$this->baseurl . '/media/jui/js/bootstrap.min.js']); // Et on le supprime du coeur (egalement pour les comp. externe)
 
+	// On supprime bootstrap2
+	if(array_key_exists($this->baseurl . '/media/jui/js/bootstrap.min.js', $doc->_scripts))
+		unset($doc->_scripts[$this->baseurl . '/media/jui/js/bootstrap.min.js']); // Et on le supprime du coeur (egalement pour les comp. externe)
+	if(array_key_exists($this->baseurl . '/media/jui/js/bootstrap.js', $doc->_scripts))
+		unset($doc->_scripts[$this->baseurl . '/media/jui/js/bootstrap.js']); // Et on le supprime du coeur (egalement pour les comp. externe)
+	
 // Les Metas du site
 	// Bootstrap
 	$doc->setMetaData( 'viewport', 'width=device-width, initial-scale=1' );
