@@ -18,7 +18,9 @@ $msgList = $displayData['msgList'];
 			<?php foreach ($msgList as $type => $msgs) : ?>
 				<div class="alert alert-<?php echo $type; ?>">
 					<?php // This requires JS so we should add it trough JS. Progressive enhancement and stuff. ?>
-					<a class="close" data-dismiss="alert">×</a>
+					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+  						<span aria-hidden="true">&times;</span>
+					</button>
 
 					<?php if (!empty($msgs)) : ?>
 						<h4 class="alert-heading"><?php echo JText::_($type); ?></h4>
