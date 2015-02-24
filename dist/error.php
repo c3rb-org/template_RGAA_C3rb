@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Erreur..</title>
   <link rel="stylesheet" href="">
-</head>
+</head> 
 <body>
   
 </body>

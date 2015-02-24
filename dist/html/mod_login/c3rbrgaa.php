@@ -86,7 +86,7 @@ JHtml::_('bootstrap.tooltip');
 		<?php if (JPluginHelper::isEnabled('system', 'remember')) : ?>
 		<div id="form-login-remember" class="checkbox">
 			<label>
-			<input id="modlgn-remember" type="checkbox" name="remember" class="" value="yes"/>
+			<input id="modlgn-remember" type="checkbox" name="remember" class="" value="yes" role="checkbox" aria-checked="false" tabindex="0"/>
 			<label for="modlgn-remember"><?php echo JText::_('MOD_LOGIN_REMEMBER_ME') ?></label>
 			</label> 
 		</div>

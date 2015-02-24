@@ -15,8 +15,6 @@ defined( '_JEXEC' ) or die;
 	$bssize				= $params->get('bootstrap_size');					// Taille bootstrap dans l'admin
 	$headerlvl 			= $params->get('headerLevel');						// Niveau de titre du module choisi dans l'admin
 	$tmplpath 			= $this->baseurl.'/templates/'.$this->template;     // adresse du template
-
-echo 'TEST CYC';	
 	
 	$config 			= new JConfig(); 
 	$doc->setGenerator('');	 												// on supprime le generator content="Joomla! - Open Source Content Management" pour plus de securite
@@ -32,8 +30,13 @@ echo 'TEST CYC';
 	JHTML::_('jquery.framework');
 	// Bootstrap joomla
 	JHtml::_('bootstrap.framework'); //On charge bootstrap 
-	unset($doc->_scripts[$this->baseurl . '/media/jui/js/bootstrap.min.js']); // Et on le supprime du coeur (egalement pour les comp. externe)
 
+	// On supprime bootstrap2
+	if(array_key_exists($this->baseurl . '/media/jui/js/bootstrap.min.js', $doc->_scripts))
+		unset($doc->_scripts[$this->baseurl . '/media/jui/js/bootstrap.min.js']); // Et on le supprime du coeur (egalement pour les comp. externe)
+	if(array_key_exists($this->baseurl . '/media/jui/js/bootstrap.js', $doc->_scripts))
+		unset($doc->_scripts[$this->baseurl . '/media/jui/js/bootstrap.js']); // Et on le supprime du coeur (egalement pour les comp. externe)
+	
 // Les Metas du site
 	// Bootstrap
 	$doc->setMetaData( 'viewport', 'width=device-width, initial-scale=1' );
@@ -64,7 +67,7 @@ echo 'TEST CYC';
 	<head>
 		<jdoc:include type="head" /><!-- Balise meta et autre de la config du site joomla -->
 		<!-- A FAIRE : supprimmer le caption.js genere par le jdoc:include ? -->
-
+ 
 		<!-- Les favicons autre que la favicon.ico generale genere par le jdoc:include -->
 		<link rel="apple-touch-icon" sizes="57x57" href="/templates/images/template/favicon/apple-touch-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="114x114" href="/templates/images/template/favicon/apple-touch-icon-114x114.png">
@@ -94,11 +97,9 @@ echo 'TEST CYC';
 		echo '<div class="debughtml">'; 
 	} ?>
 	<body>
+	        <jdoc:include type="message" /> 
 		<!-- début du template -->
 		<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
-		les font-awesome bug!
-		<span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
-		test
 		<div class="container">
 			<div class="row">
 				<header aria-label="<?php echo $titlesite; ?>" role="banner">
@@ -269,8 +270,6 @@ echo 'TEST CYC';
 				<!-- Bloc bas -->
 				
 			</div>
-
-
 <jdoc:include type="modules" name="debug" style="none" />
 <?php //require_once 'html/bootstrap.test.full.php'; ?>
 <?php //require_once 'html/font.test.full.php'; ?>
@@ -283,7 +282,7 @@ echo 'TEST CYC';
 ?>
 
 
-
+ 
 
 
 <?php 
