@@ -1,6 +1,11 @@
-﻿#Logique d'utilisation
-##Activer Grunt pour un projet portail
-1 - Lancer Cmder.exe (console)
+﻿Pré-requis : 
+- Node.js
+- Npm
+- la variable d'environement doit pouvoir accéder à node depuis la totalité des répertoires de votre poste.
+
+//-------------------------------
+// ACTIVER GRUNT POUR UN PROJET LOCAL
+1 - Lancer une console
 2 - Se placer dans le dossier projet/sources pour dialoguer avec le systeme grunt mis en place.
 
 	Permet de descendre à la racine de c:
@@ -13,14 +18,14 @@
 	cd D:\site\joomla3\template_RGAA_C3rb\Sources (exemple depuis mon poste)
 
 //-------------------------------
-// Mettre à jour les dépendences git
+// METTRE A JOUR / INSTALLER LES DEPENDENCES GITHUB
 1 - Se placer dans le dossier projet/sources pour dialoguer avec le systeme grunt mis en place.
 	
 	Permet de lancer la mise a jour des dépendences git :
-	npm update
+	npm install
 
 //-------------------------------
-// Intégrer les mises à jour des dépendences git dans le dossier local (Il est nécessaire de mettre à jour les dépendences git en amont) :
+// Intégrer les mises à jour des dépendences github dans le dossier local (Il est nécessaire de mettre à jour les dépendences git en amont) :
 1 - Se placer dans le dossier projet/sources pour dialoguer avec le systeme grunt mis en place.
 2 - Mise a jour du dossier local
 
@@ -30,7 +35,7 @@
 
 
 //-------------------------------
-// Travailler sur le projet en Local
+// TRAVAILLER SUR LE PROJET LOCAL
 1 - Se placer dans le dossier projet/sources 
 2 - Mettre à jour les dépendences
 3 - Lancer un "watch" pour avoir un regard sur les fichiers en modification et les traiter les cas échéants (ex : a la sauvegarde d'un fichier less, une compilation est réalisé)
@@ -38,13 +43,8 @@
 	Permet de lancer un watch : 
 	grunt watch
 
-4 - 
-
-
 //-------------------------------
-
-//-------------------------------
-// Créer le dossier template distant
+// CREER LE DOSSIER DIST POUR LES PROJETS FINI
 1 - Se placer dans le dossier projet/sources
 2 - lancer la commande de construction :
 	
@@ -53,8 +53,8 @@
 
 //-------------------------------
 
-
 //-------------------------------
+//Debug 
 Solution: Bootstrap glyphicons-halflings-regular.woff 404 not found
 dans IIS : clicker MIME Types icon et ajouter .woff avec application/octet-stream
 
