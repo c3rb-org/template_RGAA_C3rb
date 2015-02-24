@@ -1,5 +1,5 @@
-﻿//-------------------------------
-// Activer Grunt pour un projet portail
+﻿#Logique d'utilisation
+##Activer Grunt pour un projet portail
 1 - Lancer Cmder.exe (console)
 2 - Se placer dans le dossier projet/sources pour dialoguer avec le systeme grunt mis en place.
 
