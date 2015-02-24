@@ -7,4 +7,5 @@ jQuery(function ($) {
 	$('[data-toggle="popover"]').popover({ html : true });
 	// dropdown
 	$('.dropdown-toggle').dropdown()
+	
 }); 
