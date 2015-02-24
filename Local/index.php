@@ -97,7 +97,7 @@ defined( '_JEXEC' ) or die;
 		echo '<div class="debughtml">'; 
 	} ?>
 	<body>
-	        <jdoc:include type="message" /> 
+	<jdoc:include type="message" /> 
 		<!-- début du template -->
 		<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 		<div class="container">
@@ -272,7 +272,7 @@ defined( '_JEXEC' ) or die;
 			</div>
 <jdoc:include type="modules" name="debug" style="none" />
 <?php //require_once 'html/bootstrap.test.full.php'; ?>
-<?php //require_once 'html/font.test.full.php'; ?>
+<?php //require_once 'html/font.test.full.php'; ?> 
 
 <!-- Elements d'aide au template -->
 <?php if ($paramtmpl_debug == 1) {
@@ -281,7 +281,7 @@ defined( '_JEXEC' ) or die;
 	} 
 ?>
 
-
+   
  
 
 
@@ -299,6 +299,7 @@ if($config->debug == 1) : ?>
 	<script src="<?php echo $tmplpath; ?>/js/stacktable.min.js" defer></script>
 	<script src="<?php echo $tmplpath; ?>/js/template.min.js" type="text/javascript" defer></script>
 <?php endif;?>
+
 
 </body>
 </html>
