@@ -17,7 +17,7 @@ defined( '_JEXEC' ) or die;
 	$tmplpath 			= $this->baseurl.'/templates/'.$this->template;     // adresse du template
 	
 	$config 			= new JConfig(); 
-	$doc->setGenerator('');	 												// on supprime le generator content="Joomla! - Open Source Content Management" pour plus de securite
+	$doc->setGenerator('');	 	 											// on supprime le generator content="Joomla! - Open Source Content Management" pour plus de securite
 // Parametre du template
 	// Basics
 	$paramtmpl_tmpltitlechoice 	= $params->get('tmpltitlechoice');
