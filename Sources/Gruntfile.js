@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 		      	{expand: true, cwd: 'node_modules/font-awesome/less/', src: ['**'], dest: '../Local/css/less/less_fontawesome'},
 		      	{expand: true, cwd: 'node_modules/font-awesome/fonts/', src: ['**'], dest: '../Local/fonts'},
 		      	// Paypalplugin js accessible pour bootstrap
-		      	{expand: true, cwd: 'node_modules/bootstrap-accessibility-plugin/bs3/js/', src: ['**', '!**/tests/**'], dest: '../Local/js/js_ppaccessible'}, // '!**/tests/**' on exclu le dossier test
+		      	{expand: true, cwd: 'node_modules/bootstrap-accessibility-plugin/plugins/js/', src: ['**', '!**/tests/**'], dest: '../Local/js/js_ppaccessible'}, // '!**/tests/**' on exclu le dossier test
 		      	],
 		      },
 		    godist: {
@@ -89,18 +89,7 @@ module.exports = function(grunt) {
 																		'../Local/js/js_bs/affix.js'
 												 					],
 					//paypal accessib js
-					'../Local/js/bootstrap-accessibility.min.js': 	[	'../Local/js/js_ppaccessible/transition.js',
-																		'../Local/js/js_ppaccessible/alert.js',
-																		'../Local/js/js_ppaccessible/button.js',
-																		'../Local/js/js_ppaccessible/carousel.js',
-																		'../Local/js/js_ppaccessible/collapse.js',
-																		'../Local/js/js_ppaccessible/dropdown.js',
-																		//'../Local/js/js_ppaccessible/modal.js',
-																		//'../Local/js/js_ppaccessible/tooltip.js',
-																		'../Local/js/js_ppaccessible/popover.js',
-																		'../Local/js/js_ppaccessible/scrollspy.js',
-																		'../Local/js/js_ppaccessible/tab.js',
-																		'../Local/js/js_ppaccessible/affix.js'
+					'../Local/js/bootstrap-accessibility.min.js': 	[	'../Local/plugin/js/js_ppaccessible/bootstrap-accessibility.js'
 												 				  	],
 
 					'../Local/js/stacktable.min.js':				[	'../Local/js/js_tablerwd/stacktable.js'
@@ -127,18 +116,7 @@ module.exports = function(grunt) {
 																		'../Local/js/js_bs/tab.js',
 																		'../Local/js/js_bs/affix.js'
 												 					],
-					'../Local/js/bootstrap-accessibility.js': 		[	'../Local/js/js_ppaccessible/transition.js',
-																		'../Local/js/js_ppaccessible/alert.js',
-																		'../Local/js/js_ppaccessible/button.js',
-																		'../Local/js/js_ppaccessible/carousel.js',
-																		'../Local/js/js_ppaccessible/collapse.js',
-																		'../Local/js/js_ppaccessible/dropdown.js',
-																		//'../Local/js/js_ppaccessible/modal.js',
-																		//'../Local/js/js_ppaccessible/tooltip.js',
-																		'../Local/js/js_ppaccessible/popover.js',
-																		'../Local/js/js_ppaccessible/scrollspy.js',
-																		'../Local/js/js_ppaccessible/tab.js',
-																		'../Local/js/js_ppaccessible/affix.js'
+					'../Local/js/bootstrap-accessibility.js': 		[	'../Local/plugin/js/js_ppaccessible/bootstrap-accessibility.js'
 												 				  	],
 					'../Local/js/stacktable.js':					[	'../Local/js/js_tablerwd/stacktable.js'
 												 				  	],
