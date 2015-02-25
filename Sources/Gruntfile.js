@@ -20,7 +20,7 @@ module.exports = function(grunt) {
 		    godist: {
 				files: [
 	    		//bootstrap
-	    		{expand: true, cwd: '../Local/', src: ['**', '!**/tests/**', '!**/_doc/**', '!**/less/**', '!**/js_bs/**', '!**/js_ppaccessible/**', '!**/js_c3rb/**', '!**/js_tablerwd/**'], dest: '../dist/'},		    	
+	    		{expand: true, cwd: '../Local/', src: ['**', '!**/tests/**', '!**/_doc/**', '!**/less/**', '!**/js_bs/**', '!**/js_ppaccessible/**', '!**/js_c3rb/**', '!**/js_tablerwd/**', '!**/html/**/*.bak'], dest: '../dist/'},		    	
 	      		// Dist copy to template mir // idee a aprofondir
 	    		{expand: true, cwd: '../dist/', src: ['**'], dest: '../../joomla3x/templates/rgaac3rb/'}, 		    	
 	      		],
