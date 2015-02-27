@@ -270,6 +270,26 @@ body .debughtml h2:before {
   padding: 1px;
   margin: 1px;
 }
+.debughtml div[role="list"]:before {
+  content: "<div role='list'>";
+  background: #DD96A2;
+  color: white;
+}
+.debughtml div[role="list"] {
+  border: 1px solid #DD96A2;
+  padding: 1px;
+  margin: 1px;
+}
+.debughtml div[role="listitem"]:before {
+  content: "<div role='listitem'>";
+  background: pink;
+  color: white;
+}
+.debughtml div[role="listitem"] {
+  border: 1px solid peachpuff;
+  padding: 1px;
+  margin: 1px;
+}
 .debughtml .sr-only {
   position: relative;
   width: auto;
