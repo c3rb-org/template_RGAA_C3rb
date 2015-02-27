@@ -164,11 +164,28 @@ body .debughtml  {
 	}
 	address:before   {content: "<address>"; background: pink; color: white}
 	address       {
-	  border: 1px solid pink;
+	  border: 1px solid pink; 
 	  padding: 1px;
 	  margin: 1px;
 	}
+	div[role="list"]:before   {
+		content: "<div role='list'>";
+		background: #DD96A2;
+		color: white
+	}
+	div[role="list"]{	  
+	  border: 1px solid #DD96A2;
+	  padding: 1px;
+	  margin: 1px;}
+
+	div[role="listitem"]:before   {content: "<div role='listitem'>"; background: pink; color: white}
+	div[role="listitem"]{	  
+	  border: 1px solid peachpuff;
+	  padding: 1px;
+	  margin: 1px;}
+
 	.sr-only {position: relative; width: auto; height: auto;   }
+
 }
 
 #system-debug { 
