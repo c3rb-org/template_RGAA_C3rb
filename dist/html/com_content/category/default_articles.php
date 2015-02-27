@@ -32,7 +32,6 @@ if (!empty($this->items))
 	}
 }
 ?>
-test
 <?php if (empty($this->items)) : ?>
 
 	<?php if ($this->params->get('show_no_articles', 1)) : ?>
@@ -68,7 +67,7 @@ test
 	</fieldset>
 	<?php endif; ?>
 
-	<table class="category table table-striped table-bordered table-hover">
+	<table class="category table table-striped table-bordered table-hover" role="list">
 		<?php if ($this->params->get('show_headings')) : ?>
 		<thead>
 			<tr>
