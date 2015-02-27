@@ -23,6 +23,7 @@ $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_da
 	|| $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author'));
 
 ?>
+
 <div class="item-page<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="http://schema.org/Article">
 	<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
 	<?php if ($this->params->get('show_page_heading', 1)) : ?>
@@ -163,6 +164,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 				<?php endif; ?>
 			<?php endif; ?>
 			</dl>
+		<div class="clearfix"></div>	
 		</address>
 		</div>
 	<?php endif; ?>
@@ -218,6 +220,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 						<?php else: ?>
 							<?php echo JText::sprintf('COM_CONTENT_WRITTEN_BY', $author); ?>
 						<?php endif; ?>
+					<div class="clearfix"></div>	
 					</address>
 					</dd>
 				<?php endif; ?>

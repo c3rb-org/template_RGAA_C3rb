@@ -134,6 +134,7 @@ $info    = $this->item->params->get('info_block_position', 0);
 
 		<?php endif; ?>
 	</dl>
+<div class="clearfix"></div>
 </address>
 <?php endif; ?>
 </header>
@@ -235,6 +236,7 @@ $info    = $this->item->params->get('info_block_position', 0);
 			<?php echo $this->item->tagLayout->render($this->item->tags->itemTags); ?>
 		<?php endif; ?>
 	</dl>
+<div class="clearfix"></div>
 </address>
 <?php endif; ?>
 
