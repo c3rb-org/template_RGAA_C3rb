@@ -1,14 +1,26 @@
 /* Template joomla */
+/* pagination */
+.pagination .counter {
+  border-bottom: 0px;
+}
 /* com_content */
 /* article */
 dl.article-info dd:after {
   content: " | ";
+  margin-left: 5px;
 }
 dl.article-info dd {
-  display: inline-block;
+  display: flex;
+  /* hoouuu du flex ca fait peur ^^ */
+  float: left;
+  margin-right: 5px;
 }
 dl.article-info dd:last-child:after {
   content: "";
+}
+/* archive */
+.chzn-container {
+  width: 100% !important;
 }
 /* mod_articles_category */
 .article-info-mod-cat span:after {
@@ -31,6 +43,48 @@ a[target="_blank"]:after {
 ul.unstyled {
   list-style-type: none;
   padding: 0px;
+}
+/* Add bootstrap multilvl menu */
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  -webkit-border-radius: 0 6px 6px 6px;
+  -moz-border-radius: 0 6px 6px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+.dropdown-submenu > a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #ccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover > a:after {
+  border-left-color: #fff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  -webkit-border-radius: 6px 0 6px 6px;
+  -moz-border-radius: 6px 0 6px 6px;
+  border-radius: 6px 0 6px 6px;
 }
 /* Debug front-end */
 /* Html5 debug */

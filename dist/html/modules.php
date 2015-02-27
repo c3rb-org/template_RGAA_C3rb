@@ -37,7 +37,7 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 	if (($moduletype == 'mod_users_latest') || ($moduletype == 'mod_banners') || ($moduletype == 'mod_wrapper') || ($moduletype == 'mod_syndicate') || ($moduletype == 'mod_random_image') || ($moduletype == 'mod_languages') || ($moduletype == 'mod_feed') || ($moduletype == 'mod_custom') || ($moduletype == 'mod_banner') ) {
 		$activeasidemod = 1;
 		$asidemod = 'note';    
-	} elseif ($moduletype == 'mod_search') {
+	} elseif (($moduletype == 'mod_search') || ($moduletype == 'mod_finder')) {
 		$activeasidemod = 1;
 		$asidemod = 'search';  
 	} elseif ($moduletype == 'mod_menu') {
@@ -60,7 +60,7 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 					<aside role="<?php echo $asidemod; ?>">
 					<?php endif ?>
 					<?php if ($moduletype == 'mod_menu') {
-						echo '<nav role="navigation" aria-labelledby="label'.$module->id.'">';
+						echo '<nav  role="navigation" aria-labelledby="label'.$module->id.'">';
 					} ?>
 				<?php else : ?>
 					<<?php echo $moduleTag; ?>>

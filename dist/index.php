@@ -1,6 +1,5 @@
 <?php
-defined( '_JEXEC' ) or die;
-
+defined( '_JEXEC' ) or die; 
 // Parametre general joomla
 	$app            	= JFactory::getApplication();
 	$doc            	= JFactory::getDocument();							
@@ -67,7 +66,6 @@ defined( '_JEXEC' ) or die;
 	<head>
 		<jdoc:include type="head" /><!-- Balise meta et autre de la config du site joomla -->
 		<!-- A FAIRE : supprimmer le caption.js genere par le jdoc:include ? -->
- 
 		<!-- Les favicons autre que la favicon.ico generale genere par le jdoc:include -->
 		<link rel="apple-touch-icon" sizes="57x57" href="/templates/images/template/favicon/apple-touch-icon-57x57.png">
 		<link rel="apple-touch-icon" sizes="114x114" href="/templates/images/template/favicon/apple-touch-icon-114x114.png">
@@ -96,8 +94,8 @@ defined( '_JEXEC' ) or die;
 	<?php if ( $paramtmpl_html == 1) {
 		echo '<div class="debughtml">'; 
 	} ?>
-	<body>
-	        <jdoc:include type="message" /> 
+	<body> 
+	    <jdoc:include type="message" />
 		<!-- début du template -->
 		<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
 		<div class="container">
@@ -295,7 +293,7 @@ if($config->debug == 1) : ?>
 	<script src="<?php echo $tmplpath; ?>/js/template.js" type="text/javascript" defer></script>
 <?php else : ?> 
 	<script src="<?php echo $tmplpath; ?>/js/bootstrap.min.js" defer></script>
-	<script src="<?php echo $tmplpath; ?>/js/bootstrap-accessibility.min.js" defer></script>
+	<!-- <script src="<?php echo $tmplpath; ?>/js/bootstrap-accessibility.min.js" defer></script> -->
 	<script src="<?php echo $tmplpath; ?>/js/stacktable.min.js" defer></script>
 	<script src="<?php echo $tmplpath; ?>/js/template.min.js" type="text/javascript" defer></script>
 <?php endif;?>

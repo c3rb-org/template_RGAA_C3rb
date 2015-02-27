@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  mod_menu
- *	°version J! : 3.4.0 - MIR
+ *	Â°version J! : 3.4.0 - MIR
  * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -21,9 +21,10 @@ else
 {
 	$linktype = $item->title;
 }
-
 ?>	
-<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+
+
+<a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
 	<span class="separator" <?php echo $title; ?>>
 		<?php echo $linktype; ?>
 	</span>

@@ -37,6 +37,7 @@ $info    = $params->get('info_block_position', 0);
 <?php if ($useDefList && ($info == 0 || $info == 2)) : ?>
 	<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'above')); ?>
 <?php endif; ?>
+<div class="clearfix"></div>
 </address>
 </header>
 <?php echo JLayoutHelper::render('joomla.content.intro_image', $this->item); ?>
