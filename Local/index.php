@@ -1,8 +1,8 @@
 <?php
 defined( '_JEXEC' ) or die; 
 
-	//Chargements des librairies
-	JLoader::register('JHtmlBootstrap', dirname(__FILE__).'/libraries/cms/html/bootstrap.php', true);
+//Chargements des librairies
+JLoader::register('JHtmlBootstrap', dirname(__FILE__).'/libraries/cms/html/bootstrap.php', true);
 
 // Parametre general joomla
 	$app            	= JFactory::getApplication();
@@ -18,7 +18,7 @@ defined( '_JEXEC' ) or die;
 	$bssize				= $params->get('bootstrap_size');					// Taille bootstrap dans l'admin
 	$headerlvl 			= $params->get('headerLevel');						// Niveau de titre du module choisi dans l'admin
 	$tmplpath 			= $this->baseurl.'/templates/'.$this->template;     // adresse du template
-	
+	 
 	$config 			= new JConfig(); 
 	$doc->setGenerator('');	 	 											// on supprime le generator content="Joomla! - Open Source Content Management" pour plus de securite
 // Parametre du template
