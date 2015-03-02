@@ -269,7 +269,8 @@ defined( '_JEXEC' ) or die;
 				
 			</div>
 <jdoc:include type="modules" name="debug" style="none" />
-<?php //require_once 'html/bootstrap.test.full.php'; ?>
+
+<?php require_once 'html/bootstrap.test.full.php'; ?>
 <?php //require_once 'html/font.test.full.php'; ?>
 
 <!-- Elements d'aide au template -->
