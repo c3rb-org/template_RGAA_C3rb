@@ -1,9 +1,6 @@
 <?php
 defined( '_JEXEC' ) or die; 
 
-//Chargements des librairies
-JLoader::register('JHtmlBootstrap', dirname(__FILE__).'/libraries/cms/html/bootstrap.php', true);
-
 // Parametre general joomla
 	$app            	= JFactory::getApplication();
 	$doc            	= JFactory::getDocument();							
@@ -274,7 +271,7 @@ JLoader::register('JHtmlBootstrap', dirname(__FILE__).'/libraries/cms/html/boots
 			</div>
 <jdoc:include type="modules" name="debug" style="none" />
 
-<?php require_once 'html/bootstrap.test.full.php'; ?>
+<?php //require_once 'html/bootstrap.test.full.php'; ?>
 <?php //require_once 'html/font.test.full.php'; ?>
 
 <!-- Elements d'aide au template -->
