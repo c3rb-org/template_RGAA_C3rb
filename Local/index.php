@@ -1,9 +1,6 @@
 <?php
 defined( '_JEXEC' ) or die; 
 
-	//Chargements des librairies
-	JLoader::register('JHtmlBootstrap', dirname(__FILE__).'/libraries/cms/html/bootstrap.php', true);
-
 // Parametre general joomla
 	$app            	= JFactory::getApplication();
 	$doc            	= JFactory::getDocument();							
