@@ -7,11 +7,9 @@ jQuery(function ($) {
 	$('.dropdown-toggle').dropdown();
 
 	//noconflict chosen joomla
-	$('.tab-pane-noconflictchosen').addClass( "tab-pane" );
-	$('.tab-pane-noconflictchosen').removeClass( "tab-pane-noconflictchosen" );
+	$('div.tab-pane-noconflictchosen').addClass( "tab-pane" ).removeClass( "tab-pane-noconflictchosen" );
 
 }); 
-
 
 Element.implement({
 	hide: function () { return this; },
