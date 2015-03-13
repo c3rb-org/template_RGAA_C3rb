@@ -87,7 +87,7 @@ $doc            	= JFactory::getDocument();
 		<meta name="msapplication-TileColor" content="#2b5797">
 		<meta name="msapplication-TileImage" content="/templates/images/template/favicon/mstile-144x144.png">
 		<meta name="msapplication-config" content="/templates/images/template/favicon/browserconfig.xml">
-		
+		 
 		<!--[if ie]>
 		<meta content='IE=8' http-equiv='X-UA-Compatible'/>
 		<![endif]-->
