@@ -5,6 +5,11 @@ jQuery(function ($) {
 	$('[data-toggle="popover"]').popover({ html : true });
 	// dropdown
 	$('.dropdown-toggle').dropdown();
+
+	//noconflict chosen joomla
+	$('.tab-pane-noconflictchosen').addClass( "tab-pane" );
+	$('.tab-pane-noconflictchosen').removeClass( "tab-pane-noconflictchosen" );
+
 }); 
 
 
