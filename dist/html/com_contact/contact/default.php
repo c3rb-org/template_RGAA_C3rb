@@ -13,6 +13,7 @@ $cparams = JComponentHelper::getParams('com_media');
 
 jimport('joomla.html.html.bootstrap');
 ?>
+<article role="main">
 <div class="contact<?php echo $this->pageclass_sfx?>" itemscope itemtype="http://schema.org/Person">
 	<?php if ($this->params->get('show_page_heading')) : ?>
 		<h1>
@@ -216,3 +217,4 @@ jimport('joomla.html.html.bootstrap');
 		<?php echo JHtml::_('bootstrap.endTabSet'); ?>
 	<?php endif; ?>
 </div>
+</article>

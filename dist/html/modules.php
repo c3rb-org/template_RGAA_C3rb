@@ -24,14 +24,14 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 	$headerLvl 			= $params->get('header_tag');			// niveau de h dans le titre
 	$moduleTag      	= $params->get('module_tag');			// Choix html5 de la balise du module
 
-	$datacontent 		=
+	$datacontent 		=										//Contenu du debug
 	"
 					Nbre de module dans la position : <span class='label label-info'>$nbmod</span><br />
 					Taille bootstrap dans l'admin : <span class='label label-info'>$modbssize</span><br />
 					Style du module : <span class='label label-info'>$modstyle</span><br />
 					Nom du module : <span class='label label-info'>$moduletype</span><br />
 					Nom de la positiondu module : <span class='label label-info'>$modposname</span>
-	";															//Contenu du debug
+	";															
 
 	//Suivant le type du module le aside est different
 	if (($moduletype == 'mod_users_latest') || ($moduletype == 'mod_banners') || ($moduletype == 'mod_wrapper') || ($moduletype == 'mod_syndicate') || ($moduletype == 'mod_random_image') || ($moduletype == 'mod_languages') || ($moduletype == 'mod_feed') || ($moduletype == 'mod_custom') || ($moduletype == 'mod_banner') ) {
@@ -48,46 +48,73 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 	}
 ?>
 
+	<!-- Taille BS dans l'admin du module -->
 	<?php if ($modbssize != 0) : ?>
-		<div class="col-xs-12 col-sm-<?php echo $modbssize; ?> col-md-<?php echo $modbssize; ?> col-lg-<?php echo $modbssize; ?>">
+	<div class="col-xs-12 col-sm-<?php echo $modbssize; ?> col-md-<?php echo $modbssize; ?> col-lg-<?php echo $modbssize; ?>">
+	<?php else : ?>
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<?php endif; ?>
+	<!-- Fin taille BS dans l'admin du module -->		
+
+	<div id="Mod<?php echo $module->id; ?>" class="moduletable <?php echo htmlspecialchars($params->get('moduleclass_sfx')); ?> ">
+	
+	<!-- Choix de la balise html5 -->
+	<?php if (($moduleTag == 'div') || (empty($moduleTag))) : ?>
+		<?php if ($activeasidemod == 1 ): ?>
+		<aside role="<?php echo $asidemod; ?>">
+		<?php endif ?>
+			
+		<?php if ($moduletype == 'mod_menu'): ?>
+		<nav role="navigation" aria-labelledby="label<?php echo $module->id; ?>">
+		<?php endif; ?>
+
+	<?php else : ?> 
+	<<?php echo $moduleTag; ?>>
+	<?php endif; ?>
+	<!-- Fin Choix de la balise html5 -->
+
+	<!-- Titre Hn du module -->
+	<?php if ($module->showtitle) : ?> 
+		<?php if (empty($headerLvl)) : ?>
+			<?php echo "<h3>"; ?>
+			<?php else: ?>
+			<<?php echo $headerLvl; ?>>
+		<?php endif; ?>
+	<!-- Fin titre du module -->
+		<span id="label<?php echo $module->id; ?>"><?php echo JText::_( $module->title ); ?></span>	
+	<!-- Fermeture Hn du module -->	
+		<?php if (empty($headerLvl)) : ?>
+			<?php echo "</h3>"; ?>
+		<?php else: ?>
+			</<?php echo $headerLvl; ?>>
+		<?php endif; ?>
+	<!-- Fin fermeture Hn du module -->
 		<?php else : ?>
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<?php endif; ?>
-			<div id="Mod<?php echo $module->id; ?>" class="moduletable <?php echo htmlspecialchars($params->get('moduleclass_sfx')); ?> ">
+		<<?php echo $headerLvl; ?> class="sr-only">
+		<span id="label<?php echo $module->id; ?>"><?php echo JText::_( $module->title ); ?></span>
+		</<?php echo $headerLvl;  ?>>	
+	<?php endif; ?>
 
-				<?php if ($moduleTag == 'div') : ?>
-					<?php if ($activeasidemod == 1 ): ?>
-					<aside role="<?php echo $asidemod; ?>">
-					<?php endif ?>
-					<?php if ($moduletype == 'mod_menu') {
-						echo '<nav  role="navigation" aria-labelledby="label'.$module->id.'">';
-					} ?>
-				<?php else : ?>
-					<<?php echo $moduleTag; ?>>
-				<?php endif; ?>
+			<!-- Content du module -->
+			<div class="modcontent"> 
+				<?php echo $module->content; ?>
+			</div>
+				
+	<!-- Fermeture balise html5 -->
+	<?php if (($moduleTag == 'div') || (empty($moduleTag))) : ?>
+		<?php if ($activeasidemod == 1 ): ?>
+		</aside>
+		<?php endif ?>
+			
+		<?php if ($moduletype == 'mod_menu'): ?>
+		</nav>
+		<?php endif; ?>
 
-					<!-- Titre du module -->
-					<?php if ($module->showtitle) : ?> 
-						<<?php echo $headerLvl; ?>><span id="label<?php echo $module->id; ?>"><?php echo JText::_( $module->title ); ?></span></<?php echo $headerLvl;  ?>>
-					<?php else : ?>
-						<<?php echo $headerLvl; ?> class="sr-only"><span id="label<?php echo $module->id; ?>"><?php echo JText::_( $module->title ); ?></span></<?php echo $headerLvl;  ?>>	
-					<?php endif; ?>
-
-					<!-- Content du module -->
-					<div class="modcontent"> 
-						<?php echo $module->content; ?>
-					</div>
-				<?php if ($moduleTag == 'div') : ?>
-					<?php if ($moduletype == 'mod_menu') {
-						echo '</nav>';
-					} ?>
-					<?php if ($activeasidemod == 1 ): ?>
-					</aside>
-					<?php endif ?>
-				<?php else : ?>
-					</<?php echo $moduleTag; ?>>
-				<?php endif; ?>
-
+	<?php else : ?> 
+	</<?php echo $moduleTag; ?>>
+	<?php endif; ?>
+	<!-- Fin Fermeture balise html5 -->
+ 
 			</div>
 			<?php if ($paramtmpl_debug == 1) : ?>	
 			<a tabindex="0" class="btn btn-sm btn-warning" role="button" data-html="true" data-toggle="popover" data-placement="bottom" data-trigger="focus" title="Paramètre du template" 

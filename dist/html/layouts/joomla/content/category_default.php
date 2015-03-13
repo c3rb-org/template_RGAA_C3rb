@@ -23,13 +23,15 @@ if (substr($className, -1) == 's')
 }
 $tagsData  = $displayData->get('category')->tags->itemTags;
 ?>
+<article>
 <div>
-
 	<div class="<?php echo $className .'-category' . $displayData->pageclass_sfx;?>">
 		<?php if ($params->get('show_page_heading')) : ?>
-			<h1>
+			<!-- <h1> -->
+			<h2>
 				<?php echo $displayData->escape($params->get('page_heading')); ?>
-			</h1>
+			</h2>
+			<!-- </h1> -->
 		<?php endif; ?>
 		<?php if($params->get('show_category_title', 1)) : ?>
 			<h2>
@@ -63,4 +65,4 @@ $tagsData  = $displayData->get('category')->tags->itemTags;
 		<?php endif; ?>
 	</div>
 </div>
-
+</article>
