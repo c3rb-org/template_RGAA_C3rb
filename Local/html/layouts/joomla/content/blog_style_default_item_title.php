@@ -19,14 +19,16 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
 
 			<?php if ($params->get('show_title')) : ?>
 
-				<h1 itemprop="name">
+				<!-- <h1 itemprop="name"> -->
+				<h2>
 					<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
 						<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($displayData->slug, $displayData->catid)); ?>" itemprop="url">
 						<?php echo $this->escape($displayData->title); ?></a>
 					<?php else : ?>
 						<?php echo $this->escape($displayData->title); ?>
 					<?php endif; ?>
-				</h1>
+				</h2>
+				<!-- </h1> -->
 
 			<?php endif; ?>
 
