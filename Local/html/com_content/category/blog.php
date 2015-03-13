@@ -18,19 +18,24 @@ JHtml::_('behavior.caption');
 	<?php if ($this->params->get('show_page_heading', 1)) : ?>
 			
 		<div class="page-header">
-			<h1><?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
+			<!-- <h1> -->
+			<h2>
+			<?php echo $this->escape($this->params->get('page_heading')); ?>
+			</h2>
+			<!-- </h1> -->
 		</div>
 	<?php endif; ?>
 
 <header>
 	<?php if ($this->params->get('show_category_title', 1) or $this->params->get('page_subheading')) : ?>
-		<h1>
-
+		<!-- <h1> -->
+<h2>
 			<?php echo $this->escape($this->params->get('page_subheading')); ?>
 			<?php if ($this->params->get('show_category_title')) : ?>
 				<span class="subheading-category"><?php echo $this->category->title; ?></span>
 			<?php endif; ?>
-		</h1>
+</h2>
+		<!-- <h1> -->/
 
 	<?php endif; ?>
 	<?php if ($this->params->get('show_cat_tags', 1) && !empty($this->category->tags->itemTags)) : ?>
