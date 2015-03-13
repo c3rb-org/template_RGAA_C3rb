@@ -646,7 +646,7 @@ abstract class JHtmlBootstrap
 		$html = '<div class="panel panel-default' . $class . '">'
 			. '<div class="panel-heading" role="tab" id="heading'.$id.'">'
 			. '<h4 class="panel-title">'
-			. '<a data-toggle="collapse" data-parent="#' . $selector . '" href="#'.$id.'" aria-expanded="true" aria-controls="'.$id.'" data-toggle="collapse">'
+			. '<a data-toggle="collapse" data-parent="#' . $selector . '" href="#'.$id.'" aria-expanded="true" aria-controls="'.$id.'">'
 			. $text
 			. '</a>'
 			. '</h4>'
