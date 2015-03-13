@@ -1,4 +1,8 @@
 /* Template joomla */
+/* Systeme liste chosen noconflict */
+.tab-pane-noconflictchosen {
+  display: block;
+}
 /* Com search */
 .searchintro {
   border-bottom: 1px solid #e0e0e0;
@@ -83,6 +87,49 @@ a[target="_blank"]:after {
 ul.unstyled {
   list-style-type: none;
   padding: 0px;
+}
+.nopadding {
+  padding: 0 !important;
+}
+.nomarge {
+  margin: 0 !important;
+}
+.nomargeleft {
+  margin-left: 0 !important;
+}
+.margeleft {
+  margin-left: 10px !important;
+}
+.margeright {
+  margin-right: 10px !important;
+}
+.margebottom {
+  margin-bottom: 10px !important;
+}
+.margetop {
+  margin-top: 10px !important;
+}
+.marge {
+  margin: 0 10px 10px 0 !important;
+}
+.margeleft-s {
+  margin-left: 5px !important;
+}
+.margeright-s {
+  margin-right: 5px !important;
+}
+.margebottom-s {
+  margin-bottom: 5px !important;
+}
+.margetop-s {
+  margin-top: 5px !important;
+}
+.marge-s {
+  margin: 0 5px 5px 0 !important;
+}
+hr.hrlight {
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 /* Add bootstrap multilvl menu */
 .dropdown-submenu {
