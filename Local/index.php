@@ -298,7 +298,7 @@ if($config->debug == 1) : ?>
 	<!-- <script src="<?php echo $tmplpath; ?>/js/bootstrap-accessibility.min.js" defer></script> -->
 	<script src="<?php echo $tmplpath; ?>/js/stacktable.min.js" defer></script>
 	<script src="<?php echo $tmplpath; ?>/js/template.min.js" type="text/javascript" defer></script>
-<?php endif;?>
-
+<?php endif;?>	
+	
 </body>
 </html>
