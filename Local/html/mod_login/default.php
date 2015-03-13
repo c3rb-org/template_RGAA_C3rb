@@ -15,7 +15,7 @@ JHtml::_('behavior.keepalive');
 JHtml::_('bootstrap.tooltip');
 
 ?>
-<form action="<?php echo JRoute::_(JUri::getInstance()->toString(), true, $params->get('usesecure')); ?>" method="post" id="login-form" class="form-inline">
+<form action="<?php echo JRoute::_(JUri::getInstance()->toString(), true, $params->get('usesecure')); ?>" method="post" id="login-form" class="form-horyzontal">
 	<?php if ($params->get('pretext')) : ?>
 		<div class="pretext">
 			<p><?php echo $params->get('pretext'); ?></p>
@@ -25,11 +25,9 @@ JHtml::_('bootstrap.tooltip');
 		<div id="form-login-username" class="form-group">
 			<div class="form-group">
 				<?php if (!$params->get('usetext')) : ?>
-					<div class="input-prepend">
-						<span class="add-on">
-							<span class="glyphicon glyphicon-user hasTooltip" title="<?php echo JText::_('MOD_LOGIN_VALUE_USERNAME') ?>"></span>
-							<label id="modlgn-username-label" for="modlgn-username" class="sr-only"><?php echo JText::_('MOD_LOGIN_VALUE_USERNAME'); ?></label>
-						</span>
+					<div class="input-group">
+						<span class="glyphicon glyphicon-user hasTooltip input-group-addon" title="<?php echo JText::_('MOD_LOGIN_VALUE_USERNAME') ?>"></span>
+						<label id="modlgn-username-label" for="modlgn-username" class="sr-only"><?php echo JText::_('MOD_LOGIN_VALUE_USERNAME'); ?></label>
 						<input id="modlgn-username" type="text" name="username" class="form-control" tabindex="0" size="18" placeholder="<?php echo JText::_('MOD_LOGIN_VALUE_USERNAME') ?>" aria-labelledby="modlgn-username-label" />
 					</div>
 				<?php else: ?>
@@ -41,13 +39,11 @@ JHtml::_('bootstrap.tooltip');
 		<div id="form-login-password" class="form-group">
 			<div class="form-group">
 				<?php if (!$params->get('usetext')) : ?>
-					<div class="input-prepend">
-						<span class="add-on">
-							<span class="glyphicon glyphicon-lock hasTooltip" title="<?php echo JText::_('JGLOBAL_PASSWORD') ?>">
+					<div class="input-group">
+							<span class="glyphicon glyphicon-lock hasTooltip input-group-addon" title="<?php echo JText::_('JGLOBAL_PASSWORD') ?>">
 							</span>
 								<label id="modlgn-passwd-label" for="modlgn-passwd" class="sr-only"><?php echo JText::_('JGLOBAL_PASSWORD'); ?>
 							</label>
-						</span>
 						<input id="modlgn-passwd" type="password" name="password" class="form-control" tabindex="0" size="18" placeholder="<?php echo JText::_('JGLOBAL_PASSWORD') ?>" aria-labelledby="modlgn-passwd-label" />
 					</div>
 				<?php else: ?>
@@ -60,13 +56,11 @@ JHtml::_('bootstrap.tooltip');
 		<div id="form-login-secretkey" class="form-group">
 			<div class="form-control">
 				<?php if (!$params->get('usetext')) : ?>
-					<div class="input-prepend input-append">
-						<span class="add-on">
+					<div class="input-group input-append">
 							<span class="icon-star hasTooltip" title="<?php echo JText::_('JGLOBAL_SECRETKEY'); ?>">
 							</span>
 								<label for="modlgn-secretkey" class="sr-only"><?php echo JText::_('JGLOBAL_SECRETKEY'); ?>
 							</label>
-						</span>
 						<input id="modlgn-secretkey" autocomplete="off" type="text" name="secretkey" class="form-control" tabindex="0" size="18" placeholder="<?php echo JText::_('JGLOBAL_SECRETKEY') ?>" />
 						<span class="btn width-auto hasTooltip" title="<?php echo JText::_('JGLOBAL_SECRETKEY_HELP'); ?>">
 							<span class="icon-help"></span>
@@ -79,15 +73,17 @@ JHtml::_('bootstrap.tooltip');
 						<span class="icon-help"></span>
 					</span>
 				<?php endif; ?>
-
 			</div>
 		</div>
 		<?php endif; ?>
 		<?php if (JPluginHelper::isEnabled('system', 'remember')) : ?>
 		<div id="form-login-remember" class="checkbox">
-			<div>
+			<div class="checkbox">
+			<label for="modlgn-remember">
 			<input id="modlgn-remember" type="checkbox" name="remember" class="" value="yes"/>
-			<label for="modlgn-remember"><?php echo JText::_('MOD_LOGIN_REMEMBER_ME') ?></label>
+			<?php echo JText::_('MOD_LOGIN_REMEMBER_ME') ?>
+			</label>
+			
 			</div> 
 		</div>
 		<?php endif; ?>
