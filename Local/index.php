@@ -303,8 +303,13 @@ if($config->debug == 1) : ?>
 	<!-- <script src="<?php echo $tmplpath; ?>/js/bootstrap-accessibility.min.js" defer></script> -->
 	<script src="<?php echo $tmplpath; ?>/js/stacktable.min.js" defer></script>
 	<script src="<?php echo $tmplpath; ?>/js/template.min.js" type="text/javascript" defer></script>
+<<<<<<< HEAD
 
 <?php endif;?>
  
+=======
+<?php endif;?>	
+	
+>>>>>>> 7ebb2c6084985609b61eafb04e15c59d36e9c111
 </body>
 </html> 
