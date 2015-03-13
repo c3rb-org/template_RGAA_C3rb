@@ -1,10 +1,53 @@
 /* Template joomla */
+/* Com search */
+.searchintro {
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 40px;
+  margin-top: 15px;
+}
+.search .ordering-box {
+  margin-bottom: 25px;
+}
+.search .ordering-box {
+  margin-bottom: 25px;
+}
+.search .form-limit {
+  border-top: 1px solid #e0e0e0;
+  margin: 25px 0;
+  padding: 25px 0 0;
+}
+dl.search-results dt.result-title {
+  border-top: 1px solid #e0e0e0;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+dl.search-results dt:first-child {
+  border-top: 0px solid #e0e0e0;
+  margin-top: 0px;
+  padding-top: 0px;
+}
+/* Module en col droite */
+.coldrte .moduletable {
+  background: none repeat scroll 0 0 #f7f7f7;
+  margin-bottom: 10px;
+  padding: 1px 10px 10px;
+}
 /* pagination */
 .pagination .counter {
   border-bottom: 0px;
 }
 /* com_content */
 /* article */
+.article-info.muted {
+  background: none repeat scroll 0 0 #f5f5f5;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 15px;
+  padding: 10px 10px 0px 10px;
+  min-height: 65px;
+}
+dl.article-info a {
+  margin-left: 5px;
+}
 dl.article-info dd:after {
   content: " | ";
   margin-left: 5px;
@@ -17,10 +60,6 @@ dl.article-info dd {
 }
 dl.article-info dd:last-child:after {
   content: "";
-}
-/* archive */
-.chzn-container {
-  width: 100% !important;
 }
 /* mod_articles_category */
 .article-info-mod-cat span:after {
@@ -35,8 +74,9 @@ dl.article-info dd:last-child:after {
 }
 /* Accessibility */
 a[target="_blank"]:after {
-  border: 1px solid #FFFFFF;
   font-family: "Glyphicons Halflings";
+  font-size: 10px;
+  margin-left: 5px;
   content: "\e164";
 }
 /* My bootstrap */
@@ -445,3 +485,7 @@ body .debughtml h2:before {
   padding: 9px 15px;
 }
 /* Systeme debug template */
+/* Theme joomla day */
+img.bannierejday {
+  width: 100%;
+}
