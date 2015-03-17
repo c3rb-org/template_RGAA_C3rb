@@ -7,20 +7,20 @@ module.exports = function(grunt) {
 			golocal: {
 				files: [
 		    	//bootstrap
-		    	{expand: true, cwd: 'node_modules/bootstrap/js/', src: ['**', '!**/tests/**'], dest: '../Local/js/js_bs'}, // '!**/tests/**' on exclu le dossier test		    	
+		    	{expand: true, cwd: 'node_modules/bootstrap/js/', src: ['**', '!**/tests/**'], dest: '../Local/js/js_uncompress/js_bs'}, // '!**/tests/**' on exclu le dossier test		    	
 		    	{expand: true, cwd: 'node_modules/bootstrap/less/', src: ['**'], dest: '../Local/css/less/less_bs'},
 		    	{expand: true, cwd: 'node_modules/bootstrap/fonts/', src: ['**'], dest: '../Local/fonts'},
 		      	// font awesome
 		      	{expand: true, cwd: 'node_modules/font-awesome/less/', src: ['**'], dest: '../Local/css/less/less_fontawesome'},
 		      	{expand: true, cwd: 'node_modules/font-awesome/fonts/', src: ['**'], dest: '../Local/fonts'},
 		      	// Paypalplugin js accessible pour bootstrap
-		      	{expand: true, cwd: 'node_modules/bootstrap-accessibility-plugin/plugins/js/', src: ['**', '!**/tests/**'], dest: '../Local/js/js_ppaccessible'}, // '!**/tests/**' on exclu le dossier test
+		      	//{expand: true, cwd: 'node_modules/bootstrap-accessibility-plugin/plugins/js/', src: ['**', '!**/tests/**'], dest: '../Local/js/js_ppaccessible'}, // '!**/tests/**' on exclu le dossier test
 		      	],
 		      },
 		    godist: {
 				files: [
 	    		//bootstrap
-	    		{expand: true, cwd: '../Local/', src: ['**', '!**/tests/**', '!**/_doc/**', '!**/less/**', '!**/js_bs/**', '!**/js_ppaccessible/**', '!**/js_c3rb/**', '!**/js_tablerwd/**', '!**/html/**/*.bak'], dest: '../dist/'},		    	
+	    		{expand: true, cwd: '../Local/', src: ['**', '!**/tests/**', '!**/_doc/**', '!**/less/**', '!**/html/**/*.bak'], dest: '../dist/'},		    	
 	      		// Dist copy to template mir // idee a aprofondir
 	    		{expand: true, cwd: '../dist/', src: ['**'], dest: '../../joomla3x/templates/rgaac3rb/'}, 		    	
 	      		],
@@ -75,55 +75,24 @@ module.exports = function(grunt) {
 				},
 				files: {
 					//bootstrap js
-					'../Local/js/bootstrap.min.js': 				[	'../Local/js/js_bs/transition.js',
-																		'../Local/js/js_bs/alert.js',
-																		'../Local/js/js_bs/button.js',
-																		'../Local/js/js_bs/carousel.js',
-																		'../Local/js/js_bs/collapse.js',
-																		'../Local/js/js_bs/dropdown.js',
-																		'../Local/js/js_bs/modal.js',
-																		'../Local/js/js_bs/tooltip.js',
-																		'../Local/js/js_bs/popover.js',
-																		'../Local/js/js_bs/scrollspy.js',
-																		'../Local/js/js_bs/tab.js',
-																		'../Local/js/js_bs/affix.js'
-												 					],
-					//paypal accessib js
-					'../Local/js/bootstrap-accessibility.min.js': 	[	'../Local/plugin/js/js_ppaccessible/bootstrap-accessibility.js'
-												 				  	],
-
-					'../Local/js/stacktable.min.js':				[	'../Local/js/js_tablerwd/stacktable.js'
-												 				  	],
-					'../Local/js/template.min.js': 					[	'../Local/js/js_c3rb/app.js'
-												 				  	],
-				},
-			},
-			tmpl_jsuncompress: {
-				options: {
-					beautify: true //si true on compile le js sans compression
-				},
-				files: {
-					'../Local/js/bootstrap.js': 					[	'../Local/js/js_bs/transition.js',
-																		'../Local/js/js_bs/alert.js',
-																		'../Local/js/js_bs/button.js',
-																		'../Local/js/js_bs/carousel.js',
-																		'../Local/js/js_bs/collapse.js',
-																		'../Local/js/js_bs/dropdown.js',
-																		'../Local/js/js_bs/modal.js',
-																		'../Local/js/js_bs/tooltip.js',
-																		'../Local/js/js_bs/popover.js',
-																		'../Local/js/js_bs/scrollspy.js',
-																		'../Local/js/js_bs/tab.js',
-																		'../Local/js/js_bs/affix.js'
-												 					],
-					'../Local/js/bootstrap-accessibility.js': 		[	'../Local/plugin/js/js_ppaccessible/bootstrap-accessibility.js'
-												 				  	],
-					'../Local/js/stacktable.js':					[	'../Local/js/js_tablerwd/stacktable.js'
-												 				  	],
-
-					'../Local/js/template.js': 						[	'../Local/js/js_c3rb/app.js'
-												 				  	],
-
+					'../Local/js/template.min.js': 				[	// Bootstrap
+																		'../Local/js/js_uncompress/js_bs/transition.js',
+																		'../Local/js/js_uncompress/js_bs/alert.js',
+																		'../Local/js/js_uncompress/js_bs/button.js',
+																		'../Local/js/js_uncompress/js_bs/carousel.js',
+																		'../Local/js/js_uncompress/js_bs/collapse.js',
+																		'../Local/js/js_uncompress/js_bs/dropdown.js',
+																		'../Local/js/js_uncompress/js_bs/modal.js',
+																		'../Local/js/js_uncompress/js_bs/tooltip.js',
+																		'../Local/js/js_uncompress/js_bs/popover.js',
+																		'../Local/js/js_uncompress/js_bs/scrollspy.js',
+																		'../Local/js/js_uncompress/js_bs/tab.js',
+																		'../Local/js/js_uncompress/js_bs/affix.js',
+																		// C3rb
+																		'../Local/js/js_uncompress/js_c3rb/app.js',
+																		// Table rwd
+																		'../Local/js/js_uncompress/js_tablerwd/js_tablerwd.js'
+																	],
 				},
 			},
 		},
