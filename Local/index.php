@@ -56,8 +56,7 @@ $doc            	= JFactory::getDocument();
 	else {
 		$doc->addStyleSheet( ''. $tmplpath .'/css/template.min.css ' );	
 	}
-// Le Js en fond d'index
-
+	// Le Js en fond d'index
 	?>
 
 
@@ -285,25 +284,29 @@ if ($nbmod): ?>
 	//require_once 'html/font.test.full.php'; 	
 } 
 ?>
-
-
-
-
  
 <?php 
 // Si on est en debug on vas chercher les elements non minifié.
-if($config->debug == 1) : ?>	
-<!-- Si le debug on inclu les exemple botstrap -->
-<script src="<?php echo $tmplpath; ?>/js/bootstrap.js" defer></script>
-<script src="<?php echo $tmplpath; ?>/js/bootstrap-accessibility.js" defer></script> <!-- https://paypal.github.io/bootstrap-accessibility-plugin/demo.html -->
-<script src="<?php echo $tmplpath; ?>/js/stacktable.js" defer></script> <!-- https://paypal.github.io/bootstrap-accessibility-plugin/demo.html -->
-<script src="<?php echo $tmplpath; ?>/js/template.js" type="text/javascript" defer></script>
+if($config->debug == 1) : ?> 	
+	<!-- Bootstrap -->
+	<script src="<?php echo $tmplpath; ?>/js/js/js_bs/transition.js" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js/js_bs/alert.js" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js/js_bs/button.js" defer></script> 
+	<script src="<?php echo $tmplpath; ?>/js/js/js_bs/carousel.js" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js/js_bs/collapse.js" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js/js_bs/dropdown.js" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js/js_bs/modal.js" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js/js_bs/tooltip.js" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js/js_bs/popover.js" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js/js_bs/scrollspy.js" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js/js_bs/tab.js" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js/js_bs/affix.js" defer></script>
+	<!-- C3rb -->
+	<script src="<?php echo $tmplpath; ?>/js/js/js_c3rb/app.js" defer></script>
+	<!-- Table rwd -->
+	<script src="<?php echo $tmplpath; ?>/js/js/js_tablerwd/stacktable.js" defer></script>
 <?php else : ?> 
-	<script src="<?php echo $tmplpath; ?>/js/bootstrap.min.js" defer></script>
-	<!-- <script src="<?php echo $tmplpath; ?>/js/bootstrap-accessibility.min.js" defer></script> -->
-	<script src="<?php echo $tmplpath; ?>/js/stacktable.min.js" defer></script>
-	<script src="<?php echo $tmplpath; ?>/js/template.min.js" type="text/javascript" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/template.min.js" defer></script>
 <?php endif;?>
-
 </body>
 </html> 
