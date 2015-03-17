@@ -15,7 +15,7 @@ if(window.MooTools)
 {
     Element.implement({
 	    hide: function () { return this; },
-	    show: function (v) { return this; },
-	    slide: function (v) { return this; }
+	    show: function () { return this; },
+	    slide: function () { return this; }
     });
 }
