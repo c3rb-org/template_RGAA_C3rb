@@ -1,7 +1,7 @@
 <?php
 defined( '_JEXEC' ) or die; 
 
-// Parametre general joomla
+// Parametre general joomla 
 $app            	= JFactory::getApplication(); 
 $doc            	= JFactory::getDocument();							
 	$user            	= JFactory::getUser();								// Info Users
