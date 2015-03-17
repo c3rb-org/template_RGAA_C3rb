@@ -298,9 +298,8 @@ if(JDEBUG) : ?>
 	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_bs/scrollspy.js" type="text/javascript" defer></script>
 	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_bs/tab.js" type="text/javascript" defer></script>
 	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_bs/affix.js" type="text/javascript" defer></script>
-
-	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_uncompress/js_c3rb/app.js" type="text/javascript" defer></script>
-	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_uncompress/bootstrap.js" type="text/javascript" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_tablerwd/stacktable.js" type="text/javascript" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_c3rb/app.js" type="text/javascript" defer></script>
 <?php else : ?> 
 	<script src="<?php echo $tmplpath; ?>/js/template.min.js" type="text/javascript" defer></script>
 <?php endif;?>
