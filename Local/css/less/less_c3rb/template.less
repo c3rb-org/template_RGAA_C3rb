@@ -1,0 +1,72 @@
+@import "htmldebug.less";
+@import "bootstrapc3rb.less";
+
+/* Template joomla */
+/* Systeme liste chosen noconflict */
+.tab-pane-noconflictchosen {display: block}
+
+/* Com search */
+.searchintro {    
+	border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 40px;
+    margin-top: 15px;}
+.search .ordering-box {
+    margin-bottom: 25px;
+}
+.search {
+	.ordering-box {margin-bottom: 25px;}
+	.form-limit {    
+		border-top: 1px solid #e0e0e0;
+    	margin: 25px 0;
+    	padding: 25px 0 0;}
+}
+dl.search-results {
+	dt.result-title {
+	    border-top: 1px solid #e0e0e0;
+	    margin-top: 10px;
+	    padding-top: 10px;
+	}
+	dt:first-child {
+		border-top: 0px solid #e0e0e0;
+	    margin-top: 0px;
+	    padding-top: 0px;
+	}
+}
+
+/* Module en col droite */
+.coldrte .moduletable {
+    background: none repeat scroll 0 0 #f7f7f7;
+    margin-bottom: 10px;
+    padding: 1px 10px 10px;
+}
+
+/* pagination */
+.pagination .counter { border-bottom: 0px;}
+.pagination .pagination {}
+
+
+/* com_content */
+/* article */
+.article-info.muted {
+    background: none repeat scroll 0 0 #f5f5f5;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 15px;
+    padding: 10px 10px 0px 10px;
+    min-height: 65px;
+}
+dl.article-info a {margin-left:5px}
+dl.article-info dd:after {content: " | "; margin-left: 5px;}
+dl.article-info dd {
+    display: flex; /* hoouuu du flex ca fait peur ^^ */
+    float: left;
+    margin-right: 5px;
+
+}
+dl.article-info dd:last-child:after {content: ""} 
+
+/* mod_articles_category */
+.article-info-mod-cat span:after {content: " | "}
+.article-info-mod-cat span:last-child:after {content: ""} 
+
+/* mod_banner */
+.banneritem {overflow: hidden;}
