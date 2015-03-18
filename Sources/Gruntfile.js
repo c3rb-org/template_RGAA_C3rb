@@ -23,6 +23,7 @@ module.exports = function(grunt) {
 	    		{expand: true, cwd: '../Local/', src: ['**', '!**/tests/**', '!**/_doc/**', '!**/less/**', '!**/html/**/*.bak'], dest: '../dist/'},		    	
 	      		// Dist copy to template mir // idee a aprofondir
 	    		{expand: true, cwd: '../dist/', src: ['**'], dest: '../../joomla3x/templates/rgaac3rb/'}, 		    	
+	    		{expand: true, cwd: '../dist/', src: ['**'], dest: '../../joomla3x_demo01/templates/rgaac3rb/'}, 		    	
 	      		],
 	      	},
 		  },
@@ -50,7 +51,7 @@ module.exports = function(grunt) {
 					// optimization: 1 à 7 // pour compresser encore plus sur une echelle de 1 à 7
 				},
 					files: {
-						"../Local/css/template.css": "../Local/css/less/template.less",
+						"../Local/css/template.css": "../Local/css/less/less_c3rb/template.less",
 						"../Local/css/bootstrap.css": "../Local/css/less/less_bs/bootstrap.less",
 						"../Local/css/font-awesome.css": "../Local/css/less/less_fontawesome/font-awesome.less",
 						//"../Local/css/bootstrap.css": "../Local/css/less/less_ppaccessible/bootstrap.less" ligne paypaljs accessible
