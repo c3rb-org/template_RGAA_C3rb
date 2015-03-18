@@ -12,11 +12,14 @@ defined('_JEXEC') or die;
 $msgList = $displayData['msgList'];
 
 ?>
+<div class="container margetop">
+	<div class="row">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 <div id="system-message-container">
 	<?php if (is_array($msgList) && !empty($msgList)) : ?>
 		<div id="system-message">
 			<?php foreach ($msgList as $type => $msgs) : ?>
-				<div class="alert alert-<?php echo $type; ?>">
+							<div class="alert alert-info alert-<?php echo $type; ?>">
 					<?php // This requires JS so we should add it trough JS. Progressive enhancement and stuff. ?>
 					<button type="button" class="close" data-dismiss="alert" aria-label="Close">
   						<span aria-hidden="true">&times;</span>
@@ -34,4 +37,7 @@ $msgList = $displayData['msgList'];
 			<?php endforeach; ?>
 		</div>
 	<?php endif; ?>
+			</div>
+		</div>
+	</div>
 </div>

@@ -21,10 +21,6 @@ $lang->load('plg_user_profile', JPATH_ADMINISTRATOR);
 $tab_input = array('name','username','password1','password2','email1','email2');
 foreach($tab_input as $i)
 	$this->form->setFieldAttribute($i, 'class', 'form-control');
-	
-
-
-	$this->form->setFieldAttribute($i,'class','form-control');
 /* fin On injecte des classes dans les input */
 
 
