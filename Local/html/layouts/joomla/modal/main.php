@@ -10,7 +10,6 @@
 defined('JPATH_BASE') or die;
 
 extract($displayData);
-
 /**
  * Layout variables
  * ------------------
