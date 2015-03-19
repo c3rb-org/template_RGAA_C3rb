@@ -53,9 +53,9 @@ if (isset($params['keyboard']))
 
 if (isset($params['url']))
 {
-	$iframeHtml = JLayoutHelper::render('joomla.modal.iframe', $displayData);
+	//$iframeHtml = JLayoutHelper::render('joomla.modal.iframe', $displayData);
 
-	JFactory::getDocument()->addScriptDeclaration("
+	/*JFactory::getDocument()->addScriptDeclaration("
 		jQuery(document).ready(function($) {
 			$('#" . $selector . "').on('show.bs.modal', function() {
 				var modalBody = $(this).find('.modal-body');
@@ -68,7 +68,11 @@ if (isset($params['url']))
 
 			});
 		});
-	");
+	");*/
+	
+	$modalAttributes['data-iframe'] = $params['url'];
+	$modalAttributes['data-iframe-width'] = $params['width'];
+	$modalAttributes['data-iframe-height'] = $params['height'];
 }
 ?>
 <div id="<?php echo $selector; ?>" <?php echo JArrayHelper::toString($modalAttributes); ?> role="dialog" aria-labelledby="<?php echo $selector; ?>Label" aria-hidden="true">
