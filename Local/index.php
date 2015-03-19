@@ -284,7 +284,7 @@ if ($nbmod): ?>
  
 <?php 
 // Si on est en debug on vas chercher les elements non minifié.
-if(JDEBUG) : ?>	
+if(JDEBUG || JString::strpos(JUri::base(),'wdev009') >= 0) : ?>	
 	<!-- Si le debug on inclu les exemple botstrap -->
 	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_bs/transition.js" type="text/javascript" defer></script>
 	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_bs/alert.js" type="text/javascript" defer></script>
@@ -301,7 +301,7 @@ if(JDEBUG) : ?>
 	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_tablerwd/stacktable.js" type="text/javascript" defer></script>
 	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_c3rb/app.js" type="text/javascript" defer></script>
 <?php else : ?> 
-	<script src="<?php echo $tmplpath; ?>/js/template.min.js" type="text/javascript" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/template.min.js" type="text/javascript"></script>
 <?php endif;?>
 
 </body>
