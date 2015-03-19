@@ -1,7 +1,7 @@
 <?php
 defined( '_JEXEC' ) or die; 
-
-// Parametre general joomla
+ 
+// Parametre general joomla 
 $app            	= JFactory::getApplication(); 
 $doc            	= JFactory::getDocument();							
 	$user            	= JFactory::getUser();								// Info Users
@@ -16,7 +16,6 @@ $doc            	= JFactory::getDocument();
 	$headerlvl 			= $params->get('headerLevel');						// Niveau de titre du module choisi dans l'admin
 	$tmplpath 			= $this->baseurl.'/templates/'.$this->template;     // adresse du template
 	
-	$config 			= new JConfig(); 
 	$doc->setGenerator('');	 	 											// on supprime le generator content="Joomla! - Open Source Content Management" pour plus de securite
 // Parametre du template
 	// Basics
@@ -45,20 +44,17 @@ $doc            	= JFactory::getDocument();
 	// Force la derniere version de IE
 	//$doc->setMetadata('x-ua-compatible','IE=edge,chrome=1'); Commente car pas valide w3c, sauf manipulation IIS remplacer par ligne90
 
-// Le CSS
-	// Si on est en debug on vas chercher les elements non minifie.
-	if($config->debug == 1) {
-		$doc->addStyleSheet( ''. $tmplpath .'/css/bootstrap.css');
-		$doc->addStyleSheet( ''. $tmplpath .'/css/font-awesome.css');
-		$doc->addStyleSheet( ''. $tmplpath .'/css/template.css');
-	}
-	//Sinon on vas chercher du minifier.
-	else {
-		$doc->addStyleSheet( ''. $tmplpath .'/css/template.min.css ' );	
-	}
-// Le Js en fond d'index
-
-	?>
+	//Ajout des css : css template toujours en premier
+	$tab_sheets = $doc->_styleSheets;
+	$doc->_styleSheets = array();
+	if(JDEBUG)
+		$doc->addStyleSheet( ''. $tmplpath .'/css/bootstrap.css')->addStyleSheet( ''. $tmplpath .'/css/font-awesome.css')->addStyleSheet( ''. $tmplpath .'/css/template.css');
+	else
+		$doc->addStyleSheet( ''. $tmplpath .'/css/template.min.css' );
+	foreach($tab_sheets as $url => $val)
+		$doc->addStyleSheet($url,$val['mime'],$val['media'],$val['attribs']);
+	
+?>
 
 
 	<!DOCTYPE html>
@@ -285,23 +281,26 @@ if ($nbmod): ?>
 	//require_once 'html/font.test.full.php'; 	
 } 
 ?>
-
-
-
-
  
 <?php 
 // Si on est en debug on vas chercher les elements non minifié.
-if($config->debug == 1) : ?>	
-<!-- Si le debug on inclu les exemple botstrap -->
-<script src="<?php echo $tmplpath; ?>/js/bootstrap.js" defer></script>
-<script src="<?php echo $tmplpath; ?>/js/bootstrap-accessibility.js" defer></script> <!-- https://paypal.github.io/bootstrap-accessibility-plugin/demo.html -->
-<script src="<?php echo $tmplpath; ?>/js/stacktable.js" defer></script> <!-- https://paypal.github.io/bootstrap-accessibility-plugin/demo.html -->
-<script src="<?php echo $tmplpath; ?>/js/template.js" type="text/javascript" defer></script>
+if(JDEBUG) : ?>	
+	<!-- Si le debug on inclu les exemple botstrap -->
+	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_bs/transition.js" type="text/javascript" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_bs/alert.js" type="text/javascript" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_bs/button.js" type="text/javascript" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_bs/carousel.js" type="text/javascript" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_bs/collapse.js" type="text/javascript" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_bs/dropdown.js" type="text/javascript" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_bs/modal.js" type="text/javascript" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_bs/tooltip.js" type="text/javascript" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_bs/popover.js" type="text/javascript" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_bs/scrollspy.js" type="text/javascript" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_bs/tab.js" type="text/javascript" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_bs/affix.js" type="text/javascript" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_tablerwd/stacktable.js" type="text/javascript" defer></script>
+	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_c3rb/app.js" type="text/javascript" defer></script>
 <?php else : ?> 
-	<script src="<?php echo $tmplpath; ?>/js/bootstrap.min.js" defer></script>
-	<!-- <script src="<?php echo $tmplpath; ?>/js/bootstrap-accessibility.min.js" defer></script> -->
-	<script src="<?php echo $tmplpath; ?>/js/stacktable.min.js" defer></script>
 	<script src="<?php echo $tmplpath; ?>/js/template.min.js" type="text/javascript" defer></script>
 <?php endif;?>
 

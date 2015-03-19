@@ -39,7 +39,7 @@ JFactory::getDocument()->addScriptDeclaration("
 	}
 ");
 
-$tab_input = array('title','alias');
+$tab_input = array('title','alias','version_note','created_by_alias','publish_up','publish_down','metadesc','metakey');
 foreach($tab_input as $i)
 	$this->form->setFieldAttribute($i, 'class', 'form-control');
 	
@@ -133,36 +133,43 @@ foreach($tab_input as $i)
 					</div>
 					<?php endif; ?>
 					<div role="tabpanel" class="tab-pane-noconflictchosen fade" id="publishing">
-
-						<?php echo $this->form->renderField('catid'); ?>
-
-						<?php echo $this->form->renderField('tags'); ?>
-
+					<div class="row margetop margebottom">
+						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+							<div class="form-group"><?php echo $this->form->renderField('catid'); ?></div>
+							<div class="form-group"><?php echo $this->form->renderField('tags'); ?></div>
 						<?php if ($params->get('save_history', 0)) : ?>
-							<?php echo $this->form->renderField('version_note'); ?>
+								<div class="form-group"><?php echo $this->form->renderField('version_note'); ?></div>
 						<?php endif; ?>
-						<?php echo $this->form->renderField('created_by_alias'); ?>
+							<div class="form-group"><?php echo $this->form->renderField('created_by_alias'); ?></div>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
 						<?php if ($this->item->params->get('access-change')) : ?>
-							<?php echo $this->form->renderField('state'); ?>
-							<?php echo $this->form->renderField('featured'); ?>
-							<?php echo $this->form->renderField('publish_up'); ?>
-							<?php echo $this->form->renderField('publish_down'); ?>
+							<div class="form-group"><?php echo $this->form->renderField('state'); ?></div>
+							<div class="form-group"><?php echo $this->form->renderField('featured'); ?></div>
+							<div class="form-inline"><?php echo $this->form->renderField('publish_up'); ?></div>
+							<div class="form-inline"><?php echo $this->form->renderField('publish_down'); ?></div>
 						<?php endif; ?>
-						<?php echo $this->form->renderField('access'); ?>
+						</div>
+						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+							<div class="form-group"><?php echo $this->form->renderField('access'); ?></div>
+						</div>
+						<div class="clearfix"></div>	
 						<?php if (is_null($this->item->id)):?>
-							<div class="form-group">
-								<div class="">
-								</div>
-								<div class="">
+							<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margetop">
+								<div class="alert alert-info">
 									<?php echo JText::_('COM_CONTENT_ORDERING'); ?>
 								</div>
 							</div>
 						<?php endif; ?>
 					</div>
+					</div>
 					<div role="tabpanel" class="tab-pane-noconflictchosen fade" id="language">
+					<div class="margetop margebottom">
 						<?php echo $this->form->renderField('language'); ?>
 					</div>
+					</div>
 					<div role="tabpanel" class="tab-pane-noconflictchosen fade" id="metadata">
+					<div class="margetop margebottom">
 						<?php echo $this->form->renderField('metadesc'); ?>
 						<?php echo $this->form->renderField('metakey'); ?>
 
@@ -172,6 +179,7 @@ foreach($tab_input as $i)
 						<input type="hidden" name="jform[catid]" value="<?php echo $this->params->get('catid', 1); ?>" />
 						<?php endif; ?>
 					</div>
+				</div>
 				</div>
 				<?php echo JHtml::_('form.token'); ?>
 			</div>

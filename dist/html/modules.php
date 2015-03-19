@@ -26,11 +26,12 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 
 	$datacontent 		=										//Contenu du debug
 	"
+					Nom de la positiondu module : <span class='label label-info'>$modposname</span><br />
 					Nbre de module dans la position : <span class='label label-info'>$nbmod</span><br />
 					Taille bootstrap dans l'admin : <span class='label label-info'>$modbssize</span><br />
 					Style du module : <span class='label label-info'>$modstyle</span><br />
 					Nom du module : <span class='label label-info'>$moduletype</span><br />
-					Nom de la positiondu module : <span class='label label-info'>$modposname</span>
+
 	";															
 
 	//Suivant le type du module le aside est different
