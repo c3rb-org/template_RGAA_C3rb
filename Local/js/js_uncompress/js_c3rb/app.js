@@ -17,7 +17,7 @@ jQuery(function ($) {
 	    $(this).on('show.bs.modal', function() {
 		var modalBody = $(this).find('.modal-body');
 		modalBody.find('iframe').remove();
-		modalBody.prepend('<iframe src="' + $(this).attr('data-iframe') + '" width="' + $(this).attr('data-iframe-width') + '" height="' + $(this).attr('data-iframe-height') + '"></iframe>');
+		modalBody.prepend('<iframe style="border:none" src="' + $(this).attr('data-iframe') + '" width="' + $(this).attr('data-iframe-width') + '" height="' + $(this).attr('data-iframe-height') + '"></iframe>');
 	    });
 	   
 	});
