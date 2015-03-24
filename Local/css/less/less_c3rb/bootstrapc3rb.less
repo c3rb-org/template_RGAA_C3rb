@@ -39,6 +39,7 @@ hr.hrlight {margin-bottom: 10px; margin-top: 10px; }
 ul.unstyled {list-style-type: none;  padding: 0px}
 
 /* Menu (ajout a bootstrap pour menu a plusieurs niveaux dans joomla) */
+
 .dropdown-submenu {
     position: relative;
 }
@@ -87,4 +88,16 @@ a[target="_blank"]:after {
     font-size: 10px;
     margin-left: 5px; 
     content: "\e164"; 
+}
+.parent a:focus {
+    outline: thin dotted;
+    outline-offset: -2px;
+}
+
+.parent {
+    a:after {
+    font-family: 'FontAwesome';
+    content: "\f0d7"
+    }
+    ul li a:after {content: ""}
 }
