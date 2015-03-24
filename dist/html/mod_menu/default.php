@@ -23,7 +23,7 @@ defined('_JEXEC') or die;
 			$tag = $params->get('tag_id') . '';  
 			echo ' id="' . $tag . '"';
 		}
-		?>>
+		?> role="menubar">
 		<?php
 		foreach ($list as $i => &$item)
 		{
@@ -81,7 +81,7 @@ defined('_JEXEC') or die;
 			$class = ' class="' . trim($class) . '"';
 		}
 
-		echo '<li' . $class . '>';
+		echo '<li' . $class . ' role="menuitem">';
 
 		// Render the menu item.
 		switch ($item->type) :
