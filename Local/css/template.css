@@ -493,6 +493,27 @@ a[target="_blank"]:after {
   margin-left: 5px;
   content: "\e164";
 }
+.navbar-default .navbar-nav > li > a {
+  color: #565656;
+}
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+.breadcrumb > li {
+  display: inline-block;
+}
+.breadcrumb > li + li:before {
+  content: "/\00a0";
+  padding: 0 5px;
+  color: #cccccc;
+}
+.breadcrumb > .active {
+  color: #565656;
+}
 /* Template joomla */
 /* Systeme liste chosen noconflict */
 .tab-pane-noconflictchosen {
