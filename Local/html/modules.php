@@ -41,7 +41,7 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 	} elseif (($moduletype == 'mod_search') || ($moduletype == 'mod_finder')) {
 		$activeasidemod = 1;
 		$asidemod = 'search';  
-	} elseif ($moduletype == 'mod_menu') {
+	} elseif (($moduletype == 'mod_menu') || ($moduletype == 'mod_breadcrumbs')) {
 		$activeasidemod = 0; 
 	} else {
 		$activeasidemod = 1;
@@ -65,7 +65,7 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 		<aside role="<?php echo $asidemod; ?>">
 		<?php endif ?>
 			
-		<?php if ($moduletype == 'mod_menu'): ?>
+		<?php if (($moduletype == 'mod_menu') || ($moduletype == 'mod_breadcrumbs')): ?>
 		<nav role="navigation" aria-labelledby="label<?php echo $module->id; ?>">
 		<?php endif; ?>
 
