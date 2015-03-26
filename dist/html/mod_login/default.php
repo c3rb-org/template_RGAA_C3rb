@@ -15,7 +15,8 @@ JHtml::_('behavior.keepalive');
 JHtml::_('bootstrap.tooltip');
 
 ?>
-<form action="<?php echo JRoute::_(JUri::getInstance()->toString(), true, $params->get('usesecure')); ?>" method="post" id="login-form" class="form-horyzontal">
+
+<form action="<?php echo JRoute::_(JUri::getInstance()->toString(), true, $params->get('usesecure')); ?>" method="post" id="login-form" class="form-horyzontal form-validate">
 	<?php if ($params->get('pretext')) : ?>
 		<div class="pretext">
 			<p><?php echo $params->get('pretext'); ?></p>
@@ -26,7 +27,7 @@ JHtml::_('bootstrap.tooltip');
 			<div class="form-group">
 				<?php if (!$params->get('usetext')) : ?>
 					<div class="input-group">
-						<span class="glyphicon glyphicon-user hasTooltip input-group-addon" title="<?php echo JText::_('MOD_LOGIN_VALUE_USERNAME') ?>"></span>
+						<span for="modlgn-username" class="glyphicon glyphicon-user hasTooltip input-group-addon" aria-hidden="true" title="<?php echo JText::_('MOD_LOGIN_VALUE_USERNAME') ?>"></span>
 						<label id="modlgn-username-label" for="modlgn-username" class="sr-only"><?php echo JText::_('MOD_LOGIN_VALUE_USERNAME'); ?></label>
 						<input id="modlgn-username" type="text" name="username" class="form-control" tabindex="0" size="18" placeholder="<?php echo JText::_('MOD_LOGIN_VALUE_USERNAME') ?>" aria-labelledby="modlgn-username-label" />
 					</div>
@@ -89,7 +90,7 @@ JHtml::_('bootstrap.tooltip');
 		<?php endif; ?>
 		<div class="clearfix"></div>
 		<div id="form-login-submit" class="form-group">
-				<button type="submit" tabindex="0" name="Submit" class="btn"><?php echo JText::_('JLOGIN') ?></button>
+				<button type="submit" tabindex="0" name="Submit" class="btn" aria-label="<?php echo JText::_('LABELENVOIFORMULAIRE') ?>"><?php echo JText::_('JLOGIN') ?></button>
 		</div>
 		<?php
 			$usersConfig = JComponentHelper::getParams('com_users'); ?>

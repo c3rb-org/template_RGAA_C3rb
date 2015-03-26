@@ -99,7 +99,9 @@ $doc            	= JFactory::getDocument();
 <body> 
 	<jdoc:include type="message" />
 	<!-- début du template -->
-	<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+	<a class="sr-only sr-only-focusable evit-lnk" href="#content-lnk"><?php echo JText::_('TPL_RGAAC3RB_EVITEMENT_CONTENT') ?></a>
+	<a class="sr-only sr-only-focusable evit-lnk" href="#search-lnk"><?php echo JText::_('TPL_RGAAC3RB_EVITEMENT_RECH') ?></a>
+	<a class="sr-only sr-only-focusable evit-lnk" href="#menu-lnk"><?php echo JText::_('TPL_RGAAC3RB_EVITEMENT_MENU') ?></a>
 	<div class="container">
 		<div class="row">
 			<header aria-label="<?php echo $titlesite; ?>" role="banner">
@@ -170,7 +172,7 @@ if($this->countModules('position-5')>0)
 <!-- Fin Col gauche -->
 
 <!-- Col centre -->
-<div class="col-xs-12 col-sm-<?php echo $colbs; ?> col-md-<?php echo $colbs; ?> col-lg-<?php echo $colbs; ?> colctre" >
+<div id="content-lnk" class="col-xs-12 col-sm-<?php echo $colbs; ?> col-md-<?php echo $colbs; ?> col-lg-<?php echo $colbs; ?> colctre" >
 	
 	<?php if ($this->countModules('position-6')): ?>
 		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -284,7 +286,7 @@ if ($nbmod): ?>
  
 <?php 
 // Si on est en debug on vas chercher les elements non minifié.
-if(JDEBUG || JString::strpos(JUri::base(),'wdev009') >= 0) : ?>	
+if(JDEBUG) : ?>	
 	<!-- Si le debug on inclu les exemple botstrap -->
 	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_bs/transition.js" type="text/javascript" defer></script>
 	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_bs/alert.js" type="text/javascript" defer></script>
@@ -301,7 +303,7 @@ if(JDEBUG || JString::strpos(JUri::base(),'wdev009') >= 0) : ?>
 	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_tablerwd/stacktable.js" type="text/javascript" defer></script>
 	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_c3rb/app.js" type="text/javascript" defer></script>
 <?php else : ?> 
-	<script src="<?php echo $tmplpath; ?>/js/template.min.js" type="text/javascript"></script>
+		<script src="<?php echo $tmplpath; ?>/js/template.min.js" type="text/javascript" defer></script>
 <?php endif;?>
 
 </body>

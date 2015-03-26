@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 // Note. It is important to remove spaces between elements.
 ?>
 <?php // The menu class is deprecated. Use nav instead. ?>
-<div class="navbar navbar-default">
+<div class="navbar navbar-default" id="menu-lnk">
 	
 
 	<ul class="nav navbar-nav menu<?php echo $class_sfx;?>"<?php

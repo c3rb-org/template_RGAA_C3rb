@@ -147,7 +147,7 @@ JFactory::getDocument()->addScriptDeclaration($script);
 	<div class="form-group finder<?php echo $suffix; ?>">
 		<?php
 		// Show the form fields.
-		echo $output;
+		echo $output; 
 		?>
 
 		<?php $show_advanced = $params->get('show_advanced'); ?>
