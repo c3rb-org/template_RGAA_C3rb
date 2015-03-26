@@ -87,6 +87,7 @@ function pagination_list_footer($list)
  *
  * @since   3.0
  */
+
 function pagination_list_render($list)
 {
 	// Calculate to display range of pages
@@ -112,7 +113,11 @@ function pagination_list_render($list)
 		}
 	}
 
-	$html = '<nav role="navigation" aria-label="Pagination"><ul class="pagination">';
+	$html = '
+	<div class="dropdown">
+	<nav role="navigation" aria-label="Pagination">
+	<button class="btn btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown">Page '.$currentPage .' <span class="caret"></span></button>
+	<ul class="dropdown-menu">';
 	$html .= $list['start']['data'];
 	$html .= $list['previous']['data'];
 
@@ -132,7 +137,7 @@ function pagination_list_render($list)
 	$html .= $list['next']['data'];
 	$html .= $list['end']['data'];
 
-	$html .= '</ul></nav>';
+	$html .= '</ul></nav></div>';
 	return $html;
 }
 
@@ -147,6 +152,7 @@ function pagination_list_render($list)
  */
 function pagination_item_active(&$item)
 {
+
 	$class = '';
 
 	// Check for "Start" item
@@ -180,7 +186,7 @@ function pagination_item_active(&$item)
 		$class   = ' class="hidden-phone"';
 	}
 
-	return '<li' . $class . '><a title="' . $item->text . '" href="' . $item->link . '" class="pagenav">' . $display . '</a></li>';
+	return '<li' . $class . ' role="presentation"><a title="' . $item->text . '" href="' . $item->link . '" class="pagenav">' . $display . '</a></li>';
 }
 
 /**
