@@ -11,10 +11,10 @@ defined('_JEXEC') or die;
 
 // Including fallback code for the placeholder attribute in the search field.
 JHtml::_('jquery.framework');
-JHtml::_('script', 'system/html5fallback.js', false, true);
+//JHtml::_('script', 'system/html5fallback.js', false, true); //genere des erreur aria
 ?>
 <!-- Des corrections sont a faire dans le cas ou les options droite gauche au bas sont choisies, par default btn a draoite sans image -->
-<div class="search<?php echo $moduleclass_sfx ?>">
+<div class="search<?php echo $moduleclass_sfx ?>" id="search-lnk">
 	<form action="<?php echo JRoute::_('index.php');?>" method="post" class="form-inline" role="search"><!-- Ajout du role C3rbrgaa -->
 			<?php
 				$output = '<label for="mod-search-searchword" class="sr-only">' . $label . '</label> ';
@@ -50,3 +50,4 @@ JHtml::_('script', 'system/html5fallback.js', false, true);
 	</form>
 	<div class="clearfix"></div>
 </div>
+
