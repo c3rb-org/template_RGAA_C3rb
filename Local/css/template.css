@@ -486,16 +486,12 @@ ul.unstyled {
   -moz-border-radius: 6px 0 6px 6px;
   border-radius: 6px 0 6px 6px;
 }
-/* Accessibility */
+/* Accessibilite */
 a[target="_blank"]:after {
   font-family: "Glyphicons Halflings";
   font-size: 10px;
   margin-left: 5px;
   content: "\e164";
-}
-.parent a:focus {
-  outline: thin dotted;
-  outline-offset: -2px;
 }
 .parent a:after {
   font-family: 'FontAwesome';
@@ -503,6 +499,14 @@ a[target="_blank"]:after {
 }
 .parent ul li a:after {
   content: "";
+}
+.parent a:focus {
+  outline: thin dotted;
+  outline-offset: -2px;
+}
+.close:focus {
+  outline: thin dotted;
+  outline-offset: 2px;
 }
 .navbar-default .navbar-nav > li > a {
   color: #565656;
@@ -524,6 +528,12 @@ a[target="_blank"]:after {
 }
 .breadcrumb > .active {
   color: #565656;
+}
+/* design */
+.evit-lnk {
+  background: none repeat scroll 0 0 #f5f5f5;
+  border: 1px solid #e0e0e0;
+  padding: 12px 35px 12px 20px;
 }
 /* Template joomla */
 /* Systeme liste chosen noconflict */
