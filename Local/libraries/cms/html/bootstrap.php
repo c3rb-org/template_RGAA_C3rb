@@ -596,10 +596,15 @@ abstract class JHtmlBootstrap
 			static::framework();
 
 			// Setup options object
-			$opt['parent'] = isset($params['parent']) ? (boolean) $params['parent'] : false;
-			$opt['toggle'] = isset($params['toggle']) ? (boolean) $params['toggle'] : true;
+			$opt['parent'] = isset($params['parent']) ? (boolean) $params['parent'] : 'false';
+			$opt['toggle'] = isset($params['toggle']) ? (boolean) $params['toggle'] : 'true';
 			$opt['active'] = isset($params['active']) ? (string) $params['active'] : '';
 			
+			$options = '';
+			foreach($opt as $k => $v)
+			if(!empty($v))
+				$options .= 'data-'.$k.'="'.$v.'" ';
+
 			// Set static array
 			static::$loaded[__METHOD__][$sig] = true;
 			static::$loaded[__METHOD__]['active'] = $opt['active'];
