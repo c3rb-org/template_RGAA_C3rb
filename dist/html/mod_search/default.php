@@ -1,5 +1,5 @@
 <?php
-/**
+/** 
  * @package     Joomla.Site
  * @subpackage  mod_search
  *	°version J! : 3.4.0 - MIR
@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 // Including fallback code for the placeholder attribute in the search field.
 JHtml::_('jquery.framework');
 //JHtml::_('script', 'system/html5fallback.js', false, true); //genere des erreur aria
-?>
+?> 
 <!-- Des corrections sont a faire dans le cas ou les options droite gauche au bas sont choisies, par default btn a draoite sans image -->
 <div class="search<?php echo $moduleclass_sfx ?>" id="search-lnk">
 	<form action="<?php echo JRoute::_('index.php');?>" method="post" class="form-inline" role="search"><!-- Ajout du role C3rbrgaa -->
@@ -23,13 +23,13 @@ JHtml::_('jquery.framework');
 					if ($imagebutton) :
 						$btn_output = '<input  type="image" value="' . $button_text . '" class="button" src="' . $img . '" onclick="this.form.searchword.focus();"/>';
 					else :
-						$btn_output = '<button class="btn btn-default pull-right" onclick="this.form.searchword.focus();">' . $button_text . '</button>';
+						$btn_output = '<button role="button" aria-label=" '. JText::_('TPL_RGAAC3RB_LABEL_ENVOI_FORMRECH') .' " class="btn btn-default pull-right" onclick="this.form.searchword.focus();">' . $button_text . '</button>';
 					endif;
 					switch ($button_pos) :
 						case 'top' :
 							$output = $btn_output . '<br />' . $output;
 							break;
-						case 'bottom' :
+						case 'bottom' : 
 							$output .= '<br />' . $btn_output;
 							break;
 						case 'right' :
@@ -50,4 +50,3 @@ JHtml::_('jquery.framework');
 	</form>
 	<div class="clearfix"></div>
 </div>
-

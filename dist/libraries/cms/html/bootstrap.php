@@ -589,22 +589,22 @@ abstract class JHtmlBootstrap
 	public static function startAccordion($selector = 'myAccordian', $params = array())
 	{
 		$sig = md5(serialize(array($selector, $params)));
+
 		if (!isset(static::$loaded[__METHOD__][$sig]))
 		{
 			// Include Bootstrap framework
 			static::framework();
-			
+
 			// Setup options object
-			$opt['parent'] = isset($params['parent']) ? (string) $params['parent'] : 'false';
-			$opt['toggle'] = isset($params['toggle']) ? (string) $params['toggle'] : 'true';
+			$opt['parent'] = isset($params['parent']) ? (boolean) $params['parent'] : 'false';
+			$opt['toggle'] = isset($params['toggle']) ? (boolean) $params['toggle'] : 'true';
+			$opt['active'] = isset($params['active']) ? (string) $params['active'] : '';
 			
 			$options = '';
 			foreach($opt as $k => $v)
-				if(!empty($v))
-					$options .= 'data-'.$k.'="'.$v.'" ';
-			
-			$opt['active'] = isset($params['active']) ? (string) $params['active'] : '';
-			
+			if(!empty($v))
+				$options .= 'data-'.$k.'="'.$v.'" ';
+
 			// Set static array
 			static::$loaded[__METHOD__][$sig] = true;
 			static::$loaded[__METHOD__]['active'] = $opt['active'];
