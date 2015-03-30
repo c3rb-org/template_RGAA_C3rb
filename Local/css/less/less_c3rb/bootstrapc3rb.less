@@ -1,20 +1,22 @@
 /* Marge */
-.nomarge{margin:0 !important}
+.nomarge{margin:0 !important} 
 .nomargeleft{margin-left:0 !important}
+.nomargeright{margin-right:0 !important}
 .margeleft{margin-left:10px !important}
 .margeright{margin-right:10px !important}
 .margebottom{margin-bottom:10px !important}
 .margetop{margin-top:10px !important}
-.marge{margin:0 10px 10px 0 !important}
+.marge{margin:0 10px 10px 0 !important} 
 .margeleft-s{margin-left:5px !important}
 .margeright-s{margin-right:5px !important}
 .margebottom-s{margin-bottom:5px !important}
 .margetop-s{margin-top:5px !important}
-.marge-s{margin:0 5px 5px 0 !important}
+.marge-s{margin:0 5px 5px 0 !important} 
 
-/* padding */
+/* padding */  
 .nopadding{padding:0 !important}
 .nopaddingleft{padding-left:0 !important}
+.nopaddingright{padding-right:0 !important}
 .paddingleft{padding-left:10px !important}
 .paddingright{padding-right:10px !important}
 .paddingbottom{padding-bottom:10px !important}
@@ -82,6 +84,10 @@ ul.unstyled {list-style-type: none;  padding: 0px}
     border-radius: 6px 0 6px 6px;
 } 
 
+/* Hover ico font */
+span.glyphicon:hover {cursor: default;}
+a span.glyphicon:hover {cursor: pointer;}
+
 /* Accessibilite */ 
 a[target="_blank"]:after {
 	font-family: "Glyphicons Halflings";
@@ -106,3 +112,8 @@ a[target="_blank"]:after {
     outline: thin dotted;
     outline-offset: 2px;
 }
+.icons a:focus {    
+    outline: thin dotted;
+    outline-offset: -2px;
+}
+
