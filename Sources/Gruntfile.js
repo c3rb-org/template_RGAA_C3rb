@@ -13,8 +13,6 @@ module.exports = function(grunt) {
 		      	// font awesome
 		      	{expand: true, cwd: 'node_modules/font-awesome/less/', src: ['**'], dest: '../Local/css/less/less_fontawesome'},
 		      	{expand: true, cwd: 'node_modules/font-awesome/fonts/', src: ['**'], dest: '../Local/fonts'},
-		      	// Paypalplugin js accessible pour bootstrap
-		      	//{expand: true, cwd: 'node_modules/bootstrap-accessibility-plugin/plugins/js/', src: ['**', '!**/tests/**'], dest: '../Local/js/js_ppaccessible'}, // '!**/tests/**' on exclu le dossier test
 		      	],
 		      },
 		    godist: {
@@ -22,11 +20,53 @@ module.exports = function(grunt) {
 	    		//bootstrap
 	    		{expand: true, cwd: '../Local/', src: ['**', '!**/tests/**', '!**/_doc/**', '!**/less/**', '!**/html/**/*.bak'], dest: '../dist/'},		    	
 	      		// Dist copy to template mir // idee a aprofondir
-	    		{expand: true, cwd: '../dist/', src: ['**'], dest: '../../joomla3x/templates/rgaac3rb/'}, 		    	
+	    		],
+	    		files: [
+	    		{expand: true, cwd: '../dist/', src: ['**'], dest: '../../joomla3x/templates/rgaac3rb/'},
 	    		{expand: true, cwd: '../dist/', src: ['**'], dest: '../../joomla3x_demo01/templates/rgaac3rb/'}, 		    	
 	      		],
 	      	},
+
+	      	// On copie uniquement les css. (perf) 
+	      	godistcss: {
+				files: [
+	    		{expand: true, cwd: '../Local/', src: ['**/css/*', '!**/less/**'], dest: '../dist/'},		    	
+	      		// Dist copy to template mir // idee a aprofondir
+	    		{expand: true, cwd: '../dist/', src: ['**/css/**/*', '!**/less/**'], dest: '../../joomla3x/templates/rgaac3rb/'}, 		    	
+	    		{expand: true, cwd: '../dist/', src: ['**/css/**/*', '!**/less/**'], dest: '../../joomla3x_demo01/templates/rgaac3rb/'}, 		    	
+	      		],
+	      	},
+	      	// On copie uniquement les js. (perf) 
+	      	godistjs: {
+				files: [
+	    		{expand: true, cwd: '../Local/', src: ['**/js/**/*'], dest: '../dist/'},		    	
+	      		// Dist copy to template mir // idee a aprofondir
+	    		{expand: true, cwd: '../dist/', src: ['**/js/**/*'], dest: '../../joomla3x/templates/rgaac3rb/'}, 		    	
+	    		{expand: true, cwd: '../dist/', src: ['**/js/**/*'], dest: '../../joomla3x_demo01/templates/rgaac3rb/'}, 		    	
+	      		],
+	      	},
+	      	// On copie uniquement les html. (perf) 
+	      	godisthtml: {
+				files: [
+	    		{expand: true, cwd: '../Local/', src: ['**/html/**/*'], dest: '../dist/'},		    	
+	      		// Dist copy to template mir // idee a aprofondir
+	    		{expand: true, cwd: '../dist/', src: ['**/html/**/*'], dest: '../../joomla3x/templates/rgaac3rb/'}, 		    	
+	    		{expand: true, cwd: '../dist/', src: ['**/html/**/*'], dest: '../../joomla3x_demo01/templates/rgaac3rb/'}, 		    	
+	      		],
+	      	},
+	      	// On copie uniquement le reste. (perf) 
+	      	godistautres: {
+				files: [
+				{expand: true, cwd: '../Local/', src: ['**', '!**/tests/**', '!**/_doc/**', '!**/css/**', '!**/js/**', '!**/html/**/*.bak'], dest: '../dist/'},		    	
+	      		// Dist copy to template mir // idee a aprofondir
+	    		{expand: true, cwd: '../dist/', src: ['**'], dest: '../../joomla3x/templates/rgaac3rb/'}, 		    	
+	    		{expand: true, cwd: '../dist/', src: ['**'], dest: '../../joomla3x_demo01/templates/rgaac3rb/'},  		    	
+	      		],
+	      	},
 		  },
+
+	      
+
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	// Action sur local
 		// On compile du less du dossier local vers du css (template.css) toujours en local sans compression.
@@ -40,7 +80,7 @@ module.exports = function(grunt) {
 					// optimization: 1 à 7 // pour compresser encore plus sur une echelle de 1 à 7
 				},
 				files: {
-					"../Local/css/template.min.css": "../Local/css/less/mix.template.less"
+					"../Local/css/template.min.css": "../Local/css/less/mix.template.less",
 				},
 			},
 			tmpl_csscompressdebug: {
@@ -54,19 +94,8 @@ module.exports = function(grunt) {
 						"../Local/css/template.css": "../Local/css/less/less_c3rb/template.less",
 						"../Local/css/bootstrap.css": "../Local/css/less/less_bs/bootstrap.less",
 						"../Local/css/font-awesome.css": "../Local/css/less/less_fontawesome/font-awesome.less",
-						//"../Local/css/bootstrap.css": "../Local/css/less/less_ppaccessible/bootstrap.less" ligne paypaljs accessible
 				},
 			},
-			//tmpl_cssuncompress: {
-			//	options: {
-			//		paths: ["../Local/css/less/**/*"],
-			//		compress: false,
-			//		ieCompat: true 
-			//	},
-			//	files: {
-			//		"../Local/css/template.css": "../Local/css/less/template.less"
-			//	},
-			//},
 		},
 		// On compile du JS.
 		uglify: {
@@ -100,20 +129,22 @@ module.exports = function(grunt) {
 		watch: {
 			css:{
       			files: ['../Local/css/less/**/*'],
-      			tasks: ['less','copy:godist'],
+      			tasks: ['less','copy:godistcss'],
      		},
      		js:{
 				files: ['../Local/js/**/*'],
-      			tasks: ['uglify','copy:godist'],
+      			tasks: ['uglify','copy:godistjs'],
       		},
+       		html:{
+				files: ['../Local/html/**/*' ],
+      			tasks: ['copy:godisthtml'],
+      		}, 
+      		    		
       		autres:{
-				files: ['../Local/**/*'],
-      			tasks: ['copy:godist'],
+				files: ['../Local/fonts/**/*', '../Local/languages/**/*', '../Local/libraries/**/*' ],
+      			tasks: ['copy:godistautres'],
       		},
       	},
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-	//Local vers dist & action
-
 	});
 	
 
