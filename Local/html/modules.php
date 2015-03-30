@@ -107,7 +107,7 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 		</aside>
 		<?php endif ?>
 			
-		<?php if ($moduletype == 'mod_menu'): ?>
+		<?php if (($moduletype == 'mod_menu') || ($moduletype == 'mod_breadcrumbs')): ?>
 		</nav>
 		<?php endif; ?>
 
