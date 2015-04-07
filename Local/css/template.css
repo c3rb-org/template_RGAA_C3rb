@@ -525,6 +525,9 @@ a[target="_blank"]:after {
   outline: thin dotted;
   outline-offset: -2px;
 }
+.glyphicon {
+  top: 0px;
+}
 .navbar-default .navbar-nav > li > a {
   color: #565656;
 }
