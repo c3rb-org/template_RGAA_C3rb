@@ -633,3 +633,6 @@ dl.article-info dd:last-child:after {
 .banneritem {
   overflow: hidden;
 }
+select {
+	width:220px;
+}

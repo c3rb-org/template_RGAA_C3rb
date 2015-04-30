@@ -12,12 +12,21 @@ jQuery(function ($) {
 	//noconflict chosen joomla
 	$('div.tab-pane-noconflictchosen').addClass( "tab-pane" ).removeClass( "tab-pane-noconflictchosen" );
 
+	//$('div.collapse-noconflictchosen').addClass( "collapse" ).removeClass( "collapse-noconflictchosen" );
+
 	//Modal avec iframe
 	$('div[data-iframe]').each(function(){
-	    $(this).on('show.bs.modal', function() {
+	    $(this).on('show.bs.modal', function(event) {
+	    	var url = $(this).attr('data-iframe');
+	    	var modalBody = $(this).find('.modal-body');
+	    	var button = $(event.relatedTarget);
+	    	if(button.data('iframe'))
+	    		url = button.data('iframe');
+	    	modalBody.find('iframe').remove();
+	    	modalBody.prepend('<iframe style="border:none" src="' + url + '" width="' + $(this).attr('data-iframe-width') + '" height="' + $(this).attr('data-iframe-height') + '"></iframe>');
+	    }).on('hide.bs.modal', function() {
 		var modalBody = $(this).find('.modal-body');
 		modalBody.find('iframe').remove();
-		modalBody.prepend('<iframe style="border:none" src="' + $(this).attr('data-iframe') + '" width="' + $(this).attr('data-iframe-width') + '" height="' + $(this).attr('data-iframe-height') + '"></iframe>');
 	    });
 	   
 	});
