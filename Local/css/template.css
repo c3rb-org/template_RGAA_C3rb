@@ -633,6 +633,18 @@ dl.article-info dd:last-child:after {
 .banneritem {
   overflow: hidden;
 }
-select {
-	width:220px;
+/* Mod menu (default) */
+.navbar-collapse.menuhoryzontal {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+/* RWD */
+@media screen and (max-width: 767px) {
+  .nav > li > a {
+    padding: 10px 25px;
+    box-sizing: paddingbox;
+  }
+  .menuhoryzontal ul {
+    max-width: 100%;
+  }
 }

@@ -21,31 +21,31 @@
 	border-bottom: 1px solid #e0e0e0;
     margin-bottom: 40px;
     margin-top: 15px;}
-.search .ordering-box {
-    margin-bottom: 25px;
-}
-.search {
-	.ordering-box {margin-bottom: 25px;}
-	.form-limit {    
-		border-top: 1px solid #e0e0e0;
-    	margin: 25px 0;
-    	padding: 25px 0 0;}
-}
-dl.search-results {
-	dt.result-title {
-	    border-top: 1px solid #e0e0e0;
-	    margin-top: 10px;
-	    padding-top: 10px;
-	}
-	dt:first-child {
-		border-top: 0px solid #e0e0e0;
-	    margin-top: 0px;
-	    padding-top: 0px;
-	}
-}
+    .search .ordering-box {
+        margin-bottom: 25px;
+    }
+    .search {
+       .ordering-box {margin-bottom: 25px;}
+       .form-limit {    
+          border-top: 1px solid #e0e0e0;
+          margin: 25px 0;
+          padding: 25px 0 0;}
+      }
+      dl.search-results {
+       dt.result-title {
+           border-top: 1px solid #e0e0e0;
+           margin-top: 10px;
+           padding-top: 10px;
+       }
+       dt:first-child {
+          border-top: 0px solid #e0e0e0;
+          margin-top: 0px;
+          padding-top: 0px;
+      }
+  }
 
-/* Module en col droite */
-.coldrte .moduletable {
+  /* Module en col droite */
+  .coldrte .moduletable {
     background: none repeat scroll 0 0 #f7f7f7;
     margin-bottom: 10px;
     padding: 1px 10px 10px;
@@ -82,6 +82,13 @@ dl.article-info dd:last-child:after {content: ""}
 /* mod_banner */
 .banneritem {overflow: hidden;}
 
+/* Mod menu (default) */
+.navbar-collapse.menuhoryzontal {padding-left: 0px;padding-right: 0px;} 
 
+/* RWD */
+@media screen and (max-width: 767px) {
+    .nav > li > a {padding:10px 25px; box-sizing: paddingbox}
+    .menuhoryzontal ul {max-width: 100%}
+}
 
 @import "dyslexicfont.less";
