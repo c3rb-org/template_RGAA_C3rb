@@ -12,9 +12,23 @@ defined('_JEXEC') or die;
 // Note. It is important to remove spaces between elements.
 ?>
 <?php // The menu class is deprecated. Use nav instead. ?>
-<div class="navbar navbar-default" id="menu-lnk">
-	
 
+
+
+<div class="navbar navbar-default " id="menu-lnk">
+  <div class="row-fluid ">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse<?php echo $module->id; ?>">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse menuhoryzontal" id="collapse<?php echo $module->id; ?>">
 	<ul class="nav navbar-nav menu<?php echo $class_sfx;?>"<?php
 		$tag = '';
 
@@ -115,5 +129,7 @@ defined('_JEXEC') or die;
 		}
 	}
 	?></ul>
+		</div>
+	</div>
 	<div class="clearfix"></div>
 </div>
