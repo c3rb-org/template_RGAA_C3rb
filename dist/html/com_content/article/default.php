@@ -51,7 +51,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 	<?php //if ($this->params->get('show_page_heading') == 0) : ?>
 	<?php /* <h1 itemprop="name"> */ ?>
 	<?php //else : ?>
-		<h2 itemprop="name">
+		<h1 itemprop="name">
 	<?php //endif; ?>	
 			<?php if ($params->get('show_title')) : ?>
 				<?php if ($params->get('link_titles') && !empty($this->item->readmore_link)) : ?>
@@ -63,7 +63,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 	<?php //if ($this->params->get('show_page_heading') == 0) : ?>
 	<?php /*	</h1> */ ?>
 	<?php //else : ?>
-		</h2>
+		</h1>
 	<?php //endif; ?>		
 		<?php if ($this->item->state == 0) : ?>
 			<span class="label label-warning"><?php echo JText::_('JUNPUBLISHED'); ?></span>

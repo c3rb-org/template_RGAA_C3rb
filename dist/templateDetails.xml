@@ -13,11 +13,13 @@
 	<authorUrl>http://www.c3rb.org</authorUrl>
 	<description><![CDATA[ 
 		<hr />
-		<h1 style="text-align:left;">C3rb - RGAA - haaaa!</h1>
+		<h2 style="text-align:left;">C3rb - RGAA - haaaa!</h2>
 		<p style="text-align:left">Created by <a href="http://www.c3rb.org" target="_blank">C3rb Informatique | c3rb.org</a>.<br />
 		Ruzafa Mikael / Andurand Ariane / Espié Vincent / Cabrol Cyril
 		</p>
 		<hr />
+		<h2 style="text-align:left;">Les positions disponibles du template :</h2>
+		<img src="../templates/rgaac3rb/images/template/administrator/position.jpg" alt="les positions du template">
 	]]></description>
 	
 	<!-- Langue -->
@@ -56,6 +58,16 @@
 		<position>position-8</position>
 		<position>position-9</position>
 		<position>position-10</position>
+		<position>position-11</position>
+		<position>position-12</position>
+		<position>position-13</position>
+		<position>position-14</position>
+		<position>position-15</position>
+		<position>position-16</position>
+		<position>position-17</position>
+		<position>position-18</position>
+		<position>position-19</position>
+		<position>position-20</position>
 		<position>debug</position>
 	</positions>
 	
