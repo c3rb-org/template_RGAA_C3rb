@@ -2,8 +2,8 @@
 /**
  * @package     Joomla.Site
  * @subpackage  com_content
- *
- * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * °version 3.4.1 - MIR
+ * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -15,8 +15,7 @@ JHtml::_('behavior.caption');
 ?>
 
 <div class="blog<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="http://schema.org/Blog">
-	<?php if ($this->params->get('show_page_heading', 1)) : ?>
-			
+	<?php if ($this->params->get('show_page_heading')) : ?>
 		<div class="page-header">
 			<!-- <h1> -->
 			<h2>
