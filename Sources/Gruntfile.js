@@ -10,17 +10,19 @@ module.exports = function(grunt) {
 		    	{expand: true, cwd: 'node_modules/bootstrap/js/', src: ['**', '!**/tests/**'], dest: '../Local/js/js_uncompress/js_bs'}, // '!**/tests/**' on exclu le dossier test		    	
 		    	{expand: true, cwd: 'node_modules/bootstrap/less/', src: ['**'], dest: '../Local/css/less/less_bs'},
 		    	{expand: true, cwd: 'node_modules/bootstrap/fonts/', src: ['**'], dest: '../Local/fonts'},
-		      	// font awesome
-		      	{expand: true, cwd: 'node_modules/font-awesome/less/', src: ['**'], dest: '../Local/css/less/less_fontawesome'},
-		      	{expand: true, cwd: 'node_modules/font-awesome/fonts/', src: ['**'], dest: '../Local/fonts'},
-		      	],
+		      // font awesome
+		      {expand: true, cwd: 'node_modules/font-awesome/less/', src: ['**'], dest: '../Local/css/less/less_fontawesome'},
+		      {expand: true, cwd: 'node_modules/font-awesome/fonts/', src: ['**'], dest: '../Local/fonts'},
+		      ],
 		      },
 		    godist: {
 				files: [
 	    		//bootstrap
 	    		{expand: true, cwd: '../Local/', src: ['**', '!**/tests/**', '!**/_doc/**', '!**/less/**', '!**/html/**/*.bak'], dest: '../dist/'},		    	
-	      		// Dist copy to template mir // idee a aprofondir
+	      	// Dist copy to template mir // idee a aprofondir
 	    		],
+          },
+        gosite: {
 	    		files: [
 	    		{expand: true, cwd: '../dist/', src: ['**'], dest: '../../joomla3x/templates/rgaac3rb/'},
 	    		{expand: true, cwd: '../dist/', src: ['**'], dest: '../../joomla3x_demo01/templates/rgaac3rb/'}, 		    	
@@ -28,7 +30,7 @@ module.exports = function(grunt) {
 	      	},
 
 	      	// On copie uniquement les css. (perf) 
-	      	godistcss: {
+	      godistcss: {
 				files: [
 	    		{expand: true, cwd: '../Local/', src: ['**/css/*', '!**/less/**'], dest: '../dist/'},		    	
 	      		// Dist copy to template mir // idee a aprofondir
@@ -37,7 +39,7 @@ module.exports = function(grunt) {
 	      		],
 	      	},
 	      	// On copie uniquement les js. (perf) 
-	      	godistjs: {
+	      godistjs: {
 				files: [
 	    		{expand: true, cwd: '../Local/', src: ['**/js/**/*'], dest: '../dist/'},		    	
 	      		// Dist copy to template mir // idee a aprofondir
@@ -46,7 +48,7 @@ module.exports = function(grunt) {
 	      		],
 	      	},
 	      	// On copie uniquement les html. (perf) 
-	      	godisthtml: {
+	      godisthtml: {
 				files: [
 	    		{expand: true, cwd: '../Local/', src: ['**/html/**/*'], dest: '../dist/'},		    	
 	      		// Dist copy to template mir // idee a aprofondir
@@ -55,7 +57,7 @@ module.exports = function(grunt) {
 	      		],
 	      	},
 	      	// On copie uniquement le reste. (perf) 
-	      	godistautres: {
+	      godistautres: {
 				files: [
 				{expand: true, cwd: '../Local/', src: ['**', '!**/tests/**', '!**/_doc/**', '!**/css/**', '!**/js/**', '!**/html/**/*.bak'], dest: '../dist/'},		    	
 	      		// Dist copy to template mir // idee a aprofondir
