@@ -549,6 +549,9 @@ a[target="_blank"]:after {
 .breadcrumb > .active {
   color: #565656;
 }
+.pagination {
+  padding-left: inherit;
+}
 /* design */
 .evit-lnk {
   background: none repeat scroll 0 0 #f5f5f5;
@@ -596,6 +599,36 @@ dl.search-results dt:first-child {
 /* pagination */
 .pagination .counter {
   border-bottom: 0px;
+}
+.pagination .btn.pagi {
+  border: 0 none;
+  padding: 0;
+}
+.pagination .btn.pagi button.btn {
+  border-radius: 0;
+}
+.pagination .btn.pagi button.btn span.caret {
+  margin-left: 10px;
+}
+.pagination a.btn span.glyphicon {
+  color: #555555;
+  font-size: 12px;
+}
+.pagination .pagi ul.dropdown-menu {
+  min-width: 90px;
+  text-align: center;
+}
+.pagination .pagi ul.dropdown-menu a.btn {
+  border: 0 none;
+  display: block;
+  float: none;
+  margin: 0;
+  padding: 5px 0 0;
+  width: 100%;
+}
+.pagination .pagi ul.dropdown-menu a:hover {
+  background: transparent;
+  color: #555555;
 }
 /* com_content */
 /* article */
