@@ -2,8 +2,8 @@
 /**
  * @package     Joomla.Site
  * @subpackage  com_content
- *
- * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * °version 3.4.1 - MIR
+ * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -38,6 +38,11 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 	echo $this->item->pagination;
 }
 ?>
+
+	<?php // Todo Not that elegant would be nice to group the params ?>
+	<?php $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_date') || $params->get('show_create_date')
+	|| $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author') ); ?>
+
 	<?php if (!$useDefList && $this->print) : ?>
 		<div id="pop-print" class="btn hidden-print">
 			<?php echo JHtml::_('icon.print_screen', $this->item, $params); ?>
@@ -51,7 +56,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 	<?php //if ($this->params->get('show_page_heading') == 0) : ?>
 	<?php /* <h1 itemprop="name"> */ ?>
 	<?php //else : ?>
-		<h2 itemprop="name">
+		<h1 itemprop="name">
 	<?php //endif; ?>	
 			<?php if ($params->get('show_title')) : ?>
 				<?php if ($params->get('link_titles') && !empty($this->item->readmore_link)) : ?>
@@ -63,7 +68,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 	<?php //if ($this->params->get('show_page_heading') == 0) : ?>
 	<?php /*	</h1> */ ?>
 	<?php //else : ?>
-		</h2>
+		</h1>
 	<?php //endif; ?>		
 		<?php if ($this->item->state == 0) : ?>
 			<span class="label label-warning"><?php echo JText::_('JUNPUBLISHED'); ?></span>
@@ -71,7 +76,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 		<?php if (strtotime($this->item->publish_up) > strtotime(JFactory::getDate())) : ?>
 			<span class="label label-warning"><?php echo JText::_('JNOTPUBLISHEDYET'); ?></span>
 		<?php endif; ?>
-		<?php if ((strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != '0000-00-00 00:00:00') : ?>
+		<?php if ((strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != JFactory::getDbo()->getNullDate()) : ?>
 			<span class="label label-warning"><?php echo JText::_('JEXPIRED'); ?></span>
 		<?php endif; ?>
 	</div>

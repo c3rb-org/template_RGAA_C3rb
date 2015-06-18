@@ -70,6 +70,7 @@ defined('_JEXEC') or die;
  */
 function pagination_list_footer($list)
 {
+	
 	$html = "<nav role=\"navigation\"><div class=\"pagination\">\n";
 	$html .= $list['pageslinks'];
 	$html .= "\n<input type=\"hidden\" name=\"" . $list['prefix'] . "limitstart\" value=\"" . $list['limitstart'] . "\" />";
@@ -113,13 +114,16 @@ function pagination_list_render($list)
 		}
 	}
 
-	$html = '
-	<div class="dropdown">
-	<nav role="navigation" aria-label="Pagination">
-	<button class="btn btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown">Page '.$currentPage .' <span class="caret"></span></button>
-	<ul class="dropdown-menu">';
+
+	$html = '<div class="btn-group">';
 	$html .= $list['start']['data'];
 	$html .= $list['previous']['data'];
+	
+	$html .= '
+	<div class="dropdown btn btn-default pagi">
+	<nav role="navigation" aria-label="Pagination">
+	<button class="btn btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown">Page '.$currentPage .'<span class="caret"></span></button>
+	<ul class="dropdown-menu">';
 
 	foreach ($list['pages'] as $k => $page)
 	{
@@ -134,10 +138,11 @@ function pagination_list_render($list)
 		$html .= $page['data'];
 	}
 
-	$html .= $list['next']['data'];
-	$html .= $list['end']['data'];
 
 	$html .= '</ul></nav></div>';
+	$html .= $list['next']['data'];
+	$html .= $list['end']['data'];
+	$html .= '</div>';
 	return $html;
 }
 
@@ -158,35 +163,34 @@ function pagination_item_active(&$item)
 	// Check for "Start" item
 	if ($item->text == JText::_('JLIB_HTML_START'))
 	{
-		$display = '<span aria-hidden="true" class=""><<</span>';
+		$display = '<span aria-hidden="true" class="glyphicon glyphicon-fast-backward"></span>';
 	}
 
 	// Check for "Prev" item
 	if ($item->text == JText::_('JPREV'))
 	{
-		$display = '<span aria-hidden="true" class=""><</span>';
+		$display = '<span aria-hidden="true" class="glyphicon glyphicon-step-backward"></span>';
 	}
 
 	// Check for "Next" item
 	if ($item->text == JText::_('JNEXT'))
 	{
-		$display = '<span aria-hidden="true" class="">></span>';
+		$display = '<span aria-hidden="true" class="glyphicon glyphicon-step-forward"></span>';
 	}
 
 	// Check for "End" item
 	if ($item->text == JText::_('JLIB_HTML_END'))
 	{
-		$display = '<span aria-hidden="true" class="">>></span>';
+		$display = '<span aria-hidden="true" class="glyphicon glyphicon-fast-forward"></span>';
 	}
 
 	// If the display object isn't set already, just render the item with its text
 	if (!isset($display))
 	{
 		$display = $item->text;
-		$class   = ' class="hidden-phone"';
 	}
 
-	return '<li' . $class . ' role="presentation"><a title="' . $item->text . '" href="' . $item->link . '" class="pagenav">' . $display . '</a></li>';
+	return '<a title="' . $item->text . '" href="' . $item->link . '" class="btn btn-default hidden-phone">' . $display . '</a>';
 }
 
 /**
@@ -203,25 +207,25 @@ function pagination_item_inactive(&$item)
 	// Check for "Start" item
 	if ($item->text == JText::_('JLIB_HTML_START'))
 	{
-		return '<li class="disabled"><a href="#" aria-label="First"><span aria-hidden="true" class=""><<</span></a></li>';
+		return '<a class="btn btn-default disabled" href="#" aria-label="First"><span aria-hidden="true" class="glyphicon glyphicon-fast-backward"></span></a>';
 	}
 
 	// Check for "Prev" item
 	if ($item->text == JText::_('JPREV'))
 	{
-		return '<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true" class=""><</span></a></li>';
+		return '<a class="btn btn-default disabled" href="#" aria-label="Previous"><span aria-hidden="true" class="glyphicon glyphicon-step-backward"></span></a>';
 	}
 
 	// Check for "Next" item
 	if ($item->text == JText::_('JNEXT'))
 	{
-		return '<li class="disabled"><a href="#" aria-label="Next"><span aria-hidden="true" class="">></span></a></li>';
+		return '<a class="btn btn-default disabled" href="#" aria-label="Next"><span aria-hidden="true" class="glyphicon glyphicon-step-forward"></span></a>';
 	}
 
 	// Check for "End" item
 	if ($item->text == JText::_('JLIB_HTML_END'))
 	{
-		return '<li class="disabled"><a href="#" aria-label="End"><span aria-hidden="true" class="">>></span></a></li>';
+		return '<a class="btn btn-default disabled" href="#" aria-label="End"><span aria-hidden="true" class="glyphicon glyphicon-fast-forward"></span></a>';
 	}
 
 	// Check if the item is the active page
