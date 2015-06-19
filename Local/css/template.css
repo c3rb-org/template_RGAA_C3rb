@@ -564,6 +564,10 @@ a[target="_blank"]:after {
   display: block;
 }
 /* Com search */
+.search .btn {
+  width: 45px;
+  height: 34px;
+}
 .searchintro {
   border-bottom: 1px solid #e0e0e0;
   margin-bottom: 40px;
@@ -629,6 +633,14 @@ dl.search-results dt:first-child {
 .pagination .pagi ul.dropdown-menu a:hover {
   background: transparent;
   color: #555555;
+}
+/* Com adminfront */
+i.icon-calendar {
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+}
+i.icon-calendar:before {
+  content: "\e109";
 }
 /* com_content */
 /* article */

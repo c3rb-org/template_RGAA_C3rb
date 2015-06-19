@@ -9,7 +9,7 @@
 }
 
 
-
+ 
 
 
 /* Template joomla */
@@ -17,6 +17,10 @@
 .tab-pane-noconflictchosen {display: block}
 
 /* Com search */ 
+.search .btn {
+  width: 45px;
+  height: 34px
+}
 .searchintro {    
 	border-bottom: 1px solid #e0e0e0;
     margin-bottom: 40px;
@@ -86,14 +90,18 @@
       a:hover { 
         background: transparent;
         color: #555555
-      }
+      } 
   }
 }
 
 
 
-
-
+/* Com adminfront */
+i.icon-calendar {
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+}
+i.icon-calendar:before {content: "\e109";}
 /* com_content */
 /* article */
 .article-info.muted {
@@ -108,7 +116,7 @@ dl.article-info dd:after {content: " | "; margin-left: 5px;}
 dl.article-info dd {
     display: flex; /* hoouuu du flex ca fait peur ^^ */
     float: left;
-    margin-right: 5px;
+    margin-right: 5px; 
 
 }
 dl.article-info dd:last-child:after {content: ""} 
