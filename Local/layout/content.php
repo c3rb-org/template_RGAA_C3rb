@@ -1,3 +1,4 @@
+<?php defined( '_JEXEC' ) or die; ?>
 <!-- Calcul taille colonne centrale (gauche / centre / droite) -->
 <?php 
 $colbs = 12;

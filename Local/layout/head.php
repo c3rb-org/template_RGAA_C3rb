@@ -1,3 +1,4 @@
+<?php defined( '_JEXEC' ) or die; ?>
 <jdoc:include type="head" /><!-- Balise meta et autre de la config du site joomla -->
 <!-- A FAIRE : supprimmer le caption.js genere par le jdoc:include ? -->
 <!-- Les favicons autre que la favicon.ico generale genere par le jdoc:include -->
