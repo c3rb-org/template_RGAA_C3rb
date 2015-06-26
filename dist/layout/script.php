@@ -1,3 +1,4 @@
+<?php defined( '_JEXEC' ) or die; ?>
 <?php 
 // Si on est en debug on vas chercher les elements non minifié.
 if(JDEBUG) : ?>	

@@ -1,3 +1,4 @@
+<?php defined( '_JEXEC' ) or die; ?>
 <div class="row">
 		<!-- position-12 -->
 		<?php

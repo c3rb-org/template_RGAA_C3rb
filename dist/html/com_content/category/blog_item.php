@@ -34,10 +34,12 @@ $info    = $params->get('info_block_position', 0);
 <?php $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_date') || $params->get('show_create_date')
 	|| $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author') ); ?>
 <address>
+<div class="sr-only"> <!-- Demande de EB pas de detail en affichage blog -->
 <?php if ($useDefList && ($info == 0 || $info == 2)) : ?>
 	<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'above')); ?>
 <?php endif; ?>
 <div class="clearfix"></div>
+</div>
 </address>
 </header>
 <?php echo JLayoutHelper::render('joomla.content.intro_image', $this->item); ?>

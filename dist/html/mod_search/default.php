@@ -21,9 +21,9 @@ JHtml::_('jquery.framework');
 				$output .= '<input title="'. $label .'" name="searchword" id="mod-search-searchword" maxlength="' . $maxlength . '"  class="form-control" type="text" size="' . $width . '" value="' . $text . '"  onblur="if (this.value==\'\') this.value=\'' . $text . '\';" onfocus="if (this.value==\'' . $text . '\') this.value=\'\';" />';
 				if ($button) :
 					if ($imagebutton) :
-						$btn_output = '<input  type="image" value="' . $button_text . '" class="button" src="' . $img . '" onclick="this.form.searchword.focus();"/>';
+						$btn_output = '<input  type="image" value="' . $button_text . '" class="btn btn-default" src="' . $img . '" onclick="this.form.searchword.focus();"/>';
 					else :
-						$btn_output = '<button role="button" aria-label=" '. JText::_('TPL_RGAAC3RB_LABEL_ENVOI_FORMRECH') .' " class="btn btn-default pull-right" onclick="this.form.searchword.focus();">' . $button_text . '</button>';
+						$btn_output = '<button role="btn btn-default" aria-label=" '. JText::_('TPL_RGAAC3RB_LABEL_ENVOI_FORMRECH') .' " class="btn btn-default pull-right" onclick="this.form.searchword.focus();">' . $button_text . '</button>';
 					endif;
 					switch ($button_pos) :
 						case 'top' :

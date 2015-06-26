@@ -44,13 +44,14 @@ JHtml::_('behavior.caption');
 </div>
 </article>
 <?php endif; ?>
+
 <?php
 	$introcount = (count($this->intro_items));
 	$counter = 0;
 ?>
+
 <?php if (!empty($this->intro_items)) : ?>
 	<?php foreach ($this->intro_items as $key => &$item) : ?>
-		<article>	
 		<?php
 		$key = ($key - $leadingcount) + 1;
 		$rowcount = (((int) $key - 1) % (int) $this->columns) + 1;
@@ -58,14 +59,17 @@ JHtml::_('behavior.caption');
 
 		if ($rowcount == 1) : ?>
 
-		<div class="items-row cols-<?php echo (int) $this->columns;?> <?php echo 'row-'.$row; ?> row-fluid">
+		<div class="items-row <?php echo 'row-'.$row; ?> row">
+		
 		<?php endif; ?>
-			<div class="item column-<?php echo $rowcount;?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?> span<?php echo round((12 / $this->columns));?>"
+			<div class="item <?php echo $item->state == 0 ? ' system-unpublished' : null; ?> col-sm-<?php echo round((12 / $this->columns));?>"
 				itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+		<article>	
 			<?php
 					$this->item = &$item;
 					echo $this->loadTemplate('item');
 			?>
+		</article>
 			</div>
 			<?php $counter++; ?>
 
@@ -73,7 +77,7 @@ JHtml::_('behavior.caption');
 
 		</div>
 		<?php endif; ?>
-		</article>
+
 
 	<?php endforeach; ?>
 <?php endif; ?>

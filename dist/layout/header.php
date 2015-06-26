@@ -1,3 +1,4 @@
+<?php defined( '_JEXEC' ) or die; ?>
 <!-- lien evitement -->
 <a class="sr-only sr-only-focusable evit-lnk" href="#content-lnk"><?php echo JText::_('TPL_RGAAC3RB_EVITEMENT_CONTENT') ?></a>
 <a class="sr-only sr-only-focusable evit-lnk" href="#search-lnk"><?php echo JText::_('TPL_RGAAC3RB_EVITEMENT_RECH') ?></a>
