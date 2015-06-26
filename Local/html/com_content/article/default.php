@@ -94,15 +94,15 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 	<?php endif; ?>
 
 	<?php if ($useDefList && ($info == 0 || $info == 2)) : ?>
-		<div class="article-info muted">
+		<div class="article-info muted ">
 		<address>		
 			<dl class="article-info">
-			<dt class="article-info-term"><?php echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?></dt>
+			<dt class="article-info-term sr-only "><?php echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?></dt>
 
 			<?php if ($params->get('show_author') && !empty($this->item->author )) : ?>
 				<dd class="createdby" itemprop="author" itemscope itemtype="http://schema.org/Person">
 					<?php $author = $this->item->created_by_alias ? $this->item->created_by_alias : $this->item->author; ?>
-					<?php $author = '<span itemprop="name">' . $author . '</span>'; ?>
+					<?php $author = ':&nbsp;<span itemprop="name">' . $author . '</span>'; ?>
 					<?php if (!empty($this->item->contact_link) && $params->get('link_author') == true) : ?>
 						<?php echo JText::sprintf('COM_CONTENT_WRITTEN_BY', JHtml::_('link', $this->item->contact_link, $author, array('itemprop' => 'url'))); ?>
 					<?php else: ?>
@@ -213,14 +213,14 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 	<?php if ($useDefList && ($info == 1 || $info == 2)) : ?>
 		<div class="article-info muted">
 			<dl class="article-info">
-				<dt class="article-info-term"><?php echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?></dt>
+				<dt class="article-info-term sr-only"><?php echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?></dt>
 
 				<?php if ($info == 1) : ?>
 					<?php if ($params->get('show_author') && !empty($this->item->author )) : ?>
 						<dd class="createdby" itemprop="author" itemscope itemtype="http://schema.org/Person">
 						<address class="author">
 							<?php $author = $this->item->created_by_alias ? $this->item->created_by_alias : $this->item->author; ?>
-							<?php $author = '<span itemprop="name">' . $author . '</span>'; ?>
+							<?php $author = ':&nbsp;<span itemprop="name">' . $author . '</span>'; ?>
 							<?php if (!empty($this->item->contact_link) && $params->get('link_author') == true) : ?>
 								<?php echo JText::sprintf('COM_CONTENT_WRITTEN_BY', JHtml::_('link', $this->item->contact_link, $author, array('itemprop' => 'url'))); ?>
 							<?php else: ?>

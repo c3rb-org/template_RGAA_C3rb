@@ -31,7 +31,7 @@ $params = $this->params;
 					<?php if ($params->get('show_author') && !empty($item->author )) : ?>
 						<div class="createdby" itemprop="author" itemscope itemtype="http://schema.org/Person">
 						<?php $author = ($item->created_by_alias) ? $item->created_by_alias : $item->author; ?>
-						<?php $author = '<span itemprop="name">' . $author . '</span>'; ?>
+						<?php $author = ':&nbsp;<span itemprop="name">' . $author . '</span>'; ?>
 							<?php if (!empty($item->contact_link) && $params->get('link_author') == true) : ?>
 								<?php echo JText::sprintf('COM_CONTENT_WRITTEN_BY', JHtml::_('link', $this->item->contact_link, $author, array('itemprop' => 'url'))); ?>
 							<?php else: ?>
@@ -45,7 +45,7 @@ $params = $this->params;
 			<?php if ($useDefList && ($info == 0 || $info == 2)) : ?>
 				<div class="article-info muted">
 					<dl class="article-info">
-					<dt class="article-info-term">
+					<dt class="article-info-term sr-only">
 						<?php echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?>
 					</dt>
 
@@ -134,7 +134,7 @@ $params = $this->params;
 			<?php if ($useDefList && ($info == 1 || $info == 2)) : ?>
 				<div class="article-info muted">
 					<dl class="article-info">
-					<dt class="article-info-term"><?php echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?></dt>
+					<dt class="article-info-term sr-only"><?php echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?></dt>
 
 					<?php if ($info == 1) : ?>
 						<?php if ($params->get('show_parent_category') && !empty($item->parent_slug)) : ?>

@@ -34,7 +34,7 @@ JHtml::_('behavior.caption');
 				<span class="subheading-category"><?php echo $this->category->title; ?></span>
 			<?php endif; ?>
 </h2>
-		<!-- <h1> -->/
+		<!-- <h1> -->
 
 	<?php endif; ?>
 	<?php if ($this->params->get('show_cat_tags', 1) && !empty($this->category->tags->itemTags)) : ?>
@@ -85,19 +85,20 @@ JHtml::_('behavior.caption');
 
 	<?php if (!empty($this->intro_items)) : ?>
 		<?php foreach ($this->intro_items as $key => &$item) : ?>
-			<article role="article">
 				<?php $rowcount = ((int) $key % (int) $this->columns) + 1; ?>
 				<?php if ($rowcount == 1) : ?>
 					<?php $row = $counter / $this->columns; ?>
-					<div class="items-row cols-<?php echo (int) $this->columns; ?> <?php echo 'row-' . $row; ?> row-fluid clearfix">
+					<div class="items-row cols-<?php echo (int) $this->columns; ?> <?php echo 'row-' . $row; ?> row ">
 				<?php endif; ?>
-				<div class="span<?php echo round((12 / $this->columns)); ?>">
+				<div class="col-sm-<?php echo round((12 / $this->columns)); ?>">
 					<div class="item column-<?php echo $rowcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>"
 						itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+			<article role="article">
 						<?php
 						$this->item = & $item;
 						echo $this->loadTemplate('item');
 						?>
+			</article>
 					</div>
 					<!-- end item -->
 					<?php $counter++; ?>
@@ -105,7 +106,6 @@ JHtml::_('behavior.caption');
 				<?php if (($rowcount == $this->columns) or ($counter == $introcount)) : ?>
 					</div><!-- end row -->
 				<?php endif; ?>
-			</article>
 		<?php endforeach; ?>
 	<?php endif; ?>
 

@@ -644,18 +644,15 @@ i.icon-calendar:before {
 }
 /* com_content */
 /* article */
-.article-info.muted {
-  background: none repeat scroll 0 0 #f5f5f5;
-  border: 1px solid #e0e0e0;
-  margin-bottom: 15px;
-  padding: 10px 10px 0px 10px;
-  min-height: 65px;
+.article-info {
+  color: #666;
+  font-style: italic;
 }
 dl.article-info a {
   margin-left: 5px;
 }
 dl.article-info dd:after {
-  content: " | ";
+  content: " , ";
   margin-left: 5px;
 }
 dl.article-info dd {
@@ -669,7 +666,7 @@ dl.article-info dd:last-child:after {
 }
 /* mod_articles_category */
 .article-info-mod-cat span:after {
-  content: " | ";
+  content: " , ";
 }
 .article-info-mod-cat span:last-child:after {
   content: "";
