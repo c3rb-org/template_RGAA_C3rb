@@ -41,7 +41,6 @@ hr.hrlight {margin-bottom: 10px; margin-top: 10px; }
 ul.unstyled {list-style-type: none;  padding: 0px}
 
 /* Menu (ajout a bootstrap pour menu a plusieurs niveaux dans joomla) */
-
 .dropdown-submenu {
     position: relative;
 }
@@ -117,3 +116,67 @@ a[target="_blank"]:after {
     outline-offset: -2px;
 }
 
+/* Joomla theme */
+.colctre {
+    background: @main-bg;
+    padding: 0 15px 15px 15px;
+    .page-header { 
+        float: left; 
+        margin-top: 0;
+        width: 100%;
+    }
+}
+/* Module */
+.moduletable  {
+    background: @module-bg;
+    margin-bottom: 15px;
+    padding: 10px;
+    h3{
+        margin-top: 10px;
+    }
+}
+/* Menu vertical  */
+.menuvertical {
+    padding: 0px;
+    li {}
+    li.active a::before {
+        content: "\e250";
+        font-family: "Glyphicons Halflings";
+        height: 100%;
+        left: -6px;
+        overflow: hidden;
+        position: absolute;
+        top: 9px;
+        width: 10px;
+    }
+    .dropdown-menu {
+        position: relative;
+        float: none;
+        .dropdown-menu.multi-level {display: block;}
+
+    }
+}
+/* Article */
+.article-info {
+  color: #666; 
+  font-style: italic;
+  font-size: 13px
+}
+dl.article-info a {margin-left:5px}
+dl.article-info dd:after {content: " , "; margin-left: 5px;}
+dl.article-info dd {
+    display: flex; /* hoouuu du flex ca fait peur ^^ */
+    float: left;
+    margin-right: 5px;
+
+}
+dl.article-info dd:last-child:after {content: ""} 
+ul.tags.inline {
+    display: inline-block;
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+ul.tags.inline li {
+    display: inline-block;
+}

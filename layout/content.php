@@ -22,22 +22,23 @@ if($this->countModules('position-8')>0)
 	<!-- Fin Col gauche -->
 	
 	<!-- Col centre -->
-	<div id="content-lnk" class="col-xs-12 col-sm-<?php echo $colbs; ?> col-md-<?php echo $colbs; ?> col-lg-<?php echo $colbs; ?> colctre" >
+	<div id="content-lnk" class="col-xs-12 col-sm-<?php echo $colbs; ?> col-md-<?php echo $colbs; ?> col-lg-<?php echo $colbs; ?>" >
+			<?php //top du content
+			include_once JPATH_THEMES.'/'.$this->template.'/layout/contenttop.php';
+			?>
 
-	<?php //top du content
-	include_once JPATH_THEMES.'/'.$this->template.'/layout/contenttop.php';
-	?>
-
-	<main role="main">
-		<!-- Le contenu principal injecte par joomla -->
-		<jdoc:include type="component" />
-		<div class="clearfix"></div>
-	</main>
-	
-	<?php //bottom du content
-	include_once JPATH_THEMES.'/'.$this->template.'/layout/contentbot.php';
-	?>
-</div> 
+		<div class="colctre">
+			<main role="main">
+				<!-- Le contenu principal injecte par joomla -->
+				<jdoc:include type="component" />
+				<div class="clearfix"></div>
+			</main>
+		</div>
+			
+			<?php //bottom du content
+			include_once JPATH_THEMES.'/'.$this->template.'/layout/contentbot.php';
+			?>
+	</div> 
 
 <!-- Fin Col centre -->
 

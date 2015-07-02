@@ -27,6 +27,12 @@ jQuery(function ($) {
     modalBody.find('iframe').remove();
       });
 	});
+  
+  // multi level menu nav bootstrap (Ajout MIR car non natif BS3)
+  $( "#target" ).click(function() {
+    alert( "Handler for .click() called." );
+  });
+
 }); 
  
 if(window.MooTools) 
