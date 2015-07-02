@@ -47,7 +47,7 @@ $doc->setMetaData( 'viewport', 'width=device-width, initial-scale=1' );
 $tab_sheets = $doc->_styleSheets;
 $doc->_styleSheets = array();
 if(JDEBUG)
-$doc->addStyleSheet( ''. $tmplpath .'/css/bootstrap.css')->addStyleSheet( ''. $tmplpath .'/css/font-awesome.css')->addStyleSheet( ''. $tmplpath .'/css/template.css');
+$doc->addStyleSheet( ''. $tmplpath .'/css/template.css');
 else
 $doc->addStyleSheet( ''. $tmplpath .'/css/template.min.css' );
 foreach($tab_sheets as $url => $val)

@@ -45,15 +45,6 @@ lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 		</div>
 
 		<jdoc:include type="modules" name="debug" style="none" />
-		<?php //require_once 'html/bootstrap.test.full.php'; ?>
-		<?php //require_once 'html/font.test.full.php'; ?>
-
-		<!-- Elements d'aide au template -->
-		<?php if ($paramtmpl_debug == 1) {
-			//require_once 'html/bootstrap.test.full.php'; 
-			//require_once 'html/font.test.full.php'; 	
-		} 
-		?>
 		<?php
 		//Script du template
 		include_once JPATH_THEMES.'/'.$this->template.'/layout/script.php';
