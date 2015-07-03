@@ -3,94 +3,94 @@
 
 <extension version="3.3" type="template" client="site" method="upgrade">
 	
-	<!-- Version -->
-	<name>rgaac3rb</name>
-	<version>0.0.2</version>
-	<creationDate>20-01-2015</creationDate>
-	<author>C3rb Informatique</author>
-	<copyright>Copyright © 2015 c3rb.org</copyright>
-	<authorEmail>orphee@c3rb.fr</authorEmail>
-	<authorUrl>http://www.c3rb.org</authorUrl>
-	<description><![CDATA[ 
-		<hr />
-		<h2 style="text-align:left;">C3rb - RGAA - haaaa!</h2>
-		<p style="text-align:left">Created by <a href="http://www.c3rb.org" target="_blank">C3rb Informatique | c3rb.org</a>.<br />
-		Ruzafa Mikael / Andurand Ariane / Espié Vincent / Cabrol Cyril
-		</p>
-		<hr />
-		<h2 style="text-align:left;">Les positions disponibles du template :</h2>
-		<img src="../templates/rgaac3rb/images/template/administrator/position.jpg" alt="les positions du template">
-	]]></description>
-	
-	<!-- Langue -->
-	<languages folder="languages">
-		<language tag="fr-FR">fr-FR/fr-FR.tpl_rgaac3rb.ini</language> 
-		<language tag="fr-FR">fr-FR/fr-FR.tpl_rgaac3rb.sys.ini</language>
-	</languages>
+    <!-- Version -->
+    <name>rgaac3rb</name>
+    <version>0.0.2</version>
+    <creationDate>20-01-2015</creationDate>
+    <author>C3rb Informatique</author>
+    <copyright>Copyright © 2015 c3rb.org</copyright>
+    <authorEmail>orphee@c3rb.fr</authorEmail>
+    <authorUrl>http://www.c3rb.org</authorUrl>
+    <description><![CDATA[ 
+            <hr />
+            <h2 style="text-align:left;">C3rb - RGAA - haaaa!</h2>
+            <p style="text-align:left">Created by <a href="http://www.c3rb.org" target="_blank">C3rb Informatique | c3rb.org</a>.<br />
+            Ruzafa Mikael / Andurand Ariane / Espié Vincent / Cabrol Cyril
+            </p>
+            <hr />
+            <h2 style="text-align:left;">Les positions disponibles du template :</h2>
+            <img src="../templates/rgaac3rb/images/template/administrator/position.jpg" alt="les positions du template">
+    ]]></description>
 
-	<!-- Arborescence -->
-	<files>
-		<folder>css</folder>
-		<folder>fonts</folder>
-		<folder>html</folder>
-		<folder>images</folder>
-		<folder>js</folder>
-		<folder>languages</folder>
-		<folder>layout</folder>
-		<filename>error.php</filename>
-		<filename>favicon.ico</filename>
-		<filename>index.html</filename>
-		<filename>index.php</filename>
-		<filename>template_preview.png</filename>
-		<filename>template_thumbnail.png</filename>
-		<filename>templateDetails.xml</filename>
-	</files>
-	
-	<!-- Position du template -->
-	<positions>
-		<position>position-1</position>
-		<position>position-2</position>
-		<position>position-3</position>
-		<position>position-4</position>
-		<position>position-5</position>
-		<position>position-6</position>
-		<position>position-7</position>
-		<position>position-8</position>
-		<position>position-9</position>
-		<position>position-10</position>
-		<position>position-11</position>
-		<position>position-12</position>
-		<position>position-13</position>
-		<position>position-14</position>
-		<position>position-15</position>
-		<position>position-16</position>
-		<position>position-17</position>
-		<position>position-18</position>
-		<position>position-19</position>
-		<position>position-20</position>
-		<position>debug</position>
-	</positions>
-	
-	<config>
-		<fields name="params">
-			<fieldset name="basic">
-				<field name="tmpltitlechoice" type="radio" label="TPL_RGAAC3RB_CHECK_TMPLTITCHOISE_LABEL" default="0">
-				    <option value="0">JNO</option>
-				    <option value="1">JYES</option>
-				</field>
-			</fieldset>
-			  
-			<fieldset name="advanced">
-				<field name="tmplmodhelp" type="radio" label="TPL_RGAAC3RB_CHECK_TMPLMODHELP_LABEL" default="0">
-				    <option value="0">JNO</option>
-				    <option value="1">JYES</option>
-				</field>
-				<field name="tmplhtmlhelp" type="radio" label="TPL_RGAAC3RB_CHECK_TMPLHTMLHELP_LABEL" default="0">
-				    <option value="0">JNO</option>
-				    <option value="1">JYES</option>
-				</field>
-				<hr />			
-			</fieldset>  
-		</fields>
-	</config>
+    <!-- Langue -->
+    <languages folder="languages">
+        <language tag="fr-FR">fr-FR/fr-FR.tpl_template_rgaa_c3rb.ini</language> 
+        <language tag="fr-FR">fr-FR/fr-FR.tpl_template_rgaa_c3rb.sys.ini</language>
+    </languages>
+
+    <!-- Arborescence -->
+    <files>
+        <folder>css</folder>
+        <folder>fonts</folder>
+        <folder>html</folder>
+        <folder>images</folder>
+        <folder>js</folder>
+        <folder>languages</folder>
+        <folder>layout</folder>
+        <filename>error.php</filename>
+        <filename>favicon.ico</filename>
+        <filename>index.html</filename>
+        <filename>index.php</filename>
+        <filename>template_preview.png</filename>
+        <filename>template_thumbnail.png</filename>
+        <filename>templateDetails.xml</filename>
+    </files>
+
+    <!-- Position du template -->
+    <positions>
+        <position>position-1</position>
+        <position>position-2</position>
+        <position>position-3</position>
+        <position>position-4</position>
+        <position>position-5</position>
+        <position>position-6</position>
+        <position>position-7</position>
+        <position>position-8</position>
+        <position>position-9</position>
+        <position>position-10</position>
+        <position>position-11</position>
+        <position>position-12</position>
+        <position>position-13</position>
+        <position>position-14</position>
+        <position>position-15</position>
+        <position>position-16</position>
+        <position>position-17</position>
+        <position>position-18</position>
+        <position>position-19</position>
+        <position>position-20</position>
+        <position>debug</position>
+    </positions>
+
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="tmpltitlechoice" type="radio" label="TPL_RGAAC3RB_CHECK_TMPLTITCHOISE_LABEL" default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+            </fieldset>
+
+            <fieldset name="advanced">
+                <field name="tmplmodhelp" type="radio" label="TPL_RGAAC3RB_CHECK_TMPLMODHELP_LABEL" default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="tmplhtmlhelp" type="radio" label="TPL_RGAAC3RB_CHECK_TMPLHTMLHELP_LABEL" default="0">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <hr />	
+            </fieldset>  
+        </fields>
+    </config>
 </extension>
