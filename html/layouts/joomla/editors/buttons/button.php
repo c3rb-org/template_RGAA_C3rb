@@ -17,7 +17,7 @@ $button = $displayData;
 		$class    = ($button->get('class')) ? $button->get('class') : null;
 		$class	 .= ($button->get('modal')) ? ' modal-button' : null;
 		$href     = ($button->get('link')) ? ' href="' . JUri::base() . $button->get('link') . '"' : null;
-		$onclick  = ($button->get('onclick')) ? ' onclick="' . $button->get('onclick') . '"' : ' onclick="IeCursorFix(); return false;"';
+		$onclick  = ($button->get('onclick')) ? ' onclick="' . $button->get('onclick') . '"' : '';
 		$title    = ($button->get('title')) ? $button->get('title') : $button->get('text');
 	?>
 	<a class="<?php echo $class; ?> btn-default" title="<?php echo $title; ?>" <?php echo $href . $onclick; ?> rel="<?php echo $button->get('options'); ?>">

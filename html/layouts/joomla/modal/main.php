@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  Layout
- *
+ * °version J! : 3.4.3 - MIR
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -29,7 +29,7 @@ extract($displayData);
  *
  */
 
-$modalClasses = array('modal');
+$modalClasses = array('modal', 'hide');
 
 if (!isset($params['animation']) || $params['animation'])
 {
@@ -51,29 +51,33 @@ if (isset($params['keyboard']))
 	$modalAttributes['data-keyboard'] = (is_bool($params['keyboard']) ? ($params['keyboard'] ? 'true' : 'false') : 'true');
 }
 
+/**
+ * These lines below are for disabling scrolling of parent window.
+ * $('body').addClass('modal-open');
+ * $('body').removeClass('modal-open')
+ *
+ * Specific hack for Bootstrap 2.3.x
+ */
+$script[] = "jQuery(document).ready(function($) {";
+$script[] = "   $('#" . $selector . "').on('show', function() {";
+$script[] = "       $('body').addClass('modal-open');";
+
 if (isset($params['url']))
 {
-	//$iframeHtml = JLayoutHelper::render('joomla.modal.iframe', $displayData);
+	$iframeHtml = JLayoutHelper::render('joomla.modal.iframe', $displayData);
 
-	/*JFactory::getDocument()->addScriptDeclaration("
-		jQuery(document).ready(function($) {
-			$('#" . $selector . "').on('show.bs.modal', function() {
-				var modalBody = $(this).find('.modal-body');
-				
-				// Destroy previous iframe if loaded
-				modalBody.find('iframe').remove();
-
-				// Load iframe
-				modalBody.prepend('" . trim($iframeHtml) . "');
-
-			});
-		});
-	");*/
-	
-	$modalAttributes['data-iframe'] = $params['url'];
-	$modalAttributes['data-iframe-width'] = $params['width'];
-	$modalAttributes['data-iframe-height'] = $params['height'];
+	// Script for destroying and reloading the iframe
+	$script[] = "       var modalBody = $(this).find('.modal-body');";
+	$script[] = "       modalBody.find('iframe').remove();";
+	$script[] = "       modalBody.prepend('" . trim($iframeHtml) . "');";
 }
+
+$script[] = "   }).on('hide', function () {";
+$script[] = "       $('body').removeClass('modal-open');";
+$script[] = "   });";
+$script[] = "});";
+
+JFactory::getDocument()->addScriptDeclaration(implode("\n", $script));
 ?>
 <div id="<?php echo $selector; ?>" <?php echo JArrayHelper::toString($modalAttributes); ?> role="dialog" aria-labelledby="<?php echo $selector; ?>Label" aria-hidden="true">
 	<div class="modal-dialog">

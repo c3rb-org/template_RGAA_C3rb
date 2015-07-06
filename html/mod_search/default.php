@@ -2,7 +2,7 @@
 /** 
  * @package     Joomla.Site
  * @subpackage  mod_search
- *	°version J! : 3.4.0 - MIR
+ * °version J! : 3.4.3 - MIR
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -11,7 +11,19 @@ defined('_JEXEC') or die;
 
 // Including fallback code for the placeholder attribute in the search field.
 JHtml::_('jquery.framework');
-//JHtml::_('script', 'system/html5fallback.js', false, true); //genere des erreur aria
+//JHtml::_('script', 'system/html5fallback.js', false, true);
+
+if ($width)
+{
+	$moduleclass_sfx .= ' ' . 'mod_search' . $module->id;
+	$css = 'div.mod_search' . $module->id . ' input[type="search"]{ width:auto; }';
+	JFactory::getDocument()->addStyleDeclaration($css);
+	$width = ' size="' . $width . '"';
+}
+else
+{
+	$width = '';
+}
 ?> 
 <!-- Des corrections sont a faire dans le cas ou les options droite gauche au bas sont choisies, par default btn a draoite sans image -->
 <div class="search<?php echo $moduleclass_sfx ?>" id="search-lnk">

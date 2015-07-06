@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  com_content
- * °version 3.4.1 - MIR
+ * °version 3.4.3 - MIR
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -38,11 +38,6 @@ JFactory::getDocument()->addScriptDeclaration("
 		}
 	}
 ");
-
-$tab_input = array('title','alias','version_note','created_by_alias','publish_up','publish_down','metadesc','metakey');
-foreach($tab_input as $i)
-	$this->form->setFieldAttribute($i, 'class', 'form-control');
-	
 ?>
 
 <div class="edit item-page<?php echo $this->pageclass_sfx; ?>">

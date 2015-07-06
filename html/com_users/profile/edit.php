@@ -79,7 +79,10 @@ foreach($tab_input as $i)
 								<span class="optional"><?php echo JText::_('COM_USERS_OPTIONAL'); ?></span>
 							<?php endif; ?>
 						</div>
-						<div class="col-xs-12 col-sm-8">
+						<div class="controls">
+							<?php if ($field->fieldname == 'password1') : ?>
+								<?php // Disables autocomplete ?> <input type="text" style="display:none">
+							<?php endif; ?>
 							<?php echo $field->input; ?>
 						</div>
 					</div>

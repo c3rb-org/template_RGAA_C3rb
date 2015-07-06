@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  com_search
- *
+ * °version J! : 3.4.3 - MIR
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -35,26 +35,8 @@ $upper_limit = $lang->getUpperLimitSearchWord();
 			<legend><?php echo JText::_('COM_SEARCH_FOR');?>
 			</legend>
 				<div class="phrases-box">	
-					<div class="radio">
-						<label  id="searchphraseall-lbl" for="searchphraseall">
-						<input type="radio" <?php echo $this->searchphrase == 'all' ? 'checked="checked"' : '' ; ?> value="all" id="searchphraseall" name="searchphrase"><?php echo JText::_('COM_SEARCH_ALL_WORDS'); ?>
-						</label>
+			<?php echo $this->lists['searchphrase']; ?>
 					</div>
-					<div class="radio">
-
-						<label id="searchphraseany-lbl" for="searchphraseany">
-						
-						<input type="radio" <?php echo $this->searchphrase == 'any' ? 'checked="checked"' : '' ; ?> value="any" id="searchphraseany" name="searchphrase"><?php echo JText::_('COM_SEARCH_ANY_WORDS'); ?>
-						</label>
-					</div>
-					<div class="radio">
-						<label id="searchphraseexact-lbl" for="searchphraseexact">
-						
-						<input type="radio" <?php echo $this->searchphrase == 'exact' ? 'checked="checked"' : '' ; ?> value="exact" id="searchphraseexact" name="searchphrase"><?php echo JText::_('COM_SEARCH_EXACT_PHRASE'); ?>
-						</label>
-					</div>
-				</div>
-				
 				<div class="ordering-box">
 				<label for="ordering" class="ordering">
 					<?php echo JText::_('COM_SEARCH_ORDERING');?>

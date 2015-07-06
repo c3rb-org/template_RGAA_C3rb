@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  mod_articles_categories
- *	°version J! : 3.4.1 - MIR
+ *	°version J! : 3.4.3 - MIR
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -10,7 +10,7 @@
 defined('_JEXEC') or die;
 
 foreach ($list as $item) : ?>
-<article role="article">
+<article role="article"><!-- HTML5 c3rbrgaa -->
 		<div <?php if ($_SERVER['REQUEST_URI'] == JRoute::_(ContentHelperRoute::getCategoryRoute($item->id))) echo ' class="active"';?>> <?php $levelup = $item->level - $startLevel - 1; ?><!-- Pas de liste C3rbRgaa -->
 			<h<?php echo $params->get('item_heading') + $levelup; ?>>
 				<a href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($item->id)); ?>">
@@ -33,6 +33,6 @@ foreach ($list as $item) : ?>
 				<?php $list = $temp; ?>
 				<?php echo '</ul>'; ?>
 			<?php endif; ?>
-		</div>
-</article>
+		</div><!-- FIN Pas de liste C3rbRgaa -->
+</article><!-- FIN HTML5 c3rbrgaa -->
 <?php endforeach; ?>

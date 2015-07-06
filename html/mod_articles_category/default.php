@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  mod_articles_category
- *	°version J! : 3.4.0 - MIR
+ *	°version J! : 3.4.3 - MIR
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -13,7 +13,7 @@ defined('_JEXEC') or die;
 <div class="category-module<?php echo $moduleclass_sfx; ?>"><!-- Pas de liste C3rbrgaa -->
 	<?php if ($grouped) : ?>
 		<?php foreach ($list as $group_name => $group) : ?>
-		<article role="article">
+		<article role="article"><!-- HTML5 C3rbrgaa -->
 			<div><!-- Pas de liste C3rbrgaa -->
 				<?php foreach ($group as $item) : ?>
 					<div><!-- Pas de liste C3rbrgaa -->

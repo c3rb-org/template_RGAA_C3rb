@@ -10,11 +10,12 @@
 defined('_JEXEC') or die;
 
 ?>
-<div class="categories-list<?php echo $displayData->pageclass_sfx;?>" role="list" aria-describedby="<?php echo JText::_('arbredescategorie'); ?>">
 <?php if ($displayData->params->get('show_page_heading')) : ?>
+<div class="page-header">
 <h1>
 	<?php echo $displayData->escape($displayData->params->get('page_heading')); ?>
 </h1>
+</div>
 <?php endif; ?>
 
 <?php if ($displayData->params->get('show_base_description')) : ?>

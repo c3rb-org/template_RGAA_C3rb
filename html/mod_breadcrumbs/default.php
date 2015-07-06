@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  mod_breadcrumbs
- *
+ * °version J! : 3.4.3 - MIR
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -11,7 +11,7 @@ defined('_JEXEC') or die;
 JHtml::_('bootstrap.tooltip');
 ?>
 
-<ul class="breadcrumb<?php echo $moduleclass_sfx; ?>" role="menu"> <!-- MIR rgaac3rb -->
+<ul class="breadcrumb<?php echo $moduleclass_sfx; ?>" role="menu"> <!-- ARIA rgaac3rb -->
 	<?php
 	if ($params->get('showHere', 1))
 	{
@@ -45,7 +45,7 @@ JHtml::_('bootstrap.tooltip');
 	if ($key != $last_item_key)
 	{
 		// Render all but last item - along with separator
-		echo '<li role="menuitem">'; //Ajout Mir rgaa
+		echo '<li role="menuitem">'; // ARIA c3RBrgaa
 		if (!empty($item->link))
 		{
 			echo '<a href="' . $item->link . '" class="pathway">' . $item->name . '</a>';
