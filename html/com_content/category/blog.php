@@ -17,16 +17,18 @@ JHtml::_('behavior.caption');
 <div class="blog<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="http://schema.org/Blog">
 	<?php if ($this->params->get('show_page_heading')) : ?>
 		<div class="page-header">
+		<div class="col-sm-12">
 			<!-- <h1> -->
 			<h2>
 			<?php echo $this->escape($this->params->get('page_heading')); ?>
 			</h2>
 			<!-- </h1> -->
+		<div class="col-sm-12">
 		</div>
 	<?php endif; ?>
 
-<header>
 	<?php if ($this->params->get('show_category_title', 1) or $this->params->get('page_subheading')) : ?>
+<header>
 		<!-- <h1> -->
 <h2>
 			<?php echo $this->escape($this->params->get('page_subheading')); ?>
@@ -51,8 +53,8 @@ JHtml::_('behavior.caption');
 				<?php echo JHtml::_('content.prepare', $this->category->description, '', 'com_content.category'); ?>
 			<?php endif; ?>
 		</div>
-	<?php endif; ?>
 </header>
+	<?php endif; ?>
 
 	<?php if (empty($this->lead_items) && empty($this->link_items) && empty($this->intro_items)) : ?>
 		<?php if ($this->params->get('show_no_articles', 1)) : ?>
@@ -62,20 +64,22 @@ JHtml::_('behavior.caption');
 
 	<?php $leadingcount = 0; ?>
 	<?php if (!empty($this->lead_items)) : ?>
-	<article role="main">	
-		<div class="items-leading clearfix">
-			<?php foreach ($this->lead_items as &$item) : ?>
-				<div class="leading-<?php echo $leadingcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>"
-					itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-					<?php
-					$this->item = & $item;
-					echo $this->loadTemplate('item');
-					?>
-				</div>
-				<?php $leadingcount++; ?>
-			<?php endforeach; ?>
+		<div class="items-leading row">
+			<div class="col-sm-12">
+				<?php foreach ($this->lead_items as &$item) : ?>
+					<div class="leading-<?php echo $leadingcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>"
+						itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+					<article role="main">	
+						<?php
+						$this->item = & $item;
+						echo $this->loadTemplate('item');
+						?>
+					</article>
+					</div>
+					<?php $leadingcount++; ?>
+				<?php endforeach; ?>
+			</div>
 		</div><!-- end items-leading -->
-	</article>
 	<?php endif; ?>
 
 	<?php
