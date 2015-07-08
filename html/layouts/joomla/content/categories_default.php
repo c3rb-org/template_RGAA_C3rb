@@ -17,7 +17,6 @@ defined('_JEXEC') or die;
 </h1>
 </div>
 <?php endif; ?>
-
 <?php if ($displayData->params->get('show_base_description')) : ?>
 	<?php //If there is a description in the menu parameters use that; ?>
 		<?php if($displayData->params->get('categories_description')) : ?> 

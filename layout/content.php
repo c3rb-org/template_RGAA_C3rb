@@ -7,7 +7,6 @@ if($this->countModules('position-7')>0)
 if($this->countModules('position-8')>0)
 	$colbs = $colbs - 3;
 ?>
-
 <div class="row">
 	<!-- Col gauche -->
 	<?php 
