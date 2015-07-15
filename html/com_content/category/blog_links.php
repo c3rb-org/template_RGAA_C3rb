@@ -10,8 +10,8 @@
 defined('_JEXEC') or die;
 ?>
 
-
-<ol class="nav nav-tabs nav-stacked">
+<h3>Plus d'articles</h3>
+<ul class="nav nav-tabs nav-stacked">
 <?php
 	foreach ($this->link_items as &$item) :
 ?>
@@ -20,4 +20,4 @@ defined('_JEXEC') or die;
 			<?php echo $item->title; ?></a>
 	</li>
 <?php endforeach; ?>
-</ol>
+</ul>
