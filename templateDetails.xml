@@ -4,7 +4,7 @@
 <extension version="3.3" type="template" client="site" method="upgrade">
 	
     <!-- Version -->
-    <name>rgaac3rb</name>
+    <name>template_RGAA_C3rb</name>
     <version>0.0.2</version>
     <creationDate>20-01-2015</creationDate>
     <author>C3rb Informatique</author>
@@ -37,10 +37,13 @@
         <folder>js</folder>
         <folder>languages</folder>
         <folder>layout</folder>
+        <folder>libraries</folder>
+        <filename>component.php</filename>
         <filename>error.php</filename>
         <filename>favicon.ico</filename>
         <filename>index.html</filename>
         <filename>index.php</filename>
+        <filename>logic.php</filename>
         <filename>template_preview.png</filename>
         <filename>template_thumbnail.png</filename>
         <filename>templateDetails.xml</filename>
