@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  com_content
- * °version 3.4.3 - MIR
+ * Â°version 3.4.3 - MIR
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -15,27 +15,25 @@ JHtml::_('behavior.caption');
 ?>
 
 <div class="blog<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="http://schema.org/Blog">
+	<header>
 	<?php if ($this->params->get('show_page_heading')) : ?>
 		<div class="page-header">
-		<div class="col-sm-12">
 			<!-- <h1> -->
 			<h2>
 			<?php echo $this->escape($this->params->get('page_heading')); ?>
 			</h2>
 			<!-- </h1> -->
-		<div class="col-sm-12">
 		</div>
 	<?php endif; ?>
 
 	<?php if ($this->params->get('show_category_title', 1) or $this->params->get('page_subheading')) : ?>
-<header>
 		<!-- <h1> -->
-<h2>
+		<h2>
 			<?php echo $this->escape($this->params->get('page_subheading')); ?>
 			<?php if ($this->params->get('show_category_title')) : ?>
 				<span class="subheading-category"><?php echo $this->category->title; ?></span>
 			<?php endif; ?>
-</h2>
+		</h2>
 		<!-- <h1> -->
 
 	<?php endif; ?>
@@ -53,7 +51,7 @@ JHtml::_('behavior.caption');
 				<?php echo JHtml::_('content.prepare', $this->category->description, '', 'com_content.category'); ?>
 			<?php endif; ?>
 		</div>
-</header>
+	</header>
 	<?php endif; ?>
 
 	<?php if (empty($this->lead_items) && empty($this->link_items) && empty($this->intro_items)) : ?>
@@ -69,7 +67,7 @@ JHtml::_('behavior.caption');
 				<?php foreach ($this->lead_items as &$item) : ?>
 					<div class="leading-<?php echo $leadingcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>"
 						itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
-					<article role="main">	
+					<article role="main">
 						<?php
 						$this->item = & $item;
 						echo $this->loadTemplate('item');
