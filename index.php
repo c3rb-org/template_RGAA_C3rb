@@ -1,13 +1,13 @@
 <?php
-defined( '_JEXEC' ) or die; 
+defined( '_JEXEC' ) or die;
 //variables du template
-include_once JPATH_THEMES.'/'.$this->template.'/logic.php'; 
+include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 ?>
 
 <!DOCTYPE html>
 <html 	xmlns="http://www.w3.org/1999/xhtml"
 xml:lang="<?php echo $this->language; ?>"
-lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
+lang="fr" dir="<?php echo $this->direction; ?>">
 
 	<head>
 	<?php
@@ -51,4 +51,4 @@ lang="<?php echo $this->language; ?>" dir="<?php echo $this->direction; ?>">
 		?>
 	</body>
 
-</html> 
+</html>
