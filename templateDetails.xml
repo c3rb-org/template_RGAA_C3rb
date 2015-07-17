@@ -4,7 +4,7 @@
 <extension version="3.3" type="template" client="site" method="upgrade">
 	
     <!-- Version -->
-    <name>template_RGAA_C3rb</name>
+    <name>C3rb_Rgaa</name>
     <version>0.0.2</version>
     <creationDate>20-01-2015</creationDate>
     <author>C3rb Informatique</author>
@@ -19,12 +19,12 @@
             </p>
             <hr />
             <h2 style="text-align:left;">Les positions disponibles du template :</h2>
-            <img src="../templates/rgaac3rb/images/template/administrator/position.jpg" alt="les positions du template">
+            <img src="../templates/C3rb_Rgaa/images/template/administrator/position.jpg" alt="les positions du template">
     ]]></description>
 
     <!-- Langue -->
     <languages folder="languages">
-        <language tag="fr-FR">fr-FR/fr-FR.tpl_template_rgaa_c3rb.ini</language> 
+        <language tag="fr-FR">fr-FR/fr-FR.tpl_template_rgaa_c3rb.ini</language>
         <language tag="fr-FR">fr-FR/fr-FR.tpl_template_rgaa_c3rb.sys.ini</language>
     </languages>
 
