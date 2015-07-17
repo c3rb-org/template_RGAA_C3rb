@@ -1081,12 +1081,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #6a8f1e;
+  color: #517704;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #3b5011;
+  color: #1f2d02;
   text-decoration: underline;
 }
 a:focus {
@@ -3433,7 +3433,7 @@ fieldset[disabled] .btn-danger.active {
   background-color: #ffffff;
 }
 .btn-link {
-  color: #6a8f1e;
+  color: #517704;
   font-weight: normal;
   border-radius: 0;
 }
@@ -3454,7 +3454,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #3b5011;
+  color: #1f2d02;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -4029,7 +4029,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #6a8f1e;
+  border-color: #517704;
 }
 .nav .nav-divider {
   height: 1px;
@@ -4748,7 +4748,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 6px 12px;
   line-height: 1.42857143;
   text-decoration: none;
-  color: #6a8f1e;
+  color: #517704;
   background-color: #ffffff;
   border: 1px solid #dddddd;
   margin-left: -1px;
@@ -4769,7 +4769,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > a:focus,
 .pagination > li > span:focus {
   z-index: 3;
-  color: #3b5011;
+  color: #1f2d02;
   background-color: #eeeeee;
   border-color: #dddddd;
 }
@@ -4944,7 +4944,7 @@ a.label:focus {
   vertical-align: middle;
   white-space: nowrap;
   text-align: center;
-  background-color: #777777;
+  background-color: #555555;
   border-radius: 10px;
 }
 .badge:empty {
@@ -4967,7 +4967,7 @@ a.badge:focus {
 }
 .list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #6a8f1e;
+  color: #517704;
   background-color: #ffffff;
 }
 .list-group-item > .badge {
@@ -5040,7 +5040,7 @@ a.badge:focus {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #6a8f1e;
+  border-color: #517704;
 }
 .thumbnail .caption {
   padding: 9px;
@@ -9198,6 +9198,11 @@ a[target="_blank"]:after {
   outline: thin dotted;
   outline-offset: -2px;
 }
+a.evit-lnk {
+  background: #FFFFFF;
+  color: #222222;
+  padding: 10px 15px;
+}
 /* Joomla theme */
 .colctre {
   background: #ffffff;
@@ -9240,7 +9245,7 @@ a[target="_blank"]:after {
 }
 /* Article */
 .article-info {
-  color: #666;
+  color: #111111;
   font-style: italic;
   font-size: 13px;
 }
