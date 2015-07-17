@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  com_content
- * °version J! : 3.4.3 - MIR
+ * Â°version J! : 3.4.3 - MIR
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -44,6 +44,7 @@ if (!empty($this->items))
 	<?php if ($this->params->get('show_headings') || $this->params->get('filter_field') != 'hide' || $this->params->get('show_pagination_limit')) :?>
 	<div class="clearfix"></div>
 	<fieldset class="filters btn-toolbar clearfix">
+	<legend class="sr-only"><?php echo JText::_('TPL_RGAAC3RB_ARTICLE_NBARTICLE_LEGEND'); ?></legend>
 		<?php if ($this->params->get('filter_field') != 'hide') :?>
 			<div class="btn-group">
 				<label class="filter-search-lbl element-invisible" for="filter-search">
