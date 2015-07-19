@@ -19,7 +19,7 @@
 		$nbmod =  $this->countModules('position-1');
 		if ($nbmod): ?>
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				<div>
+				<div class="row">
 					<jdoc:include type="modules" name="position-1" style="CrbXhtml" nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
 				</div>
 			</div>	
