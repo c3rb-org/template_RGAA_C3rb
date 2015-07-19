@@ -90,10 +90,21 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 			</<?php echo $headerLvl; ?>>
 		<?php endif; ?>
 	<!-- Fin fermeture Hn du module -->
+	<!-- Sinon on affiche le titre pour les lecteur d'ecran uniquement -->
 		<?php else : ?>
-		<<?php echo $headerLvl; ?> class="sr-only">
+		<?php if (empty($headerLvl)) : ?>
+			<?php echo "<h3 class='sr-only'>"; ?>
+			<?php else: ?>
+			<<?php echo $headerLvl; ?> class="sr-only">
+		<?php endif; ?>
 		<span id="label<?php echo $module->id; ?>"><?php echo JText::_( $module->title ); ?></span>
-		</<?php echo $headerLvl;  ?>>	
+		<?php if (empty($headerLvl)) : ?>
+			<?php echo "</h3>"; ?>
+		<?php else: ?>
+			</<?php echo $headerLvl; ?>>
+		<?php endif; ?>
+	<!-- Fin Sinon on affiche le titre pour les lecteur d'ecran uniquement -->
+
 	<?php endif; ?>
 
 			<!-- Content du module -->
