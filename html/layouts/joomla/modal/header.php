@@ -36,6 +36,6 @@ extract($displayData);
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	<?php endif; ?>
 	<?php if (isset($params['title'])) : ?>
-        <h4 class="modal-title" id="<?php echo $selector; ?>Label"><?php echo $params['title']; ?></h4>
+        <h2 class="modal-title" id="<?php echo $selector; ?>Label"><?php echo $params['title']; ?></h2>
 	<?php endif; ?>
 </div>
