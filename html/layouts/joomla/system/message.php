@@ -24,7 +24,7 @@ $error_type = array('error'=>'alert-danger','warning'=>'alert-warning',
 							<span aria-hidden="true">&times;</span>
 						</button>
 						<?php if (!empty($msgs)) : ?>
-						<h4 class="alert-heading"><?php echo JText::_($type); ?></h4>
+						<span class="alert-heading"><?php echo JText::_($type); ?></span><!-- Attention au nieveu de titre dans les alerte qui sont affiché en top du site  -->
 						<div>
 							<?php foreach ($msgs as $msg) : ?>
 							<p><?php echo $msg; ?></p>
