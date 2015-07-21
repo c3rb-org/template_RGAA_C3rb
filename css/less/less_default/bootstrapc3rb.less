@@ -39,7 +39,17 @@ hr.hrlight {margin-bottom: 10px; margin-top: 10px; }
 
 /* Liste */
 ul.unstyled {list-style-type: none;  padding: 0px}
-
+.a-list {
+    clear: both;
+    display: block;
+    font-weight: normal;
+    line-height: 1.42857;
+    padding: 3px 20px;
+    white-space: nowrap;
+}
+li.active span.a-list {
+   background-color: #f5f5f5;
+}
 /* Menu (ajout a bootstrap pour menu a plusieurs niveaux dans joomla) */
 .dropdown-submenu {
     position: relative;
@@ -95,6 +105,7 @@ span.glyphicon:hover {cursor: default;}
 a span.glyphicon:hover {cursor: pointer;}
 
 /* Accessibilite */ 
+
 a[target="_blank"]:after {
 	font-family: "Glyphicons Halflings";
     font-size: 10px;
@@ -127,7 +138,10 @@ a.evit-lnk {
     color: #222222;
     padding: 10px 15px;
 }
-
+a.a11y {
+    background: rgba(0, 0, 0, 0) url("../images/template/ay11.png") no-repeat scroll 10px center;
+    padding-left: 37px !important;
+}
 /* Joomla theme */
 .colctre {
     background: @main-bg;
