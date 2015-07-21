@@ -77,7 +77,7 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 	<!-- Titre Hn du module -->
 	<?php if ($module->showtitle) : ?> 
 		<?php if (empty($headerLvl)) : ?>
-			<?php echo "<h3>"; ?>
+			<?php echo "<h2>"; ?>
 			<?php else: ?>
 			<<?php echo $headerLvl; ?>>
 		<?php endif; ?>
@@ -85,7 +85,7 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 		<span id="label<?php echo $module->id; ?>"><?php echo JText::_( $module->title ); ?></span>	
 	<!-- Fermeture Hn du module -->	
 		<?php if (empty($headerLvl)) : ?>
-			<?php echo "</h3>"; ?>
+			<?php echo "</h2>"; ?>
 		<?php else: ?>
 			</<?php echo $headerLvl; ?>>
 		<?php endif; ?>
@@ -93,13 +93,13 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 	<!-- Sinon on affiche le titre pour les lecteur d'ecran uniquement -->
 		<?php else : ?>
 		<?php if (empty($headerLvl)) : ?>
-			<?php echo "<h3 class='sr-only'>"; ?>
+			<?php echo "<h2 class='sr-only'>"; ?>
 			<?php else: ?>
 			<<?php echo $headerLvl; ?> class="sr-only">
 		<?php endif; ?>
 		<span id="label<?php echo $module->id; ?>"><?php echo JText::_( $module->title ); ?></span>
 		<?php if (empty($headerLvl)) : ?>
-			<?php echo "</h3>"; ?>
+			<?php echo "</h2>"; ?>
 		<?php else: ?>
 			</<?php echo $headerLvl; ?>>
 		<?php endif; ?>
