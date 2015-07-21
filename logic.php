@@ -46,10 +46,9 @@ $doc->setMetaData( 'viewport', 'width=device-width, initial-scale=1' );
 //Ajout des css : css template toujours en premier
 $tab_sheets = $doc->_styleSheets;
 $doc->_styleSheets = array();
-if(JDEBUG)
-$doc->addStyleSheet( ''. $tmplpath .'/css/template.css');
-else
+
 $doc->addStyleSheet( ''. $tmplpath .'/css/template.min.css' );
+
 foreach($tab_sheets as $url => $val)
-$doc->addStyleSheet($url,$val['mime'],$val['media'],$val['attribs']);
+        $doc->addStyleSheet($url,$val['mime'],$val['media'],$val['attribs']);
 ?>
