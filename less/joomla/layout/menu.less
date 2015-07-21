@@ -1,0 +1,26 @@
+.menuvertical {
+        padding: 0px;
+
+        li {
+                &.active {
+                        & a {
+                                &:before {
+                                        content: "\e250";
+                                        font-family: "Glyphicons Halflings";
+                                        height: 100%;
+                                        left: -6px;
+                                        overflow: hidden;
+                                        position: absolute;
+                                        top: 9px;
+                                        width: 10px;
+                                }
+                        }
+                }
+        }
+        .dropdown-menu {
+            position: relative;
+            float: none;
+
+            &.multi-level {display: block;}
+        }
+}
