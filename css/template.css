@@ -5876,106 +5876,6 @@ button.close {
   border: 0;
   -webkit-appearance: none;
 }
-.glyphicon {
-  top: 0px;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.1;
-  color: inherit;
-}
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small,
-.h1 small,
-.h2 small,
-.h3 small,
-.h4 small,
-.h5 small,
-.h6 small,
-h1 .small,
-h2 .small,
-h3 .small,
-h4 .small,
-h5 .small,
-h6 .small,
-.h1 .small,
-.h2 .small,
-.h3 .small,
-.h4 .small,
-.h5 .small,
-.h6 .small {
-  font-weight: normal;
-  line-height: 1;
-  color: #777777;
-}
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3 {
-  margin-top: 20px;
-  margin-bottom: 20px;
-}
-.nav-tabs > li > a {
-  background: #F2F2F2;
-  border-bottom: 1px solid #dddddd;
-}
-.nav-tabs > li.active > a {
-  background-color: #FFFFFF;
-  border-bottom: 1px solid #FFFFFF;
-}
-.nav-tabs > li.active > a:focus,
-.nav-tabs > li.active > a:hover {
-  background-color: #FFFFFF;
-}
-.tab-content {
-  padding: 10px ;
-  margin-bottom: 10px;
-  border-right: 1px solid #dddddd;
-  border-left: 1px solid #dddddd;
-  border-bottom: 1px solid #dddddd;
-}
-.navbar-default .navbar-nav > li > a {
-  color: #777777;
-}
-.breadcrumb {
-  padding: 8px 15px;
-  margin-bottom: 0px;
-  list-style: none;
-  background-color: #f5f5f5;
-  border-radius: 0px;
-}
-.breadcrumb > li {
-  display: inline-block;
-}
-.breadcrumb > li + li:before {
-  content: "/\00a0";
-  padding: 0 5px;
-  color: #cccccc;
-}
-.breadcrumb > .active {
-  color: #777777;
-}
-.pagination {
-  padding-left: inherit;
-}
 .modal-open {
   overflow: hidden;
 }
@@ -6860,6 +6760,106 @@ h3,
   .hidden-print {
     display: none !important;
   }
+}
+.glyphicon {
+  top: 0px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small,
+h6 small,
+.h1 small,
+.h2 small,
+.h3 small,
+.h4 small,
+.h5 small,
+.h6 small,
+h1 .small,
+h2 .small,
+h3 .small,
+h4 .small,
+h5 .small,
+h6 .small,
+.h1 .small,
+.h2 .small,
+.h3 .small,
+.h4 .small,
+.h5 .small,
+.h6 .small {
+  font-weight: normal;
+  line-height: 1;
+  color: #777777;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.nav-tabs > li > a {
+  background: #F2F2F2;
+  border-bottom: 1px solid #dddddd;
+}
+.nav-tabs > li.active > a {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+}
+.nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover {
+  background-color: #FFFFFF;
+}
+.tab-content {
+  padding: 10px ;
+  margin-bottom: 10px;
+  border-right: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #777777;
+}
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 0px;
+  list-style: none;
+  background-color: #f5f5f5;
+  border-radius: 0px;
+}
+.breadcrumb > li {
+  display: inline-block;
+}
+.breadcrumb > li + li:before {
+  content: "/\00a0";
+  padding: 0 5px;
+  color: #cccccc;
+}
+.breadcrumb > .active {
+  color: #777777;
+}
+.pagination {
+  padding-left: inherit;
 }
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
@@ -9221,7 +9221,7 @@ a.a11y {
 /* Joomla theme */
 .colctre {
   background: #ffffff;
-  padding: 0 15px 15px 15px;
+  padding: 1px 15px 15px 15px;
 }
 .colctre .page-header {
   float: left;
