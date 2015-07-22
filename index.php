@@ -7,7 +7,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 <!DOCTYPE html>
 <html 	xmlns="http://www.w3.org/1999/xhtml"
 xml:lang="<?php echo $this->language; ?>"
-lang="fr" dir="<?php echo $this->direction; ?>">
+lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); ?>" dir="<?php echo $this->direction; ?>">
 
 	<head>
 	<?php
