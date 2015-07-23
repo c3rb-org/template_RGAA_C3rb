@@ -24,6 +24,10 @@ JHtml::_('behavior.caption');
 			</h2>
 			<!-- </h1> -->
 		</div>
+	<?php else: ?>
+			<h2 class="sr-only">
+			<?php echo $this->escape($this->params->get('page_heading')); ?>
+			</h2>
 	<?php endif; ?>
 
 	<?php if ($this->params->get('show_category_title', 1) or $this->params->get('page_subheading')) : ?>

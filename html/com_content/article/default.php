@@ -28,10 +28,10 @@ $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_da
 	<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
 	<?php if ($this->params->get('show_page_heading', 1)) : ?>
 	<div class="page-header">
-		<h1><?php echo $this->escape($this->params->get('page_heading')); ?> </h1>
+		<h2><?php echo $this->escape($this->params->get('page_heading')); ?></h2>
 	</div>
 	<?php else : ?>
-		<h1 class="sr-only"><?php echo $this->escape($this->params->get('page_heading')); ?></h1>
+		<h2 class="sr-only"><?php echo $this->escape($this->params->get('page_heading')); ?></h2>
 	<?php endif;
 if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->paginationposition && $this->item->paginationrelative)
 {
@@ -52,35 +52,58 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 	<?php if ($params->get('show_title') || $params->get('show_author')) : ?>
 <article role="main">
 	<header>
-	<div class="page-header">
-	<?php //if ($this->params->get('show_page_heading') == 0) : ?>
-	<?php /* <h1 itemprop="name"> */ ?>
-	<?php //else : ?>
-		<h2 itemprop="name">
-	<?php //endif; ?>	
-			<?php if ($params->get('show_title')) : ?>
-				<?php if ($params->get('link_titles') && !empty($this->item->readmore_link)) : ?>
-					<a href="<?php echo $this->item->readmore_link; ?>" itemprop="url"> <?php echo $this->escape($this->item->title); ?></a>
-				<?php else : ?>
-					<?php echo $this->escape($this->item->title); ?>
-				<?php endif; ?>
+
+
+	<?php if ($params->get('show_title')) : ?>
+		
+		<div class="page-header">
+			<?php if ($this->params->get('show_page_heading', 1)) : ?>
+				<h3 itemprop="name">
+			<?php else : ?>
+				<h2 itemprop="name">
 			<?php endif; ?>
-	<?php //if ($this->params->get('show_page_heading') == 0) : ?>
-	<?php /*	</h1> */ ?>
-	<?php //else : ?>
-		</h2>
-	<?php //endif; ?>		
-		<?php if ($this->item->state == 0) : ?>
-			<span class="label label-warning"><?php echo JText::_('JUNPUBLISHED'); ?></span>
+					<?php if ($params->get('link_titles') && !empty($this->item->readmore_link)) : ?>
+						<a href="<?php echo $this->item->readmore_link; ?>" itemprop="url"> <?php echo $this->escape($this->item->title); ?></a>
+					<?php else : ?>
+						<?php echo $this->escape($this->item->title); ?>
+					<?php endif; ?>
+			<?php if ($this->params->get('show_page_heading', 1)) : ?>
+				</h3>
+			<?php else : ?>
+				</h2>
+			<?php endif; ?>
+
+			<?php if ($this->item->state == 0) : ?>
+				<span class="label label-warning"><?php echo JText::_('JUNPUBLISHED'); ?></span>
+			<?php endif; ?>
+			<?php if (strtotime($this->item->publish_up) > strtotime(JFactory::getDate())) : ?>
+				<span class="label label-warning"><?php echo JText::_('JNOTPUBLISHEDYET'); ?></span>
+			<?php endif; ?>
+			<?php if ((strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != JFactory::getDbo()->getNullDate()) : ?>
+				<span class="label label-warning"><?php echo JText::_('JEXPIRED'); ?></span>
+			<?php endif; ?>
+		</div>
+	<?php else : ?>
+		<?php if ($this->params->get('show_page_heading', 1)) : ?>
+			<h3 class="sr-only" itemprop="name">
+		<?php else : ?>
+			<h2 class="sr-only" itemprop="name">
 		<?php endif; ?>
-		<?php if (strtotime($this->item->publish_up) > strtotime(JFactory::getDate())) : ?>
-			<span class="label label-warning"><?php echo JText::_('JNOTPUBLISHEDYET'); ?></span>
+
+		<a href="<?php echo $this->item->readmore_link; ?>" itemprop="url"> <?php echo $this->escape($this->item->title); ?></a>
+		<?php if ($this->params->get('show_page_heading', 1)) : ?>
+			</h3>
+		<?php else : ?>
+			</h2>
 		<?php endif; ?>
-		<?php if ((strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != JFactory::getDbo()->getNullDate()) : ?>
-			<span class="label label-warning"><?php echo JText::_('JEXPIRED'); ?></span>
-		<?php endif; ?>
-	</div>
 	<?php endif; ?>
+	<?php endif; ?>
+
+
+
+
+
+
 	<?php if (!$this->print) : ?>
 		<?php if ($canEdit || $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
 			<?php echo JLayoutHelper::render('joomla.content.icons', array('params' => $params, 'item' => $this->item, 'print' => false)); ?>

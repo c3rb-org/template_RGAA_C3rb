@@ -23,7 +23,6 @@ $class = ' class="first"';
 				$class = ' class="last"';
 			endif;
 		?>
-
 		<div<?php echo $class; ?>>
 			<?php $class = ''; ?>
 			<?php if ($lang->isRTL()) : ?>
