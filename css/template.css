@@ -9218,6 +9218,10 @@ a.a11y {
   background: rgba(0, 0, 0, 0) url("../images/template/ay11.png") no-repeat scroll 10px center;
   padding-left: 37px !important;
 }
+a.noa11y {
+  background: rgba(0, 0, 0, 0) url("../images/template/noay11.png") no-repeat scroll 10px center;
+  padding-left: 37px !important;
+}
 /* Joomla theme */
 .colctre {
   background: #ffffff;
@@ -9236,6 +9240,11 @@ a.a11y {
 }
 .moduletable h3 {
   margin-top: 10px;
+}
+/* Suffixe de module */
+.moduletable.nostyle {
+  padding: 0px;
+  background: transparent;
 }
 /* Menu vertical  */
 .menuvertical {
