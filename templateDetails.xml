@@ -8,9 +8,10 @@
     <version>v1.0 - juillet 2015</version>
     <creationDate>20-01-2015</creationDate>
     <author>C3rb Informatique</author>
-    <copyright>Copyright © 2015 c3rb.org</copyright>
+    <copyright>Copyright © 2015 C3rb-informatique</copyright>
     <authorEmail>orphee@c3rb.fr</authorEmail>
     <authorUrl>http://www.c3rb.org</authorUrl>
+    <license>MIT</license>
     <description><![CDATA[ 
         <hr />
         <div class="clearfix"></div>
@@ -49,6 +50,11 @@
             </div>
         </div>
         <div class="clearfix"></div>
+        <br>
+            <hr/>
+        <p>
+        Ce template est sous <a href="http://opensource.org/licenses/mit-license.php">Licence MIT</a>
+        </p>
     ]]></description>
 
     <!-- Langue -->
