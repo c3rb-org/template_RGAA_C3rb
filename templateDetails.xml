@@ -2,9 +2,9 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 
 <extension version="3.3" type="template" client="site" method="upgrade">
-	
+    
     <!-- Version -->
-    <name>C3rb_Rgaa</name>
+    <name>c3rb_rgaa</name>
     <version>v1.0 - juillet 2015</version>
     <creationDate>20-01-2015</creationDate>
     <author>C3rb Informatique</author>
@@ -12,24 +12,49 @@
     <authorEmail>orphee@c3rb.fr</authorEmail>
     <authorUrl>http://www.c3rb.org</authorUrl>
     <description><![CDATA[ 
-            <hr />
-            <h2 style="text-align:left;">C3rb - RGAA - haaaa!</h2>
-            <p style="text-align:left">Created by <a href="http://www.c3rb.org" target="_blank">C3rb Informatique | c3rb.org</a>.<br />
-            Ruzafa Mikael @cr2a_graphique <br />
-            Andurand Ariane @ArianeWebdesign <br />
-            Espié Vincent
-            <br />
-            Cabrol Cyril
-            </p>
-            <hr />
+        <hr />
+        <div class="clearfix"></div>
+        <div class="">
+            <div class="span5">
+                <h2 style="text-align:left;">C3rb - RGAA - haaaa!</h2>
+                <p style="text-align:left">Created by <a href="http://www.c3rb.org" target="_blank">C3rb Informatique | c3rb.org</a>. </p>
+                <ul>
+                <li>Ruzafa Mikael @cr2a_graphique </li>
+                <li>Andurand Ariane @ArianeWebdesign </li>
+                <li>Espié Vincent</li>
+                <li>Cabrol Cyril</li>
+                </ul>
+            </div>
+            <div class="span7">
+                <h2 style="text-align:left;">Description</h2>
+                <ul>
+                    <li>C3rb_Rgaa est un template réalisé par la société C3rb Informatique, il propose à la communauté un template de conception  accessible (référentiel RGAA3).</li>
+                    <li>Ce template fonctionne avec les dépendances bootstrap 3 et fontawesome</li>
+                    <br />
+                    <li class ="alert alert-warning">Pour son bon fonctionnement, ce template <b>nécessite l'installation du plugin</b> : <br /> <span style="font-size: 20px"><a href="https://github.com/c3rb-org/plg_system_rgaac3rb">plg_system_rgaac3rb.</a></span></p>
+                        <p>Ce plugin permet la génération et le bon fonctionnement de Bootstrap3</p>
+                        <p>Il permet aussi d'activer un générateur LESS/CSS </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <hr />     
+        <div class="clearfix"></div>
+
+        <div class="">
+            <div class="span12">
             <h2 style="text-align:left;">Les positions disponibles du template :</h2>
-            <img src="../templates/C3rb_Rgaa/images/template/administrator/position.jpg" alt="les positions du template">
+            <img src="../templates/c3rb_rgaa/images/template/administrator/position.jpg" alt="les positions du template">
+            </div>
+        </div>
+        <div class="clearfix"></div>
     ]]></description>
 
     <!-- Langue -->
     <languages folder="languages">
-        <language tag="fr-FR">fr-FR/fr-FR.tpl_template_rgaa_c3rb.ini</language>
-        <language tag="fr-FR">fr-FR/fr-FR.tpl_template_rgaa_c3rb.sys.ini</language>
+        <language tag="fr-FR">fr-FR/fr-FR.tpl_c3rb_rgaa.ini</language>
+        <language tag="fr-FR">fr-FR/fr-FR.tpl_c3rb_rgaa.sys.ini</language>
     </languages>
 
     <!-- Arborescence -->
@@ -81,22 +106,22 @@
     <config>
         <fields name="params">
             <fieldset name="basic">
-                <field name="tmpltitlechoice" type="radio" label="TPL_RGAAC3RB_CHECK_TMPLTITCHOISE_LABEL" default="0">
-                    <option value="0">JNO</option>
-                    <option value="1">JYES</option>
-                </field>
             </fieldset>
 
-            <fieldset name="advanced">
-                <field name="tmplmodhelp" type="radio" label="TPL_RGAAC3RB_CHECK_TMPLMODHELP_LABEL" default="0">
+            <fieldset name="TPL_C3RB_RGAA_PARAMS">
+                <field width="250px" name="tmpltitlechoice" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLTITCHOISE_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLTITCHOISE_LABEL" default="0" class="btn-group btn-group-yesno">
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
-                <field name="tmplhtmlhelp" type="radio" label="TPL_RGAAC3RB_CHECK_TMPLHTMLHELP_LABEL" default="0">
+                <field name="tmplmodhelp" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLMODHELP_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLMODHELP_LABEL" default="0" class="btn-group btn-group-yesno">
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
-                <hr />	
+                <field name="tmplhtmlhelp" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLHTMLHELP_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLHTMLHELP_LABEL" default="0" class="btn-group btn-group-yesno">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <hr />  
             </fieldset>  
         </fields>
     </config>
