@@ -19,10 +19,11 @@ if($item->anchor_title)
 else
 	$title .= $item->title;
 
-if ($is_active)
+if (!empty($is_active))
 	$title .= ' - Page active"';
 else
 	$title = '';
+
 // fin generation du title rgaac3rb
 
 if ($item->menu_image)
