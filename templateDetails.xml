@@ -2,7 +2,7 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 
 <extension version="3.3" type="template" client="site" method="upgrade">
-    
+
     <!-- Version -->
     <name>c3rb_rgaa</name>
     <version>v1.0 - juillet 2015</version>
@@ -20,10 +20,10 @@
                 <h2 style="text-align:left;">C3rb - RGAA - haaaa!</h2>
                 <p style="text-align:left">Created by <a href="http://www.c3rb.org" target="_blank">C3rb Informatique | c3rb.org</a>. </p>
                 <ul>
-                <li>Ruzafa Mikael @cr2a_graphique </li>
-                <li>Andurand Ariane @ArianeWebdesign </li>
-                <li>Espié Vincent</li>
-                <li>Cabrol Cyril</li>
+                    <li>Ruzafa Mikael @cr2a_graphique </li>
+                    <li>Andurand Ariane @ArianeWebdesign </li>
+                    <li>Espié Vincent</li>
+                    <li>Cabrol Cyril</li>
                 </ul>
             </div>
             <div class="span7">
@@ -33,18 +33,18 @@
                     <li>Ce template fonctionne avec les dépendances bootstrap 3 et fontawesome</li>
                     <br />
                     <li class ="alert alert-warning">Pour son bon fonctionnement, ce template <b>nécessite l'installation du plugin</b> : <br /> <span style="font-size: 20px"><a href="https://github.com/c3rb-org/plg_system_rgaac3rb">plg_system_rgaac3rb.</a></span></p>
-                        <p>Ce plugin permet la génération et le bon fonctionnement de Bootstrap3</p>
-                        <p>Il permet aussi d'activer un générateur LESS/CSS </p>
-                    </li>
-                </ul>
-            </div>
+                    <p>Ce plugin permet la génération et le bon fonctionnement de Bootstrap3</p>
+                    <p>Il permet aussi d'activer un générateur LESS/CSS </p>
+                </li>
+            </ul>
         </div>
-        <div class="clearfix"></div>
-        <hr />     
-        <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+    <hr />     
+    <div class="clearfix"></div>
 
-        <div class="">
-            <div class="span12">
+    <div class="">
+        <div class="span12">
             <h2 style="text-align:left;">Les positions disponibles du template :</h2>
             <img src="../templates/c3rb_rgaa/images/template/administrator/position.jpg" alt="les positions du template">
             </div>
@@ -52,88 +52,94 @@
         <div class="clearfix"></div>
         <br>
             <hr/>
-        <p>
-        Ce template est sous <a href="http://opensource.org/licenses/mit-license.php">Licence MIT</a>
-        </p>
-    ]]></description>
+            <p>
+                Ce template est sous <a href="http://opensource.org/licenses/mit-license.php">Licence MIT</a>
+            </p>
+            ]]></description>
 
-    <!-- Langue -->
-    <languages folder="languages">
-        <language tag="fr-FR">fr-FR/fr-FR.tpl_c3rb_rgaa.ini</language>
-        <language tag="fr-FR">fr-FR/fr-FR.tpl_c3rb_rgaa.sys.ini</language>
-    </languages>
+            <!-- Langue -->
+            <languages folder="languages">
+                <language tag="fr-FR">fr-FR/fr-FR.tpl_c3rb_rgaa.ini</language>
+                <language tag="fr-FR">fr-FR/fr-FR.tpl_c3rb_rgaa.sys.ini</language>
+            </languages>
 
-    <!-- Arborescence -->
-    <files>
-        <folder>css</folder>
-        <folder>fonts</folder>
-        <folder>html</folder>
-        <folder>images</folder>
-        <folder>js</folder>
-        <folder>languages</folder>
-        <folder>layout</folder>
-        <folder>libraries</folder>
-        <filename>component.php</filename>
-        <filename>error.php</filename>
-        <filename>favicon.ico</filename>
-        <filename>index.html</filename>
-        <filename>index.php</filename>
-        <filename>logic.php</filename>
-        <filename>template_preview.png</filename>
-        <filename>template_thumbnail.png</filename>
-        <filename>templateDetails.xml</filename>
-    </files>
+            <!-- Arborescence -->
+            <files>
+                <folder>css</folder>
+                <folder>fonts</folder>
+                <folder>html</folder>
+                <folder>images</folder>
+                <folder>js</folder>
+                <folder>languages</folder>
+                <folder>layout</folder>
+                <folder>libraries</folder>
+                <filename>component.php</filename>
+                <filename>error.php</filename>
+                <filename>favicon.ico</filename>
+                <filename>index.html</filename>
+                <filename>index.php</filename>
+                <filename>logic.php</filename>
+                <filename>template_preview.png</filename>
+                <filename>template_thumbnail.png</filename>
+                <filename>templateDetails.xml</filename>
+            </files>
 
-    <!-- Position du template -->
-    <positions>
-        <position>position-1</position>
-        <position>position-2</position>
-        <position>position-3</position>
-        <position>position-4</position>
-        <position>position-5</position>
-        <position>position-6</position>
-        <position>position-7</position>
-        <position>position-8</position>
-        <position>position-9</position>
-        <position>position-10</position>
-        <position>position-11</position>
-        <position>position-12</position>
-        <position>position-13</position>
-        <position>position-14</position>
-        <position>position-15</position>
-        <position>position-16</position>
-        <position>position-17</position>
-        <position>position-18</position>
-        <position>position-19</position>
-        <position>position-20</position>
-        <position>debug</position>
-    </positions>
+            <!-- Position du template -->
+            <positions>
+                <position>position-1</position>
+                <position>position-2</position>
+                <position>position-3</position>
+                <position>position-4</position>
+                <position>position-5</position>
+                <position>position-6</position>
+                <position>position-7</position>
+                <position>position-8</position>
+                <position>position-9</position>
+                <position>position-10</position>
+                <position>position-11</position>
+                <position>position-12</position>
+                <position>position-13</position>
+                <position>position-14</position>
+                <position>position-15</position>
+                <position>position-16</position>
+                <position>position-17</position>
+                <position>position-18</position>
+                <position>position-19</position>
+                <position>position-20</position>
+                <position>debug</position>
+            </positions>
 
-    <config>
-        <fields name="params">
-            <fieldset name="basic">
-            </fieldset>
+            <config>
+                <fields name="params">
+                    <fieldset name="basic">
+                    </fieldset>
 
-            <fieldset name="TPL_C3RB_RGAA_PARAMS">
-                <field type="spacer" label="TPL_C3RB_RGAA_TIT_TITSYS" labelclass="text-right" ></field>
-                <field width="250px" name="tmpltitchoice" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLTITCHOICE_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLTITCHOICE_LABEL" default="0" class="btn-group btn-group-yesno" >
-                    <option value="0">JNO</option>
-                    <option value="1">JYES</option>
-                </field>
-                <field width="250px" name="tmpltitleaff" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLTITAFF_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLTITAFF_LABEL" default="0" class="btn-group btn-group-yesno">
-                    <option value="0">JNO</option>
-                    <option value="1">JYES</option>
-                </field>
-                <field name="tmplmodhelp" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLMODHELP_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLMODHELP_LABEL" default="0" class="btn-group btn-group-yesno">
-                    <option value="0">JNO</option>
-                    <option value="1">JYES</option>
-                </field>
-                <field name="tmplhtmlhelp" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLHTMLHELP_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLHTMLHELP_LABEL" default="0" class="btn-group btn-group-yesno">
-                    <option value="0">JNO</option>
-                    <option value="1">JYES</option>
-                </field>
-                <hr />  
-            </fieldset>  
-        </fields>
-    </config>
-</extension>
+                    <fieldset name="TPL_C3RB_RGAA_PARAMS">
+                        <field type="spacer" label="TPL_C3RB_RGAA_TIT_TITSYS"></field>
+                        <field width="250px" name="tmpltitchoice" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLTITCHOICE_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLTITCHOICE_LABEL" default="0" class="btn-group btn-group-yesno" >
+                            <option value="0">JNO</option>
+                            <option value="1">JYES</option>
+                        </field>
+                        <field width="250px" name="tmpltitleaff" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLTITAFF_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLTITAFF_LABEL" default="0" class="btn-group btn-group-yesno">
+                            <option value="0">JNO</option>
+                            <option value="1">JYES</option>
+                        </field>
+                        <field width="250px" name="tmpltitmodforce" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLTITMOD_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLTITMOD_LABEL" default="0" class="btn-group btn-group-yesno">
+                            <option value="0">JNO</option>
+                            <option value="1">JYES</option>
+                        </field>
+
+                        <field type="spacer" label="TPL_C3RB_RGAA_TIT_AIDE"></field>
+                        <field name="tmplmodhelp" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLMODHELP_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLMODHELP_LABEL" default="0" class="btn-group btn-group-yesno">
+                            <option value="0">JNO</option>
+                            <option value="1">JYES</option>
+                        </field>
+                        <field name="tmplhtmlhelp" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLHTMLHELP_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLHTMLHELP_LABEL" default="0" class="btn-group btn-group-yesno">
+                            <option value="0">JNO</option>
+                            <option value="1">JYES</option>
+                        </field>
+                        <hr />  
+                    </fieldset>  
+                </fields>
+            </config>
+        </extension>

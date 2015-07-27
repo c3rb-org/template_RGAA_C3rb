@@ -15,16 +15,17 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 	?> 
 	<?php
 	//Variable utiles
-	$nbmod 				= $attribs['nbmod']; 					// Nombre de module dans la position.
-	$modbssize 			= $params->get('bootstrap_size');		// Taille bootstrap defini dans l'administration.
-	$modstyle			= $attribs['style'];					// Style du module choisi dans l'admin.
-	$modposname			= $attribs['name'];						// Nom de la position du module choisi dans l'admin.
-	$paramtmpl_debug	= $attribs['debug'];					// Parametre du debug
-	$moduletype			= $module->module;						// type de module.
-	$headerLvl 			= $params->get('header_tag');			// niveau de h dans le titre
-	$moduleTag      	= $params->get('module_tag');			// Choix html5 de la balise du module
-
-	$datacontent 		=										//Contenu du debug
+	$nbmod 						= $attribs['nbmod']; 				// Nombre de module dans la position.
+	$modbssize 					= $params->get('bootstrap_size');	// Taille bootstrap defini dans l'administration.
+	$modstyle					= $attribs['style'];				// Style du module choisi dans l'admin.
+	$modposname					= $attribs['name'];					// Nom de la position du module choisi dans l'admin.
+	$paramtmpl_debug			= $attribs['debug'];				// Parametre du debug
+	$paramtmpl_tmpltitmodforce 	= $attribs['tmpltitmodforce'];		//Choix forcer les titres des modules
+	$moduletype					= $module->module;					// type de module.
+	$headerLvl 					= $params->get('header_tag');		// niveau de h dans le titre
+	$moduleTag      			= $params->get('module_tag');		// Choix html5 de la balise du module
+		
+	$datacontent 				=											//Contenu du debug
 	"
 					Nom de la positiondu module : <span class='label label-info'>$modposname</span><br />
 					Nbre de module dans la position : <span class='label label-info'>$nbmod</span><br />
@@ -76,34 +77,34 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 
 	<!-- Titre Hn du module -->
 	<?php if ($module->showtitle) : ?> 
-		<?php if (empty($headerLvl)) : ?>
+
+		<?php if ($paramtmpl_tmpltitmodforce  == 1) : ?>
 			<?php echo "<h2>"; ?>
-			<?php else: ?>
+		<?php else : ?>
 			<<?php echo $headerLvl; ?>>
 		<?php endif; ?>
 	<!-- Fin titre du module -->
 		<span id="label<?php echo $module->id; ?>"><?php echo JText::_( $module->title ); ?></span>	
-	<!-- Fermeture Hn du module -->	
-		<?php if (empty($headerLvl)) : ?>
+	<!-- Fermeture Hn du module -->
+		<?php if ($paramtmpl_tmpltitmodforce  == 1) : ?>
 			<?php echo "</h2>"; ?>
-		<?php else: ?>
+		<?php else : ?>
 			</<?php echo $headerLvl; ?>>
 		<?php endif; ?>
-	<!-- Fin fermeture Hn du module -->
-	<!-- Sinon on affiche le titre pour les lecteur d'ecran uniquement -->
-		<?php else : ?>
-		<?php if (empty($headerLvl)) : ?>
+	
+	<?php else : ?>
+
+		<?php if ($paramtmpl_tmpltitmodforce  == 1) : ?>
 			<?php echo "<h2 class='sr-only'>"; ?>
-			<?php else: ?>
+		<?php else : ?>
 			<<?php echo $headerLvl; ?> class="sr-only">
 		<?php endif; ?>
-		<span id="label<?php echo $module->id; ?>"><?php echo JText::_( $module->title ); ?></span>
-		<?php if (empty($headerLvl)) : ?>
+		<span id="label<?php echo $module->id; ?>"><?php echo JText::_( $module->title ); ?></span>	
+		<?php if ($paramtmpl_tmpltitmodforce  == 1) : ?>
 			<?php echo "</h2>"; ?>
-		<?php else: ?>
+		<?php else : ?>
 			</<?php echo $headerLvl; ?>>
 		<?php endif; ?>
-	<!-- Fin Sinon on affiche le titre pour les lecteur d'ecran uniquement -->
 
 	<?php endif; ?>
 

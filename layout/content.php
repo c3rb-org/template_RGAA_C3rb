@@ -14,7 +14,7 @@ if($this->countModules('position-8')>0)
 	if ($nbmod): ?>
 		<div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 colgche">
 			<div class="row">
-				<jdoc:include type="modules" name="position-7" style="CrbXhtml" nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
+				<jdoc:include type="modules" name="position-7" style="CrbXhtml" tmpltitmodforce="<?php echo $paramtmpl_tmpltitmodforce; ?>"  nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
 			</div>
 		</div>
 	<?php endif; ?>
@@ -49,7 +49,7 @@ if ($nbmod): ?>
 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 coldrte">
 	
 	<div class="row">
-		<jdoc:include type="modules" name="position-8" style="CrbXhtml" nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
+		<jdoc:include type="modules" name="position-8" style="CrbXhtml" tmpltitmodforce="<?php echo $paramtmpl_tmpltitmodforce; ?>"  nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
 	</div>
 	
 </div>
