@@ -124,7 +124,7 @@
                             <option value="0">JNO</option>
                             <option value="1">JYES</option>
                         </field>
-                        <field width="250px" name="tmpltitmodforce" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLTITMOD_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLTITMOD_LABEL" default="0" class="btn-group btn-group-yesno">
+                        <field width="250px" name="tmpltitmodforce" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLTITMOD_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLTITMOD_LABEL" default="1" class="btn-group btn-group-yesno">
                             <option value="0">JNO</option>
                             <option value="1">JYES</option>
                         </field>
