@@ -1,11 +1,10 @@
 <?php defined( '_JEXEC' ) or die; ?>
 <!-- lien evitement -->
-<a class="sr-only sr-only-focusable evit-lnk" href="#content-lnk"><?php echo JText::_('TPL_RGAAC3RB_EVITEMENT_CONTENT') ?></a>
-<a class="sr-only sr-only-focusable evit-lnk" href="#search-lnk"><?php echo JText::_('TPL_RGAAC3RB_EVITEMENT_RECH') ?></a>
-<a class="sr-only sr-only-focusable evit-lnk" href="#menu-lnk"><?php echo JText::_('TPL_RGAAC3RB_EVITEMENT_MENU') ?></a>
+<a class="sr-only sr-only-focusable evit-lnk" href="#content-lnk"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_CONTENT') ?></a>
+<a class="sr-only sr-only-focusable evit-lnk" href="#search-lnk"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_RECH') ?></a>
+<a class="sr-only sr-only-focusable evit-lnk" href="#menu-lnk"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_MENU') ?></a>
 <!-- Fin lien evitement -->
 <div class="row">
-
 	<header aria-label="<?php echo $titlesite; ?>" role="banner">
 		<?php if ($paramtmpl_tmpltitleaff == 1) : ?><!-- Param template affichage du titre -->
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
