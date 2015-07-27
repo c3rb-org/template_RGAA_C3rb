@@ -5,9 +5,7 @@
 <a class="sr-only sr-only-focusable evit-lnk" href="#menu-lnk"><?php echo JText::_('TPL_RGAAC3RB_EVITEMENT_MENU') ?></a>
 <!-- Fin lien evitement -->
 <div class="row">
-<pre>
-	<?php print_r($params) ?>
-</pre>
+
 	<header aria-label="<?php echo $titlesite; ?>" role="banner">
 		<?php if ($paramtmpl_tmpltitleaff == 1) : ?><!-- Param template affichage du titre -->
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
