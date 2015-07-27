@@ -18,7 +18,8 @@ $tmplpath 			= $this->baseurl.'/templates/'.$this->template;     // adresse du t
 $doc->setGenerator('');	 	 											// on supprime le generator content="Joomla! - Open Source Content Management" pour plus de securite
 // Parametre du template
 // Basics
-$paramtmpl_tmpltitlechoice 	= $params->get('tmpltitlechoice');
+$paramtmpl_tmpltitleaff 	= $params->get('tmpltitleaff');
+$paramtmpl_tmpltitchoice 	= $params->get('tmpltitchoice');
 // Avance
 $paramtmpl_debug			= $params->get('tmplmodhelp');
 $paramtmpl_html				= $params->get('tmplhtmlhelp');

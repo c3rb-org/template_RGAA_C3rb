@@ -5,14 +5,25 @@
 <a class="sr-only sr-only-focusable evit-lnk" href="#menu-lnk"><?php echo JText::_('TPL_RGAAC3RB_EVITEMENT_MENU') ?></a>
 <!-- Fin lien evitement -->
 <div class="row">
+<pre>
+	<?php print_r($params) ?>
+</pre>
 	<header aria-label="<?php echo $titlesite; ?>" role="banner">
-		<?php if ($paramtmpl_tmpltitlechoice == 1) : ?>
+		<?php if ($paramtmpl_tmpltitleaff == 1) : ?><!-- Param template affichage du titre -->
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-			<?php else : ?>
+		<?php else : ?>
 			<div class="sr-only">
 		<?php endif ?>
-		<h1><?php echo $titlesite; ?></h1>
-		</div><!-- fin col-xs-12 col-sm-12 col-md-12 col-lg-12 /OU/ sr-only -->
+
+		<!-- Le H1 est branché sur le titre de la page, il est possible d'avoir ou non le titre du site + le titre de la page dans l'administration : ->Systeme -> configuration -> Nom du site dans les titres   -->
+			<h1>
+			<?php if ($paramtmpl_tmpltitchoice == 1) : ?>
+				<?php echo $titlesite; ?>
+			<?php else : ?>
+				<?php echo $doc->title; ?>
+			<?php endif	 ?>
+			</h1>
+			</div><!-- fin col-xs-12 col-sm-12 col-md-12 col-lg-12 /OU/ sr-only -->
 		
 		<!-- position 1 -->
 		<?php

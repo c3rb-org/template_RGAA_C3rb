@@ -115,7 +115,12 @@
             </fieldset>
 
             <fieldset name="TPL_C3RB_RGAA_PARAMS">
-                <field width="250px" name="tmpltitlechoice" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLTITCHOISE_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLTITCHOISE_LABEL" default="0" class="btn-group btn-group-yesno">
+                <field type="spacer" label="TPL_C3RB_RGAA_TIT_TITSYS" labelclass="text-right" ></field>
+                <field width="250px" name="tmpltitchoice" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLTITCHOICE_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLTITCHOICE_LABEL" default="0" class="btn-group btn-group-yesno" >
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field width="250px" name="tmpltitleaff" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLTITAFF_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLTITAFF_LABEL" default="0" class="btn-group btn-group-yesno">
                     <option value="0">JNO</option>
                     <option value="1">JYES</option>
                 </field>
