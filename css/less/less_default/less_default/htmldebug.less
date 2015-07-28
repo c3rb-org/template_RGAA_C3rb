@@ -4,8 +4,12 @@ body .debughtml  {
 	border: 1px solid red;
 	padding: 1px;
 	margin: 1px; 
-	h1:before {content: "<H1>"; background: red; color: white; }
-	h2:before {content: "<H2>"; background: red; color: white; }
+	h1:before {content: "<H1>"; background: #1C427F; color: white; }
+	h2:before {content: "<H2>"; background: #2E6ACC; color: white; }
+	h3:before {content: "<H3>"; background: #3984FF; color: white; }
+	h4:before {content: "<H4>"; background: #85B4FF; color: white; }
+	h5:before {content: "<H5>"; background: #435000; color: white; }
+	h6:before {content: "<H6>"; background: blue; color: white; }
 }
 
 .debughtml {
@@ -13,12 +17,12 @@ body .debughtml  {
 	main:before {content: "<main>"; background: red; color: white;}
 	section, main {
 		border: 1px solid red;
-		padding: 1px; 
+		padding: 1px;  
 		margin: 1px;
-		h1:before {content: "<H1>"; background: red; color: white; }
-		h2:before {content: "<H2>"; background: red; color: white; }
+		//h1:before {content: "<H1>"; background: red; color: white; }
+		//h2:before {content: "<H2>"; background: red; color: white; }
 	}
-	section[role="main"], main[role="main"] {
+	section[role="main"], main[role="main"] { 
 		background: repeating-linear-gradient(
 			45deg,
 			#FFFFFF,
@@ -42,8 +46,8 @@ body .debughtml  {
 		border: 1px solid blue;
 		padding: 1px;
 		margin: 1px;
-		h1:before {content: "<H1>"; background: blue; color: white}
-		h2:before {content: "<H2>"; background: blue; color: white}
+		//h1:before {content: "<H1>"; background: blue; color: white}
+		//h2:before {content: "<H2>"; background: blue; color: white}
 	}
 	footer:before   {content: "<Footer>"; background: green; color: white}
 	footer {
@@ -56,24 +60,24 @@ body .debughtml  {
 		border: 1px solid black;
 		padding: 1px;
 		margin: 1px;
-		h1:before {content: "<H1>"; background: black; color: white}
-		h2:before {content: "<H2>"; background: black; color: white}
+		//h1:before {content: "<H1>"; background: black; color: white}
+		//h2:before {content: "<H2>"; background: black; color: white}
 	}
 	nav:before   {content: "<Nav>"; background: gray; color: white}
 	nav {
 		border: 1px solid gray;
 		padding: 1px;
 		margin: 1px;
-		h1:before {content: "<H1>"; background: gray; color: white}
-		h2:before {content: "<H2>"; background: gray; color: white}
+		//h1:before {content: "<H1>"; background: gray; color: white}
+		//h2:before {content: "<H2>"; background: gray; color: white}
 	}
 	aside:before   {content: "<Aside>"; background: gray; color: white}
 	aside       {
 		border: 1px solid gray;
 		padding: 1px;
 		margin: 1px;
-		h1:before {content: "<H1>"; background: grey; color: white}
-		h2:before {content: "<H2>"; background: grey; color: white}
+		//h1:before {content: "<H1>"; background: grey; color: white}
+		//h2:before {content: "<H2>"; background: grey; color: white}
 	}
 	address:before   {content: "<address>"; background: pink; color: white}
 	address       {
@@ -98,7 +102,8 @@ body .debughtml  {
 		padding: 1px;
 		margin: 1px;
 	}
-	.sr-only {position: relative; width: auto; height: auto;   }
+	.sr-only {position: relative; width: auto; height: auto; background: #CCCCCC}
+	.sr-only:after {content: "class=sr-only"; font-size: 50%; font-weight: bold; font-style: italic;}
 }
 
 /* Panel debug joomla */
