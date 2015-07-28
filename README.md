@@ -17,5 +17,9 @@ Pour son bon fonctionnement, ce template nécessite l'installation du plugin : [
 Ce plugin permet la génération et le bon fonctionnement de Bootstrap3
 Il permet aussi d'activer un générateur LESS/CSS
 
+### License
+
+MIT, Voir [LICENSE](https://github.com/c3rb-org/template_RGAA_C3rb/blob/master/LICENCE)
+
 
 
