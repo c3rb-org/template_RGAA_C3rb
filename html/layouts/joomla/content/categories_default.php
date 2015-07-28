@@ -12,10 +12,14 @@ defined('_JEXEC') or die;
 ?>
 <?php if ($displayData->params->get('show_page_heading')) : ?>
 <div class="page-header">
-<h1>
+<h2>
 	<?php echo $displayData->escape($displayData->params->get('page_heading')); ?>
-</h1>
+</h2>
 </div>
+<?php else : ?>
+<h2 class="sr-only">
+	<?php echo $displayData->escape($displayData->params->get('page_heading')); ?>
+</h2>
 <?php endif; ?>
 <?php if ($displayData->params->get('show_base_description')) : ?>
 	<?php //If there is a description in the menu parameters use that; ?>

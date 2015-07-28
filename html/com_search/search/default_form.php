@@ -23,7 +23,7 @@ $upper_limit = $lang->getUpperLimitSearchWord();
 		<input type="hidden" name="task" value="search" />
 		<div class="clearfix"></div>
 </div>
-
+<hr>
 	<div class="searchintro<?php echo $this->params->get('pageclass_sfx'); ?>">
 		<?php if (!empty($this->searchword)):?>
 		<p class="alert alert-info"><?php echo JText::plural('COM_SEARCH_SEARCH_KEYWORD_N_RESULTS', '<span class="badge badge-info">' . $this->total . '</span>');?></p>
@@ -34,9 +34,9 @@ $upper_limit = $lang->getUpperLimitSearchWord();
 		<fieldset class="phrases">
 			<legend><?php echo JText::_('COM_SEARCH_FOR');?>
 			</legend>
-				<div class="phrases-box">	
-			<?php echo $this->lists['searchphrase']; ?>
-					</div>
+				<div class="checkbox">	
+				<?php echo $this->lists['searchphrase']; ?>
+				</div>
 				<div class="ordering-box">
 				<label for="ordering" class="ordering">
 					<?php echo JText::_('COM_SEARCH_ORDERING');?>

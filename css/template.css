@@ -9100,6 +9100,17 @@ ul.unstyled {
 li.active span.a-list {
   background-color: #f5f5f5;
 }
+/* list joomla chzn */
+.archive .chzn-container-single .chzn-single {
+  height: 30px;
+  line-height: 28px;
+}
+.archive .chzn-container-single .chzn-single div b {
+  background-position: 0px 5px;
+}
+.archive .chzn-container {
+  width: 100% !important;
+}
 /* Menu (ajout a bootstrap pour menu a plusieurs niveaux dans joomla) */
 .dropdown-submenu {
   position: relative;
@@ -9206,6 +9217,9 @@ a.noa11y {
   float: left;
   margin-top: 0;
   width: 100%;
+}
+.checkbox .controls label.radio {
+  margin-top: 5px;
 }
 /* Module */
 .moduletable {

@@ -17,9 +17,13 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 <article role="main">
 <div class="blog-featured<?php echo $this->pageclass_sfx;?>">
 <?php if ($this->params->get('show_page_heading') != 0 ) : ?>
-	<h1>
+	<h2>
 	<?php echo $this->escape($this->params->get('page_heading')); ?>
-	</h1>
+	</h2>
+<?php else: ?>
+	<h2 class="sr-only">
+	<?php echo $this->escape($this->params->get('page_heading')); ?>
+	</h2>
 <?php endif; ?>
 
 <?php echo $this->loadTemplate('items'); ?>

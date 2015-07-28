@@ -33,7 +33,10 @@ $tagsData  = $displayData->get('category')->tags->itemTags;
 				<?php echo $displayData->escape($params->get('page_heading')); ?>
 			</h2>
 			</div>
-
+		<?php else: ?>
+			<h2 class="sr-only">
+				<?php echo $displayData->escape($params->get('page_heading')); ?>
+			</h2>
 		<?php endif; ?>
 		<?php if($params->get('show_category_title', 1)) : ?>
 			<div class="page-header">

@@ -19,10 +19,14 @@ JHtml::_('behavior.caption');
 <div class="blog-featured<?php echo $this->pageclass_sfx;?>" itemscope itemtype="http://schema.org/Blog">
 <?php if ($this->params->get('show_page_heading') != 0) : ?>
 <div class="page-header">
-	<h1>
+	<h2>
 	<?php echo $this->escape($this->params->get('page_heading')); ?>
-	</h1>
+	</h2>
 </div>
+<?php else : ?>
+	<h2 class="sr-only">
+	<?php echo $this->escape($this->params->get('page_heading')); ?>
+	</h2>
 <?php endif; ?>
 
 <?php $leadingcount = 0; ?>

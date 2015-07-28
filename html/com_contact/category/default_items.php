@@ -6,11 +6,8 @@
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
-
 defined('_JEXEC') or die;
-
 JHtml::_('behavior.core');
-
 $listOrder	= $this->escape($this->state->get('list.ordering'));
 $listDirn	= $this->escape($this->state->get('list.direction'));
 ?>
@@ -28,7 +25,6 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 			</div>
 	</aside>
 		<?php endif; ?>
-
 		<?php if ($this->params->get('show_pagination_limit')) : ?>
 			<div class="btn-group pull-right">
 				<label for="limit" class="element-invisible">
@@ -39,17 +35,14 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 		<?php endif; ?>
 	</fieldset>
 	<?php endif; ?>
-
 		<ul class="category list-striped list-group">
 			<?php foreach ($this->items as $i => $item) : ?>
-
 				<?php if (in_array($item->access, $this->user->getAuthorisedViewLevels())) : ?>
 					<?php if ($this->items[$i]->published == 0) : ?>
 						<li class="system-unpublished cat-list-row<?php echo $i % 2; ?> list-group-item">
 					<?php else: ?>
 						<li class="cat-list-row<?php echo $i % 2; ?> list-group-item" >
 					<?php endif; ?>
-
 						<span class="pull-right">
 							<?php if ($this->params->get('show_telephone_headings') AND !empty($item->telephone)) : ?>
 								<?php echo JTEXT::sprintf('COM_CONTACT_TELEPHONE_NUMBER', $item->telephone); ?><br />
@@ -63,7 +56,6 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 								<?php echo JTEXT::sprintf('COM_CONTACT_FAX_NUMBER', $item->fax); ?><br />
 							<?php endif; ?>
 					</span>
-
 					<p>
 						<div class="list-title">
 							<a href="<?php echo JRoute::_(ContactHelperRoute::getContactRoute($item->slug, $item->catid)); ?>">
@@ -94,7 +86,6 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 				<?php endif; ?>
 			<?php endforeach; ?>
 		</ul>
-
 		<?php if ($this->params->get('show_pagination', 2)) : ?>
 		<div class="pagination">
 			<?php if ($this->params->def('show_pagination_results', 1)) : ?>

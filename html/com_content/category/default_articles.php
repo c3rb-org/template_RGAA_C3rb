@@ -44,7 +44,7 @@ if (!empty($this->items))
 	<?php if ($this->params->get('show_headings') || $this->params->get('filter_field') != 'hide' || $this->params->get('show_pagination_limit')) :?>
 	<div class="clearfix"></div>
 	<fieldset class="filters btn-toolbar clearfix">
-	<legend class="sr-only"><?php echo JText::_('TPL_RGAAC3RB_ARTICLE_NBARTICLE_LEGEND'); ?></legend>
+	<legend class="sr-only"><?php echo JText::_('TPL_C3RB_RGAA_ARTICLE_NBARTICLE_LEGEND'); ?></legend>
 		<?php if ($this->params->get('filter_field') != 'hide') :?>
 			<div class="btn-group">
 				<label class="filter-search-lbl element-invisible" for="filter-search">

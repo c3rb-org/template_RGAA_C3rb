@@ -24,7 +24,7 @@ $info    = $this->item->params->get('info_block_position', 0);
 
 <header>
 <?php if ($params->get('show_title')) : ?>
-	<h1 class="item-title" itemprop="name">
+	<h3 class="item-title" itemprop="name">
 	<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
 		<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language)); ?>" itemprop="url">
 			<?php echo $this->escape($this->item->title); ?>
@@ -32,7 +32,17 @@ $info    = $this->item->params->get('info_block_position', 0);
 	<?php else : ?>
 		<?php echo $this->escape($this->item->title); ?>
 	<?php endif; ?>
-	</h1>
+	</h3>
+<?php else: ?>
+	<h3 class="sr-only" itemprop="name">
+	<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
+		<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language)); ?>" itemprop="url">
+			<?php echo $this->escape($this->item->title); ?>
+		</a>
+	<?php else : ?>
+		<?php echo $this->escape($this->item->title); ?>
+	<?php endif; ?>
+	</h3>
 <?php endif; ?>
 
 <?php if ($this->item->state == 0) : ?>

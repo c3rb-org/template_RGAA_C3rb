@@ -19,7 +19,7 @@ $params = $this->params;
 			<?php $info = $item->params->get('info_block_position', 0); ?>
 			<div class="row<?php echo $i % 2; ?>" itemscope itemtype="http://schema.org/Article">
 				<div class="page-header">
-					<h2 itemprop="name">
+					<h3 itemprop="name">
 						<?php if ($params->get('link_titles')) : ?>
 							<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($item->slug, $item->catid, $item->language)); ?>" itemprop="url">
 								<?php echo $this->escape($item->title); ?>
@@ -27,7 +27,7 @@ $params = $this->params;
 						<?php else: ?>
 							<?php echo $this->escape($item->title); ?>
 						<?php endif; ?>
-					</h2>
+					</h3>
 					<?php if ($params->get('show_author') && !empty($item->author )) : ?>
 						<div class="createdby" itemprop="author" itemscope itemtype="http://schema.org/Person">
 						<?php $author = ($item->created_by_alias) ? $item->created_by_alias : $item->author; ?>
