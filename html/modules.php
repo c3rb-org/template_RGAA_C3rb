@@ -77,11 +77,18 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 
 	<!-- Titre Hn du module -->
 	<?php if ($module->showtitle) : ?> 
-
 		<?php if ($paramtmpl_tmpltitmodforce  == 1) : ?>
 			<?php echo "<h2>"; ?>
 		<?php else : ?>
-			<<?php echo $headerLvl; ?>>
+			<?php
+			if ($headerLvl == "") {
+				echo "<h3>";
+			} else {
+			echo "<"; 
+			echo $headerLvl; 
+			echo ">";				
+			}
+			?>
 		<?php endif; ?>
 	<!-- Fin titre du module -->
 		<span id="label<?php echo $module->id; ?>"><?php echo JText::_( $module->title ); ?></span>	
@@ -89,9 +96,16 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 		<?php if ($paramtmpl_tmpltitmodforce  == 1) : ?>
 			<?php echo "</h2>"; ?>
 		<?php else : ?>
-			</<?php echo $headerLvl; ?>>
+			<?php
+			if ($headerLvl == "") {
+				echo "</h3>";
+			} else {
+			echo "</"; 
+			echo $headerLvl; 
+			echo ">";				
+			}
+			?>
 		<?php endif; ?>
-	
 	<?php else : ?>
 
 		<?php if ($paramtmpl_tmpltitmodforce  == 1) : ?>
@@ -103,7 +117,15 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 		<?php if ($paramtmpl_tmpltitmodforce  == 1) : ?>
 			<?php echo "</h2>"; ?>
 		<?php else : ?>
-			</<?php echo $headerLvl; ?>>
+			<?php
+			if ($headerLvl == "") {
+				echo "</h3>";
+			} else {
+			echo "</"; 
+			echo $headerLvl; 
+			echo ">";				
+			}
+			?>
 		<?php endif; ?>
 
 	<?php endif; ?>
