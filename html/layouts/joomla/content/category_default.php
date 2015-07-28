@@ -28,12 +28,12 @@ $tagsData  = $displayData->get('category')->tags->itemTags;
 	<div class="<?php echo $className .'-category' . $displayData->pageclass_sfx;?>">
 		<?php if ($params->get('show_page_heading')) : ?>
 			<div class="page-header">
-			<!-- <h1> -->
+
 			<h2>
 				<?php echo $displayData->escape($params->get('page_heading')); ?>
 			</h2>
 			</div>
-			<!-- </h1> -->
+
 		<?php endif; ?>
 		<?php if($params->get('show_category_title', 1)) : ?>
 			<div class="page-header">
@@ -61,9 +61,9 @@ $tagsData  = $displayData->get('category')->tags->itemTags;
 		<?php if ($displayData->get('children') && $displayData->maxLevel != 0) : ?>
 			<div class="cat-children">
 				<?php if ($params->get('show_category_heading_title_text', 1) == 1) : ?>
-				<h3>
+				<h2>
 					<?php echo JTEXT::_('JGLOBAL_SUBCATEGORIES'); ?>
-				</h3>
+				</h2>
 				<?php endif; ?>
 				<?php echo $displayData->loadTemplate('children'); ?>
 			</div>

@@ -18,8 +18,6 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
 		<div class="page-header">
 
 			<?php if ($params->get('show_title')) : ?>
-
-				<!-- <h1 itemprop="name"> -->
 				<h3>
 					<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
 						<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($displayData->slug, $displayData->catid)); ?>" itemprop="url">
@@ -28,8 +26,15 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
 						<?php echo $this->escape($displayData->title); ?>
 					<?php endif; ?>
 				</h3>
-				<!-- </h1> -->
-
+			<?php else : ?>
+				<h3 class="sr-only">
+					<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
+						<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($displayData->slug, $displayData->catid)); ?>" itemprop="url">
+						<?php echo $this->escape($displayData->title); ?></a>
+					<?php else : ?>
+						<?php echo $this->escape($displayData->title); ?>
+					<?php endif; ?>
+				</h3>
 			<?php endif; ?>
 
 			<?php if ($displayData->state == 0) : ?>

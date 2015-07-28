@@ -30,8 +30,6 @@ $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_da
 	<div class="page-header">
 		<h2><?php echo $this->escape($this->params->get('page_heading')); ?></h2>
 	</div>
-	<?php else : ?>
-		<h2 class="sr-only"><?php echo $this->escape($this->params->get('page_heading')); ?></h2>
 	<?php endif;
 if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->paginationposition && $this->item->paginationrelative)
 {
