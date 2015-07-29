@@ -22,7 +22,11 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); 
 
 	<body>
 		<jdoc:include type="message" />
-		<div class="container">
+		<div class="container <?php 
+		if ($paramtmpl_tmpltitmodforce == 1) {
+		echo "tmpmodhn"; 
+		}
+		?>">
 			<?php //Header du template
 			include_once JPATH_THEMES.'/'.$this->template.'/layout/header.php';
 			?>

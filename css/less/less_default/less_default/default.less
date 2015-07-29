@@ -27,7 +27,47 @@
 .paddingbottom-s{padding-bottom:5px !important} 
 .paddingtop-s{padding-top:5px !important}
 .padding-s{padding:0 5px 5px 0 !important}
- 
+/* class full*/
+.full .btn {width:100%}
+
+/* Titre des modules gere par le template */
+.tmpmodhn {
+        h2 {
+            font-size: 25px;
+        }
+        .moduletable h2 {margin: 5px 0 15px 0}
+        .page-header, .items-leading {
+            margin-top: 0px;
+            padding-top:5px;
+            width: 100%; 
+            h2 {
+                font-size: 28px;
+                margin: 6px 0 6px 0;
+            }            
+            h3 {
+                font-size: 28px;
+                margin: 6px 0 6px 0;
+            }
+        }
+        .items-leading h3 { 
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 20px
+        }
+        h3 {
+            font-size: 22px;
+        }
+        h4 {
+            font-size: 19px;
+        }
+        h5 {
+            font-size: 17px;
+        }
+        h6 {
+            font-size: 15px;
+        }
+}
+
 /* images */
 img.fullimg {width: 100%} 
 
@@ -163,11 +203,6 @@ a.noa11y {
 .colctre {
     background: @main-bg;
     padding: 1px 15px 15px 15px;
-    .page-header { 
-        float: left; 
-        margin-top: 0;
-        width: 100%; 
-    }
 }
 .checkbox .controls label.radio {margin-top: 5px}
 /* Module */
@@ -175,9 +210,6 @@ a.noa11y {
     background: @module-bg;
     margin-bottom: 15px;
     padding: 10px;
-    h3{
-        margin-top: 10px;
-    }
 }
 /* Suffixe de module */
 .nostyle {

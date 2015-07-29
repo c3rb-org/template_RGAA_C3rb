@@ -6765,58 +6765,18 @@ button.close {
   top: 0px;
 }
 h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 .h1,
+h2,
 .h2,
+h3,
 .h3,
+h4,
 .h4,
+h5,
 .h5,
+h6,
 .h6 {
-  font-family: inherit;
-  font-weight: 500;
-  line-height: 1.1;
-  color: inherit;
-}
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small,
-h6 small,
-.h1 small,
-.h2 small,
-.h3 small,
-.h4 small,
-.h5 small,
-.h6 small,
-h1 .small,
-h2 .small,
-h3 .small,
-h4 .small,
-h5 .small,
-h6 .small,
-.h1 .small,
-.h2 .small,
-.h3 .small,
-.h4 .small,
-.h5 .small,
-.h6 .small {
-  font-weight: normal;
-  line-height: 1;
-  color: #777777;
-}
-h1,
-.h1,
-h2,
-.h2,
-h3,
-.h3 {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 0px;
 }
 .nav-tabs > li > a {
   background: #F2F2F2;
@@ -9071,6 +9031,50 @@ body .debughtml h6:before {
 .padding-s {
   padding: 0 5px 5px 0 !important;
 }
+/* class full*/
+.full .btn {
+  width: 100%;
+}
+/* Titre des modules gere par le template */
+.tmpmodhn h2 {
+  font-size: 25px;
+}
+.tmpmodhn .moduletable h2 {
+  margin: 5px 0 15px 0;
+}
+.tmpmodhn .page-header,
+.tmpmodhn .items-leading {
+  margin-top: 0px;
+  padding-top: 5px;
+  width: 100%;
+}
+.tmpmodhn .page-header h2,
+.tmpmodhn .items-leading h2 {
+  font-size: 28px;
+  margin: 6px 0 6px 0;
+}
+.tmpmodhn .page-header h3,
+.tmpmodhn .items-leading h3 {
+  font-size: 28px;
+  margin: 6px 0 6px 0;
+}
+.tmpmodhn .items-leading h3 {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+.tmpmodhn h3 {
+  font-size: 22px;
+}
+.tmpmodhn h4 {
+  font-size: 19px;
+}
+.tmpmodhn h5 {
+  font-size: 17px;
+}
+.tmpmodhn h6 {
+  font-size: 15px;
+}
 /* images */
 img.fullimg {
   width: 100%;
@@ -9213,11 +9217,6 @@ a.noa11y {
   background: #ffffff;
   padding: 1px 15px 15px 15px;
 }
-.colctre .page-header {
-  float: left;
-  margin-top: 0;
-  width: 100%;
-}
 .checkbox .controls label.radio {
   margin-top: 5px;
 }
@@ -9226,9 +9225,6 @@ a.noa11y {
   background: #ffffff;
   margin-bottom: 15px;
   padding: 10px;
-}
-.moduletable h3 {
-  margin-top: 10px;
 }
 /* Suffixe de module */
 .moduletable.nostyle {
