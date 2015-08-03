@@ -29,16 +29,17 @@
 .padding-s{padding:0 5px 5px 0 !important}
 /* class full*/
 .full .btn {width:100%}
-
+/* display */
+.displaynone {display: none;}
 /* Titre des modules gere par le template */
 .tmpmodhn {
-        h2 {
+        h2 { 
             font-size: 25px;
         }
         .moduletable h2 {margin: 5px 0 15px 0}
         .page-header, .items-leading {
             margin-top: 0px;
-            padding-top:5px;
+            padding-top:5px; 
             width: 100%; 
             h2 {
                 font-size: 28px;
@@ -50,9 +51,6 @@
             }
         }
         .items-leading h3 { 
-            border-bottom: 1px solid #eee;
-            padding-bottom: 15px;
-            margin-bottom: 20px
         }
         h3 {
             font-size: 22px;
@@ -205,6 +203,42 @@ a.noa11y {
     padding: 1px 15px 15px 15px;
 }
 .checkbox .controls label.radio {margin-top: 5px}
+/* Affichage Article blog */
+.blog .items-row {margin-bottom:  25px}
+/* Intro article image */
+.item-image {
+
+    transition: all 0.4s ease 0s;
+        &:hover img{
+            transform: scale(1.2) translate3d(0px, 0px, 0px);
+            transition: all 0.4s ease 0s;
+        }
+    img {
+        width: 100%;
+    }
+    .fxfadeInUp {
+        background: #fff none repeat scroll 0 0;
+        border: 1px solid;
+        color: @link-color;
+        display: inline-block;
+        left: 50%;
+        margin-left: -17px;
+        margin-top: -15px;
+        opacity: 0;
+        padding: 6px 12px;
+        position: absolute;
+        top: 50%;
+        font-weight: bold;
+    }
+    .item-image-bloc {
+        border-bottom: 5px solid @link-color;;
+        height: 175px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        width: 100%;
+        position: relative;
+    }
+}
 /* Module */
 .moduletable  {
     background: @module-bg;
@@ -261,4 +295,56 @@ ul.tags.inline {
 }
 ul.tags.inline li {
     display: inline-block;
+}
+
+/* Animate.css - https://daneden.github.io/animate.css/ */
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.animated.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+/* fadeInUp */
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
 }

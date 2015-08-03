@@ -33,6 +33,12 @@ jQuery(function ($) {
     alert( "Handler for .click() called." );
   });
 
+  //effet
+  $( ".item-image" ).hover(function() {
+    //$(".fxfadeInUp").toggleClass("displaynone");
+    $(this).find('.fxfadeInUp').toggleClass("fadeInUp animated");
+  });
+
 }); 
  
 if(window.MooTools) 
