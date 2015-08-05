@@ -9382,10 +9382,10 @@ li.active span.a-list {
   border-radius: 6px 0 6px 6px;
 }
 /* Modal */
-.tablesaw-enhanced body {
+.modal-body body {
   background: transparent;
 }
-.tablesaw-enhanced .container {
+.modal-body .container {
   padding: 0 10px 0px 0;
   margin: 0;
 }
