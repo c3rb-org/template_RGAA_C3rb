@@ -113,13 +113,16 @@ function pagination_list_render($list)
 			$range = ceil($currentPage / $step);
 		}
 	}
-
-
-	$html = '<div class="btn-group">';
-	$html .= $list['start']['data'];
-	$html .= $list['previous']['data'];
 	
-	$html .= '
+	
+	$html = array();
+	$html[] = '<div class="pagination">';
+	$html[] = '<div class="pagination-page text-left">';
+	$html[] = '<div class="btn-group">';
+	$html[] = $list['start']['data'];
+	$html[]= $list['previous']['data'];
+	
+	$html[]= '
 	<div class="dropdown btn btn-default pagi">
 	<nav role="navigation" aria-label="Pagination">
 	<button class="btn btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown">Page '.$currentPage .'<span class="caret"></span></button>
@@ -135,15 +138,16 @@ function pagination_list_render($list)
 			}
 		}
 
-		$html .= $page['data'];
+		$html[] = $page['data'];
 	}
 
-
-	$html .= '</ul></nav></div>';
-	$html .= $list['next']['data'];
-	$html .= $list['end']['data'];
-	$html .= '</div>';
-	return $html;
+	$html[] = '</ul></nav></div>';
+	$html[] = $list['next']['data'];
+	$html[] = $list['end']['data'];
+	$html[] = '</div>';
+	$html[] = '</div';
+	$html[] = '</div>';
+	return implode('',$html);
 }
 
 /**
