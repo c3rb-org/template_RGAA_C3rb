@@ -143,10 +143,15 @@ li.active span.a-list {
     -moz-border-radius: 6px 0 6px 6px;
     border-radius: 6px 0 6px 6px;
 } 
-/* Modal */
-.tablesaw-enhanced body {background: transparent;}
-.tablesaw-enhanced .container {padding: 0; margin: 0;}
-.modal-header, .modal-body, .modal-footer{text-align: left}
+/* Modal 
+.tablesaw-enhanced {
+   > body {background: transparent;}
+}
+.tablesaw-enhanced {
+   > .container {padding: 0; margin: 0;}
+}
+*/
+.modal-header{text-align: left}
 /* menu line link */
 .linelink  {
     ul{
