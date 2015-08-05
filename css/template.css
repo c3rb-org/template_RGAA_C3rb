@@ -9328,6 +9328,31 @@ ul.unstyled {
 li.active span.a-list {
   background-color: #f5f5f5;
 }
+/* Tri table joomla */
+.icon-arrow-up-3:after {
+  content: "\e253";
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-arrow-down-3:after {
+  content: "\e252";
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 /* list joomla chzn */
 .archive .chzn-container-single .chzn-single {
   height: 30px;
