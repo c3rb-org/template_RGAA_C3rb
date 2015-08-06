@@ -6781,6 +6781,11 @@ h6,
 .btn {
   padding: 5px 12px;
 }
+.btn-xs,
+.btn-group-xs > .btn,
+.btn-group-xs > .btn {
+  padding: 1px 5px;
+}
 .nav-tabs > li > a {
   background: #F2F2F2;
   border-bottom: 1px solid #dddddd;
@@ -9355,6 +9360,20 @@ li.active span.a-list {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+/* Callendrier joomla */
+span.icon-calendar:before {
+  content: "\f073";
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 13px;
 }
 /* list joomla chzn */
 .archive .chzn-container-single .chzn-single {
