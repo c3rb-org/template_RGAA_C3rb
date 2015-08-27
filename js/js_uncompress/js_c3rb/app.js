@@ -1,17 +1,12 @@
 jQuery(function ($) {
-
 	// Initialise les tooltip Bs
 	$('[data-toggle="tooltip"]').tooltip(); 
-	
 	//Autorise le html dans les tools tip
 	$('[data-toggle="popover"]').popover({ html : true });
-	 
 	// dropdown
 	$('.dropdown-toggle').dropdown(); 
- 
 	//noconflict chosen joomla
 	$('div.tab-pane-noconflictchosen').addClass( "tab-pane" ).removeClass( "tab-pane-noconflictchosen" );
-	
 	//Modal avec iframe
 	$('div[data-iframe]').each(function(){
      $(this).on('show.bs.modal', function(event) {
@@ -27,7 +22,6 @@ jQuery(function ($) {
     modalBody.find('iframe').remove();
       });
 	});
-  
   // multi level menu nav bootstrap (Ajout MIR car non natif BS3)
   $( "#target" ).click(function() {
     alert( "Handler for .click() called." );
@@ -38,9 +32,11 @@ jQuery(function ($) {
     //$(".fxfadeInUp").toggleClass("displaynone");
     $(this).find('.fxfadeInUp').toggleClass("fadeInUp animated");
   });
-
-}); 
- 
+  //  $( ".lstntc-cadre" ).hover(function() {
+  //  //$(".fxfadeInUp").toggleClass("displaynone");
+  //  $(this).find('.fxfadeInUp').toggleClass("fadeInUp animated");
+  //});
+});
 if(window.MooTools) 
 {
     Element.implement({
