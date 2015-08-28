@@ -12,9 +12,6 @@ defined('_JEXEC') or die;
 // Note. It is important to remove spaces between elements.
 ?>
 <?php // The menu class is deprecated. Use nav instead. ?>
-
-
-
 <div class="navbar navbar-default " id="menu-lnk">
   <div class="row-fluid ">
     <!-- Brand and toggle get grouped for better mobile display -->
