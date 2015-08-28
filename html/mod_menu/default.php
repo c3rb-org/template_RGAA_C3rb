@@ -15,7 +15,7 @@ defined('_JEXEC') or die;
 
 
 
-<div class="navbar navbar-default " id="menu-lnk">
+<div class="navbar navbar-default " id="menu-lnk<?php echo $module->id; ?>">
   <div class="row-fluid ">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
