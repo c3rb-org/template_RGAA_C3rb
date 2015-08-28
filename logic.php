@@ -1,8 +1,8 @@
 <?php defined( '_JEXEC' ) or die;
 
-// Parametre general joomla 
-$app            	= JFactory::getApplication(); 
-$doc            	= JFactory::getDocument();							
+// Parametre general joomla
+$app            	= JFactory::getApplication();
+$doc            	= JFactory::getDocument();
 $user            	= JFactory::getUser();								// Info Users
 $this->language  	= $doc->language;									// Langue du template
 $this->direction 	= $doc->direction;									// Direction du template (RTL, LTR)
@@ -30,7 +30,7 @@ $paramtmpl_html				= $params->get('tmplhtmlhelp');
 //Jquery joomla
 JHTML::_('jquery.framework');
 // Bootstrap joomla
-JHtml::_('bootstrap.framework'); //On charge bootstrap 
+JHtml::_('bootstrap.framework'); //On charge bootstrap
 
 // On supprime bootstrap2
 if(array_key_exists($this->baseurl . '/media/jui/js/bootstrap.min.js', $doc->_scripts))
@@ -55,4 +55,12 @@ else
 $doc->addStyleSheet( ''. $tmplpath .'/css/template.min.css' );
 foreach($tab_sheets as $url => $val)
 $doc->addStyleSheet($url,$val['mime'],$val['media'],$val['attribs']);
+
+
+
+
+//Variable LESS admin du template vers Less front
+
+$varbgbody = $params->get('backgroundcolor');
+
 ?>
