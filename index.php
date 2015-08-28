@@ -1,5 +1,10 @@
 <?php
 defined( '_JEXEC' ) or die;
+if(JFactory::getApplication()->input->getInt('test_tpl') == 1)
+{
+	include_once JPATH_THEMES.'/'.$this->template.'/index2.php';
+	return;
+}
 //variables du template
 include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 ?>

@@ -145,7 +145,7 @@ function pagination_list_render($list)
 	$html[] = $list['next']['data'];
 	$html[] = $list['end']['data'];
 	$html[] = '</div>';
-	$html[] = '</div';
+	$html[] = '</div>';
 	$html[] = '</div>';
 	return implode('',$html);
 }

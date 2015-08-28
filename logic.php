@@ -50,7 +50,10 @@ $doc->setMetaData( 'viewport', 'width=device-width, initial-scale=1' );
 $tab_sheets = $doc->_styleSheets;
 $doc->_styleSheets = array();
 if(JDEBUG)
-$doc->addStyleSheet( ''. $tmplpath .'/css/template.css');
+{
+	$doc->addStyleSheet( ''. $tmplpath .'/css/template.css');
+	//$doc->addStyleSheet( 'http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css');
+}
 else
 $doc->addStyleSheet( ''. $tmplpath .'/css/template.min.css' );
 foreach($tab_sheets as $url => $val)
