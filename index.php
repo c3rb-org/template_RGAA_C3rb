@@ -18,11 +18,11 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); 
 	<?php if ( $paramtmpl_html == 1): ?><div class="debughtml"><?php endif; ?>
 	<body>
 		<jdoc:include type="message" />
-		<div class="container <?php if ($paramtmpl_tmpltitmodforce == 1): ?>tmpmodhn<?php endif; ?>">
+		<div class="container paddingtop  <?php if ($paramtmpl_tmpltitmodforce == 1): ?>tmpmodhn<?php endif; ?>">
 			<?php
 			//Header du template
 			include_once JPATH_THEMES.'/'.$this->template.'/layout/header.php';
-			//Header du template
+			//Top du template
 			include_once JPATH_THEMES.'/'.$this->template.'/layout/top.php';
 			//Content du template
 			include_once JPATH_THEMES.'/'.$this->template.'/layout/content.php';
@@ -35,6 +35,6 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); 
 		<jdoc:include type="modules" name="debug" style="none" />
 		<?php include_once JPATH_THEMES.'/'.$this->template.'/layout/script.php'; ?>
 		<!-- Exemple bootstrap -->
-		<?php include_once JPATH_THEMES.'/'.$this->template.'/html/bootstrap.test.full.php'; ?>
+		<?php //include_once JPATH_THEMES.'/'.$this->template.'/html/bootstrap.test.full.php'; ?>
 	</body>
 </html>
