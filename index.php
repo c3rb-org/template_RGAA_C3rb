@@ -16,6 +16,7 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); 
 	<?php include_once JPATH_THEMES.'/'.$this->template.'/layout/head.php';	?>
 	</head>
 	<?php if ( $paramtmpl_html == 1): ?><div class="debughtml"><?php endif; ?>
+	
 	<body>
 		<jdoc:include type="message" />
 		<div class="container paddingtop  <?php if ($paramtmpl_tmpltitmodforce == 1): ?>tmpmodhn<?php endif; ?>">
@@ -35,10 +36,5 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); 
 		<jdoc:include type="modules" name="debug" style="none" />
 		<?php include_once JPATH_THEMES.'/'.$this->template.'/layout/script.php'; ?>
 		<!-- Exemple bootstrap -->
-<<<<<<< .merge_file_a14044
-		<?php //include_once JPATH_THEMES.'/'.$this->template.'/html/bootstrap.test.full.php'; ?>
-=======
-		<?php /*include_once JPATH_THEMES.'/'.$this->template.'/html/bootstrap.test.full.php';*/ ?>
->>>>>>> .merge_file_a12752
 	</body>
 </html>
