@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  com_search
- * °version J! : 3.4.3 - MIR
+ * @version J! : 3.4.4 - MIR
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -24,16 +24,17 @@ $upper_limit = $lang->getUpperLimitSearchWord();
 		<div class="clearfix"></div>
 </div>
 <hr>
+
 	<div class="searchintro<?php echo $this->params->get('pageclass_sfx'); ?>">
 		<?php if (!empty($this->searchword)):?>
 		<p class="alert alert-info"><?php echo JText::plural('COM_SEARCH_SEARCH_KEYWORD_N_RESULTS', '<span class="badge badge-info">' . $this->total . '</span>');?></p>
 		<?php endif;?>
 	</div>
 	<div class="row">
+<?php if ($this->params->get('search_phrases', 1)) : ?>
 	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 		<fieldset class="phrases">
-			<legend><?php echo JText::_('COM_SEARCH_FOR');?>
-			</legend>
+			<legend><?php echo JText::_('COM_SEARCH_FOR');?></legend>
 				<div class="checkbox">	
 				<?php echo $this->lists['searchphrase']; ?>
 				</div>
@@ -45,6 +46,7 @@ $upper_limit = $lang->getUpperLimitSearchWord();
 				</div>
 		</fieldset>
 	</div>
+	<?php endif; ?>
 	<?php if ($this->params->get('search_areas', 1)) : ?>
 		<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 			<fieldset class="only">
