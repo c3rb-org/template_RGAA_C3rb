@@ -35,6 +35,6 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); 
 		<jdoc:include type="modules" name="debug" style="none" />
 		<?php include_once JPATH_THEMES.'/'.$this->template.'/layout/script.php'; ?>
 		<!-- Exemple bootstrap -->
-		<?php include_once JPATH_THEMES.'/'.$this->template.'/html/bootstrap.test.full.php'; ?>
+		<?php /*include_once JPATH_THEMES.'/'.$this->template.'/html/bootstrap.test.full.php';*/ ?>
 	</body>
 </html>
