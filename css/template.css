@@ -1567,39 +1567,39 @@ pre code {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 7.5px;
-  padding-right: 7.5px;
+  padding-left: 9px;
+  padding-right: 9px;
 }
 @media (min-width: 768px) {
   .container {
-    width: 735px;
+    width: 738px;
   }
 }
 @media (min-width: 992px) {
   .container {
-    width: 955px;
+    width: 958px;
   }
 }
 @media (min-width: 1200px) {
   .container {
-    width: 1155px;
+    width: 1158px;
   }
 }
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 7.5px;
-  padding-right: 7.5px;
+  padding-left: 9px;
+  padding-right: 9px;
 }
 .row {
-  margin-left: -7px;
-  margin-right: -8px;
+  margin-left: -9px;
+  margin-right: -9px;
 }
 .col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
   position: relative;
   min-height: 1px;
-  padding-left: 8px;
-  padding-right: 7px;
+  padding-left: 9px;
+  padding-right: 9px;
 }
 .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12 {
   float: left;
@@ -2955,8 +2955,8 @@ select[multiple].input-lg {
   min-height: 27px;
 }
 .form-horizontal .form-group {
-  margin-left: -7px;
-  margin-right: -8px;
+  margin-left: -9px;
+  margin-right: -9px;
 }
 @media (min-width: 768px) {
   .form-horizontal .control-label {
@@ -2966,7 +2966,7 @@ select[multiple].input-lg {
   }
 }
 .form-horizontal .has-feedback .form-control-feedback {
-  right: 7px;
+  right: 9px;
 }
 @media (min-width: 768px) {
   .form-horizontal .form-group-lg .control-label {
@@ -4206,8 +4206,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-collapse {
   overflow-x: visible;
-  padding-right: 7px;
-  padding-left: 7px;
+  padding-right: 9px;
+  padding-left: 9px;
   border-top: 1px solid transparent;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
   -webkit-overflow-scrolling: touch;
@@ -4251,8 +4251,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .container-fluid > .navbar-header,
 .container > .navbar-collapse,
 .container-fluid > .navbar-collapse {
-  margin-right: -7px;
-  margin-left: -7px;
+  margin-right: -9px;
+  margin-left: -9px;
 }
 @media (min-width: 768px) {
   .container > .navbar-header,
@@ -4296,7 +4296,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .navbar-brand {
   float: left;
-  padding: 15px 7px;
+  padding: 15px 9px;
   font-size: 18px;
   line-height: 20px;
   height: 50px;
@@ -4311,13 +4311,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar > .container .navbar-brand,
   .navbar > .container-fluid .navbar-brand {
-    margin-left: -7px;
+    margin-left: -9px;
   }
 }
 .navbar-toggle {
   position: relative;
   float: right;
-  margin-right: 7px;
+  margin-right: 9px;
   padding: 9px 10px;
   margin-top: 8px;
   margin-bottom: 8px;
@@ -4344,7 +4344,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-nav {
-  margin: 7.5px -7px;
+  margin: 7.5px -9px;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
@@ -4387,9 +4387,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-form {
-  margin-left: -7px;
-  margin-right: -7px;
-  padding: 10px 7px;
+  margin-left: -9px;
+  margin-right: -9px;
+  padding: 10px 9px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
@@ -4498,8 +4498,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 @media (min-width: 768px) {
   .navbar-text {
     float: left;
-    margin-left: 7px;
-    margin-right: 7px;
+    margin-left: 9px;
+    margin-right: 9px;
   }
 }
 @media (min-width: 768px) {
@@ -4510,7 +4510,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   .navbar-right {
     float: right !important;
     float: right;
-    margin-right: -7px;
+    margin-right: -9px;
   }
   .navbar-right ~ .navbar-right {
     margin-right: 0;
@@ -6777,9 +6777,6 @@ h5,
 h6,
 .h6 {
   margin-top: 0px;
-}
-.btn {
-  padding: 5px 12px;
 }
 .nav-tabs > li > a {
   background: #F2F2F2;
@@ -9268,6 +9265,7 @@ body .debughtml h6:before {
   display: none;
 }
 /* Variable add et gestion admin */
+/* Titre */
 h2 {
   color: #000000;
 }
@@ -9279,6 +9277,23 @@ h4 {
 }
 h5 {
   color: #000000;
+}
+/* Module */
+.moduletable {
+  background: #ffffff;
+  color: #333333;
+  border: 1px solid #555555;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+.moduletable h2 {
+  background: #ffffff;
+  color: #333333;
+}
+/* General */
+.container {
+  background: #d9dcd7;
+  margin-top: 10px;
 }
 /* Titre des modules gere par le template
 .tmpmodhn {
@@ -9547,12 +9562,6 @@ body.tmpl-component {
   width: 100%;
   position: relative;
 }
-/* Module */
-.moduletable {
-  background: #ffffff;
-  margin-bottom: 15px;
-  padding: 10px;
-}
 /* Suffixe de module */
 .moduletable.nostyle {
   padding: 0px;
@@ -9794,4 +9803,3 @@ ul.tags.inline li {
 .alert-danger .alert-link {
   color: #712d38;
 }
-/* Le code du template est à ecrire ici */
