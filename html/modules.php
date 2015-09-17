@@ -345,7 +345,7 @@ function modChrome_retractable($module, &$params, &$attribs) {
 
 	<!-- Titre Hn du module -->
 	<?php if ($module->showtitle) : ?>
-		<a class="togglelink" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+		<a class="togglelink" role="button" data-toggle="collapse" href="#collapseElem<?php echo $module->id; ?>" aria-expanded="false" aria-controls="collapseElem<?php echo $module->id; ?>">
 		<?php if ($paramtmpl_tmpltitmodforce  == 1) : ?>
 			<?php echo "<h2>"; ?>
 		<?php else : ?>
@@ -400,7 +400,7 @@ function modChrome_retractable($module, &$params, &$attribs) {
 	<?php endif; ?>
 		</a>
 			<!-- Content du module -->
-			<div class="collapse" id="collapseExample">
+			<div class="collapse" id="collapseElem<?php echo $module->id; ?>">
 				<div class="modcontent">
 					<?php echo $module->content; ?>
 				</div>
