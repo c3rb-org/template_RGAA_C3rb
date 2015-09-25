@@ -1,4 +1,7 @@
 <?php defined( '_JEXEC' ) or die; ?>
+<div class="alert alert-info">
+/// BRANCHE TEMPLATE CUSTOM	
+</div>
 <div class="row">
 		<!-- position-4 -->
 		<?php
