@@ -20,4 +20,4 @@
 		</div>
 	</div>
 <?php endif; ?>
-<!-- Bloc bas -->		
+<!-- Bloc bas -->

@@ -1,6 +1,5 @@
 <?php defined( '_JEXEC' ) or die; ?>
 <jdoc:include type="head" /><!-- Balise meta et autre de la config du site joomla -->
-
 <!-- A FAIRE : supprimmer le caption.js genere par le jdoc:include ? -->
 <!-- Les favicons autre que la favicon.ico generale genere par le jdoc:include -->
 <link rel="apple-touch-icon" sizes="57x57" href="/templates/images/template/favicon/apple-touch-icon-57x57.png">
@@ -21,11 +20,9 @@
 <meta name="msapplication-TileColor" content="#2b5797">
 <meta name="msapplication-TileImage" content="/templates/images/template/favicon/mstile-144x144.png">
 <meta name="msapplication-config" content="/templates/images/template/favicon/browserconfig.xml">
-
 <!--[if ie]>
 <meta content='IE=8' http-equiv='X-UA-Compatible'/>
 <![endif]-->
-
 <!-- Fin favicon 
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/system.css" type="text/css" />
 <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/system/css/general.css" type="text/css" />
