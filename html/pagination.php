@@ -91,10 +91,14 @@ function pagination_list_footer($list)
 
 function pagination_list_render($list)
 {
+	
 	// Calculate to display range of pages
 	$currentPage = 1;
 	$range = 1;
 	$step = 5;
+	if(JFactory::getApplication()->input->get('layout') == 'vignette')
+		$step = 12;
+
 	foreach ($list['pages'] as $k => $page)
 	{
 		if (!$page['active'])
@@ -115,11 +119,14 @@ function pagination_list_render($list)
 	}
 
 
-	$html = '<div class="btn-group">';
-	$html .= $list['start']['data'];
-	$html .= $list['previous']['data'];
+	$html = array();
+	$html[] = '<div class="pagination">';
+	$html[] = '<div class="pagination-page text-left">';
+	$html[] = '<div class="btn-group">';
+	$html[] = $list['start']['data'];
+	$html[] = $list['previous']['data'];
 	
-	$html .= '
+	$html[]= '
 	<div class="dropdown btn btn-default pagi">
 	<nav role="navigation" aria-label="Pagination">
 	<button class="btn btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown">Page '.$currentPage .'<span class="caret"></span></button>
@@ -135,15 +142,16 @@ function pagination_list_render($list)
 			}
 		}
 
-		$html .= '<li>'.$page['data'].'</li>';
+		$html[] = $page['data'];
 	}
 
-
-	$html .= '</ul></nav></div>';
-	$html .= $list['next']['data'];
-	$html .= $list['end']['data'];
-	$html .= '</div>';
-	return $html;
+	$html[] = '</ul></nav></div>';
+	$html[] = $list['next']['data'];
+	$html[] = $list['end']['data'];
+	$html[] = '</div>';
+	$html[] = '</div>';
+	$html[] = '</div>';
+	return implode('',$html);
 }
 
 /**
