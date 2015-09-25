@@ -3,9 +3,6 @@ jQuery(function ($) {
     // Initialise les tooltip Bs
     $('[data-toggle="tooltip"]').tooltip();
 
-    //Suppression des title vide générés par les tooltips
-    $('[data-original-title][title=""]').removeAttr('title');
-
     //Autorise le html dans les tools tip
     $('[data-toggle="popover"]').popover({html: true});
 

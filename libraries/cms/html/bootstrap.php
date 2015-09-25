@@ -478,6 +478,14 @@ abstract class JHtmlBootstrap
 			// Build the script.
 			$script = array();
 			$script[] = "jQuery(document).ready(function(){";
+			$script[] = " var Tooltip = jQuery.fn.tooltip.Constructor;";
+    		$script[] = "Tooltip.prototype.fixTitle = function (){";
+    		$script[] = 'var $e = this.$element';
+        	$script[] = 'if ($e.attr(\'title\') || typeof $e.attr(\'data-original-title\') != \'string\') {';
+          	$script[] = '$e.attr(\'data-original-title\', $e.attr(\'title\') || \'\').attr(\'title\', \'\');';
+          	$script[] = '$e.removeAttr(\'title\');';
+        	$script[] = "}";
+    		$script[] = "}";
 			$script[] = "\tjQuery('" . $selector . "').tooltip(" . $options . ");";
 
 			if ($onShow)
