@@ -1,8 +1,8 @@
 <?php defined( '_JEXEC' ) or die;
 
-// Parametre general joomla 
-$app            	= JFactory::getApplication(); 
-$doc            	= JFactory::getDocument();							
+// Parametre general joomla
+$app            	= JFactory::getApplication();
+$doc            	= JFactory::getDocument();
 $user            	= JFactory::getUser();								// Info Users
 $this->language  	= $doc->language;									// Langue du template
 $this->direction 	= $doc->direction;									// Direction du template (RTL, LTR)
@@ -22,6 +22,7 @@ $doc->setGenerator('');	 	 											// on supprime le generator content="Jooml
 $paramtmpl_tmpltitleaff 	= $params->get('tmpltitleaff');
 $paramtmpl_tmpltitchoice 	= $params->get('tmpltitchoice');
 $paramtmpl_tmpltitmodforce 	= $params->get('tmpltitmodforce');
+$paramtmpl_tmplfluidmod 	= $params->get('tmplfluidmod');
 // Avance
 $paramtmpl_debug			= $params->get('tmplmodhelp');
 $paramtmpl_html				= $params->get('tmplhtmlhelp');
@@ -30,7 +31,7 @@ $paramtmpl_html				= $params->get('tmplhtmlhelp');
 //Jquery joomla
 JHTML::_('jquery.framework');
 // Bootstrap joomla
-JHtml::_('bootstrap.framework'); //On charge bootstrap 
+JHtml::_('bootstrap.framework'); //On charge bootstrap
 
 // On supprime bootstrap2
 if(array_key_exists($this->baseurl . '/media/jui/js/bootstrap.min.js', $doc->_scripts))
@@ -50,10 +51,7 @@ $doc->setMetaData( 'viewport', 'width=device-width, initial-scale=1' );
 $tab_sheets = $doc->_styleSheets;
 $doc->_styleSheets = array();
 if(JDEBUG)
-{
-	$doc->addStyleSheet( ''. $tmplpath .'/css/template.css');
-	//$doc->addStyleSheet( 'http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css');
-}
+$doc->addStyleSheet( ''. $tmplpath .'/css/template.css');
 else
 $doc->addStyleSheet( ''. $tmplpath .'/css/template.min.css' );
 foreach($tab_sheets as $url => $val)
