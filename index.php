@@ -16,10 +16,26 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); 
 	<?php include_once JPATH_THEMES.'/'.$this->template.'/layout/head.php';	?>
 	</head>
 	<?php if ( $paramtmpl_html == 1): ?><div class="debughtml"><?php endif; ?>
-	
+
+	<?php /*
+		echo '<pre>';
+		print_r($params);
+		echo '</pre>';
+	*/ ?>
+
+	<!-- Condition avec variable -->
+
+	<!-- Modele01 - LP -->
+	<?php if ($params->get('tmplchoice') == 1): ?>
+	<?php
+		include_once JPATH_THEMES.'/'.$this->template.'/layout/modele01/index.php';
+ 	?>
+	<?php endif ?>
+	<!-- Defaut customisable-->
+	<?php if ($params->get('tmplchoice') == 0): ?>
 	<body>
 		<jdoc:include type="message" />
-		<div class="container paddingtop  <?php if ($paramtmpl_tmpltitmodforce == 1): ?>tmpmodhn<?php endif; ?>">
+		<div class="container<?php if ($paramtmpl_tmplfluidmod == 1) {echo "-fluid";}; ?> <?php	if ($paramtmpl_tmpltitmodforce == 1) {echo "tmpmodhn";} ?>">
 			<?php
 			//Header du template
 			include_once JPATH_THEMES.'/'.$this->template.'/layout/header.php';
@@ -35,6 +51,6 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); 
 		</div>
 		<jdoc:include type="modules" name="debug" style="none" />
 		<?php include_once JPATH_THEMES.'/'.$this->template.'/layout/script.php'; ?>
-		<!-- Exemple bootstrap -->
 	</body>
+	<?php endif ?>
 </html>
