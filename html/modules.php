@@ -24,7 +24,7 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 	$moduletype					= $module->module;					// type de module.
 	$headerLvl 					= $params->get('header_tag');		// niveau de h dans le titre
 	$moduleTag      			= $params->get('module_tag');		// Choix html5 de la balise du module
-
+	$header_class				= $params->get('header_class');
 	$datacontent 				=											//Contenu du debug
 	"
 					Nom de la positiondu module : <span class='label label-info'>$modposname</span><br />
@@ -52,13 +52,13 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 
 	<!-- Taille BS dans l'admin du module -->
 	<?php if ($modbssize != 0) : ?>
-	<div class="col-xs-12 col-sm-<?php echo $modbssize; ?> col-md-<?php echo $modbssize; ?> col-lg-<?php echo $modbssize; ?>">
+	<div class="col-xs-12 col-sm-<?php echo $modbssize; ?> col-md-<?php echo $modbssize; ?> col-lg-<?php echo $modbssize; ?> <?php echo $header_class; ?>">
 	<?php else : ?>
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 <?php echo $header_class; ?>">
 	<?php endif; ?>
 	<!-- Fin taille BS dans l'admin du module -->
 
-	<div id="Mod<?php echo $module->id; ?>" class="moduletable <?php echo htmlspecialchars($params->get('moduleclass_sfx')); ?> ">
+	<div id="Mod<?php echo $module->id; ?>" class="moduletable <?php echo htmlspecialchars($params->get('moduleclass_sfx')); ?>">
 
 	<!-- Choix de la balise html5 -->
 	<?php if (($moduleTag == 'div') || (empty($moduleTag))) : ?>
@@ -133,6 +133,7 @@ function modChrome_CrbXhtml($module, &$params, &$attribs) {
 			<!-- Content du module -->
 			<div class="modcontent">
 				<?php echo $module->content; ?>
+				<div class="clearfix"></div>
 			</div>
 
 	<!-- Fermeture balise html5 -->
@@ -166,16 +167,17 @@ function modChrome_div($module, &$params, &$attribs) {
 	?>
 	<?php
 	//Variable utiles
-	$nbmod 				= $attribs['nbmod']; 					// Nombre de module dans la position.
-	$modbssize 			= $params->get('bootstrap_size');		// Taille bootstrap defini dans l'administration.
-	$modstyle			= $attribs['style'];					// Style du module choisi dans l'admin.
-	$modposname			= $attribs['name'];						// Nom de la position du module choisi dans l'admin.
-	$paramtmpl_debug	= $attribs['debug'];					// Parametre du debug
-	$moduletype			= $module->module;						// type de module.
-	$headerLvl 			= $params->get('header_tag');			// niveau de h dans le titre
-	$moduleTag      	= $params->get('module_tag');			// Choix html5 de la balise du module
-
-	$datacontent 		=										//Contenu du debug
+	$nbmod 						= $attribs['nbmod']; 				// Nombre de module dans la position.
+	$modbssize 					= $params->get('bootstrap_size');	// Taille bootstrap defini dans l'administration.
+	$modstyle					= $attribs['style'];				// Style du module choisi dans l'admin.
+	$modposname					= $attribs['name'];					// Nom de la position du module choisi dans l'admin.
+	$paramtmpl_debug			= $attribs['debug'];				// Parametre du debug
+	$paramtmpl_tmpltitmodforce 	= $attribs['tmpltitmodforce'];		//Choix forcer les titres des modules
+	$moduletype					= $module->module;					// type de module.
+	$headerLvl 					= $params->get('header_tag');		// niveau de h dans le titre
+	$moduleTag      			= $params->get('module_tag');		// Choix html5 de la balise du module
+	$header_class				= $params->get('header_class');
+	$datacontent 				=											//Contenu du debug
 	"
 					Nom de la positiondu module : <span class='label label-info'>$modposname</span><br />
 					Nbre de module dans la position : <span class='label label-info'>$nbmod</span><br />
@@ -202,9 +204,9 @@ function modChrome_div($module, &$params, &$attribs) {
 
 	<!-- Taille BS dans l'admin du module -->
 	<?php if ($modbssize != 0) : ?>
-	<div>
+	<div class="<?php echo $header_class; ?>">
 	<?php else : ?>
-	<div>
+	<div class="<?php echo $header_class; ?>">
 	<?php endif; ?>
 	<!-- Fin taille BS dans l'admin du module -->
 
@@ -250,6 +252,7 @@ function modChrome_div($module, &$params, &$attribs) {
 			<!-- Content du module -->
 			<div class="modcontent">
 				<?php echo $module->content; ?>
+				<div class="clearfix"></div>
 			</div>
 
 	<!-- Fermeture balise html5 -->
@@ -292,7 +295,7 @@ function modChrome_retractable($module, &$params, &$attribs) {
 	$moduletype					= $module->module;					// type de module.
 	$headerLvl 					= $params->get('header_tag');		// niveau de h dans le titre
 	$moduleTag      			= $params->get('module_tag');		// Choix html5 de la balise du module
-
+	$header_class				= $params->get('header_class');
 	$datacontent 				=											//Contenu du debug
 	"
 					Nom de la positiondu module : <span class='label label-info'>$modposname</span><br />
@@ -312,7 +315,7 @@ function modChrome_retractable($module, &$params, &$attribs) {
 		$asidemod = 'search';
 	} elseif (($moduletype == 'mod_menu') || ($moduletype == 'mod_breadcrumbs')) {
 		$activeasidemod = 0;
-	} else {
+	} else {		
 		$activeasidemod = 1;
 		$asidemod = 'complementary';
 	}
@@ -320,9 +323,9 @@ function modChrome_retractable($module, &$params, &$attribs) {
 
 	<!-- Taille BS dans l'admin du module -->
 	<?php if ($modbssize != 0) : ?>
-	<div class="col-xs-12 col-sm-<?php echo $modbssize; ?> col-md-<?php echo $modbssize; ?> col-lg-<?php echo $modbssize; ?>">
+	<div class="col-xs-12 col-sm-<?php echo $modbssize; ?> col-md-<?php echo $modbssize; ?> col-lg-<?php echo $modbssize; ?> <?php echo $header_class; ?>">
 	<?php else : ?>
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 <?php echo $header_class; ?>">
 	<?php endif; ?>
 	<!-- Fin taille BS dans l'admin du module -->
 
@@ -345,7 +348,6 @@ function modChrome_retractable($module, &$params, &$attribs) {
 
 	<!-- Titre Hn du module -->
 	<?php if ($module->showtitle) : ?>
-		<a class="togglelink" role="button" data-toggle="collapse" href="#collapseElem<?php echo $module->id; ?>" aria-expanded="false" aria-controls="collapseElem<?php echo $module->id; ?>">
 		<?php if ($paramtmpl_tmpltitmodforce  == 1) : ?>
 			<?php echo "<h2>"; ?>
 		<?php else : ?>
@@ -360,7 +362,9 @@ function modChrome_retractable($module, &$params, &$attribs) {
 			?>
 		<?php endif; ?>
 	<!-- Fin titre du module -->
-		<span id="label<?php echo $module->id; ?>"><?php echo JText::_( $module->title ); ?></span>
+		<a class="togglelink" role="button" data-toggle="collapse" href="#collapseElem<?php echo $module->id; ?>" aria-expanded="true" aria-controls="collapseElem<?php echo $module->id; ?>">
+			<span id="label<?php echo $module->id; ?>"><?php echo JText::_( $module->title ); ?></span>
+		</a>
 	<!-- Fermeture Hn du module -->
 		<?php if ($paramtmpl_tmpltitmodforce  == 1) : ?>
 			<?php echo "</h2>"; ?>
@@ -398,11 +402,12 @@ function modChrome_retractable($module, &$params, &$attribs) {
 		<?php endif; ?>
 
 	<?php endif; ?>
-		</a>
+	
 			<!-- Content du module -->
-			<div class="collapse" id="collapseElem<?php echo $module->id; ?>">
+			<div class="collapse in" id="collapseElem<?php echo $module->id; ?>">
 				<div class="modcontent">
 					<?php echo $module->content; ?>
+					<div class="clearfix"></div>
 				</div>
 			</div>
 
