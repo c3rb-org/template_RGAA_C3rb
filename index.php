@@ -9,9 +9,7 @@ if(JFactory::getApplication()->input->getInt('test_tpl') == 1)
 include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 ?>
 <!DOCTYPE html>
-<html 	xmlns="http://www.w3.org/1999/xhtml"
-xml:lang="<?php echo $this->language; ?>"
-lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); ?>" dir="<?php echo $this->direction; ?>">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?><?php //Non valide w3c// $lang = explode('-', $this->language); echo strtolower(end($lang)); ?>" dir="<?php echo $this->direction; ?>">
 	<head>
 	<?php include_once JPATH_THEMES.'/'.$this->template.'/layout/head.php';	?>
 	</head>
