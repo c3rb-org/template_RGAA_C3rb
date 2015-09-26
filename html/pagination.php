@@ -129,7 +129,7 @@ function pagination_list_render($list)
 	$html[]= '
 	<div class="dropdown btn btn-default pagi">
 	<nav role="navigation" aria-label="Pagination">
-	<button class="btn btn-default dropdown-toggle" type="button" id="" data-toggle="dropdown">Page '.$currentPage .'<span class="caret"></span></button>
+	<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Page '.$currentPage .'<span class="caret"></span></button>
 	<ul class="dropdown-menu">';
 
 	foreach ($list['pages'] as $k => $page)
