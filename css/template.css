@@ -9622,7 +9622,7 @@ ul.tags.inline li {
 /* Breadcrumb */
 p.txtbreadcrumb {
   float: left;
-  margin: 8px 0 0 0;
+  margin: 8px 10px;
 }
 /* Pagination */
 .btn-default.pagi {
