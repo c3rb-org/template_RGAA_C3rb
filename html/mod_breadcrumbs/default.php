@@ -48,7 +48,7 @@ if(!empty($listMod)) {
 		<?php foreach($listMod as $key => $item): ?>
 		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" role="menuitem" <?php echo !empty($item->last)?' class="active"':''; ?>>
 			<meta itemprop="position" content="<?php echo $item->position; ?>" />
-			<?php if(empty($item->last)): ?><a itemprop="item" href="<?php echo $item->link; ?>" title="<?php echo $item->name; ?>"><?php endif; ?>
+			<?php if(empty($item->last)): ?><a itemprop="item" href="<?php echo $item->link; ?>" title="Accéder à la page : <?php echo $item->name; ?>"><?php endif; ?>
 				<span itemprop="name"><?php echo $item->name; ?></span>
 			<?php if(empty($item->last)): ?></a><?php endif; ?>
 		</li>
