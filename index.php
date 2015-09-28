@@ -17,7 +17,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 	
 	<body>
 		<jdoc:include type="message" />
-		<div class="container paddingtop  <?php if ($paramtmpl_tmpltitmodforce == 1): ?>tmpmodhn<?php endif; ?>">
+		<div class="container<?php if ($paramtmpl_tmplfluidmod == 1): ?>-fluid<?php endif; ?> <?php if ($paramtmpl_tmpltitmodforce == 1): ?>tmpmodhn<?php endif; ?> firstcontainer">
 			<?php
 			//Header du template
 			include_once JPATH_THEMES.'/'.$this->template.'/layout/header.php';
