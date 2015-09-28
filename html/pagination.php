@@ -8,57 +8,6 @@
  */
 
 defined('_JEXEC') or die;
-
-/**
- * This is a file to add template specific chrome to pagination rendering.
- *
- * pagination_list_footer
- * 	Input variable $list is an array with offsets:
- * 		$list[limit]		: int
- * 		$list[limitstart]	: int
- * 		$list[total]		: int
- * 		$list[limitfield]	: string
- * 		$list[pagescounter]	: string
- * 		$list[pageslinks]	: string
- *
- * pagination_list_render
- * 	Input variable $list is an array with offsets:
- * 		$list[all]
- * 			[data]		: string
- * 			[active]	: boolean
- * 		$list[start]
- * 			[data]		: string
- * 			[active]	: boolean
- * 		$list[previous]
- * 			[data]		: string
- * 			[active]	: boolean
- * 		$list[next]
- * 			[data]		: string
- * 			[active]	: boolean
- * 		$list[end]
- * 			[data]		: string
- * 			[active]	: boolean
- * 		$list[pages]
- * 			[{PAGE}][data]		: string
- * 			[{PAGE}][active]	: boolean
- *
- * pagination_item_active
- * 	Input variable $item is an object with fields:
- * 		$item->base	: integer
- * 		$item->link	: string
- * 		$item->text	: string
- *
- * pagination_item_inactive
- * 	Input variable $item is an object with fields:
- * 		$item->base	: integer
- * 		$item->link	: string
- * 		$item->text	: string
- *
- * This gives template designers ultimate control over how pagination is rendered.
- *
- * NOTE: If you override pagination_item_active OR pagination_item_inactive you MUST override them both
- */
-
 /**
  * Renders the pagination footer
  *
@@ -171,34 +120,31 @@ function pagination_item_active(&$item)
 	// Check for "Start" item
 	if ($item->text == JText::_('JLIB_HTML_START'))
 	{
-		$display = '<span aria-hidden="true" class="glyphicon glyphicon-fast-backward"></span>';
+		$display = '<span class="sr-only">'. JText::_('TPL_C3RB_RGAA_PREM_PAGE') .'</span><span aria-hidden="true" class="glyphicon glyphicon-fast-backward"></span>';
 	}
 
 	// Check for "Prev" item
 	if ($item->text == JText::_('JPREV'))
 	{
-		$display = '<span aria-hidden="true" class="glyphicon glyphicon-step-backward"></span>';
+		$display = '<span class="sr-only">'. JText::_('TPL_C3RB_RGAA_PREC_PAGE') .'</span><span aria-hidden="true" class="glyphicon glyphicon-step-backward"></span>';
 	}
 
 	// Check for "Next" item
 	if ($item->text == JText::_('JNEXT'))
 	{
-		$display = '<span aria-hidden="true" class="glyphicon glyphicon-step-forward"></span>';
+		$display = '<span class="sr-only">'. JText::_('TPL_C3RB_RGAA_PAGE_SUIV') .'</span><span aria-hidden="true" class="glyphicon glyphicon-step-forward"></span>';
 	}
 
 	// Check for "End" item
 	if ($item->text == JText::_('JLIB_HTML_END'))
 	{
-		$display = '<span aria-hidden="true" class="glyphicon glyphicon-fast-forward"></span>';
+		$display = '<span class="sr-only">'. JText::_('TPL_C3RB_RGAA_DER_PAGE') .'</span><span aria-hidden="true" class="glyphicon glyphicon-fast-forward"></span>';
 	}
 
 	// If the display object isn't set already, just render the item with its text
 	if (!isset($display))
-	{
-		$display = $item->text;
-	}
-
-	return '<a title="' . $item->text . '" href="' . $item->link . '" class="btn btn-default hidden-phone">' . $display . '</a>';
+		return '<li><a href="' . $item->link . '" title="'. JText::_('TPL_C3RB_RGAA_ACCES_PAGE') .'' . $item->text . '" class="btn btn-default hidden-phone">' . $item->text . '</a></li>';
+		return '<a href="' . $item->link . '" class="btn btn-default hidden-phone">' . $display . '</a>';
 }
 
 /**
@@ -215,33 +161,33 @@ function pagination_item_inactive(&$item)
 	// Check for "Start" item
 	if ($item->text == JText::_('JLIB_HTML_START'))
 	{
-		return '<a class="btn btn-default disabled" href="#" aria-label="First"><span aria-hidden="true" class="glyphicon glyphicon-fast-backward"></span></a>';
+		return '<a class="btn btn-default disabled" href="#" aria-label="First"><span aria-hidden="true" class="glyphicon glyphicon-fast-backward"></span><span class="sr-only">'. JText::_('TPL_C3RB_RGAA_PREM_PAGE') .'</span></a>';
 	}
 
 	// Check for "Prev" item
 	if ($item->text == JText::_('JPREV'))
 	{
-		return '<a class="btn btn-default disabled" href="#" aria-label="Previous"><span aria-hidden="true" class="glyphicon glyphicon-step-backward"></span></a>';
+		return '<a class="btn btn-default disabled" href="#" aria-label="Previous"><span aria-hidden="true" class="glyphicon glyphicon-step-backward"></span><span class="sr-only">'. JText::_('TPL_C3RB_RGAA_PREC_PAGE') .'</span></a>';
 	}
 
 	// Check for "Next" item
 	if ($item->text == JText::_('JNEXT'))
 	{
-		return '<a class="btn btn-default disabled" href="#" aria-label="Next"><span aria-hidden="true" class="glyphicon glyphicon-step-forward"></span></a>';
+		return '<a class="btn btn-default disabled" href="#" aria-label="Next"><span aria-hidden="true" class="glyphicon glyphicon-step-forward"></span><span class="sr-only">'. JText::_('TPL_C3RB_RGAA_PAGE_SUIV') .'</span></a>';
 	}
 
 	// Check for "End" item
 	if ($item->text == JText::_('JLIB_HTML_END'))
 	{
-		return '<a class="btn btn-default disabled" href="#" aria-label="End"><span aria-hidden="true" class="glyphicon glyphicon-fast-forward"></span></a>';
+		return '<a class="btn btn-default disabled" href="#" aria-label="End"><span aria-hidden="true" class="glyphicon glyphicon-fast-forward"></span><span class="sr-only">'. JText::_('TPL_C3RB_RGAA_DER_PAGE') .'</span></a>';
 	}
 
 	// Check if the item is the active page
 	if (isset($item->active) && ($item->active))
 	{
-		return '<li class="active hidden-phone"><a>' . $item->text . '</a></li>';
+		return '<li class="active hidden-phone"><a href="#">' . $item->text . '</a></li>';
 	}
 
 	// Doesn't match any other condition, render a normal item
-	return '<li class="disabled hidden-phone"><a>' . $item->text . '</a></li>';
+	return '<li class="disabled hidden-phone"><a href="#">' . $item->text . '</a></li>';
 }
