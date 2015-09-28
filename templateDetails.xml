@@ -137,6 +137,13 @@
                         </field>
                         <hr />
                     </fieldset>
+                    <fieldset name="PRO">
+                        <field type="note" label="TPL_C3RB_RGAA_BOOTSTRAP_CUSTOM"></field>
+                        <field width="250px" name="tmplfluidmod" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLFLUID_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLFLUID" default="0" class="btn-group btn-group-yesno">
+                            <option value="0">JNO</option>
+                            <option value="1">JYES</option>
+                        </field>
+                    </fieldset>
              </fields>
          </config>
      </extension>
