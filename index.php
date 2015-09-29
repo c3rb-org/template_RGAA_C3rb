@@ -7,6 +7,12 @@ if(JFactory::getApplication()->input->getInt('test_tpl') == 1)
 }
 //variables du template
 include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
+if (is_object($active) && !empty($active->params)) {
+$pagecss =  $active->params->get('pageclass_sfx');
+}
+else {
+	$pagecss = '';
+}
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->language; ?>" lang="<?php echo $this->language; ?><?php //Non valide w3c// $lang = explode('-', $this->language); echo strtolower(end($lang)); ?>" dir="<?php echo $this->direction; ?>">
@@ -14,10 +20,11 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 	<?php include_once JPATH_THEMES.'/'.$this->template.'/layout/head.php';	?>
 	</head>
 	<?php if ( $paramtmpl_html == 1): ?><div class="debughtml"><?php endif; ?>
-	
 	<body>
+		<div class="messagejoomla">
 		<jdoc:include type="message" />
-		<div class="container<?php if ($paramtmpl_tmplfluidmod == 1): ?>-fluid<?php endif; ?> <?php if ($paramtmpl_tmpltitmodforce == 1): ?>tmpmodhn<?php endif; ?> firstcontainer">
+		</div>
+		<div class="container<?php if ($paramtmpl_tmplfluidmod == 1): ?>-fluid<?php endif; ?> <?php if ($paramtmpl_tmpltitmodforce == 1): ?>tmpmodhn<?php endif; ?> firstcontainer <?php echo $pagecss; ?>">
 			<?php
 			//Header du template
 			include_once JPATH_THEMES.'/'.$this->template.'/layout/header.php';
