@@ -16,13 +16,15 @@ jimport('joomla.html.html.bootstrap');
 <article role="main">
 <div class="contact<?php echo $this->pageclass_sfx?>" itemscope itemtype="http://schema.org/Person">
 	<?php if ($this->params->get('show_page_heading')) : ?>
-		<h2>
-			<?php echo $this->escape($this->params->get('page_heading')); ?>
-		</h2>
+		<div class="page-header">
+			<h2>
+				<?php echo $this->escape($this->params->get('page_heading')); ?>
+			</h2>
+		</div>
 	<?php endif; ?>
 	<?php if ($this->contact->name && $this->params->get('show_name')) : ?>
 		<?php if ($this->params->get('show_page_heading')) : ?>
-		<div class="page-header">
+		<div class="page-header ssheader">
 			<h3>
 				<?php if ($this->item->published == 0) : ?>
 					<span class="label label-warning"><?php echo JText::_('JUNPUBLISHED'); ?></span>
