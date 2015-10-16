@@ -9650,6 +9650,11 @@ p.txtbreadcrumb {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
+/* Ajoustement chzn */
+.search-field input.default {
+  height: 30px !important;
+  padding: 6px 12px !important;
+}
 /* fadeInUp */
 @-webkit-keyframes fadeInUp {
   0% {
