@@ -6,7 +6,9 @@
 		if ($nbmod): ?>
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="row">
-					<jdoc:include type="modules" name="position-12" style="CrbXhtml" tmpltitmodforce="<?php echo $paramtmpl_tmpltitmodforce; ?>"  nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
+					<div class="pos-12">
+						<jdoc:include type="modules" name="position-12" style="CrbXhtml" tmpltitmodforce="<?php echo $paramtmpl_tmpltitmodforce; ?>"  nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
+					</div>
 				</div>
 			</div>
 		<?php endif; ?>
@@ -17,7 +19,9 @@
 		if ($nbmod): ?>
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="row">
-					<jdoc:include type="modules" name="position-13" style="CrbXhtml" tmpltitmodforce="<?php echo $paramtmpl_tmpltitmodforce; ?>"  nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
+					<div class="pos-13">
+						<jdoc:include type="modules" name="position-13" style="CrbXhtml" tmpltitmodforce="<?php echo $paramtmpl_tmpltitmodforce; ?>"  nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
+					</div>
 				</div>
 			</div>
 		<?php endif; ?>
@@ -28,7 +32,9 @@
 		if ($nbmod): ?>
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="row">
-					<jdoc:include type="modules" name="position-14" style="CrbXhtml" tmpltitmodforce="<?php echo $paramtmpl_tmpltitmodforce; ?>"  nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
+					<div class="pos-14">
+						<jdoc:include type="modules" name="position-14" style="CrbXhtml" tmpltitmodforce="<?php echo $paramtmpl_tmpltitmodforce; ?>"  nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
+					</div>
 				</div>
 			</div>
 		<?php endif; ?>
