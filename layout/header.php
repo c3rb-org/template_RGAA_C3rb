@@ -21,7 +21,7 @@
 			<?php endif	 ?>
 			</h1>
 			</div><!-- fin col-xs-12 col-sm-12 col-md-12 col-lg-12 /OU/ sr-only -->
-		
+
 		<!-- position 1 -->
 		<?php
 		$nbmod =  $this->countModules('position-1');
@@ -30,27 +30,27 @@
 				<div class="row">
 					<jdoc:include type="modules" name="position-1" style="CrbXhtml" tmpltitmodforce="<?php echo $paramtmpl_tmpltitmodforce; ?>"  nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
 				</div>
-			</div>	
+			</div>
 		<?php endif; ?>
 		<!-- fin position 1 -->
-		
+
 		<!-- position 2 -->
-		<?php 				
+		<?php
 		$nbmod =  $this->countModules('position-2');
 		if ($nbmod): ?>
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="row">
 					<jdoc:include type="modules" name="position-2" style="CrbXhtml" tmpltitmodforce="<?php echo $paramtmpl_tmpltitmodforce; ?>"  nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
-				</div> 
+				</div>
 			</div>
-		<?php endif; ?> 
+		<?php endif; ?>
 		<!-- fin position 2 -->
-		
+
 		<!-- position 3 -->
-		<?php 
+		<?php
 		$nbmod =  $this->countModules('position-3');
-		if ($nbmod): ?> 
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"> 
+		if ($nbmod): ?>
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="row">
 					<jdoc:include type="modules" name="position-3" style="CrbXhtml" tmpltitmodforce="<?php echo $paramtmpl_tmpltitmodforce; ?>"  nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
 				</div>

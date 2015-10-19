@@ -143,13 +143,13 @@
                         <field name="tmplchoice" type="list" default="0" label="TPL_C3RB_RGAA_TMPLCHX_LABEL" description="TPL_C3RB_RGAA_TMPLCHX_DESC">
                             <option value="0">Starter (default)</option>
                             <option value="1">Thème 01</option>
+                            <option value="2">Thème 02</option>
                         </field>
 
                         <field width="250px" name="tmplfluidmod" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLFLUID_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLFLUID" default="0" class="btn-group btn-group-yesno">
                             <option value="0">JNO</option>
                             <option value="1">JYES</option>
                         </field>
-                    
 
                         <field showon="tmplchoice:0" type="note" label="TPL_C3RB_RGAA_TEXTE_CUSTOM" ></field>
 
