@@ -44,7 +44,7 @@ if(!empty($listMod)) {
 <?php if( !empty($listMod) ): ?>
 <nav role="navigation">
 	<p id="breadcrumblabel"<?php echo $showHere?'class="txtbreadcrumb"':' class="hidden"'; ?>><?php echo JText::_('MOD_BREADCRUMBS_HERE'); ?></p>
-	<ol class="breadcrumb<?php echo $moduleclass_sfx; ?>" role="menu" aria-labelledby="breadcrumblabel" itemscope itemtype="http://schema.org/BreadcrumbList">
+	<ul class="breadcrumb<?php echo $moduleclass_sfx; ?>" role="menu" aria-labelledby="breadcrumblabel" itemscope itemtype="http://schema.org/BreadcrumbList">
 		<?php foreach($listMod as $key => $item): ?>
 		<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem" role="menuitem" <?php echo !empty($item->last)?' class="active"':''; ?>>
 			<meta itemprop="position" content="<?php echo $item->position; ?>" />
@@ -56,6 +56,6 @@ if(!empty($listMod)) {
 				<?php echo $separator; ?>
 			<?php endif; ?>
 		<?php endforeach; ?>
-	</ol>
+	</ul>
 </nav>
 <?php endif; ?>
