@@ -14,7 +14,7 @@ $canEdit = $displayData['params']->get('access-edit');
 	<?php if (empty($displayData['print'])) : ?>
 		<?php if ($canEdit || $displayData['params']->get('show_print_icon') || $displayData['params']->get('show_email_icon')) : ?>
 			<div class="btn-group pull-right">
-				<a title="<?php echo JText::_('TPL_RGAAC3RB_ARTICLE_OUTIL_OPEN'); ?>" class="btn dropdown-toggle hasTooltip" data-toggle="dropdown" href="#">
+				<a title="<?php echo JText::_('TPL_C3RB_RGAA_ARTICLE_OUTIL_OPEN'); ?>" class="btn dropdown-toggle hasTooltip" data-toggle="dropdown" href="#">
 				<span class="glyphicon glyphicon-cog"></span>
 				<span class="sr-only"><?php echo JText::_('TPL_RGAAC3RB_ARTICLE_OUTIL'); ?></span>
 				</a>
