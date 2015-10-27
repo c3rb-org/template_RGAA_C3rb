@@ -2,7 +2,7 @@
 /** 
  * @package     Joomla.Site
  * @subpackage  mod_search
- * °version J! : 3.4.3 - MIR
+ * ï¿½version J! : 3.4.3 - MIR
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -30,7 +30,7 @@ else
 	<form action="<?php echo JRoute::_('index.php');?>" method="post" class="form-inline" role="search"><!-- Ajout du role C3rbrgaa -->
 			<?php
 				$output = '<label for="mod-search-searchword" class="sr-only">' . $label . '</label> ';
-				$output .= '<input title="'. $label .'" name="searchword" id="mod-search-searchword" maxlength="' . $maxlength . '"  class="form-control" type="text" size="' . $width . '" value="' . $text . '"  onblur="if (this.value==\'\') this.value=\'' . $text . '\';" onfocus="if (this.value==\'' . $text . '\') this.value=\'\';" />';
+				$output .= '<input title="'. $label .'" name="searchword" id="mod-search-searchword" maxlength="' . $maxlength . '"  class="form-control" type="text" ' . $width . ' value="' . $text . '"  onblur="if (this.value==\'\') this.value=\'' . $text . '\';" onfocus="if (this.value==\'' . $text . '\') this.value=\'\';" />';
 				if ($button) :
 					if ($imagebutton) :
 						$btn_output = '<input  type="image" value="' . $button_text . '" class="btn btn-default" src="' . $img . '" onclick="this.form.searchword.focus();"/>';

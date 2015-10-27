@@ -115,7 +115,7 @@ defined('_JEXEC') or die;
 		// The next item is deeper.
 		if ($item->deeper)
 		{
-			echo '<ul class="nav-child dropdown-menu multi-level" role="menu" aria-labelledby="">'; 
+			echo '<ul class="nav-child dropdown-menu multi-level" role="menu">'; 
 		}
 		elseif ($item->shallower)
 		{

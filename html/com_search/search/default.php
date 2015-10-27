@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  com_search
- * °version J! : 3.4.3 - MIR
+ * ï¿½version J! : 3.4.3 - MIR
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -32,6 +32,7 @@ JHtml::_('formbehavior.chosen', 'select');
 <?php endif; ?>
 
 <?php echo $this->loadTemplate('form'); ?>
+
 <?php if ($this->error == null && count($this->results) > 0) :
 	echo $this->loadTemplate('results');
 else :

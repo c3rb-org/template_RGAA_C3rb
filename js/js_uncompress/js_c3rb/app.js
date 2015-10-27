@@ -1,8 +1,8 @@
 jQuery(function ($) {
-
+	
     // Initialise les tooltip Bs
     $('[data-toggle="tooltip"]').tooltip();
-
+    
     //Autorise le html dans les tools tip
     $('[data-toggle="popover"]').popover({html: true});
 

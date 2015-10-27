@@ -52,7 +52,7 @@ abstract class JHtmlBootstrap
 			$opt['offset'] = isset($params['offset']) ? $params['offset'] : 10;
 
 			$options = JHtml::getJSObject($opt);
-
+			
 			// Attach affix to document
 			JFactory::getDocument()->addScriptDeclaration(
 				"(function($){
@@ -274,7 +274,7 @@ abstract class JHtmlBootstrap
 			$opt['remote']   = isset($params['remote']) ?  $params['remote'] : '';
 
 			$options = JHtml::getJSObject($opt);
-
+			
 			// Attach the modal to document
 			JFactory::getDocument()->addScriptDeclaration(
 				"(function($){
@@ -372,7 +372,7 @@ abstract class JHtmlBootstrap
 		$opt['container'] = isset($params['container']) ? $params['container'] : 'body';
 
 		$options = JHtml::getJSObject($opt);
-
+		
 		// Attach the popover to the document
 		JFactory::getDocument()->addScriptDeclaration(
 			"jQuery(document).ready(function()
@@ -411,7 +411,7 @@ abstract class JHtmlBootstrap
 			$opt['offset'] = isset($params['offset']) ? (int) $params['offset'] : 10;
 
 			$options = JHtml::getJSObject($opt);
-
+			
 			// Attach ScrollSpy to document
 			JFactory::getDocument()->addScriptDeclaration(
 				"(function($){
@@ -474,7 +474,7 @@ abstract class JHtmlBootstrap
 			$onHidden = isset($params['onHidden']) ? (string) $params['onHidden'] : null;
 
 			$options = JHtml::getJSObject($opt);
-
+			
 			// Build the script.
 			$script = array();
 			$script[] = "jQuery(document).ready(function(){";
@@ -563,7 +563,7 @@ abstract class JHtmlBootstrap
 			$opt['highlighter'] = isset($params['highlighter']) ? (int) $params['highlighter'] : null;
 
 			$options = JHtml::getJSObject($opt);
-
+			
 			// Attach typehead to document
 			JFactory::getDocument()->addScriptDeclaration(
 				"jQuery(document).ready(function()
