@@ -13,6 +13,7 @@ $error_type = array('error'=>'alert-danger','warning'=>'alert-warning',
     'message'=>'alert-info');
 ?>
 <?php if (is_array($msgList) && !empty($msgList)) : ?>
+<div class="messagejoomla">	
 	<div class="container margetop">
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -38,4 +39,5 @@ $error_type = array('error'=>'alert-danger','warning'=>'alert-warning',
 			</div>
 		</div>
 	</div>
+</div>
 <?php endif; ?>

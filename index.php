@@ -21,9 +21,7 @@ else {
 	</head>
 	<?php if ( $paramtmpl_html == 1): ?><div class="debughtml"><?php endif; ?>
 	<body>
-		<div class="messagejoomla">
 		<jdoc:include type="message" />
-		</div>
 		<div class="container<?php if ($paramtmpl_tmplfluidmod == 1): ?>-fluid<?php endif; ?> <?php if ($paramtmpl_tmpltitmodforce == 1): ?>tmpmodhn<?php endif; ?> firstcontainer <?php echo $pagecss; ?>">
 			<?php
 			//Header du template
