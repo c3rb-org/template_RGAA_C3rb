@@ -31,7 +31,8 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); 
 			include_once JPATH_THEMES.'/'.$this->template.'/layout/modele01/index.php';
 	 	?>
 	<?php endif ?>
-		<!-- Defaut customisable-->
+	
+	<!-- Defaut customisable-->
 	<?php if ($params->get('tmplchoice') == 0): ?>
 		<?php if ($params->get('tmplchoice') == 0): ?>
 		<body>

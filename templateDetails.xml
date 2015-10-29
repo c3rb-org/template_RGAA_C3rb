@@ -97,6 +97,8 @@
                 <position>position-9</position>
                 <position>position-10</position>
                 <position>position-11</position>
+                <position>position-11a</position>
+                <position>position-11b</position>
                 <position>position-12</position>
                 <position>position-13</position>
                 <position>position-14</position>
@@ -108,10 +110,12 @@
                 <position>position-20</position>
                 <position>debug</position>
             </positions>
-            <!-- Add style pour plus de style ... ? ...  -->
+
+
             <config>
                 <fields name="params">
-                    <!-- Onglet parametres -->
+
+                    <!-- ///////////////////// ONGLET PARAMETRE //////////////////////////-->
                     <fieldset name="TPL_C3RB_RGAA_PARAMS">
                         <field type="spacer" label="TPL_C3RB_RGAA_TIT_TITSYS" ></field>
                         <field width="250px" name="tmpltitchoice" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLTITCHOICE_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLTITCHOICE_LABEL" default="0" class="btn-group btn-group-yesno" >
@@ -138,6 +142,8 @@
                         <hr />
                     </fieldset>
 
+
+                    <!-- ///////////////////// ONGLET STYLE //////////////////////////-->
                     <fieldset name="PRO">
                         <field type="note" label="TPL_C3RB_RGAA_BOOTSTRAP_CUSTOM"></field>
                         <field name="tmplchoice" type="list" default="0" label="TPL_C3RB_RGAA_TMPLCHX_LABEL" description="TPL_C3RB_RGAA_TMPLCHX_DESC">
@@ -146,10 +152,23 @@
                             <option value="2">Thème 02</option>
                         </field>
 
-                        <field width="250px" name="tmplfluidmod" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLFLUID_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLFLUID" default="0" class="btn-group btn-group-yesno">
+                        <!-- ///////////////////// THEME 01  //////////////////////////-->
+                        <field showon="tmplchoice:1" width="250px" name="tmplfluidmod" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLFLUID_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLFLUID" default="0" class="btn-group btn-group-yesno">
                             <option value="0">JNO</option>
                             <option value="1">JYES</option>
                         </field>
+
+
+
+
+
+
+                        <!-- ///////////////////// STARTER   //////////////////////////
+                        <field showon="tmplchoice:0" width="250px" name="tmplfluidmod" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLFLUID_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLFLUID" default="0" class="btn-group btn-group-yesno">
+                            <option value="0">JNO</option>
+                            <option value="1">JYES</option>
+                        </field>                        -->
+
 
                         <field showon="tmplchoice:0" type="note" label="TPL_C3RB_RGAA_TEXTE_CUSTOM" ></field>
 
