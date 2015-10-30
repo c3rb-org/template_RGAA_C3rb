@@ -17,8 +17,8 @@
         </style>
         <hr />
         <div class="clearfix"></div>
-        <div class="">
-            <div class="span5">
+        <div>
+            <div class="span6">
                 <h2 style="text-align:left;">C3rb - RGAA - haaaa!</h2>
                 <p style="text-align:left">Created by <a href="http://www.c3rb.org" target="_blank">C3rb Informatique | c3rb.org</a>. </p>
                 <ul>
@@ -28,7 +28,7 @@
                     <li>Cabrol Cyril</li>
                 </ul>
             </div>
-            <div class="span7">
+            <div class="span6">
                 <h2 style="text-align:left;">Description</h2>
                 <ul>
                     <li>C3rb_Rgaa est un template réalisé par la société C3rb Informatique, il propose à la communauté un template de conception  accessible (référentiel RGAA3).</li>
@@ -40,25 +40,60 @@
                     <p>Ce plugin permet la génération et le bon fonctionnement de Bootstrap3</p>
                     <p>Il permet aussi d'activer un générateur LESS/CSS </p>
                 </div>
-        </div>
-    </div>
-    <div class="clearfix"></div>
-    <hr />
-    <div class="clearfix"></div>
-
-    <div class="">
-        <div class="span12">
-            <h2 style="text-align:left;">Les positions disponibles du template :</h2>
-            <img src="../templates/c3rb_rgaa/images/template/administrator/position.jpg" alt="les positions du template">
             </div>
         </div>
         <div class="clearfix"></div>
+        <hr />
+        <div class="clearfix"></div>
+        
+        <div>
+            <div class="span6">
+                <h2 style="text-align:left;">Les positions disponibles du template :</h2>
+                <img src="../templates/c3rb_rgaa/images/template/administrator/position.jpg" alt="les positions du template">
+            </div>
+
+            <div class="span6">
+                <h2 style="text-align:left;">Les Styles de modules</h2>
+                <p>Les style des modules peuvent etre choisis dans la configuration d'un module dans l'onglet <b>Paramètres avancés</b> option <b>Type de mise en page</b></p>
+                <p>Description des diférents styles par type de module :</p>
+                <dl><b>Module menu (Mod_menu)</b><br /> <em>Note : pour les menus a plusieurs niveaux : il est nécessaire que l'élément parent soit un séparateur, de plus, vous devez activer l'option "Afficher tous les liens" pour activer les sous menus</em> 
+                    <dt>default</dt>
+                    <dd>Menu horyzontal, style bootstrap, permet l'agencement de menu à plusieurs niveau. (style actif par default)</em></dd>
+                    <dt>defaultmega</dt>
+                    <dd>Menu horyzontal avec sous menu en pavé, il permet l'insertion de texte sous la zone de lien via le champ note du lien de menu. une image peut etre associé au lien pour un agencement complet</dd>
+                    <dt>vertical</dt>
+                    <dd>Menu vertical généralement utilisé dans les colone droite (position-8) ou gauche (position-7) du template.</dd>
+                    <dt>verticalnostylenorwd</dt>
+                    <dd>Menu vertical généralement utilisé en pied de page, restitu une liste structuré du menu sans style, sans réation responsive</dd>
+                </dl>
+                <hr/>
+                <h2 style="text-align:left;">Les Class de modules</h2>
+                <p>Les class de modules peuvent etre saisi dans la configuration d'un module généralement dans l'onglet <b>Paramètres avancés</b> option <b>Suffixe de classe CSS</b></p>
+                <dl>
+                <dt>nostyle</dt>
+                <dd>Permet de supprimer les élément de style du module (couleur de fond, bordure, ombre)</dd>
+                </dl>
+                <hr/>
+                <h2 style="text-align:left;">Les modèles du template :</h2>
+                <h3>Modele standard : </h3>
+                <p>Le modèle standard...</p>
+                <h3>Theme01 : </h3>
+                <p>le theme 01 propose différentes option blablabla ...</p>
+                <p>postion supplémentaire : 11a, 11b</p>
+                <p><b>Suffixe de classe du theme 01 : </b></p>
+                <ul>
+                    <li>Pour le menu : </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="clearfix"></div>
         <br>
-            <hr/>
-            <p>
-                Ce template est sous <a href="http://opensource.org/licenses/mit-license.php">Licence MIT</a>
-            </p>
-            ]]></description>
+        <hr/>
+        <p>
+            Ce template est sous <a href="http://opensource.org/licenses/mit-license.php">Licence MIT</a>
+        </p>
+        ]]></description>
             <!-- Langue -->
             <languages folder="languages">
                 <language tag="fr-FR">fr-FR/fr-FR.tpl_c3rb_rgaa.ini</language>
@@ -153,10 +188,70 @@
                         </field>
 
                         <!-- ///////////////////// THEME 01  //////////////////////////-->
+                        
+
+
                         <field showon="tmplchoice:1" width="250px" name="tmplfluidmod" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLFLUID_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLFLUID" default="0" class="btn-group btn-group-yesno">
                             <option value="0">JNO</option>
                             <option value="1">JYES</option>
                         </field>
+                        <field showon="tmplchoice:1" type="note" label="TPL_C3RB_RGAA_MODEL01_DESC"></field>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
