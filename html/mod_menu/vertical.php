@@ -101,6 +101,8 @@ defined('_JEXEC') or die;
 		switch ($item->type) :
 		case 'separator':
 		require JModuleHelper::getLayoutPath('mod_menu', 'default_separatormultilvl');
+		break;
+		
 		case 'url':
 		case 'component':
 		case 'heading':
