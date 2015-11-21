@@ -155,6 +155,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 	</div>
 
 	<?php if ($useDefList && ($info == 1 || $info == 2)) : ?>
+		<div class="article-info-split">
 		<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
 			<?php if ($params->get('show_tags', 1) && !empty($this->item->tags->itemTags)) : ?>
 				<?php $this->item->tagLayout = new JLayoutFile('joomla.content.tags'); ?>
@@ -165,7 +166,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 
 	<?php
 if (!empty($this->item->pagination) && $this->item->pagination && $this->item->paginationposition && !$this->item->paginationrelative):
-	echo '<nav role="navigation">'; // role navigation est il bien nécessaire ...
+	echo '<nav role="navigation">'; // role navigation est il bien necessaire ...
 	echo $this->item->pagination;
 	echo '</nav>';
 ?>
@@ -206,9 +207,9 @@ if (!empty($this->item->pagination) && $this->item->pagination && $this->item->p
 	<?php endif; ?>
 	<?php endif; ?>
 	<?php
-if (!empty($this->item->pagination) && $this->item->pagination && $this->item->paginationposition && $this->item->paginationrelative) :
-	echo $this->item->pagination;
-?>
+	if (!empty($this->item->pagination) && $this->item->pagination && $this->item->paginationposition && $this->item->paginationrelative) :
+		echo $this->item->pagination;
+	?>
 	<?php endif; ?>
 	<?php echo $this->item->event->afterDisplayContent; ?>
 </article>
