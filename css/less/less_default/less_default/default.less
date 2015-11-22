@@ -45,6 +45,11 @@ h4 {
 }
 h5 {
     color: @colorh5;
+} 
+a {
+    h1, h2, h3, h4, h5, h6 {
+    color: @link-color;
+    }
 }
 
 /* Module */
@@ -355,19 +360,24 @@ body.tmpl-component {background: #FFFFFF}
 
         }
     }
-    /* Article */
-    .article-info {
-      color: #111111;
-      font-style: italic;
-      font-size: 13px
-  }
-  dl.article-info a {margin-left:5px}
-  dl.article-info dd:after {content: " , "; margin-left: 5px;}
-  dl.article-info dd {
+/* Article */
+.items-leading, .item {margin-bottom: 15px}
+.article-info {
+    color: #111111;
+    font-style: italic;
+    font-size: 13px
+}
+dl.article-info a {
+    margin-left:5px
+}
+dl.article-info dd:after {
+    content: " , "; 
+    margin-left: 5px;
+}
+dl.article-info dd {
     display: flex; /* hoouuu du flex ca fait peur ^^ */
     float: left;
     margin-right: 5px;
-
 }
 dl.article-info dd:last-child:after {content: ""}
 ul.tags.inline {
@@ -379,6 +389,8 @@ ul.tags.inline {
 ul.tags.inline li {
     display: inline-block;
 }
+/* readmore lire la suite */
+p.readmore .btn {padding: 0px }
 /* Breadcrumb */ 
 p.txtbreadcrumb {
     float: left;
