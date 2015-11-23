@@ -22,7 +22,7 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
 	<div class="pull-<?php echo htmlspecialchars($imgfloat); ?> item-image"> 
 		<?php if ($params->get('link_titles') && $params->get('access-view')) : ?>
 			<a href="<?php echo JRoute::_(ContentHelperRoute::getArticleRoute($displayData->slug, $displayData->catid, $displayData->language)); ?>">
-			<div class="item-image-bloc">
+			<div class="item-image-bloc" aria-hidden="true">
 				<img
 				<?php if ($images->image_intro_caption):
 					echo 'class="caption"' . ' title="' . htmlspecialchars($images->image_intro_caption) . '"';
@@ -45,7 +45,7 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
 		<?php if ($params->get('show_title') || $displayData->state == 0 || ($params->get('show_author') && !empty($displayData->author ))) : ?>
 			
 			<?php if ($params->get('show_title')) : ?>
-				<div class="page-header">
+				<div class="page-header" role="presentation"> <!-- http://blog.atalan.fr/div-dans-a-et-voiceover-ios/ -->
 					<h3>
 						<?php echo $this->escape($displayData->title); ?>
 					</h3>

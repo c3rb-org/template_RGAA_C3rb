@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  Layout
- * °version J! : 3.4.3 - MIR
+ * version J! : 3.4.5 - MIR
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -11,7 +11,7 @@ defined('_JEXEC') or die;
 
 // Create a shortcut for params.
 $params = $this->item->params;
-JHtml::addIncludePath(JPATH_COMPONENT.'/helpers/html');
+JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
 $canEdit = $this->item->params->get('access-edit');
 $info    = $params->get('info_block_position', 0);
 ?>
@@ -19,18 +19,13 @@ $info    = $params->get('info_block_position', 0);
 	|| ((strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != JFactory::getDbo()->getNullDate())) : ?>
 	<div class="system-unpublished">
 <?php endif; ?>
+
 <header>
 
-<?php //echo JLayoutHelper::render('joomla.content.intro_image', $this->item); ?> <!-- Passe dans joomla.content.blog_style_default_item_title pour agencement -->
 <?php echo JLayoutHelper::render('joomla.content.blog_style_default_item_title', $this->item); ?>
-
 
 <?php if ($canEdit || $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
 	<?php echo JLayoutHelper::render('joomla.content.icons', array('params' => $params, 'item' => $this->item, 'print' => false)); ?>
-<?php endif; ?>
-
-<?php if ($params->get('show_tags') && !empty($this->item->tags->itemTags)) : ?>
-	<?php echo JLayoutHelper::render('joomla.content.tags', $this->item->tags->itemTags); ?>
 <?php endif; ?>
 
 <?php // Todo Not that elegant would be nice to group the params ?>
@@ -46,6 +41,7 @@ $info    = $params->get('info_block_position', 0);
 </address>
 </header>
 
+<!-- intro image dans layout -->
 
 
 <?php if (!$params->get('show_intro')) : ?>
@@ -53,9 +49,12 @@ $info    = $params->get('info_block_position', 0);
 <?php endif; ?>
 <?php echo $this->item->event->beforeDisplayContent; ?> <?php echo $this->item->introtext; ?>
 
-<?php if ($useDefList && ($info == 1 || $info == 2)) : ?>
+<?php if ($useDefList && ($info == 1 ||  $info == 2)) : ?>
 	<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
-<?php  endif; ?>
+	<?php if ($params->get('show_tags', 1) && !empty($this->item->tags->itemTags)) : ?>
+		<?php echo JLayoutHelper::render('joomla.content.tags', $this->item->tags->itemTags); ?>
+					<?php endif; ?>
+<?php endif; ?>
 
 <?php if ($params->get('show_readmore') && $this->item->readmore) :
 	if ($params->get('access-view')) :
@@ -73,8 +72,9 @@ $info    = $params->get('info_block_position', 0);
 <?php endif; ?>
 
 <?php if ($this->item->state == 0 || strtotime($this->item->publish_up) > strtotime(JFactory::getDate())
-	|| ((strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != JFactory::getDbo()->getNullDate())) : ?>
+	|| ((strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != '0000-00-00 00:00:00' )) : ?>
 </div>
 <?php endif; ?>
 
 <?php echo $this->item->event->afterDisplayContent; ?>
+

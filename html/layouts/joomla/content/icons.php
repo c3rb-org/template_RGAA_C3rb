@@ -16,7 +16,7 @@ $canEdit = $displayData['params']->get('access-edit');
 			<div class="btn-group pull-right">
 				<a title="<?php echo JText::_('TPL_C3RB_RGAA_ARTICLE_OUTIL_OPEN'); ?>" class="btn dropdown-toggle hasTooltip" data-toggle="dropdown" href="#">
 				<span class="glyphicon glyphicon-cog"></span>
-				<span class="sr-only"><?php echo JText::_('TPL_RGAAC3RB_ARTICLE_OUTIL'); ?></span>
+				<span class="sr-only"><?php echo JText::_('TPL_C3RB_RGAA_ARTICLE_OUTIL'); ?></span>
 				</a>
 
 				<?php // Note the actions class is deprecated. Use dropdown-menu instead. ?>

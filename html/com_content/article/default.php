@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  com_content
- * ∞version 3.4.3 - MIR
+ * version 3.4.5 - MIR
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -19,23 +19,19 @@ $canEdit = $params->get('access-edit');
 $user    = JFactory::getUser();
 $info    = $params->get('info_block_position', 0);
 JHtml::_('behavior.caption');
-$useDefList = ($params->get('show_modify_date') || $params->get('show_publish_date') || $params->get('show_create_date')
-	|| $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author'));
-
 ?>
-
 <div class="item-page<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="http://schema.org/Article">
 	<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
-	<?php if ($this->params->get('show_page_heading', 1)) : ?>
-	<div class="page-header entete">
+	<?php if ($this->params->get('show_page_heading')) : ?>
+	<div class="page-header">
 		<h2><?php echo $this->escape($this->params->get('page_heading')); ?></h2>
 	</div>
 	<?php endif;
-if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->paginationposition && $this->item->paginationrelative)
-{
-	echo $this->item->pagination;
-}
-?>
+	if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->paginationposition && $this->item->paginationrelative)
+	{
+		echo $this->item->pagination;
+	}
+	?>
 
 	<?php // Todo Not that elegant would be nice to group the params ?>
 	<?php $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_date') || $params->get('show_create_date')
@@ -50,10 +46,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 	<?php if ($params->get('show_title') || $params->get('show_author')) : ?>
 <article role="main">
 	<header>
-
-
 	<?php if ($params->get('show_title')) : ?>
-		
 		<div class="page-header">
 			<?php if ($this->params->get('show_page_heading', 1)) : ?>
 				<h3 itemprop="name">
@@ -136,7 +129,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 	<?php $imgfloat = (empty($images->float_fulltext)) ? $params->get('float_fulltext') : $images->float_fulltext; ?>
 	<div class="pull-<?php echo htmlspecialchars($imgfloat); ?> item-image"> <img
 	<?php if ($images->image_fulltext_caption):
-		echo 'class="caption"'.' title="' .htmlspecialchars($images->image_fulltext_caption) . '"';
+		echo 'class="caption"' . ' title="' . htmlspecialchars($images->image_fulltext_caption) . '"';
 	endif; ?>
 	src="<?php echo htmlspecialchars($images->image_fulltext); ?>" alt="<?php echo htmlspecialchars($images->image_fulltext_alt); ?>" itemprop="image"/> </div>
 	<?php endif; ?>
@@ -150,22 +143,23 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 		echo $this->item->toc;
 	endif; ?>
 </header>
-	<div itemprop="articleBody">
+	<div class="articlebody" itemprop="articleBody">
 		<?php echo $this->item->text; ?>
 	</div>
 
 	<?php if ($useDefList && ($info == 1 || $info == 2)) : ?>
+		<div class="article-info-split">
 		<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
-			<?php if ($params->get('show_tags', 1) && !empty($this->item->tags->itemTags)) : ?>
-				<?php $this->item->tagLayout = new JLayoutFile('joomla.content.tags'); ?>
-				<?php echo $this->item->tagLayout->render($this->item->tags->itemTags); ?>
-			<?php endif; ?>
+		<?php if ($params->get('show_tags', 1) && !empty($this->item->tags->itemTags)) : ?>
+			<?php $this->item->tagLayout = new JLayoutFile('joomla.content.tags'); ?>
+			<?php echo $this->item->tagLayout->render($this->item->tags->itemTags); ?>
+		<?php endif; ?>
 		</div>
 	<?php endif; ?>
 
 	<?php
 if (!empty($this->item->pagination) && $this->item->pagination && $this->item->paginationposition && !$this->item->paginationrelative):
-	echo '<nav role="navigation">'; // role navigation est il bien n√©cessaire ...
+	echo '<nav role="navigation">'; // role navigation est il bien necessaire ...
 	echo $this->item->pagination;
 	echo '</nav>';
 ?>
@@ -206,9 +200,9 @@ if (!empty($this->item->pagination) && $this->item->pagination && $this->item->p
 	<?php endif; ?>
 	<?php endif; ?>
 	<?php
-if (!empty($this->item->pagination) && $this->item->pagination && $this->item->paginationposition && $this->item->paginationrelative) :
-	echo $this->item->pagination;
-?>
+	if (!empty($this->item->pagination) && $this->item->pagination && $this->item->paginationposition && $this->item->paginationrelative) :
+		echo $this->item->pagination;
+	?>
 	<?php endif; ?>
 	<?php echo $this->item->event->afterDisplayContent; ?>
 </article>
