@@ -16,22 +16,30 @@ font-style: normal;
 // Bootstrap fontpath
 @icon-font-path:          "../../../fonts/";
 
-
 body.tmpl-component .container{background: #FFFFFF}
-.modele01 {
-    a {
-        color: #d67404;
-    }
-    //General
-    background: url("../../../images/template/tartan.png") #F49F3E;  //Param
-    h2 {
-        color: #B13B43; //Param
-    }
-    .moduletable  {
-        background: #FFFFFF;    //Param
-        border: 0px;            //Param
 
-    }
+//-------------------------------------- //
+// Param duplicata Bootstrap nécéssaire  //
+//-------------------------------------- //
+// Général
+a {
+  color: @link-color-modele01;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: @link-hover-color-modele01;
+    text-decoration: @link-hover-decoration-modele01;
+  }
+}
+// Titre
+h2 {color: @h2-color-modele01}
+h3 {color: @h3-color-modele01}
+h4 {color: @h4-color-modele01}
+h5 {color: @h5-color-modele01}
+h6 {color: @h6-color-modele01}
+
+// Template style
+.modele01 {
     .colctre {margin-bottom: 10px}
     dd.published span {display: none;}
     .icons .btn {
@@ -58,28 +66,52 @@ body.tmpl-component .container{background: #FFFFFF}
     }
     //ico sur titre
     .icone-horaire h2{
-        background: url("../../../../../images/icones/horaires.png") no-repeat transparent left center;  //Param
-        padding: 20px 0 20px 67px;
+        background-image: url("../../../../../images/icones/horaires.png");
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        margin: -10px -10px 10px;
+        padding: 20px 0 20px 77px;
+        background-color: @bgtitremodule;
     }
     .icone-nouveautes h2{
-        background: url("../../../../../images/icones/nouveautes.png") no-repeat transparent left center;  //Param
-        padding: 20px 0 20px 67px;
+        background: url("../../../../../images/icones/nouveautes.png");
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        margin: -10px -10px 10px;
+        padding: 20px 0 20px 77px;
+        background-color: @bgtitremodule;
     }
     .icone-coupdecoeur h2{
-        background: url("../../../../../images/icones/coupsDeCoeur.png") no-repeat transparent left center;  //Param
-        padding: 20px 0 20px 67px;
+        background: url("../../../../../images/icones/coupsDeCoeur.png");
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        margin: -10px -10px 10px;
+        padding: 20px 0 20px 77px;
+        background-color: @bgtitremodule;
     }
     .icone-alaune h2{
-        background: url("../../../../../images/icones/alaune.png") no-repeat transparent left center;  //Param
-        padding: 20px 0 20px 67px;
+        background: url("../../../../../images/icones/alaune.png");
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        margin: -10px -10px 10px;
+        padding: 20px 0 20px 77px;
+        background-color: @bgtitremodule;
     }
     .icone-livre h2{
-        background: url("../../../../../images/icones/livre.png") no-repeat transparent left center;  //Param
-        padding: 20px 0 20px 67px;
+        background: url("../../../../../images/icones/livre.png");
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        margin: -10px -10px 10px;
+        padding: 20px 0 20px 77px;
+        background-color: @bgtitremodule;
     }
     .icone-agenda h2{
-        background: url("../../../../../images/icones/aVenir.png") no-repeat transparent left center;  //Param
-        padding: 20px 0 20px 67px;
+        background: url("../../../../../images/icones/aVenir.png");
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        margin: -10px -10px 10px;
+        padding: 20px 0 20px 77px;
+        background-color: @bgtitremodule;
     }
 
     //Site
@@ -88,14 +120,17 @@ body.tmpl-component .container{background: #FFFFFF}
         margin-top: 0px;                    //Param
     }
     .linefullheader {
-        padding-top: 15px;
-        background: #333;                   //Param
+        padding: 10px 0 2px;
+        background: @bg-linefullheader-modele01;
+        border-bottom: 1px solid #0F656A;
+        border-top: 1px solid #0F656A;
+
         .moduletable  {
             margin-bottom: 0px;
             background: transparent none repeat scroll 0 0;
             margin: 0;
             text-transform: uppercase;
-            color: #FFFFFF;                 //Param
+            color: @color-mod-linefullheader-modele01;                 //Param
         }
         .mod-opac-login {
             .form-group {
@@ -114,6 +149,7 @@ body.tmpl-component .container{background: #FFFFFF}
                 background: transparent;
             }
         }
+        input, .btn-default {border-color: darken(@bg-linefullheader-modele01, 13%) }
     }
     .bandeausite {
         margin-top:20px;
@@ -125,34 +161,38 @@ body.tmpl-component .container{background: #FFFFFF}
     .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {background:#b13b43; }
     // Menu Horyzontal
     .menumodele01 {
+        .parent a::after {font-size: 24px}
         .image-title {
             color: #b13b43;
             font-size: 16px;
             font-weight: bold;
-            margin-left: 15px;
         }
+        .navbar {margin-bottom: 10px;}
         .navbar-collapse {
             padding: 0px;
         }
         .navbar-default {
-            background: transparent;        //Param
+            background: @bg-navbar-default-modele01;
             border: 0px solid #fff;         //Param
             .navbar-nav > li > a {
                 font-size: 25px;            //Param
                 font-weight: bold;          //Param
-                color:#FFFFFF;             //Param
+                color: @lnkclr-navbar-default-modele01;
+                margin-bottom: -1px;
+                background: @lnkbgclr-navbar-default-modele01;
                 &:hover, &:focus {
-                    color: #B13B43 ;      //Param
+                    color: @lnkhovclr-navbar-default-modele01;
+                    background: @lnkbghovclr-navbar-default-modele01;
                 }
             }
 
             .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
-                background: #B13B43;            //Param
-                color: #FFFFFF;                 //Param
+                background: @lnkactivbg-navbar-default-modele01;
+                color: @lnkactivclr-navbar-default-modele01;
             }
-            .navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus { 
+            .navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {
                 background: #FFFFFF;
-                color: #333333;
+                color: @lnkhovclr-navbar-default-modele01;
             }
 
             //Sous menu en block (type mega menu)
@@ -168,6 +208,17 @@ body.tmpl-component .container{background: #FFFFFF}
                     width: 25%;
 
                 }
+                li {
+                    a {
+                    min-height: 117px;
+                    padding: 10px 20px;
+                    white-space: normal;
+                        img {
+                            margin-right:20px;
+                            float: left;
+                        }
+                    }
+                }
                 li a p {
                     white-space: normal;
                     margin-left: 71px;
@@ -176,16 +227,34 @@ body.tmpl-component .container{background: #FFFFFF}
             }
         }
         .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {background: transparent; }
+        .nav-child.dropdown-menu.multi-level{
+            background: blue;
+        }
+        .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+            background: #CCCCCC;
+            .image-title {
+                color: red;
+
+            }
+        }
+            .image-title {
+                color: green;
+
+                &:hover, &:focus {
+                    color: red;
+                    }
+                }
+    margin-bottom:5px;
 
     }
     //Menu image block
 
     .menu-block-image {
-    .navbar-collapse {padding: 0px}
-    .navbar-default  {
-        background: transparent;
-        border:0px;
-    }
+        .navbar-collapse {padding: 0px}
+        .navbar-default  {
+            background: transparent;
+            border:0px;
+        }
         li {
             width: 50%;
             a {
@@ -206,7 +275,7 @@ body.tmpl-component .container{background: #FFFFFF}
         }
         p {
             font-size: 20px;        //param
-            color: #D67404;         //param
+            //color: #D67404;
         }
     }
 
@@ -227,7 +296,7 @@ body.tmpl-component .container{background: #FFFFFF}
         }
     }
     .tmpl-content {
-        background: rgba(255, 255, 255, 0.5); //Param
+        background: fade(@bg-tmplcontent, @bg-tmplcontent-opacity);
         margin: 0 10px;
         padding-top: 10px;
     }
@@ -237,8 +306,8 @@ body.tmpl-component .container{background: #FFFFFF}
         padding-top: 10px;
         .moduletable {
         color: #FFFFFF; //param
-        }
     }
+}
 
     // Carousel
     .slick-slide .vignette {
@@ -288,8 +357,4 @@ body.tmpl-component .container{background: #FFFFFF}
 .opaccarousel-inner .slick-next {
     box-shadow: 1px 1px 1px 1px #000!important;
     padding: 11px 12px 10px 14px !important;
-}
-#Mod110.moduletable {
-    border-radius: 0;
-    height: 93px;
 }

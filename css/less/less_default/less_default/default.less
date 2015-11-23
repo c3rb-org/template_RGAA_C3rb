@@ -33,6 +33,21 @@
 .displaynone {display: none;}
 
 /* Variable add et gestion admin */
+
+
+body {
+    content: "@{img-bg-gen-yn}";
+    background-image: url("../../../../../images/modele_de_template/@{body-bg-img}") ;
+    background-repeat:   @img-bg-gen-repeat;
+    background-position: @img-bg-gen-position;
+}
+
+.tmpl-header {
+    background: transparent;
+    margin-bottom: 10px;
+}
+
+
 /* Titre */
 h2 {
     color: @colorh2;
@@ -55,7 +70,7 @@ h5 {
     margin-bottom: 15px;
     padding: 10px;
     h2{
-        background: @bgtitremodule;
+        background-color: @bgtitremodule;
         color: @colortitremodule
     }
 }

@@ -9,7 +9,7 @@
 				include_once JPATH_THEMES.'/'.$this->template.'/layout/modele01/header.php';
 				//Top du template
 				?>
-				<div class="container<?php if ($paramtmpl_tmplfluidmod == 1) {echo "-fluid";}; ?> <?php	if ($paramtmpl_tmpltitmodforce == 1) {echo "tmpmodhn";} ?>"> <!-- Fin de ce div dans /modele01/index.php -->
+				<div class="modele01 container<?php if ($paramtmpl_tmplfluidmod == 1) {echo "-fluid";}; ?> <?php	if ($paramtmpl_tmpltitmodforce == 1) {echo "tmpmodhn";} ?>"> <!-- Fin de ce div dans /modele01/index.php -->
 					<?php
 					include_once JPATH_THEMES.'/'.$this->template.'/layout/modele01/top.php';
 					//Content du template
