@@ -26,6 +26,7 @@ $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_da
 
 <div class="item-page<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="http://schema.org/Article">
 	<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
+
 	<?php if ($this->params->get('show_page_heading', 1)) : ?>
 	<div class="page-header">
 		<h2><?php echo $this->escape($this->params->get('page_heading')); ?></h2>
@@ -53,7 +54,6 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 
 
 	<?php if ($params->get('show_title')) : ?>
-		
 		<div class="page-header">
 			<?php if ($this->params->get('show_page_heading', 1)) : ?>
 				<h3 itemprop="name">

@@ -33,6 +33,21 @@
 .displaynone {display: none;}
 
 /* Variable add et gestion admin */
+
+
+body {
+    content: "@{img-bg-gen-yn}";
+    background-image: url("../../../../../images/modele_de_template/@{body-bg-img}") ;
+    background-repeat:   @img-bg-gen-repeat;
+    background-position: @img-bg-gen-position;
+}
+
+.tmpl-header {
+    background: transparent;
+    margin-bottom: 10px;
+}
+
+
 /* Titre */
 h2 {
     color: @colorh2;
@@ -55,7 +70,7 @@ h5 {
     margin-bottom: 15px;
     padding: 10px;
     h2{
-        background: @bgtitremodule;
+        background-color: @bgtitremodule;
         color: @colortitremodule
     }
 }
@@ -125,7 +140,7 @@ ul.unstyled {list-style-type: none;  padding: 0px}
     white-space: nowrap;
 }
 li.active span.a-list {
- background-color: #f5f5f5;
+   background-color: #f5f5f5;
 }
 /* Tri table joomla */
 .icon-arrow-up-3:after {
@@ -160,8 +175,8 @@ span.icon-calendar:before {
     position: relative;
     top: 1px;
     display: inline-block;
-  font-family: 'FontAwesome';
-      font-style: normal;
+    font-family: 'FontAwesome';
+    font-style: normal;
     font-weight: normal;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
@@ -182,6 +197,21 @@ span.icon-calendar:before {
     }
 }
 /* Menu (ajout a bootstrap pour menu a plusieurs niveaux dans joomla) */
+.menunostyle {
+    ul {
+        padding: 0;
+        margin: 0;
+        li {
+            list-style:  none;
+            padding: 0;
+            margin: 0;
+            a {
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+}
 .dropdown-submenu {
     position: relative;
 }
@@ -330,38 +360,40 @@ body.tmpl-component {background: #FFFFFF}
 .nostyle {
     .moduletable& {
         padding: 0px;
-        background: transparent;}
+        background: transparent;
+        border:0px
     }
-    /* Menu vertical  */
-    .menuvertical {
-        padding: 0px;
-        li {}
-        li.active a::before {
-            content: "\e250";
-            font-family: "Glyphicons Halflings";
-            height: 100%;
-            left: -6px;
-            overflow: hidden;
-            position: absolute;
-            top: 9px;
-            width: 10px;
-        }
-        .dropdown-menu {
-            position: relative;
-            float: none;
-            .dropdown-menu.multi-level {display: block;}
+}
+/* Menu vertical  */
+.menuvertical {
+    padding: 0px;
+    li {}
+    li.active a::before {
+        content: "\e250";
+        font-family: "Glyphicons Halflings";
+        height: 100%;
+        left: -6px;
+        overflow: hidden;
+        position: absolute;
+        top: 9px;
+        width: 10px;
+    }
+    .dropdown-menu {
+        position: relative;
+        float: none;
+        .dropdown-menu.multi-level {display: block;}
 
-        }
     }
-    /* Article */
-    .article-info {
-      color: #111111;
-      font-style: italic;
-      font-size: 13px
-  }
-  dl.article-info a {margin-left:5px}
-  dl.article-info dd:after {content: " , "; margin-left: 5px;}
-  dl.article-info dd {
+}
+/* Article */
+.article-info {
+  color: #111111;
+  font-style: italic;
+  font-size: 13px
+}
+dl.article-info a {margin-left:5px}
+dl.article-info dd:after {content: " , "; margin-left: 5px;}
+dl.article-info dd {
     display: flex; /* hoouuu du flex ca fait peur ^^ */
     float: left;
     margin-right: 5px;

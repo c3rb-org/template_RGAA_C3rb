@@ -15,21 +15,11 @@ defined('_JEXEC') or die;
 
 
 
-<div class="navbar navbar-default " id="menu-lnk">
-  <div class="row-fluid ">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse<?php echo $module->id; ?>">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse menuvertical" id="collapse<?php echo $module->id; ?>">
-	<ul class="nav nav-pills nav-stacked menu<?php echo $class_sfx;?>"<?php
+<div class="menunostyle" id="menu-lnk">
+  <div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+    <div>
+	<ul class="<?php echo $class_sfx;?>"<?php
 		$tag = '';
 
 		if ($params->get('tag_id') != null)
@@ -101,8 +91,6 @@ defined('_JEXEC') or die;
 		switch ($item->type) :
 		case 'separator':
 		require JModuleHelper::getLayoutPath('mod_menu', 'default_separatormultilvl');
-		break;
-		
 		case 'url':
 		case 'component':
 		case 'heading':
@@ -134,5 +122,5 @@ defined('_JEXEC') or die;
 	?></ul>
 		</div>
 	</div>
-	<div class="clearfix"></div>
+	
 </div>
