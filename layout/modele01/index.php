@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 <!-- /////////////////// Modele01  ////////////////////// -->
 <?php
 defined( '_JEXEC' ) or die;
@@ -75,5 +75,4 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); 
 			<jdoc:include type="modules" name="debug" style="none" />
 			<?php include_once JPATH_THEMES.'/'.$this->template.'/layout/modele01/script.php'; ?>
 		</div>
->>>>>>> 2f6fe07cf5a96a434ec96eb4d104575b7911a9ee
 </html>
