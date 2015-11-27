@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  mod_menu
- *	°version J! : 3.4.0 - MIR
+ *°version J! : 3.4.3 - MIR
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -12,10 +12,7 @@ defined('_JEXEC') or die;
 // Note. It is important to remove spaces between elements.
 ?>
 <?php // The menu class is deprecated. Use nav instead. ?>
-
-
-
-<div class="navbar navbar-default " id="menu-lnk">
+<div class="navbar navbar-default " id="menu-lnk <?php echo $module->id; ?>">
   <div class="row-fluid ">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -28,8 +25,8 @@ defined('_JEXEC') or die;
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse menuvertical" id="collapse<?php echo $module->id; ?>">
-	<ul class="nav nav-pills nav-stacked menu<?php echo $class_sfx;?>"<?php
+    <div class="collapse navbar-collapse menuhoryzontal" id="collapse<?php echo $module->id; ?>">
+	<ul class="nav navbar-nav menu<?php echo $class_sfx;?>"<?php
 		$tag = '';
 
 		if ($params->get('tag_id') != null)
@@ -100,24 +97,21 @@ defined('_JEXEC') or die;
 		// Render the menu item.
 		switch ($item->type) :
 		case 'separator':
-		require JModuleHelper::getLayoutPath('mod_menu', 'default_separatormultilvl');
-		break;
-		
 		case 'url':
-		case 'component':
 		case 'heading':
-		require JModuleHelper::getLayoutPath('mod_menu', 'default_' . $item->type);
+		case 'component':
+		require JModuleHelper::getLayoutPath('mod_menu', 'defaultmega_' . $item->type);
 		break;
 
 		default:
-		require JModuleHelper::getLayoutPath('mod_menu', 'default_url');
+		require JModuleHelper::getLayoutPath('mod_menu', 'defaultmega_url');
 		break;
 		endswitch; 
 
 		// The next item is deeper.
 		if ($item->deeper)
 		{
-			echo '<ul class="nav-child dropdown-menu multi-level" role="menu">'; 
+			echo '<ul class="nav-child dropdown-menu multi-level" role="menu" aria-labelledby="">'; 
 		}
 		elseif ($item->shallower)
 		{

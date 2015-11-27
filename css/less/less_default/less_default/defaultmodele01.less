@@ -1,0 +1,360 @@
+// recalage font bug Fontawesome
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('@{fa-font-path}/fontawesome-webfont.eot?v=@{fa-version}');
+  src: url('@{fa-font-path}/fontawesome-webfont.eot?#iefix&v=@{fa-version}') format('embedded-opentype'),
+  url('@{fa-font-path}/fontawesome-webfont.woff2?v=@{fa-version}') format('woff2'),
+  url('@{fa-font-path}/fontawesome-webfont.woff?v=@{fa-version}') format('woff'),
+  url('@{fa-font-path}/fontawesome-webfont.ttf?v=@{fa-version}') format('truetype'),
+  url('@{fa-font-path}/fontawesome-webfont.svg?v=@{fa-version}#fontawesomeregular') format('svg');
+//  src: url('@{fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
+font-weight: normal;
+font-style: normal;
+}
+@fa-font-path:              "../../../fonts";
+
+// Bootstrap fontpath
+@icon-font-path:          "../../../fonts/";
+
+body.tmpl-component .container{background: #FFFFFF}
+
+//-------------------------------------- //
+// Param duplicata Bootstrap nécéssaire  //
+//-------------------------------------- //
+// Général
+a {
+  color: @link-color-modele01;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: @link-hover-color-modele01;
+    text-decoration: @link-hover-decoration-modele01;
+  }
+}
+// Titre
+h2 {color: @h2-color-modele01}
+h3 {color: @h3-color-modele01}
+h4 {color: @h4-color-modele01}
+h5 {color: @h5-color-modele01}
+h6 {color: @h6-color-modele01}
+
+// Template style
+.modele01 {
+    .colctre {margin-bottom: 10px}
+    dd.published span {display: none;}
+    .icons .btn {
+        .blog & {top: -68px}
+        position: absolute;
+        right: -10px;
+        top: -60px;
+    }
+    .blog .icons .btn {
+        top: -67px;
+    }
+    .btn.opac-share {
+        border: 0 none;
+        position: absolute;
+        right: 50px;
+        top: 40px;
+    }
+    .blog .btn.opac-share {
+        top: 25px;
+    }
+
+    .page-header {
+        margin: 25px 0 20px;
+    }
+    //ico sur titre
+    .icone-horaire h2{
+        background-image: url("../../../../../images/icones/horaires.png");
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        margin: -10px -10px 10px;
+        padding: 20px 0 20px 77px;
+        background-color: @bgtitremodule;
+    }
+    .icone-nouveautes h2{
+        background: url("../../../../../images/icones/nouveautes.png");
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        margin: -10px -10px 10px;
+        padding: 20px 0 20px 77px;
+        background-color: @bgtitremodule;
+    }
+    .icone-coupdecoeur h2{
+        background: url("../../../../../images/icones/coupsDeCoeur.png");
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        margin: -10px -10px 10px;
+        padding: 20px 0 20px 77px;
+        background-color: @bgtitremodule;
+    }
+    .icone-alaune h2{
+        background: url("../../../../../images/icones/alaune.png");
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        margin: -10px -10px 10px;
+        padding: 20px 0 20px 77px;
+        background-color: @bgtitremodule;
+    }
+    .icone-livre h2{
+        background: url("../../../../../images/icones/livre.png");
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        margin: -10px -10px 10px;
+        padding: 20px 0 20px 77px;
+        background-color: @bgtitremodule;
+    }
+    .icone-agenda h2{
+        background: url("../../../../../images/icones/aVenir.png");
+        background-repeat: no-repeat;
+        background-position: 10px center;
+        margin: -10px -10px 10px;
+        padding: 20px 0 20px 77px;
+        background-color: @bgtitremodule;
+    }
+
+    //Site
+    .container {
+        background: transparent;
+        margin-top: 0px;                    //Param
+    }
+    .linefullheader {
+        padding: 10px 0 2px;
+        background: @bg-linefullheader-modele01;
+        border-bottom: 1px solid #0F656A;
+        border-top: 1px solid #0F656A;
+
+        .moduletable  {
+            margin-bottom: 0px;
+            background: transparent none repeat scroll 0 0;
+            margin: 0;
+            text-transform: uppercase;
+            color: @color-mod-linefullheader-modele01;                 //Param
+        }
+        .mod-opac-login {
+            .form-group {
+                float: left;
+                width: 28%;
+                margin-bottom:0px;
+                input {width: 98%}
+            }
+            .ligne-bouton {
+                float: left;
+                width: 16%;
+            }
+            .pretext-login {
+                padding: 6px 0;
+                margin: 0;
+                background: transparent;
+            }
+        }
+        input, .btn-default {border-color: darken(@bg-linefullheader-modele01, 13%) }
+    }
+    .bandeausite {
+        margin-top:20px;
+        img {
+            max-width: 100%
+        }
+    }
+    //Menu vertical
+    .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {background:#b13b43; }
+    // Menu Horyzontal
+    .menumodele01 {
+        .parent a::after {font-size: 24px}
+        .image-title {
+            color: #b13b43;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .navbar {margin-bottom: 10px;}
+        .navbar-collapse {
+            padding: 0px;
+        }
+        .navbar-default {
+            background: @bg-navbar-default-modele01;
+            border: 0px solid #fff;         //Param
+            .navbar-nav > li > a {
+                font-size: 25px;            //Param
+                font-weight: bold;          //Param
+                color: @lnkclr-navbar-default-modele01;
+                margin-bottom: -1px;
+                background: @lnkbgclr-navbar-default-modele01;
+                &:hover, &:focus {
+                    color: @lnkhovclr-navbar-default-modele01;
+                    background: @lnkbghovclr-navbar-default-modele01;
+                }
+            }
+
+            .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+                background: @lnkactivbg-navbar-default-modele01;
+                color: @lnkactivclr-navbar-default-modele01;
+            }
+            .navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {
+                background: #FFFFFF;
+                color: @lnkhovclr-navbar-default-modele01;
+            }
+
+            //Sous menu en block (type mega menu)
+            .nav > li {
+                position: unset;
+            }
+            .dropdown-menu {
+                right: 0;
+                width: 1140px;
+                padding: 5px;
+                &.multi-level li {
+                    float: left;
+                    width: 25%;
+
+                }
+                li {
+                    a {
+                    min-height: 117px;
+                    padding: 10px 20px;
+                    white-space: normal;
+                        img {
+                            margin-right:20px;
+                            float: left;
+                        }
+                    }
+                }
+                li a p {
+                    white-space: normal;
+                    margin-left: 71px;
+                    color: #333
+                }
+            }
+        }
+        .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {background: transparent; }
+        .nav-child.dropdown-menu.multi-level{
+            background: blue;
+        }
+        .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+            background: #CCCCCC;
+            .image-title {
+                color: red;
+
+            }
+        }
+            .image-title {
+                color: green;
+
+                &:hover, &:focus {
+                    color: red;
+                    }
+                }
+    margin-bottom:5px;
+
+    }
+    //Menu image block
+
+    .menu-block-image {
+        .navbar-collapse {padding: 0px}
+        .navbar-default  {
+            background: transparent;
+            border:0px;
+        }
+        li {
+            width: 50%;
+            a {
+                background: #709794; //Param.
+                margin: 1px;
+                &:hover {
+                    background: #B13B43; //Param.
+                }
+                img {max-width: 100%}
+            }
+        }
+    }
+
+    //mod facette
+    #mod-opac-rech-facettes {
+        #mod-opac-facettes-mots1{
+            .full;
+        }
+        p {
+            font-size: 20px;        //param
+            //color: #D67404;
+        }
+    }
+
+    //Breadcrumb
+    p#breadcrumblabel {
+        float: left;
+        padding: 8px 0;
+        margin:  0 10px 0 0;
+    }
+    .breadcrumb {
+        background: transparent;
+        > .active {
+            color: #333333; // Param
+        }
+        > li {
+            a {color: #FFFFFF}
+            + li::before {color: #FFFFFF;}
+        }
+    }
+    .tmpl-content {
+        background: fade(@bg-tmplcontent, @bg-tmplcontent-opacity);
+        margin: 0 10px;
+        padding-top: 10px;
+    }
+    .tmpl-bottom {
+        background: #709794; //Param
+        margin: 25px 10px 10px 10px;
+        padding-top: 10px;
+        .moduletable {
+        color: #FFFFFF; //param
+    }
+}
+
+    // Carousel
+    .slick-slide .vignette {
+        background: #eae1d7 none repeat scroll 0 0;
+        width: 104px;
+    }
+    .moduletable.nostyle {
+        background: transparent none repeat scroll 0 0;
+        border: 0 none;
+        padding: 0;
+        h2 {
+            background: transparent;
+        }
+    }
+    //Menu pied de page
+    .tmpl-bottom .menunostyle {
+        ul li a {color: #FFFFFF}
+        img {
+            margin-right: 10px;
+            width: 20px;
+        }
+    }
+    //Autres & ajustement
+    .nav-tabs > li > a {background: #EAE1D7} //param
+    .slick-slide {
+        padding: 0;
+        margin: 0;
+    }
+    .slide .informations {
+        position: relative;
+        left: 0;
+        border-radius: 0px;
+        text-align: left;
+    }
+    .slick-prev, .slick-next {top: 20px;}
+
+}
+
+
+
+
+.opaccarousel-inner .slick-prev::before, .opaccarousel-inner .slick-next::before {color: #111111}
+.opaccarousel-inner .slick-prev {
+    box-shadow: 1px 1px 1px 1px #000!important;
+    padding: 11px 15px 10px 11px!important;
+}
+.opaccarousel-inner .slick-next {
+    box-shadow: 1px 1px 1px 1px #000!important;
+    padding: 11px 12px 10px 14px !important;
+}
