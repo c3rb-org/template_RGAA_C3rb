@@ -1,99 +1,20 @@
-//Pour le site SLPJ (to delete)
-body:before{
-	background: url("../../images/bgbulle.png") repeat fixed #19B3BB;
+// recalage font bug Fontawesome
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('@{fa-font-path}/fontawesome-webfont.eot?v=@{fa-version}');
+  src: url('@{fa-font-path}/fontawesome-webfont.eot?#iefix&v=@{fa-version}') format('embedded-opentype'),
+  url('@{fa-font-path}/fontawesome-webfont.woff2?v=@{fa-version}') format('woff2'),
+  url('@{fa-font-path}/fontawesome-webfont.woff?v=@{fa-version}') format('woff'),
+  url('@{fa-font-path}/fontawesome-webfont.ttf?v=@{fa-version}') format('truetype'),
+  url('@{fa-font-path}/fontawesome-webfont.svg?v=@{fa-version}#fontawesomeregular') format('svg');
+//  src: url('@{fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
+font-weight: normal;
+font-style: normal;
 }
-body{
-	background: url("../../images/bgbullefix.png") repeat fixed #19B3BB;
-}
-.bandeausite {
-	position: relative;
-	&:after {
-		background: rgba(0, 0, 0, 0) url("../../images/chat.png") no-repeat scroll 0 0;
-		content: " ";
-		height: 311px;
-		position: absolute;
-		right: 0;
-		top: 0;
-		width: 516px;
-	}
-	&:before {
-		background: rgba(0, 0, 0, 0) url("../../images/bgbulle.png") no-repeat scroll 0 0;
-		content: " ";
-		height: 401px;
-		left: -50px;
-		position: absolute;
-		top: -60px;
-		width: 690px;
-		z-index: -1;
-	}
-}
-.modele01.container.tmpmodhn{position: relative;}
-.modele01.container.tmpmodhn:after {
-	background: rgba(0, 0, 0, 0) url("../../images/chatrepeat-y.png") repeat-y scroll 0 0;
-	content: " ";
-	height: 1364px;
-	position: absolute;
-	right: -4px;
-	top: -41px;
-	width: 90px;
-	z-index: 1;
-}
-.pos-4 .menunostyle ul li a {
-	font-size: 17px;
-}
-.modele01 .menu-block-image li a{
-	text-align : center;
-}
-#Mod110.moduletable {
-	border-radius: 0;
-	height:	96px;
-}
-.modele01 .slide .informations {
-	border-radius: 0!important;
-	left: 10%!important;
-	position: absolute!important;
-	right: 10%!important;
-	text-align: center!important;
-}
-.modele01 .slick-prev, .modele01 .slick-next {
-	top: 33%!important;
-}
-.c3rbevenement-slideshow-playpause {
-	bottom: 64px;
-	height: 37px;
-	left: 23px;
-	position: absolute;
-	width: 49px;
-	.btn-playpause {
-		color: #FFFFFF;
-	}
-}
+@fa-font-path:              "../../../fonts";
+// Bootstrap fontpath
+@icon-font-path:          "../../../fonts/";
 
-.modele01 .menumodele01 .navbar-default .navbar-nav > li > a {
-    text-shadow: 1px 1px 2px #333;
-    transition: all 0.2s;
-}
-.modele01 .menumodele01 .navbar-default .navbar-nav > li > a:focus ,.modele01 .menumodele01 .navbar-default .navbar-nav > li > a:hover, .modele01 .menumodele01 .navbar-default .navbar-nav > .active > a, .modele01 .menumodele01 .navbar-default .navbar-nav > .active > a:hover, .modele01 .menumodele01 .navbar-default .navbar-nav > .active > a:focus
-{
-  text-shadow: 0px 0px 0px #333;
-  transition: all 0.2s;
-}
-#Mod109.moduletable {
-	padding: 0px;
-	.slick-slide img {
-    	border-radius: 0px;
-    	width: 100%;
-	}
-	ul.slick-dots {margin: -26px 0 0 0}
-}
-.c3rbevenement-slideshow-playpause {
-    width: auto;
-    bottom: 10px;
-    .btn-link {color: #333333}
-}
-.excerpet h3 {
-	.page-header;
-}
 
 //Md
 @media (max-width:1200px)	{}

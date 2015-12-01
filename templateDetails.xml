@@ -198,14 +198,14 @@
                         <!-- Container / body -->
 
                         <field showon="tmplchoice:0,1" type="note" label="TPL_C3RB_RGAA_CUSTOM_GENERAL"></field>
-                        <field type="spacer" label="TPL_C3RB_RGAA_MODEL01_BODY" ></field>
-                        <field showon="tmplchoice:0,1" name="lessvar_body-bg" type="color" default="#D9DCD7" label="TPL_C3RB_RGAA_COLORBODY" description="TPL_C3RB_RGAA_COLORBODY_DESC"      />
-                        <field showon="tmplchoice:1" width="250px" name="lessvar_img-bg-gen-yn" type="radio" description="TPL_C3RB_RGAA_ADDBGURL_DESC" label="TPL_C3RB_RGAA_ADDBGURL_LABEL" default="0" class="btn-group btn-group-yesno">
+                        <field showon="tmplchoice:0,1" type="spacer" label="TPL_C3RB_RGAA_MODEL01_BODY" ></field>
+                        <field showon="tmplchoice:0,1" name="lessvar_body-bg" type="color" default="#FFFFFF" label="TPL_C3RB_RGAA_COLORBODY" description="TPL_C3RB_RGAA_COLORBODY_DESC"      />
+                        <field showon="tmplchoice:0,1" width="250px" name="lessvar_img-bg-gen-yn" type="radio" description="TPL_C3RB_RGAA_ADDBGURL_DESC" label="TPL_C3RB_RGAA_ADDBGURL_LABEL" default="0" class="btn-group btn-group-yesno">
                             <option value="0">JNO</option>
                             <option value="1">JYES</option>
                         </field>
-                       <field showon="lessvar_img-bg-gen-yn:1" name="lessvar_body-bg-img" type="imagelist" default="0" label="TPL_C3RB_RGAA_BGURL_LABEL" description="TPL_C3RB_RGAA_BGURL_DESC" directory="/images/modele_de_template/"  />
-                       <field showon="lessvar_img-bg-gen-yn:1" width="250px" name="lessvar_img-bg-gen-repeat" type="list" description="TPL_C3RB_RGAA_CHECK_BGREPEAT_DESC" label="TPL_C3RB_RGAA_CHECK_BGREPEAT_LABEL" default="0">
+                        <field showon="lessvar_img-bg-gen-yn:1" name="lessvar_body-bg-img" type="imagelist" default="0" label="TPL_C3RB_RGAA_BGURL_LABEL" description="TPL_C3RB_RGAA_BGURL_DESC" directory="/images/modele_de_template/"  />
+                        <field showon="lessvar_img-bg-gen-yn:1" width="250px" name="lessvar_img-bg-gen-repeat" type="list" description="TPL_C3RB_RGAA_CHECK_BGREPEAT_DESC" label="TPL_C3RB_RGAA_CHECK_BGREPEAT_LABEL" default="0">
                             <option value="no-repeat">Pas de répétition</option>
                             <option value="repeat-x">Répétition axe X</option>
                             <option value="repeat-y">Répétition axe Y</option>
@@ -220,8 +220,29 @@
                             <option value="bottom right">En bas à droite</option>
                             <option value="center center">Au milieu</option>
                         </field>
+                        <!-- Box centre Contenu -->
+                        <field type="spacer"         label="TPL_C3RB_RGAA_CONTENTBG" ></field>
+                            <!-- Starter -->
+                        <field showon="tmplchoice:0" name="lessvar_bgcontainer"             type="color"    alpha="true"        default="#CCCCCC" label="TPL_C3RB_RGAA_BGCONTENTBOX_LABEL"          description="TPL_C3RB_RGAA_BGCONTENTBOX_DESC"     />
+                        <field showon="tmplchoice:0" name="lessvar_containborder"           type="text"     default="1px"       label="TPL_C3RB_RGAA_BORDERMOD"              description="TPL_C3RB_RGAA_BORDERMOD_DESC" class="input-mini"    />
+                        <field showon="tmplchoice:0" name="lessvar_containbordercolor"      type="color"    default="#555555"   label="TPL_C3RB_RGAA_COLORBORDERMOD"         description="TPL_C3RB_RGAA_COLORBORDERMOD_DESC"                       />
+
+                            <!-- Modele01 -->
+                        <field showon="tmplchoice:1" name="lessvar_bg-tmplcontent-modele01"              type="color" alpha="true"     default="transparent" label="TPL_C3RB_RGAA_BGCONTENTBOX_LABEL"          description="TPL_C3RB_RGAA_BGCONTENTBOX_DESC"     />
+                        <field showon="tmplchoice:1" name="lessvar_bg-tmplcontent-opacity-modele01"      type="text"  alpha="true"     default="70%"         label="TPL_C3RB_RGAA_BGCONTENTBOXOPACITY_LABEL"   description="TPL_C3RB_RGAA_BGCONTENTBOXOPACITY_DESC"     />
+                        <field showon="tmplchoice:1" name="lessvar_main-bg-modele01"                     type="color" alpha="true"     default="#000" label="TPL_C3RB_RGAA_BGCONTENTBOX_LABEL"          description="TPL_C3RB_RGAA_BGCONTENTBOX_DESC"     />
+
+
                         <field type="spacer" label="TPL_C3RB_RGAA_MODEL01_LNK" ></field>
                         <!-- Lien -->
+                            <!-- Starter -->
+                        <field showon="tmplchoice:0" name="lessvar_link-color"              type="color"    alpha="true"    default="#0070c6"                           label="TPL_C3RB_RGAA_COLORLINK"         description="TPL_C3RB_RGAA_COLORLINK_DESC"        />
+                        <field showon="tmplchoice:0" name="lessvar_link-hover"              type="text"     default="darken(@link-color, 15%)" label="TPL_C3RB_RGAA_COLORLINKHOV"      description="TPL_C3RB_RGAA_COLORLINKHOV_DESC"     />
+                        <field showon="tmplchoice:0" name="lessvar_link-hover-decoration"   type="list"     default="0"                                 label="TPL_C3RB_RGAA_LINKDECORATION_LABEL"    description="TPL_C3RB_RGAA_LINKDECORATION_DESC">
+                            <option value="underline">Lien souligné au survol</option>
+                            <option value="none">Lien non souligné au survol</option>
+                        </field>
+                            <!-- Modele01 -->
                         <field showon="tmplchoice:1" name="lessvar_link-color-modele01"             type="color" alpha="true"    default="#337ab7"                           label="TPL_C3RB_RGAA_COLORLINK"         description="TPL_C3RB_RGAA_COLORLINK_DESC"        />
                         <field showon="tmplchoice:1" name="lessvar_link-hover-color-modele01"       type="text"     default="darken(@link-color-modele01, 15%)" label="TPL_C3RB_RGAA_COLORLINKHOV"      description="TPL_C3RB_RGAA_COLORLINKHOV_DESC"     />
                         <field showon="tmplchoice:1" name="lessvar_link-hover-decoration-modele01"  type="list"     default="0"                                 label="TPL_C3RB_RGAA_LINKDECORATION_LABEL"    description="TPL_C3RB_RGAA_LINKDECORATION_DESC">
@@ -231,12 +252,20 @@
 
                         <!-- Titre -->
                         <field type="spacer" label="TPL_C3RB_RGAA_MODEL01_TITLE" ></field>
+                            <!-- Starter -->
+                        <field showon="tmplchoice:0" name="lessvar_h2-color"       type="color" alpha="true"     default="#333333" label="TPL_C3RB_RGAA_COLORH2_LABEL"      description="TPL_C3RB_RGAA_COLORH2_DESC"     />
+                        <field showon="tmplchoice:0" name="lessvar_h3-color"       type="color" alpha="true"     default="#333333" label="TPL_C3RB_RGAA_COLORH3_LABEL"      description="TPL_C3RB_RGAA_COLORH3_DESC"     />
+                        <field showon="tmplchoice:0" name="lessvar_h4-color"       type="color" alpha="true"     default="#333333" label="TPL_C3RB_RGAA_COLORH4_LABEL"      description="TPL_C3RB_RGAA_COLORH4_DESC"     />
+                        <field showon="tmplchoice:0" name="lessvar_h5-color"       type="color" alpha="true"     default="#333333" label="TPL_C3RB_RGAA_COLORH5_LABEL"      description="TPL_C3RB_RGAA_COLORH5_DESC"     />
+                        <field showon="tmplchoice:0" name="lessvar_h6-color"       type="color" alpha="true"     default="#333333" label="TPL_C3RB_RGAA_COLORH6_LABEL"      description="TPL_C3RB_RGAA_COLORH6_DESC"     />
+                        <field showon="tmplchoice:0" name="lessvar_hx-colorlnk"    type="color" alpha="true"     default="#333333" label="TPL_C3RB_RGAA_COLORHX_LABEL"   description="TPL_C3RB_RGAA_COLORH6_DESC"     />
+                            <!-- Modele01 -->
                         <field showon="tmplchoice:1" name="lessvar_h2-color-modele01"       type="color" alpha="true"     default="#333333" label="TPL_C3RB_RGAA_COLORH2_LABEL"      description="TPL_C3RB_RGAA_COLORH2_DESC"     />
                         <field showon="tmplchoice:1" name="lessvar_h3-color-modele01"       type="color" alpha="true"     default="#333333" label="TPL_C3RB_RGAA_COLORH3_LABEL"      description="TPL_C3RB_RGAA_COLORH3_DESC"     />
                         <field showon="tmplchoice:1" name="lessvar_h4-color-modele01"       type="color" alpha="true"     default="#333333" label="TPL_C3RB_RGAA_COLORH4_LABEL"      description="TPL_C3RB_RGAA_COLORH4_DESC"     />
                         <field showon="tmplchoice:1" name="lessvar_h5-color-modele01"       type="color" alpha="true"     default="#333333" label="TPL_C3RB_RGAA_COLORH5_LABEL"      description="TPL_C3RB_RGAA_COLORH5_DESC"     />
                         <field showon="tmplchoice:1" name="lessvar_h6-color-modele01"       type="color" alpha="true"     default="#333333" label="TPL_C3RB_RGAA_COLORH6_LABEL"      description="TPL_C3RB_RGAA_COLORH6_DESC"     />
-                        <field showon="tmplchoice:1" name="lessvar_hx-colorlnk-modele01"       type="color" alpha="true"     default="#333333" label="TPL_C3RB_RGAA_COLORH6_LABEL"      description="TPL_C3RB_RGAA_COLORH6_DESC"     />
+                        <field showon="tmplchoice:1" name="lessvar_hx-colorlnk-modele01"    type="color" alpha="true"     default="#333333" label="TPL_C3RB_RGAA_COLORHX_LABEL"      description="TPL_C3RB_RGAA_COLORH6_DESC"     />
 
                         <!-- Modules -->
                         <field type="spacer" label="TPL_C3RB_RGAA_CUSTOM_MODULE" ></field>
@@ -246,20 +275,44 @@
                         <field showon="tmplchoice:0,1" name="lessvar_moduletxtcolor"                    type="color"    default="#333333"   label="TPL_C3RB_RGAA_COLORTXTMOD"            description="TPL_C3RB_RGAA_COLORTXTMOD_DESC"                       />
                         <field showon="tmplchoice:0,1" name="lessvar_moduleborder"                      type="text"     default="1px"       label="TPL_C3RB_RGAA_BORDERMOD"              description="TPL_C3RB_RGAA_BORDERMOD_DESC" class="input-mini"    />
                         <field showon="tmplchoice:0,1" name="lessvar_modulebordercolor"                 type="color"    default="#555555"   label="TPL_C3RB_RGAA_COLORBORDERMOD"         description="TPL_C3RB_RGAA_COLORBORDERMOD_DESC"                       />
+                        
+
+
                         <!-- Boutons  -->
                         <field showon="tmplchoice:0,1" type="spacer" label="TPL_C3RB_RGAA_CUSTOM_BUTTON"></field>
                         <field showon="tmplchoice:0,1" name="lessvar_btn-default-color"                 type="color"    default="#333333" label="TPL_C3RB_RGAA_BUTTONCLR"                description="TPL_C3RB_RGAA_BUTTONCLR_DESC"                 />
                         <field showon="tmplchoice:0,1" name="lessvar_btn-default-bg"                    type="color"    default="#ffffff" label="TPL_C3RB_RGAA_BUTTONBG"                 description="TPL_C3RB_RGAA_BUTTONBG_DESC"                  />
                         <field showon="tmplchoice:0,1" name="lessvar_btn-default-border"                type="color"    default="#cccccc" label="TPL_C3RB_RGAA_BUTTONBORD"               description="TPL_C3RB_RGAA_BUTTONBORD_DESC"                />
 
+                        <!-- Menu horyzontal -->
+                        <field showon="tmplchoice:0,1" type="note" label="TPL_C3RB_RGAA_MENU_MODULE"></field>
+                        <field type="spacer" label="TPL_C3RB_RGAA_MENUNIVUN_MODULE" ></field>
+                        <field showon="tmplchoice:0" name="lessvar_navbar-default-link-color"         type="color"    default="#777777" label="TPL_C3RB_RGAA_COLORMENUDEF"             description="TPL_C3RB_RGAA_COLORMENUDEF_DESC"        />
+                        <field showon="tmplchoice:0" name="lessvar_navbar-default-bg"                 type="color"    default="#f8f8f8" label="TPL_C3RB_RGAA_COLORMENUBG"              description="TPL_C3RB_RGAA_COLORMENUBG_DESC"         />
+                        <field showon="tmplchoice:0" name="lessvar_navbar-default-border"             type="color"    default="#e7e7e7" label="TPL_C3RB_RGAA_COLORMENUBORDER"          description="TPL_C3RB_RGAA_COLORMENUBORDER_DESC"     />
+                        <field showon="tmplchoice:0" name="lessvar_navbar-default-link-hover-color"   type="color"    default="#333333" label="TPL_C3RB_RGAA_COLORMENULNKHOV"          description="TPL_C3RB_RGAA_COLORMENUBORDER_DESC"     />
+                        <field showon="tmplchoice:0" name="lessvar_navbar-default-link-hover-bg"      type="color"    default="#C2C2C2" label="TPL_C3RB_RGAA_COLORMENUBGHOV"           description="TPL_C3RB_RGAA_COLORMENUBORDER_DESC"     />
+                        <field showon="tmplchoice:0" name="lessvar_navbar-default-link-active-color"  type="color"    default="#555555" label="TPL_C3RB_RGAA_COLORMENULNKACTIVE"       description="TPL_C3RB_RGAA_COLORMENUBORDER_DESC"     />
+                        <field showon="tmplchoice:0" name="lessvar_navbar-default-link-active-bg"     type="color"    default="#e7e7e7" label="TPL_C3RB_RGAA_COLORMENUBGACTIVE"        description="TPL_C3RB_RGAA_COLORMENUBORDER_DESC"     />
+                        <!-- Sous menu -->
+                        <field type="spacer" label="TPL_C3RB_RGAA_MENUNIVDEUX_MODULE" ></field>
+                        <field showon="tmplchoice:0" name="lessvar_dropdown-link-color"               type="color"    default="#777777" label="TPL_C3RB_RGAA_COLORSMMENUDEF"           description="TPL_C3RB_RGAA_COLORSMMENUDEF"            />
+                        <field showon="tmplchoice:0" name="lessvar_dropdown-bg"                       type="color"    default="#f8f8f8" label="TPL_C3RB_RGAA_COLORSMMENUBG"            description="TPL_C3RB_RGAA_COLORSMMENUBG"             />
+                        <field showon="tmplchoice:0" name="lessvar_dropdown-border"                   type="color"    default="#e7e7e7" label="TPL_C3RB_RGAA_COLORSMMENUBORDER"        description="TPL_C3RB_RGAA_COLORSMMENUBORDER"         />
+                        <field showon="tmplchoice:0" name="lessvar_dropdown-link-hover-color"         type="color"    default="#333333" label="TPL_C3RB_RGAA_COLORSMMENULNKHOV"        description="TPL_C3RB_RGAA_COLORSMMENULNKHOV"         />
+                        <field showon="tmplchoice:0" name="lessvar_dropdown-link-hover-bg"            type="color"    default="#333333" label="TPL_C3RB_RGAA_COLORSMMENUBGHOV"         description="TPL_C3RB_RGAA_COLORSMMENUBGHOV"          />
+                        <field showon="tmplchoice:0" name="lessvar_dropdown-link-active-color"        type="color"    default="#555555" label="TPL_C3RB_RGAA_COLORSMMENULNKACTIVE"     description="TPL_C3RB_RGAA_COLORSMMENULNKACTIVE"      />
+                        <field showon="tmplchoice:0" name="lessvar_dropdown-link-active-bg"           type="color"    default="#e7e7e7" label="TPL_C3RB_RGAA_COLORSMMENUBGACTIVE"      description="TPL_C3RB_RGAA_COLORSMMENUBGACTIVE"       />
+
+
                         <!-- Element top -->
-                        <field type="note"         label="TPL_C3RB_RGAA_MODELLINETOP_SPEC" ></field>
-                        <field type="spacer"         label="TPL_C3RB_RGAA_MODELLINETOP_SPEC" ></field>
+                        <field showon="tmplchoice:1" type="note"         label="TPL_C3RB_RGAA_MODELLINETOP_SPEC" ></field>
+                        <field showon="tmplchoice:1" type="spacer"       label="TPL_C3RB_RGAA_MODELLINETOP_SPEC" ></field>
                         <field showon="tmplchoice:1" name="lessvar_bg-linefullheader-modele01"              type="color" alpha="true"     default="#333333" label="TPL_C3RB_RGAA_COLORLINEHEADER_LABEL"      description="TPL_C3RB_RGAA_COLORLINEHEADER_DESC"     />
                         <field showon="tmplchoice:1" name="lessvar_color-mod-linefullheader-modele01"       type="color" alpha="true"     default="#FFFFFF" label="TPL_C3RB_RGAA_COLORTXTLINEHEADER_LABEL"      description="TPL_C3RB_RGAA_COLORTXTLINEHEADER_DESC"     />
 
                         <!-- Mega Menu -->
-                        <field type="spacer"         label="TPL_C3RB_RGAA_MODELMENU_SPEC" ></field>
+                        <field showon="tmplchoice:1" type="spacer"         label="TPL_C3RB_RGAA_MODELMENU_SPEC" ></field>
                         <field showon="tmplchoice:1" name="lessvar_bg-navbar-default-modele01"              type="color" alpha="true"     default="transparent" label="TPL_C3RB_RGAA_BGMENUMOD01_LABEL"      description="TPL_C3RB_RGAA_BGMENUMOD01_DESC"     />
                         <field showon="tmplchoice:1" name="lessvar_lnkclr-navbar-default-modele01"          type="color" alpha="true"     default="transparent" label="TPL_C3RB_RGAA_COLORLNKMENUMOD01_LABEL"      description="TPL_C3RB_RGAA_COLORLNKMENUMOD01_DESC"     />
                         <field showon="tmplchoice:1" name="lessvar_lnkhovclr-navbar-default-modele01"       type="color" alpha="true"     default="transparent" label="TPL_C3RB_RGAA_COLORLNKHOVMENUMOD01_LABEL"      description="TPL_C3RB_RGAA_COLORLNKHOVMENUMOD01_DESC"     />
@@ -267,13 +320,6 @@
                         <field showon="tmplchoice:1" name="lessvar_lnkbghovclr-navbar-default-modele01"     type="color" alpha="true"     default="transparent" label="TPL_C3RB_RGAA_COLORLNKBGHOVMENUMOD01_LABEL"      description="TPL_C3RB_RGAA_COLORLNKBGHOVMENUMOD01_DESC"     />
                         <field showon="tmplchoice:1" name="lessvar_lnkactivclr-navbar-default-modele01"     type="color" alpha="true"     default="transparent" label="TPL_C3RB_RGAA_COLORLNKACTIVEMENUMOD01_LABEL"      description="TPL_C3RB_RGAA_COLORLNKACTIVEMENUMOD01_DESC"     />
                         <field showon="tmplchoice:1" name="lessvar_lnkactivbg-navbar-default-modele01"      type="color" alpha="true"     default="transparent" label="TPL_C3RB_RGAA_COLORLNKBGACTIVEMENUMOD01_LABEL"      description="TPL_C3RB_RGAA_COLORLNKBGACTIVEMENUMOD01_DESC"     />
-
-                        <!-- Box centre Contenu -->
-                        <field type="spacer"         label="TPL_C3RB_RGAA_CONTENTBG" ></field>
-                        <field showon="tmplchoice:1" name="lessvar_bg-tmplcontent"              type="color" alpha="true"     default="transparent" label="TPL_C3RB_RGAA_BGCONTENTBOX_LABEL"          description="TPL_C3RB_RGAA_BGCONTENTBOX_DESC"     />
-                        <field showon="tmplchoice:1" name="lessvar_bg-tmplcontent-opacity"      type="text"  alpha="true"     default="70%"         label="TPL_C3RB_RGAA_BGCONTENTBOXOPACITY_LABEL"   description="TPL_C3RB_RGAA_BGCONTENTBOXOPACITY_DESC"     />
-                        <field showon="tmplchoice:1" name="lessvar_main-bg"                     type="color" alpha="true"     default="#000" label="TPL_C3RB_RGAA_BGCONTENTBOX_LABEL"          description="TPL_C3RB_RGAA_BGCONTENTBOX_DESC"     />
-
 
 
 
@@ -340,7 +386,7 @@
                         <field showon="tmplchoice:0" width="250px" name="tmplfluidmod" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLFLUID_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLFLUID" default="0" class="btn-group btn-group-yesno">
                             <option value="0">JNO</option>
                             <option value="1">JYES</option>
-                        </field>                        
+                        </field>
 
 
                         <field showon="tmplchoice:0" type="note" label="TPL_C3RB_RGAA_TEXTE_CUSTOM" ></field>

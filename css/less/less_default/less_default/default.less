@@ -27,14 +27,14 @@
 .paddingbottom-s{padding-bottom:5px !important}
 .paddingtop-s{padding-top:5px !important}
 .padding-s{padding:0 5px 5px 0 !important}
+
 /* class full*/
 .full {width:100%}
+
 /* display */
 .displaynone {display: none;}
 
 /* Variable add et gestion admin */
-
-
 body {
     content: "@{img-bg-gen-yn}";
     background-image: url("../../../../../images/modele_de_template/@{body-bg-img}") ;
@@ -46,7 +46,6 @@ body {
     background: transparent;
     margin-bottom: 10px;
 }
-
 
 /* Titre */
 h2 {
@@ -68,10 +67,33 @@ h5 {
     color: @moduletxtcolor;
     border:  @moduleborder solid @modulebordercolor;
     margin-bottom: 15px;
-    padding: 10px;
-    h2{
+    padding:  0px;
+    h2 {
         background-color: @bgtitremodule;
-        color: @colortitremodule
+        color: @colortitremodule;
+        padding: 5px 10px;
+        a {
+            &.togglelink {
+                display: block;
+                position: relative;
+                padding-right: 20px;
+                span.glyphicon {
+                    font-size: 17px;
+                    position: absolute;
+                    top: 10px;
+                    right: 0;
+                    .glyphicon-chevron-up;
+                }
+            }
+            &.togglelink.collapsed {
+                span.glyphicon {
+                    .glyphicon-chevron-down;
+                }
+            }
+        }
+    }
+    .modcontent {
+        padding: 10px;
     }
 }
 
@@ -79,46 +101,11 @@ h5 {
 .container {
     background: @bgcontainer;
     margin-top: @mtopcontainer;
+    padding-top: 10px;
+    margin-bottom:10px;
+    border: @containborder solid @containbordercolor;
+
 }
-
-
-
-
-/* Titre des modules gere par le template
-.tmpmodhn {
-    h2 {
-        font-size: 25px;
-    }
-    .moduletable h2 {margin: 5px 0 15px 0}
-    .page-header, .items-leading {
-        margin-top: 0px;
-        padding-top:5px;
-        width: 100%;
-        h2 {
-            font-size: 28px;
-            margin: 6px 0 6px 0;
-        }
-        h3 {
-            font-size: 28px;
-            margin: 6px 0 6px 0;
-        }
-    }
-    .items-leading h3 {
-    }
-    h3 {
-        font-size: 22px;
-    }
-    h4 {
-        font-size: 19px;
-    }
-    h5 {
-        font-size: 17px;
-    }
-    h6 {
-        font-size: 15px;
-    }
-}
-*/
 
 /* images */
 img.fullimg {width: 100%}
@@ -463,4 +450,8 @@ ul.tags.inline li {
   -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
 }
+
+
+
+
 
