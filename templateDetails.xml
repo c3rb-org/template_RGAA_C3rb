@@ -200,7 +200,7 @@
                         <field showon="tmplchoice:0,1" type="note" label="TPL_C3RB_RGAA_CUSTOM_GENERAL"></field>
                         <field showon="tmplchoice:0,1" type="spacer" label="TPL_C3RB_RGAA_MODEL01_BODY" ></field>
                         <field showon="tmplchoice:0,1" name="lessvar_body-bg" type="color" default="#FFFFFF" label="TPL_C3RB_RGAA_COLORBODY" description="TPL_C3RB_RGAA_COLORBODY_DESC"      />
-                        <field showon="tmplchoice:0,1" width="250px" name="lessvar_img-bg-gen-yn" type="radio" description="TPL_C3RB_RGAA_ADDBGURL_DESC" label="TPL_C3RB_RGAA_ADDBGURL_LABEL" default="0" class="btn-group btn-group-yesno">
+                        <!-- <field showon="tmplchoice:0,1" width="250px" name="lessvar_img-bg-gen-yn" type="radio" description="TPL_C3RB_RGAA_ADDBGURL_DESC" label="TPL_C3RB_RGAA_ADDBGURL_LABEL" default="0" class="btn-group btn-group-yesno">
                             <option value="0">JNO</option>
                             <option value="1">JYES</option>
                         </field>
@@ -219,7 +219,7 @@
                             <option value="bottom left">En bas à gauche</option>
                             <option value="bottom right">En bas à droite</option>
                             <option value="center center">Au milieu</option>
-                        </field>
+                        </field> -->
                         <!-- Box centre Contenu -->
                         <field type="spacer"         label="TPL_C3RB_RGAA_CONTENTBG" ></field>
                             <!-- Starter -->
