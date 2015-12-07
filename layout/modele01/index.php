@@ -18,17 +18,8 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); 
 	<?php include_once JPATH_THEMES.'/'.$this->template.'/layout/modele01/head.php';	?>
 	</head>
 	<?php if ( $paramtmpl_html == 1): ?><div class="debughtml"><?php endif; ?>
-
-	<?php /*
-		echo '<pre>';
-		print_r($params);
-		echo '</pre>';
-	*/ ?>
 	<!-- Condition avec variable -->
-
 	<!-- Defaut customisable-->
-
-//modele 01
 	<body>
 		<jdoc:include type="message" />
 		<div class="container<?php if ($paramtmpl_tmplfluidmod == 1) {echo "-fluid";}; ?> <?php	if ($paramtmpl_tmpltitmodforce == 1) {echo "tmpmodhn";} ?>">
@@ -48,8 +39,6 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); 
 		<jdoc:include type="modules" name="debug" style="none" />
 		<?php include_once JPATH_THEMES.'/'.$this->template.'/layout/modele01/script.php'; ?>
 	</body>
-
-=======
 	<!-- Modele01  -->
 		<div class="modele01">
 			<jdoc:include type="message" />
