@@ -17,11 +17,12 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); 
 	</head>
 	<?php if ( $paramtmpl_html == 1): ?><div class="debughtml"><?php endif; ?>
 
-	<?php /*
-		echo '<pre>';
-		print_r($params);
-		echo '</pre>';
-	*/ ?>
+	<?php 
+	 	//$lessvar_bgimgbody				= $params->get('lessvar_bgimgbody');
+		//echo '<pre>';
+		//print_r($lessvar_bgimgbody);
+		//echo '</pre>';
+	?>
 
 	<!-- Condition avec variable -->
 
@@ -31,9 +32,8 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); 
 			include_once JPATH_THEMES.'/'.$this->template.'/layout/modele01/index.php';
 	 	?>
 	<?php endif ?>
-	
 	<!-- Defaut customisable-->
-	<?php if ($params->get('tmplchoice') == 0): ?>
+
 		<?php if ($params->get('tmplchoice') == 0): ?>
 		<body>
 			<jdoc:include type="message" />
@@ -55,5 +55,5 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); 
 			<?php include_once JPATH_THEMES.'/'.$this->template.'/layout/script.php'; ?>
 		</body>
 		<?php endif ?>
-	<?php endif ?>
+
 </html>
