@@ -152,7 +152,7 @@
                 <fields name="params">
 
                     <!-- ///////////////////// ONGLET PARAMETRE //////////////////////////-->
-                    <fieldset name="TPL_C3RB_RGAA_PARAMS">
+                    <fieldset name="params" label="TPL_C3RB_RGAA_PARAMS_FIELDSET_LABEL">
                         <field type="spacer" label="TPL_C3RB_RGAA_TIT_TITSYS" ></field>
                         <field width="250px" name="tmpltitchoice" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLTITCHOICE_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLTITCHOICE_LABEL" default="0" class="btn-group btn-group-yesno" >
                             <option value="0">JNO</option>
@@ -180,7 +180,7 @@
 
 
                     <!-- ///////////////////// ONGLET STYLE //////////////////////////-->
-                    <fieldset name="PRO">
+                    <fieldset name="pro" label="TPL_C3RB_RGAA_PRO_FIELDSET_LABEL">
                         <field type="note" label="TPL_C3RB_RGAA_BOOTSTRAP_CUSTOM"></field>
                         <field name="tmplchoice" type="list" default="0" label="TPL_C3RB_RGAA_TMPLCHX_LABEL" description="TPL_C3RB_RGAA_TMPLCHX_DESC">
                             <option value="0">Starter (default)</option>
