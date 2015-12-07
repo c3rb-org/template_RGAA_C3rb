@@ -34,14 +34,14 @@
 /* display */
 .displaynone {display: none;}
 
-/* Variable add et gestion admin */
-
+/* Variable add et gestion admin
 body {
-    //content : "test";
-    //   background-repeat:   @img-bg-gen-repeat;
-    //   background-position: @img-bg-gen-position;
+    content: "@{img-bg-gen-yn}";
+    background-image: url("../../../../../images/modele_de_template/@{body-bg-img}") ;
+    background-repeat:   @img-bg-gen-repeat;
+    background-position: @img-bg-gen-position;
 }
-
+*/
 .tmpl-header {
     background: transparent;
     margin-bottom: 10px;
@@ -309,6 +309,7 @@ body.tmpl-component {background: #FFFFFF}
 .checkbox .controls label.radio {margin-top: 5px}
 /* Affichage Article blog */
 .blog .items-row {margin-bottom:  25px}
+.blog-featured, .blog{ .item {max-width: 99%;}}
 /* Intro article image */
 .item-image {
     transition: all 0.4s ease 0s;
