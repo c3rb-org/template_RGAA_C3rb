@@ -41,11 +41,11 @@ switch ($item->browserNav)
 {
 	default:
 	case 0:
-?><a <?php echo $class; ?>href="<?php echo $item->flink; ?>" <?php echo $title; ?>><?php echo $linktype; ?></a><?php
+?><a <?php echo $class; ?>href="<?php echo $item->flink; ?>" title="<?php echo $title; ?>"><?php echo $linktype; ?></a><?php
 		break;
 	case 1:
 		// _blank
-?><a <?php echo $class; ?>href="<?php echo $item->flink; ?>" target="_blank" <?php echo $title; ?>><?php echo $linktype; ?></a><?php
+?><a <?php echo $class; ?>href="<?php echo $item->flink; ?>" target="_blank" title="<?php echo $title; ?>"><?php echo $linktype; ?></a><?php
 		break;
 	case 2:
 	// Use JavaScript "window.open"
