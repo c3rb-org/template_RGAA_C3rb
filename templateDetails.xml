@@ -306,7 +306,7 @@
                         <field showon="tmplchoice:0" name="lessvar_dropdown-bg"                       type="color"    default="#f8f8f8" label="TPL_C3RB_RGAA_COLORSMMENUBG"            description="TPL_C3RB_RGAA_COLORSMMENUBG"             />
                         <field showon="tmplchoice:0" name="lessvar_dropdown-border"                   type="color"    default="#e7e7e7" label="TPL_C3RB_RGAA_COLORSMMENUBORDER"        description="TPL_C3RB_RGAA_COLORSMMENUBORDER"         />
                         <field showon="tmplchoice:0" name="lessvar_dropdown-link-hover-color"         type="color"    default="#333333" label="TPL_C3RB_RGAA_COLORSMMENULNKHOV"        description="TPL_C3RB_RGAA_COLORSMMENULNKHOV"         />
-                        <field showon="tmplchoice:0" name="lessvar_dropdown-link-hover-bg"            type="color"    default="#333333" label="TPL_C3RB_RGAA_COLORSMMENUBGHOV"         description="TPL_C3RB_RGAA_COLORSMMENUBGHOV"          />
+                        <field showon="tmplchoice:0" name="lessvar_dropdown-link-hover-bg"            type="color"    default="#f0f0f0" label="TPL_C3RB_RGAA_COLORSMMENUBGHOV"         description="TPL_C3RB_RGAA_COLORSMMENUBGHOV"          />
                         <field showon="tmplchoice:0" name="lessvar_dropdown-link-active-color"        type="color"    default="#555555" label="TPL_C3RB_RGAA_COLORSMMENULNKACTIVE"     description="TPL_C3RB_RGAA_COLORSMMENULNKACTIVE"      />
                         <field showon="tmplchoice:0" name="lessvar_dropdown-link-active-bg"           type="color"    default="#e7e7e7" label="TPL_C3RB_RGAA_COLORSMMENUBGACTIVE"      description="TPL_C3RB_RGAA_COLORSMMENUBGACTIVE"       />
 
