@@ -7,6 +7,12 @@ if(JFactory::getApplication()->input->getInt('test_tpl') == 1)
 }
 //variables du template
 include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
+if (is_object($active) && !empty($active->params)) {
+$pagecss =  $active->params->get('pageclass_sfx');
+}
+else {
+	$pagecss = '';
+}
 ?>
 <!DOCTYPE html>
 <html 	xmlns="http://www.w3.org/1999/xhtml"
@@ -16,16 +22,13 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); 
 	<?php include_once JPATH_THEMES.'/'.$this->template.'/layout/head.php';	?>
 	</head>
 	<?php if ( $paramtmpl_html == 1): ?><div class="debughtml"><?php endif; ?>
-
-	<?php 
+	<?php
 	 	//$lessvar_bgimgbody				= $params->get('lessvar_bgimgbody');
 		//echo '<pre>';
 		//print_r($lessvar_bgimgbody);
 		//echo '</pre>';
 	?>
-
 	<!-- Condition avec variable -->
-
 	<!-- Modele01  -->
 	<?php if ($params->get('tmplchoice') == 1): ?>
 		<?php
@@ -33,11 +36,10 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); 
 	 	?>
 	<?php endif ?>
 	<!-- Defaut customisable-->
-
 		<?php if ($params->get('tmplchoice') == 0): ?>
-		<body>
+		<body <?php if (!empty($pagecss)): ?>class="<?php echo $pagecss; ?>"<?php endif ; ?>>
 			<jdoc:include type="message" />
-			<div class="container<?php if ($paramtmpl_tmplfluidmod == 1) {echo "-fluid";}; ?> <?php	if ($paramtmpl_tmpltitmodforce == 1) {echo "tmpmodhn";} ?>">
+			<div class="container<?php if ($paramtmpl_tmplfluidmod == 1) {echo "-fluid";}; ?> <?php	if ($paramtmpl_tmpltitmodforce == 1) {echo "tmpmodhn";} ?> firstcontainer <?php echo $pagecss; ?>">
 				<?php
 				//Header du template
 				include_once JPATH_THEMES.'/'.$this->template.'/layout/header.php';
@@ -55,5 +57,4 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); 
 			<?php include_once JPATH_THEMES.'/'.$this->template.'/layout/script.php'; ?>
 		</body>
 		<?php endif ?>
-
 </html>
