@@ -227,12 +227,16 @@
                             <option value="center center">Au milieu</option>
                         </field>
                     -->
-                        <!-- Box centre Contenu -->
+                        <!-- Box -->
                         <field type="spacer"         label="TPL_C3RB_RGAA_CONTENTBG" ></field>
                             <!-- Starter -->
                         <field showon="tmplchoice:0" name="lessvar_bgcontainer"             type="color"    alpha="true"        default="#CCCCCC" label="TPL_C3RB_RGAA_BGCONTENTBOX_LABEL"          description="TPL_C3RB_RGAA_BGCONTENTBOX_DESC"     />
                         <field showon="tmplchoice:0" name="lessvar_containborder"           type="text"     default="1px"       label="TPL_C3RB_RGAA_BORDERMOD"              description="TPL_C3RB_RGAA_BORDERMOD_DESC" class="input-mini"    />
                         <field showon="tmplchoice:0" name="lessvar_containbordercolor"      type="color"    default="#555555"   label="TPL_C3RB_RGAA_COLORBORDERMOD"         description="TPL_C3RB_RGAA_COLORBORDERMOD_DESC"                       />
+
+                        <field type="spacer"         label="TPL_C3RB_RGAA_CTRE" ></field>
+                        <field showon="tmplchoice:0" name="lessvar_colctreborder"         type="text"     default="1px"       label="TPL_C3RB_RGAA_BORDERCTRE"              description="TPL_C3RB_RGAA_BORDERCTRE_DESC" class="input-mini"    />
+                        <field showon="tmplchoice:0" name="lessvar_colctreclrborder"      type="color"    default="#555555"   label="TPL_C3RB_RGAA_COLORBORDERCTRE"         description="TPL_C3RB_COLORBORDERCTRE_DESC"                       />
 
                             <!-- Modele01 -->
                         <field showon="tmplchoice:1" name="lessvar_bg-tmplcontent-modele01"              type="color" alpha="true"     default="transparent" label="TPL_C3RB_RGAA_BGCONTENTBOX_LABEL"          description="TPL_C3RB_RGAA_BGCONTENTBOX_DESC"     />
