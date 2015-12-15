@@ -8,7 +8,7 @@
  */
 
 defined('_JEXEC') or die;
-
+JHtml::_('bootstrap.tooltip');
 // Note. It is important to remove spaces between elements.
 ?>
 <?php // The menu class is deprecated. Use nav instead. ?>
@@ -34,7 +34,7 @@ defined('_JEXEC') or die;
 
 		if ($params->get('tag_id') != null)
 		{
-			$tag = $params->get('tag_id') . '';  
+			$tag = $params->get('tag_id') . '';
 			echo ' id="' . $tag . '"';
 		}
 		?> role="menubar">
@@ -83,7 +83,7 @@ defined('_JEXEC') or die;
 			if ($item->parent)
 			{
 			//<?php echo ($item->deeper && $item->parent && $item->level > 1) ? '-submenu' : '-toggle'
-				
+
 			$class .= ' parent '; //class bootstrap3 pour sub menu
 			if ($item->deeper && $item->parent && $item->level > 1) {
 				$class .= ' parent dropdown-submenu';
@@ -102,7 +102,7 @@ defined('_JEXEC') or die;
 		case 'separator':
 		require JModuleHelper::getLayoutPath('mod_menu', 'default_separatormultilvl');
 		break;
-		
+
 		case 'url':
 		case 'component':
 		case 'heading':
@@ -112,17 +112,17 @@ defined('_JEXEC') or die;
 		default:
 		require JModuleHelper::getLayoutPath('mod_menu', 'default_url');
 		break;
-		endswitch; 
+		endswitch;
 
 		// The next item is deeper.
 		if ($item->deeper)
 		{
-			echo '<ul class="nav-child dropdown-menu multi-level" role="menu">'; 
+			echo '<ul class="nav-child dropdown-menu multi-level" role="menu">';
 		}
 		elseif ($item->shallower)
 		{
 			// The next item is shallower.
-			echo '</li>'; 
+			echo '</li>';
 			echo str_repeat('</ul></li>', $item->level_diff);
 		}
 		else
