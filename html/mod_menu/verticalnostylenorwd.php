@@ -8,6 +8,7 @@
  */
 
 defined('_JEXEC') or die;
+JHtml::_('bootstrap.tooltip');
 
 // Note. It is important to remove spaces between elements.
 ?>
