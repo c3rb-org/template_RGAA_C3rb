@@ -57,5 +57,6 @@ $blockPosition = $displayData['params']->get('info_block_position', 0);
 				<?php echo JLayoutHelper::render('joomla.content.info_block.hits', $displayData); ?>
 			<?php endif; ?>
 		<?php endif; ?>
+	<div class="clearfix"></div>
 	</dl>
 	<div class="clearfix"></div>
