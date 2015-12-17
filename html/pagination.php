@@ -110,30 +110,30 @@ function pagination_item_active(&$item)
 	switch($item->text)
 	{
 		case JText::_('JLIB_HTML_START'):
-			$display = '<span class="sr-only">'. JText::_('TPL_C3RB_RGAA_PREM_PAGE') .'</span><span aria-hidden="true" class="glyphicon glyphicon-fast-backward"></span>';
-			$title = JText::_('TPL_C3RB_RGAA_PREM_PAGE');
+			$display = '<span class="sr-only">'. JText::_('TPL_C3RB_RGAA_PAGE_PREM_SR') .'</span><span aria-hidden="true" class="glyphicon glyphicon-fast-backward"></span>';
+			$title = JText::_('TPL_C3RB_RGAA_PAGE_PREM');
 			break;
 
 		case JText::_('JPREV'):
-			$display = '<span class="sr-only">'. JText::_('TPL_C3RB_RGAA_PREC_PAGE') .'</span><span aria-hidden="true" class="glyphicon glyphicon-step-backward"></span>';
-			$title = JText::_('TPL_C3RB_RGAA_PREC_PAGE');
+			$display = '<span class="sr-only">'. JText::_('TPL_C3RB_RGAA_PAGE_PREC_SR') .'</span><span aria-hidden="true" class="glyphicon glyphicon-step-backward"></span>';
+			$title = JText::_('TPL_C3RB_RGAA_PAGE_PREC');
 			break;
 
 		case JText::_('JNEXT'):
-			$display = '<span class="sr-only">'. JText::_('TPL_C3RB_RGAA_PAGE_SUIV') .'</span><span aria-hidden="true" class="glyphicon glyphicon-step-forward"></span>';
+			$display = '<span class="sr-only">'. JText::_('TPL_C3RB_RGAA_PAGE_SUIV_SR') .'</span><span aria-hidden="true" class="glyphicon glyphicon-step-forward"></span>';
 			$title = JText::_('TPL_C3RB_RGAA_PAGE_SUIV');
 			break;
 
 		case JText::_('JLIB_HTML_END'):
-			$display = '<span class="sr-only">'. JText::_('TPL_C3RB_RGAA_DER_PAGE') .'</span><span aria-hidden="true" class="glyphicon glyphicon-fast-forward"></span>';
-			$title = JText::_('TPL_C3RB_RGAA_DER_PAGE');
+			$display = '<span class="sr-only">'. JText::_('TPL_C3RB_RGAA_PAGE_DER_SR') .'</span><span aria-hidden="true" class="glyphicon glyphicon-fast-forward"></span>';
+			$title = JText::_('TPL_C3RB_RGAA_PAGE_DER');
 			break;
 
 		default :
-			return '<li><a href="' . $item->link . '" title="'. JText::_('TPL_C3RB_RGAA_ACCES_PAGE') .' '. $item->text . '" class="btn btn-default hidden-phone">' . $item->text . '</a></li>';
+			return '<li><a href="' . $item->link . '" class="btn btn-default hidden-phone"><span class="sr-only">'.JText::_('TPL_C3RB_RGAA_PAGE_ACCES').'</span>' . $item->text . '</a></li>';
 	}
 
-	return '<a href="' . $item->link . '" title="'.$title.'" class="btn btn-default hidden-phone">' . $display . '</a>';
+	return '<a href="' . $item->link . '" title="'.$title.'" class="btn btn-default hidden-phone hasTooltip">' . $display . '</a>';
 }
 
 /**
