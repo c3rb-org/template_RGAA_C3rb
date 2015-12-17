@@ -6,7 +6,6 @@
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
-
 defined('_JEXEC') or die;
 /**
  * Renders the pagination footer
@@ -19,7 +18,7 @@ defined('_JEXEC') or die;
  */
 function pagination_list_footer($list)
 {
-	
+
 	$html = "<nav role=\"navigation\"><div class=\"pagination\">\n";
 	$html .= $list['pageslinks'];
 	$html .= "\n<input type=\"hidden\" name=\"" . $list['prefix'] . "limitstart\" value=\"" . $list['limitstart'] . "\" />";
@@ -40,7 +39,7 @@ function pagination_list_footer($list)
 
 function pagination_list_render($list)
 {
-	
+
 	// Calculate to display range of pages
 	$currentPage = 1;
 	$range = 1;
@@ -74,7 +73,7 @@ function pagination_list_render($list)
 	$html[] = '<div class="btn-group">';
 	$html[] = $list['start']['data'];
 	$html[] = $list['previous']['data'];
-	
+
 	$html[]= '
 	<div class="dropdown btn btn-default pagi">
 	<nav role="navigation" aria-label="Pagination">
@@ -107,29 +106,29 @@ function pagination_item_active(&$item)
 {
 	$display = '';
 	$title = '';
-	
+
 	switch($item->text)
 	{
 		case JText::_('JLIB_HTML_START'):
 			$display = '<span class="sr-only">'. JText::_('TPL_C3RB_RGAA_PREM_PAGE') .'</span><span aria-hidden="true" class="glyphicon glyphicon-fast-backward"></span>';
 			$title = JText::_('TPL_C3RB_RGAA_PREM_PAGE');
 			break;
-		
+
 		case JText::_('JPREV'):
 			$display = '<span class="sr-only">'. JText::_('TPL_C3RB_RGAA_PREC_PAGE') .'</span><span aria-hidden="true" class="glyphicon glyphicon-step-backward"></span>';
 			$title = JText::_('TPL_C3RB_RGAA_PREC_PAGE');
 			break;
-		
+
 		case JText::_('JNEXT'):
 			$display = '<span class="sr-only">'. JText::_('TPL_C3RB_RGAA_PAGE_SUIV') .'</span><span aria-hidden="true" class="glyphicon glyphicon-step-forward"></span>';
 			$title = JText::_('TPL_C3RB_RGAA_PAGE_SUIV');
 			break;
-		
+
 		case JText::_('JLIB_HTML_END'):
 			$display = '<span class="sr-only">'. JText::_('TPL_C3RB_RGAA_DER_PAGE') .'</span><span aria-hidden="true" class="glyphicon glyphicon-fast-forward"></span>';
 			$title = JText::_('TPL_C3RB_RGAA_DER_PAGE');
 			break;
-		
+
 		default :
 			return '<li><a href="' . $item->link . '" title="'. JText::_('TPL_C3RB_RGAA_ACCES_PAGE') .' '. $item->text . '" class="btn btn-default hidden-phone">' . $item->text . '</a></li>';
 	}
