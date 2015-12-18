@@ -34,9 +34,33 @@
 /* display */
 .displaynone {display: none;}
 
-/* Variable add et gestion admin
+
+
+
+.stylebodybg() when (@body-bgimg != -1) {
+  body {
+    background: red;
+  }
+}
+.stylebodybg();
+
+/*
 body {
-    content: "@{img-bg-gen-yn}";
+    background-image: url("../../../../../images/template_rgaa/starter/@{body-bgimg}");
+    background-repeat:@body-bgrepeat;
+    background-position:@body-bgposition;
+}
+*/
+
+
+
+/*
+@body-bgimgpath: "/montest/@{body-bgimg}";
+body:before {
+    background: url( @body-bgimgpath );
+}
+Variable add et gestion admin
+
     background-image: url("../../../../../images/modele_de_template/@{body-bg-img}") ;
     background-repeat:   @img-bg-gen-repeat;
     background-position: @img-bg-gen-position;
