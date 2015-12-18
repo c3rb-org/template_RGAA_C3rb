@@ -34,33 +34,9 @@
 /* display */
 .displaynone {display: none;}
 
-
-
-
-.stylebodybg() when (@body-bgimg != -1) {
-  body {
-    background: red;
-  }
-}
-.stylebodybg();
-
-/*
+/* Variable add et gestion admin
 body {
-    background-image: url("../../../../../images/template_rgaa/starter/@{body-bgimg}");
-    background-repeat:@body-bgrepeat;
-    background-position:@body-bgposition;
-}
-*/
-
-
-
-/*
-@body-bgimgpath: "/montest/@{body-bgimg}";
-body:before {
-    background: url( @body-bgimgpath );
-}
-Variable add et gestion admin
-
+    content: "@{img-bg-gen-yn}";
     background-image: url("../../../../../images/modele_de_template/@{body-bg-img}") ;
     background-repeat:   @img-bg-gen-repeat;
     background-position: @img-bg-gen-position;
