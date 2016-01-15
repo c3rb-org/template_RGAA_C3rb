@@ -16,7 +16,7 @@
 <link rel="icon" type="image/png" href="<?php echo $tmplpath ?>/images/template/favicon/android-chrome-192x192.png" sizes="192x192">
 <link rel="icon" type="image/png" href="<?php echo $tmplpath ?>/images/template/favicon/favicon-16x16.png" sizes="16x16">
 <link rel="manifest" href="<?php echo $tmplpath ?>/images/template/favicon/manifest.json">
-<link rel="mask-icon" href="<?php echo $tmplpath ?>/images/template/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="mask-icon" href="<?php echo $tmplpath ?>/images/template/favicon/safari-pinned-tab.svg">
 <link rel="shortcut icon" href="<?php echo $tmplpath ?>/images/template/favicon/favicon.ico">
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="msapplication-TileImage" content="<?php echo $tmplpath ?>/images/template/favicon/mstile-144x144.png">
