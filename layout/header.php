@@ -1,9 +1,13 @@
 <?php defined( '_JEXEC' ) or die; ?>
-<!-- lien evitement -->
-<a class="sr-only sr-only-focusable evit-lnk" href="#content-lnk"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_CONTENT') ?></a>
-<a class="sr-only sr-only-focusable evit-lnk" href="#search-lnk"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_RECH') ?></a>
-<a class="sr-only sr-only-focusable evit-lnk" href="#menu-lnk"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_MENU') ?></a>
-<!-- Fin lien evitement -->
+<?php 
+$paramtmpl_tmplevitlnkct = "#content-lnk";
+if ($paramtmpl_tmplevitlnk == 1) : ?>
+	<!-- lien evitement -->
+	<a class="sr-only sr-only-focusable evit-lnk" href="<?php echo $paramtmpl_tmplevitlnkct; ?>"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_CONTENT') ?></a>
+	<a class="sr-only sr-only-focusable evit-lnk" href="#Mod<?php echo $paramtmpl_tmplevitlnksearch; ?>"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_RECH') ?></a>
+	<a class="sr-only sr-only-focusable evit-lnk" href="#Mod<?php echo $paramtmpl_tmplevitlnkmenu; ?>"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_MENU') ?></a>
+	<!-- Fin lien evitement -->
+<?php endif; ?>
 <div class="row">
 	<div class="tmpl-header">
 		<header aria-label="<?php echo $titlesite; ?>" role="banner">

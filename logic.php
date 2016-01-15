@@ -1,31 +1,36 @@
 <?php defined( '_JEXEC' ) or die;
 
 // Parametre general joomla
-$app            	= JFactory::getApplication();
-$doc            	= JFactory::getDocument();
-$user            	= JFactory::getUser();								// Info Users
-$this->language  	= $doc->language;									// Langue du template
-$this->direction 	= $doc->direction;									// Direction du template (RTL, LTR)
-$menu 				= $app->getMenu();									// Info menu
-$active 			= $app->getMenu()->getActive();						// Item actif du menu
-$params 			= $app->getTemplate(true)->params;					// Parametre du template
-$titlesite			= $app->get('sitename');
-$pageclass 			= $params->get('pageclass_sfx');					// Suffixe de class de la page
-$bssize				= $params->get('bootstrap_size');					// Taille bootstrap dans l'admin
-$headerlvl 			= $params->get('headerLevel');						// Niveau de titre du module choisi dans l'admin
-$tmplpath 			= $this->baseurl.'/templates/'.$this->template;     // adresse du template
+$app            				= JFactory::getApplication();
+$doc            				= JFactory::getDocument();
+$user            				= JFactory::getUser();								// Info Users
+$this->language  				= $doc->language;									// Langue du template
+$this->direction 				= $doc->direction;									// Direction du template (RTL, LTR)
+$menu 							= $app->getMenu();									// Info menu
+$active 						= $app->getMenu()->getActive();						// Item actif du menu
+$params 						= $app->getTemplate(true)->params;					// Parametre du template
+$titlesite						= $app->get('sitename');
+$pageclass 						= $params->get('pageclass_sfx');					// Suffixe de class de la page
+$bssize							= $params->get('bootstrap_size');					// Taille bootstrap dans l'admin
+$headerlvl 						= $params->get('headerLevel');						// Niveau de titre du module choisi dans l'admin
+$tmplpath 						= $this->baseurl.'/templates/'.$this->template;     // adresse du template
 
-$doc->setGenerator('');	 	 											// on supprime le generator content="Joomla! - Open Source Content Management" pour plus de securite
+$doc->setGenerator('');	 	 														// on supprime le generator content="Joomla! - Open Source Content Management" pour plus de securite
 // Parametre du template
 
 // Basics
-$paramtmpl_tmpltitleaff 	= $params->get('tmpltitleaff');
-$paramtmpl_tmpltitchoice 	= $params->get('tmpltitchoice');
-$paramtmpl_tmpltitmodforce 	= $params->get('tmpltitmodforce');
-$paramtmpl_tmplfluidmod 	= $params->get('tmplfluidmod');
+$paramtmpl_tmpltitleaff 		= $params->get('tmpltitleaff');
+$paramtmpl_tmpltitchoice 		= $params->get('tmpltitchoice');
+$paramtmpl_tmpltitmodforce 		= $params->get('tmpltitmodforce');
+$paramtmpl_tmplfluidmod 		= $params->get('tmplfluidmod');
+$paramtmpl_tmplevitlnk 			= $params->get('tmplevitlnk');
+$paramtmpl_tmplevitlnkct 		= $params->get('tmplevitlnkct');
+$paramtmpl_tmplevitlnksearch	= $params->get('tmplevitlnksearch');
+$paramtmpl_tmplevitlnkmenu 		= $params->get('tmplevitlnkmenu');
+
 // Avance
-$paramtmpl_debug			= $params->get('tmplmodhelp');
-$paramtmpl_html				= $params->get('tmplhtmlhelp');
+$paramtmpl_debug				= $params->get('tmplmodhelp');
+$paramtmpl_html					= $params->get('tmplhtmlhelp');
 
 // Le Framework
 //Jquery joomla
