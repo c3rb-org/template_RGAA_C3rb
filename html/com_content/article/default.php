@@ -162,10 +162,9 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 			<?php endif; ?>
 		</div>
 	<?php endif; ?>
-
 	<?php
 if (!empty($this->item->pagination) && $this->item->pagination && $this->item->paginationposition && !$this->item->paginationrelative):
-	echo '<nav role="navigation">'; // role navigation est il bien n√©cessaire ...
+	echo '<nav role="navigation">'; // role navigation est il bien nÈcessaire ... voir http://html5doctor.com/nav-element/ si on considere cela comme une pagination ou une des navigations principales de la page
 	echo $this->item->pagination;
 	echo '</nav>';
 ?>
@@ -207,7 +206,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && $this->item->p
 	<?php endif; ?>
 	<?php
 if (!empty($this->item->pagination) && $this->item->pagination && $this->item->paginationposition && $this->item->paginationrelative) :
-	echo $this->item->pagination;
+	echo $this->item->pagination; //pagination entres articles a amÈliorer car pas assÈ explicite en therme d'accessibilitÈ.
 ?>
 	<?php endif; ?>
 	<?php echo $this->item->event->afterDisplayContent; ?>
