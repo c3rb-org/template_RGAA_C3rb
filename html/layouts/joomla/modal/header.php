@@ -33,7 +33,7 @@ extract($displayData);
 ?>
 <div class="modal-header">
 	<?php if (!isset($params['closeButton']) || $params['closeButton']) : ?>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <button type="button" class="close" data-dismiss="modal" aria-label="<?php echo JText::_('TPL_C3RB_RGAA_LABEL_FERMER_MODALE'); ?>"><span aria-hidden="true">&times;</span></button>
 	<?php endif; ?>
 	<?php if (isset($params['title'])) : ?>
         <h2 class="modal-title" id="<?php echo $selector; ?>Label"><?php echo $params['title']; ?></h2>
