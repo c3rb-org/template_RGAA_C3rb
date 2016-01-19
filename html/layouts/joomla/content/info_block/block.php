@@ -12,7 +12,7 @@ defined('JPATH_BASE') or die;
 $blockPosition = $displayData['params']->get('info_block_position', 0);
 
 ?>
-	<dl class="article-info muted">
+	<dl class="article-info muted clearfix">
 
 		<?php if ($displayData['position'] == 'above' && ($blockPosition == 0 || $blockPosition == 2)
 				|| $displayData['position'] == 'below' && ($blockPosition == 1)
@@ -57,6 +57,5 @@ $blockPosition = $displayData['params']->get('info_block_position', 0);
 				<?php echo JLayoutHelper::render('joomla.content.info_block.hits', $displayData); ?>
 			<?php endif; ?>
 		<?php endif; ?>
-	<div class="clearfix"></div>
 	</dl>
 	<div class="clearfix"></div>
