@@ -16,11 +16,11 @@ JHtml::_('bootstrap.tooltip');
 
 
 
-<div class="menunostyle" id="menu-lnk">
+<div class="" id="menu-lnk">
   <div>
         <!-- Collect the nav links, forms, and other content for toggling -->
     <div>
-	<ul class="<?php echo $class_sfx;?>"<?php
+	<ul class="list list-unstyled <?php echo $class_sfx;?>"<?php
 		$tag = '';
 
 		if ($params->get('tag_id') != null)
@@ -75,7 +75,7 @@ JHtml::_('bootstrap.tooltip');
 			{
 			//<?php echo ($item->deeper && $item->parent && $item->level > 1) ? '-submenu' : '-toggle'
 				
-			$class .= ' parent '; //class bootstrap3 pour sub menu
+			$class .= ' hadparent '; //class bootstrap3 pour sub menu
 			if ($item->deeper && $item->parent && $item->level > 1) {
 				$class .= ' parent dropdown-submenu';
 			}
@@ -106,7 +106,7 @@ JHtml::_('bootstrap.tooltip');
 		// The next item is deeper.
 		if ($item->deeper)
 		{
-			echo '<ul class="nav-child dropdown-menu multi-level" role="menu" aria-labelledby="">'; 
+			echo '<ul class="" role="menu">'; 
 		}
 		elseif ($item->shallower)
 		{
