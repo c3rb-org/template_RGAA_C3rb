@@ -563,7 +563,7 @@ function modChrome_retractableferme($module, &$params, &$attribs) {
 	<?php endif; ?>
 	
 			<!-- Content du module -->
-			<div class="collapsed collapse" id="collapseElem<?php echo $module->id; ?>" aria-expanded="false">
+			<div class="collapsed collapse" id="collapseElem<?php echo $module->id; ?>">
 				<div class="modcontent">
 					<?php echo $module->content; ?>
 					<div class="clearfix"></div>
