@@ -20,7 +20,7 @@ JHtml::_('bootstrap.tooltip');
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse<?php echo $module->id; ?>">
-        <span class="sr-only">Toggle navigation</span>
+        <span class="sr-only"><?php echo JText::_('TPL_C3RB_RGAA_MOD_MENU_OUVRIR'); ?></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
