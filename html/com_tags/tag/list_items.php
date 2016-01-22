@@ -18,7 +18,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 
 ?>
 
-<form action="<?php echo htmlspecialchars(JUri::getInstance()->toString()); ?>" method="post" name="adminForm" id="adminForm">
+<form action="<?php echo htmlspecialchars(JUri::getInstance()->toString()); ?>" method="post" name="adminForm" id="adminForm" class="form-inline">
 	<?php if ($this->params->get('filter_field') || $this->params->get('show_pagination_limit')) : ?>
 	<fieldset class="filters btn-toolbar">
 		<?php if ($this->params->get('filter_field')) :?>
@@ -26,7 +26,7 @@ $listDirn	= $this->escape($this->state->get('list.direction'));
 				<label class="filter-search-lbl element-invisible" for="filter-search">
 					<?php echo JText::_('COM_TAGS_TITLE_FILTER_LABEL') . '&#160;'; ?>
 				</label>
-				<input type="text" name="filter-search" id="filter-search" value="<?php echo $this->escape($this->state->get('list.filter')); ?>" class="inputbox" onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_TAGS_FILTER_SEARCH_DESC'); ?>" placeholder="<?php echo JText::_('COM_TAGS_TITLE_FILTER_LABEL'); ?>" />
+				<input type="text" name="filter-search" id="filter-search" value="<?php echo $this->escape($this->state->get('list.filter')); ?>" class="form-control" onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_TAGS_FILTER_SEARCH_DESC'); ?>" placeholder="<?php echo JText::_('COM_TAGS_TITLE_FILTER_LABEL'); ?>" />
 			</div>
 		<?php endif; ?>
 		<?php if ($this->params->get('show_pagination_limit')) : ?>

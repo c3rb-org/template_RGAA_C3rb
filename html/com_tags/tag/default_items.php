@@ -35,7 +35,7 @@ $n = count($this->items);
 				<label class="filter-search-lbl element-invisible" for="filter-search">
 					<?php echo JText::_('COM_TAGS_TITLE_FILTER_LABEL') . '&#160;'; ?>
 				</label>
-				<input type="text" name="filter-search" id="filter-search" value="<?php echo $this->escape($this->state->get('list.filter')); ?>" class="inputbox" onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_TAGS_FILTER_SEARCH_DESC'); ?>" placeholder="<?php echo JText::_('COM_TAGS_TITLE_FILTER_LABEL'); ?>" />
+				<input type="text" name="filter-search" id="filter-search" value="<?php echo $this->escape($this->state->get('list.filter')); ?>" class="form-control" onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_TAGS_FILTER_SEARCH_DESC'); ?>" placeholder="<?php echo JText::_('COM_TAGS_TITLE_FILTER_LABEL'); ?>" />
 			</div>
 		<?php endif; ?>
 		<?php if ($this->params->get('show_pagination_limit')) : ?>
@@ -58,18 +58,19 @@ $n = count($this->items);
 	<?php if ($this->items == false || $n == 0) : ?>
 		<p> <?php echo JText::_('COM_TAGS_NO_ITEMS'); ?></p>
 	<?php else : ?>
-
-	<ul class="category list-striped">
+	<div class="hrlight"></div>
+	<h3 class="margetop">
+	Article avec le tag : <?php echo  $this->tags_title; ?>
+	</h3>
+	<ul class="category list-unstyled margetop">
 		<?php foreach ($items as $i => $item) : ?>
 			<?php if ($item->core_state == 0) : ?>
 				<li class="system-unpublished cat-list-row<?php echo $i % 2; ?>">
 			<?php else: ?>
 				<li class="cat-list-row<?php echo $i % 2; ?> clearfix" >
-				<h3>
 					<a href="<?php echo JRoute::_(TagsHelperRoute::getItemRoute($item->content_item_id, $item->core_alias, $item->core_catid, $item->core_language, $item->type_alias, $item->router)); ?>">
 						<?php echo $this->escape($item->core_title); ?>
 					</a>
-				</h3>
 			<?php endif; ?>
 			<?php echo $item->event->afterDisplayTitle; ?>
 			<?php $images  = json_decode($item->core_images);?>

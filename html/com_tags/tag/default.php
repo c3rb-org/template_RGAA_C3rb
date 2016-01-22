@@ -13,21 +13,28 @@ defined('_JEXEC') or die;
 JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 $isSingleTag = (count($this->item) == 1);
 ?>
+
 <div class="tag-category<?php echo $this->pageclass_sfx; ?>">
 	<?php if ($this->params->get('show_page_heading')) : ?>
+		<div class="page-header">
 		<h2>
 			<?php echo $this->escape($this->params->get('page_heading')); ?>
 		</h2>
+		</div>
 	<?php endif; ?>
 	<?php if ($this->params->get('show_tag_title', 1)) : ?>
 		<?php if ($this->params->get('show_page_heading')) : ?>
+		<div class="page-header">
 		<h3>
 			<?php echo JHtml::_('content.prepare', $this->tags_title, '', 'com_tag.tag'); ?>
 		</h3>
+		</div>
 		<?php else: ?>
+		<div class="page-header">
 		<h2>
 			<?php echo JHtml::_('content.prepare', $this->tags_title, '', 'com_tag.tag'); ?>
 		</h2>
+		</div>
 		<?php endif; ?>
 	<?php else: ?>
 		<?php if ($this->params->get('show_page_heading')) : ?>
