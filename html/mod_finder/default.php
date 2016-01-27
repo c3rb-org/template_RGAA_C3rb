@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  mod_finder
- * °version J! : 3.4.3 - MIR
+ * Â°version J! : 3.4.3 - MIR
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -24,7 +24,7 @@ $output = '<input type="text" name="q" id="mod-finder-searchword" class="form-co
 
 if ($params->get('show_label', 1))
 {
-	$label = '<label for="mod-finder-searchword" class="finder' . $suffix . '">' . $params->get('alt_label', JText::_('JSEARCH_FILTER_SUBMIT')) . '</label>';
+	$label = '<label for="mod-finder-searchword" class="finder' . $suffix . ' sr-only">' . $params->get('alt_label', JText::_('JSEARCH_FILTER_SUBMIT')) . '</label>';
 
 	switch ($params->get('label_pos', 'left'))
 	{
@@ -49,7 +49,7 @@ if ($params->get('show_label', 1))
 
 if ($params->get('show_button'))
 {
-	$button = '<button class="btn hasTooltip ' . $suffix . ' finder' . $suffix . '" type="submit" title="' . JText::_('MOD_FINDER_SEARCH_BUTTON') . '"><span class="glyphicon glyphicon-search "></span></button>';
+	$button = '<button class="btn btn-default hasTooltip ' . $suffix . ' finder' . $suffix . '" type="submit" title="' . JText::_('MOD_FINDER_SEARCH_BUTTON') . '"><span class="glyphicon glyphicon-search "></span></button>';
 
 	switch ($params->get('button_pos', 'left'))
 	{
@@ -142,9 +142,9 @@ $script .= "});";
 
 JFactory::getDocument()->addScriptDeclaration($script);
 ?>
-
-<form id="mod-finder-searchform" action="<?php echo JRoute::_($route); ?>" method="get" class="form-inline form-search" role="search">
-	<div class="form-group finder<?php echo $suffix; ?>">
+  
+<form id="mod-finder-searchform" action="<?php echo JRoute::_($route); ?>" method="get" class="form-inline form-search margebottom" role="search">
+	<div class="form-group finder<?php echo $suffix; ?> col-xs-12 col-sm-12 col-md-12 col-lg-12">
 		<?php
 		// Show the form fields.
 		echo $output;
@@ -161,4 +161,5 @@ JFactory::getDocument()->addScriptDeclaration($script);
 		<?php endif; ?>
 		<?php echo modFinderHelper::getGetFields($route, (int) $params->get('set_itemid')); ?>
 	</div>
+    <div class="clearfix"></div>
 </form>
