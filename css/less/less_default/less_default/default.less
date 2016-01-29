@@ -109,7 +109,7 @@ h5 {
 .readmore .btn {
     padding-left: 0;
 }
-body.tmpl-component .container {background:#FFFFFF}
+body.tmpl-component .container {background:#ffffff}
 /* images */
 p img {max-width: 100%} // pour les image administré, generalement dans un p insere par JCE
 img.fullimg {width: 100%}
@@ -453,6 +453,7 @@ ul.tags.inline li {
 /* Tag */
 ul.tags.inline {
     margin-bottom: 20px;
+    li {margin-bottom: 5px}
 }
 .list-inline.tag-pop > li {
     display: inline-block;
@@ -486,7 +487,28 @@ ul.tags.inline {
     margin-right: 5px
 
 }
-
+/* Editor front end */
+.edit.item-page {
+    .btn-toolbar.pull-left.margetop.margebottom {
+        float: none!important;
+    }
+    .chzn-container-multi .chzn-choices li.search-field input[type="text"], .chzn-container-single .chzn-single {
+        height: 32px;
+        padding: 3px 3px 3px 6px;
+    }
+    .chzn-container-single .chzn-single div b {
+         margin-top: 5px;
+    }
+    .inputbox  {
+        .form-control;
+    }
+    #jform_publish_up_img, #jform_publish_down_img {
+        border: 1px solid #ccc;
+        margin: -34px 9px 0 0;
+        position: absolute;
+        right: 0;
+    }
+}
 
 /* fadeInUp */
 @-webkit-keyframes fadeInUp {
