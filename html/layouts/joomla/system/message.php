@@ -20,15 +20,16 @@ $error_type = array('error'=>'alert-danger','warning'=>'alert-warning',
 				<div id="system-message-container">
 					<div id="system-message">
 					<?php foreach ($msgList as $type => $msgs) : ?>
-						<div role="alert" class="alert <?php echo (array_key_exists($type, $error_type) == true) ? $error_type[$type] : 'alert-info'; ?> alert-dismissible fade in">
-							<button aria-label="Fermer" data-dismiss="alert" class="close" type="button">
+						<div class="alert <?php echo (array_key_exists($type, $error_type) == true) ? $error_type[$type] : 'alert-info'; ?> alert-dismissible fade in">
+							<button data-dismiss="alert" class="close" type="button">
 								<span aria-hidden="true">&times;</span>
+								<span class="sr-only">Fermer la boite d'alerte</span>
 							</button>
 							<?php if (!empty($msgs)) : ?>
-							<span class="alert-heading"><?php echo JText::_($type); ?></span><!-- Attention au nieveu de titre dans les alerte qui sont affiché en top du site  -->
+							<span id="dialogTitre" class="alert-heading"><?php echo JText::_($type); ?></span><!-- Attention au nieveu de titre dans les alerte qui sont affiché en top du site  -->
 							<div>
 								<?php foreach ($msgs as $msg) : ?>
-								<p><?php echo $msg; ?></p>
+								<p id="addrole" aria-labelledby="dialogTitre"><?php echo $msg; ?></p>
 								<?php endforeach; ?>
 							</div>
 							<?php endif; ?>

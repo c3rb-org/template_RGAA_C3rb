@@ -24,9 +24,12 @@ jQuery(function ($) {
 
     //effet
     $(".item-image").hover(function () {
-	//$(".fxfadeInUp").toggleClass("displaynone");
-	$(this).find('.fxfadeInUp').toggleClass("fadeInUp animated");
+      //$(".fxfadeInUp").toggleClass("displaynone");
+      $(this).find('.fxfadeInUp').toggleClass("fadeInUp animated");
     });
+
+    //Génère le role alerte declenche le lecteur d'ecran
+    $("#addrole").attr("role", "alert");
 
 });
 
