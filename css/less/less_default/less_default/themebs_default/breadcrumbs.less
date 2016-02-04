@@ -4,17 +4,17 @@
 
 
 .breadcrumb {
-  padding: @breadcrumb-padding-vertical @breadcrumb-padding-horizontal;
+  padding: @breadcrumb-padding-vertical 0px;
   margin-bottom: 0px;
   list-style: none;
-  background-color: @breadcrumb-bg;
+  background-color: transparent;
   border-radius: @border-radius-base;
 
   > li {
     display: inline-block;
 
     + li:before {
-     content: ""; // Unicode space added since inline-block means non-collapsing white-space //Use joomla separator style
+     content: " "; // Unicode space added since inline-block means non-collapsing white-space //Use joomla separator style
      padding: 0px;
      color: @breadcrumb-color;
     }
