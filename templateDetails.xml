@@ -32,7 +32,7 @@
             <div class="span6">
                 <h2 style="text-align:left;">Description</h2>
                 <ul>
-                    <li>C3rb_Rgaa est un template réalisé par la société C3rb Informatique, il propose à la communauté un template de conception  accessible (référentiel RGAA3).</li>
+                    <li>C3rb_Rgaa est un template réalisé par la société C3rb Informatique, il propose à la communauté un template de conception  accessible (référentiel RGAA3). Tests techniques réalisés avec Tanaguru.</li>
                     <li>Ce template fonctionne avec les dépendances bootstrap 3 et fontawesome</li>
                 </ul>
                 <br />
