@@ -63,19 +63,17 @@ if (isset($this->error)) : ?>
 									<?php echo $field->input; ?>
 								</div>
 							<?php else: ?>
-		
-									<?php echo $field->label; ?>
+									<div class="col-xs-12 col-sm-2 "><?php echo $field->label; ?></div>
 									<?php if (!$field->required && $field->type != "Spacer") : ?>
 										<span class="optional"><?php echo JText::_('COM_CONTACT_OPTIONAL'); ?></span>
 									<?php endif; ?>
-								
 								<div class="col-xs-12 col-sm-10"><?php echo $field->input; ?></div>
 							<?php endif; ?>
 						</div>
 					<?php endforeach; ?>
 				<?php endif; ?>
 			<?php endforeach; ?>
-			<div class="form-actions">
+			<div class="form-actions text-right">
 				<button class="btn btn-primary validate" type="submit"><?php echo JText::_('COM_CONTACT_CONTACT_SEND'); ?></button>
 				<input type="hidden" name="option" value="com_contact" />
 				<input type="hidden" name="task" value="contact.submit" />
