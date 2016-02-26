@@ -456,6 +456,15 @@
   // Dropdown menu items
   .navbar-nav {
     // Remove background color from open dropdown
+    > .open > a {
+      &,
+      &:hover,
+      &:focus {
+        background-color: @navbar-default-link-active-bg;
+        color: @navbar-default-link-active-color;
+      }
+    }
+
     @media (max-width: @grid-float-breakpoint-max) {
       // Dropdowns get custom display when collapsed
       .open .dropdown-menu {
