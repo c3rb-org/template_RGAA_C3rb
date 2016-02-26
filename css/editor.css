@@ -13,8 +13,11 @@ h6 {
   font-size: 16px;
   font-weight: bold;
 }
+.lien-sans-icone a[target="_blank"]::after {
+    content: "";
+}
+
 .note:before {
-  
 }
 .note:before {
     background: #000 none repeat scroll 0 0;
@@ -27,6 +30,51 @@ h6 {
     border-radius: 100%;
     padding: 7px 9px 7px 11px;
 }
+.btn.btn-default {
+  background-color: #000;
+  border-color: #f00;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.btn.btn-primary {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.btn.btn-warning {
+  background-color: #f0ad4e;
+  border-color: #eea236;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  }
 
 .note {
   position: relative;
