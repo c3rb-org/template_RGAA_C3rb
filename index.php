@@ -32,13 +32,13 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); 
 	?>
 	<!-- Condition avec variable -->
 	<!-- Modele01  -->
-	<?php if ($params->get('tmplchoice') == 1): ?>
+	<?php //if ($params->get('tmplchoice') == 1): ?>
 		<?php
-			include_once JPATH_THEMES.'/'.$this->template.'/layout/modele01/index.php';
+			//include_once JPATH_THEMES.'/'.$this->template.'/layout/modele01/index.php';
 	 	?>
-	<?php endif ?>
+	<?php //endif ?>
 	<!-- Defaut customisable-->
-		<?php if ($params->get('tmplchoice') == 0): ?>
+		<?php //if ($params->get('tmplchoice') == 0): ?>
 		<body <?php if (!empty($pagecss)): ?>class="<?php echo $pagecss; ?>"<?php endif ; ?>>
 			<jdoc:include type="message" />
 			<div class="container<?php if ($paramtmpl_tmplfluidmod == 1) {echo "-fluid";}; ?> <?php	if ($paramtmpl_tmpltitmodforce == 1) {echo "tmpmodhn";} ?> firstcontainer <?php echo $pagecss; ?>">
@@ -58,5 +58,5 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower(end($lang)); 
 			<jdoc:include type="modules" name="debug" style="none" />
 			<?php include_once JPATH_THEMES.'/'.$this->template.'/layout/script.php'; ?>
 		</body>
-		<?php endif ?>
+		<?php //endif ?>
 </html>

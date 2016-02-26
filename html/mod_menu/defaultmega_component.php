@@ -50,7 +50,7 @@ switch ($item->browserNav)
 	case 0:
 ?><a <?php echo $class; ?> href="<?php echo $item->flink; ?>" <?php echo $title; ?>><?php echo $linktype; ?>
 <?php if (!empty($item->note)) : ?>
-<div>
+<div class="megadesc">
 <p>
 	<?php echo $item->note; ?>
 </p>

@@ -15,7 +15,7 @@ JHtml::_('bootstrap.tooltip');
 
 
 
-<div class="navbar navbar-default " id="menu-lnk">
+<div class="defaultverti navbar navbar-default " id="menu-lnk">
   <div class="row-fluid ">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">

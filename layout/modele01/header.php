@@ -26,7 +26,7 @@
 			$nbmod =  $this->countModules('position-1');
 			if ($nbmod): ?>
 			<div class="linefullheader">
-			<div class="container<?php if ($paramtmpl_tmplfluidmod == 1) {echo "-fluid";}; ?> <?php	if ($paramtmpl_tmpltitmodforce == 1) {echo "tmpmodhn";} ?>">
+			<div class="<?php if ($paramtmpl_tmplfluidmod == 1) {echo "-fluid";}; ?> <?php	if ($paramtmpl_tmpltitmodforce == 1) {echo "tmpmodhn";} ?>">
 					<div class="row">
 						<div class="pos-1">
 							<jdoc:include type="modules" name="position-1" style="CrbXhtml" tmpltitmodforce="<?php echo $paramtmpl_tmpltitmodforce; ?>"  nbmod="<?php echo $nbmod; ?>" debug="<?php echo $paramtmpl_debug; ?>" />
@@ -36,7 +36,7 @@
 			</div>
 			<?php endif; ?>
 			<!-- fin position 1 -->
-			<div class="container<?php if ($paramtmpl_tmplfluidmod == 1) {echo "-fluid";}; ?> <?php	if ($paramtmpl_tmpltitmodforce == 1) {echo "tmpmodhn";} ?>"> <!-- Fin de ce div dans /modele01/index.php -->
+			<div class="<?php if ($paramtmpl_tmplfluidmod == 1) {echo "-fluid";}; ?> <?php	if ($paramtmpl_tmpltitmodforce == 1) {echo "tmpmodhn";} ?>"> <!-- Fin de ce div dans /modele01/index.php -->
 			<!-- position 2 -->
 			<?php
 			$nbmod =  $this->countModules('position-2');
