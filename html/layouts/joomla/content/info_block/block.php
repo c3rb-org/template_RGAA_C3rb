@@ -12,6 +12,7 @@ defined('JPATH_BASE') or die;
 $blockPosition = $displayData['params']->get('info_block_position', 0);
 
 ?>
+<div class="col-sm-12">
 	<dl class="article-info muted clearfix">
 
 		<?php if ($displayData['position'] == 'above' && ($blockPosition == 0 || $blockPosition == 2)
@@ -59,3 +60,4 @@ $blockPosition = $displayData['params']->get('info_block_position', 0);
 		<?php endif; ?>
 	</dl>
 	<div class="clearfix"></div>
+</div>
