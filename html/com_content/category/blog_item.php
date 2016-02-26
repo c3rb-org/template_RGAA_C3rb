@@ -21,7 +21,6 @@ $info    = $params->get('info_block_position', 0);
 <?php endif; ?>
 
 <header>
-
 <?php echo JLayoutHelper::render('joomla.content.blog_style_default_item_title', $this->item); ?>
 
 <?php if ($canEdit || $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
@@ -40,41 +39,46 @@ $info    = $params->get('info_block_position', 0);
 </div>
 </address>
 </header>
+<div class="row">
+	<?php echo JLayoutHelper::render('joomla.content.intro_image', $this->item); ?>
+	<?php
+	$imagesurl = json_decode($this->item->images);
+	?>
+	<?php if (empty($imagesurl->image_intro)) : ?>
+		<div class="col-sm-12" >
+	<?php else : ?>
+		<div class="col-sm-9" >
+	<?php endif; ?>
+	<?php if (!$params->get('show_intro')) : ?>
+		<?php echo $this->item->event->afterDisplayTitle; ?>
+	<?php endif; ?>
+	<?php echo $this->item->event->beforeDisplayContent; ?>
+	<?php echo $this->item->introtext; ?>
+	<?php if ($params->get('show_readmore') && $this->item->readmore) :
+		if ($params->get('access-view')) :
+			$link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language));
+		else :
+			$menu = JFactory::getApplication()->getMenu();
+			$active = $menu->getActive();
+			$itemId = $active->id;
+			$link = new JUri(JRoute::_('index.php?option=com_users&view=login&Itemid=' . $itemId, false));
+			$link->setVar('return', base64_encode(JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language), false)));
+		endif; ?>
 
-<!-- intro image dans layout -->
+		<?php echo JLayoutHelper::render('joomla.content.readmore', array('item' => $this->item, 'params' => $params, 'link' => $link)); ?>
 
-
-<?php if (!$params->get('show_intro')) : ?>
-	<?php echo $this->item->event->afterDisplayTitle; ?>
-<?php endif; ?>
-<?php echo $this->item->event->beforeDisplayContent; ?> <?php echo $this->item->introtext; ?>
-
-<?php if ($useDefList && ($info == 1 ||  $info == 2)) : ?>
-	<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
-	<?php if ($params->get('show_tags', 1) && !empty($this->item->tags->itemTags)) : ?>
-		<?php echo JLayoutHelper::render('joomla.content.tags', $this->item->tags->itemTags); ?>
-					<?php endif; ?>
-<?php endif; ?>
-
-<?php if ($params->get('show_readmore') && $this->item->readmore) :
-	if ($params->get('access-view')) :
-		$link = JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language));
-	else :
-		$menu = JFactory::getApplication()->getMenu();
-		$active = $menu->getActive();
-		$itemId = $active->id;
-		$link = new JUri(JRoute::_('index.php?option=com_users&view=login&Itemid=' . $itemId, false));
-		$link->setVar('return', base64_encode(JRoute::_(ContentHelperRoute::getArticleRoute($this->item->slug, $this->item->catid, $this->item->language), false)));
-	endif; ?>
-
-	<?php echo JLayoutHelper::render('joomla.content.readmore', array('item' => $this->item, 'params' => $params, 'link' => $link)); ?>
-
-<?php endif; ?>
-
-<?php if ($this->item->state == 0 || strtotime($this->item->publish_up) > strtotime(JFactory::getDate())
-	|| ((strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != '0000-00-00 00:00:00' )) : ?>
+	<?php endif; ?>
+	<?php if ($this->item->state == 0 || strtotime($this->item->publish_up) > strtotime(JFactory::getDate())
+		|| ((strtotime($this->item->publish_down) < strtotime(JFactory::getDate())) && $this->item->publish_down != '0000-00-00 00:00:00' )) : ?>
+	</div>
+	<?php endif; ?>
+	<?php echo $this->item->event->afterDisplayContent; ?>
+	</div>
+	<?php if ($useDefList && ($info == 1 ||  $info == 2)) : ?>
+		<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
+		<?php if ($params->get('show_tags', 1) && !empty($this->item->tags->itemTags)) : ?>
+			<?php echo JLayoutHelper::render('joomla.content.tags', $this->item->tags->itemTags); ?>
+						<?php endif; ?>
+	<?php endif; ?>
 </div>
-<?php endif; ?>
-
-<?php echo $this->item->event->afterDisplayContent; ?>
 

@@ -49,10 +49,9 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 		<div class="clearfix"> </div>
 	<?php endif; ?>
 	<?php if ($params->get('show_title') || $params->get('show_author')) : ?>
+<div class="posinh">
 <article role="main">
 	<header>
-
-
 	<?php if ($params->get('show_title')) : ?>
 		<div class="page-header">
 			<?php if ($this->params->get('show_page_heading', 1)) : ?>
@@ -96,12 +95,6 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 		<?php endif; ?>
 	<?php endif; ?>
 	<?php endif; ?>
-
-
-
-
-
-
 	<?php if (!$this->print) : ?>
 		<?php if ($canEdit || $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
 			<?php echo JLayoutHelper::render('joomla.content.icons', array('params' => $params, 'item' => $this->item, 'print' => false)); ?>
@@ -150,17 +143,19 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 		echo $this->item->toc;
 	endif; ?>
 </header>
-	<div itemprop="articleBody">
-		<?php echo $this->item->text; ?>
+<div class="row">
+	<div class="col-sm-12">
+		<div itemprop="articleBody">
+			<?php echo $this->item->text; ?>
+		</div>
 	</div>
-
 	<?php if ($useDefList && ($info == 1 || $info == 2)) : ?>
 		<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
 			<?php if ($params->get('show_tags', 1) && !empty($this->item->tags->itemTags)) : ?>
 				<?php $this->item->tagLayout = new JLayoutFile('joomla.content.tags'); ?>
 				<?php echo $this->item->tagLayout->render($this->item->tags->itemTags); ?>
 			<?php endif; ?>
-		</div>
+		
 	<?php endif; ?>
 	<?php
 if (!empty($this->item->pagination) && $this->item->pagination && $this->item->paginationposition && !$this->item->paginationrelative):
@@ -204,11 +199,15 @@ if (!empty($this->item->pagination) && $this->item->pagination && $this->item->p
 	</p>
 	<?php endif; ?>
 	<?php endif; ?>
+
 	<?php
 if (!empty($this->item->pagination) && $this->item->pagination && $this->item->paginationposition && $this->item->paginationrelative) :
 	echo $this->item->pagination; //pagination entres articles a améliorer car pas assé explicite en therme d'accessibilité.
 ?>
 	<?php endif; ?>
 	<?php echo $this->item->event->afterDisplayContent; ?>
+
+</div>
 </article>
+</div>
 </div>

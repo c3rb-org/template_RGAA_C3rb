@@ -34,45 +34,112 @@
 /* display */
 .displaynone {display: none;}
 
-/* Variable add et gestion admin
+/* Select */
+select.form-control {
+  background: none!important ;
+  border: none!important ;
+}
+/* Bouton */
+.btn-info {
+    background-color: @btn-default-bg;
+    border-color: @btn-default-border;
+    color: @btn-default-color;
+}
+.btn-default {
+    border-radius: @btnrad-default-border;
+}
+.btn-info:active:hover, .btn-info.active:hover, .open > .dropdown-toggle.btn-info:hover, .btn-info:active:focus, .btn-info.active:focus, .open > .dropdown-toggle.btn-info:focus, .btn-info.focus:active, .btn-info.active.focus, .open > .dropdown-toggle.btn-info.focus,
+.btn-info:active, .btn-info.active, .open > .dropdown-toggle.btn-info, .btn-default:hover {
+    background-color: @btnhov-default-bg;
+    border-color: @btnhov-default-border;
+    color: @btnhov-default-color;
+}
+
+
+//Variable add et gestion admin
 body {
-    content: "@{img-bg-gen-yn}";
-    background-image: url("../../../../../images/modele_de_template/@{body-bg-img}") ;
+    //content: "@{img-bg-gen-yn}";
+    background-image: url("../../../../../images/template_rgaa/@{body-bg-img}") ;
     background-repeat:   @img-bg-gen-repeat;
     background-position: @img-bg-gen-position;
+    background-color: @body-bg;
 }
-*/
+.container-fluid.tmpmodhn.firstcontainer {margin-top: 15px}
 .tmpl-header {
     background: transparent;
     margin-bottom: 10px;
 }
-
+img {max-width: 100%}
 /* Titre */
 h2 {
-    color: @colorh2;
+    color: @h2-color;
+    a {
+        color: @h2a-color;
+        &:hover {
+            color:@h2ahov-color;
+        }
+    }
 }
 h3 {
-    color: @colorh3;
+    color: @h3-color;
+    a {
+        color: @h3a-color;
+        &:hover {
+            color:@h3ahov-color;
+        }
+    }
 }
 h4 {
-    color: @colorh4;
+    color: @h4-color;
+    a {
+        color: @h4a-color;
+        &:hover {
+            color:@h4ahov-color;
+        }
+    }
 }
 h5 {
-    color: @colorh5;
+    color: @h5-color;
+    a {
+        color: @h5a-color;
+        &:hover {
+            color:@h5ahov-color;
+        }
+    }
+}
+h6 {
+    color: @h6-color;
+    a {
+        color: @h6a-color;
+        &:hover {
+            color:@h6ahov-color;
+        }
+    }
 }
 
 /* Module */
 .moduletable  {
-    background: @bgmodule;
+    background-image: url("../../../../../images/template_rgaa/@{body-bg-modimg}") ;
+    background-repeat:   @img-bg-mod-repeat;
+    background-position: @img-bg-mod-position;
+    border-radius: @modfullrad;
+    background-color: fade(@bgmodulefull, @bgmodalphafull);
     color: @moduletxtcolor;
     border:  @moduleborder solid @modulebordercolor;
+    border-radius: @modfullrad;
     margin-bottom: 15px;
     padding:  0px;
     h2 {
-        background-color: @bgtitremodule;
+        background-image: url("../../../../../images/template_rgaa/@{body-bg-modtitimg}") ;
+        background-repeat:   @img-bg-modtit-repeat;
+        background-position: @img-bg-modtit-position;
+        background-color: fade(@bgtitremodule, @bgtitremodalpha);
         color: @colortitremodule;
-        padding: 5px 10px;
+        padding: @modtitpadding;
+        border-radius: @modtitrad;
         a {
+            color: @moduletxtlnkcolor;
+            &:focus, &:hover {color: @moduletxtlnkhovcolor}
             &.togglelink {
                 display: block;
                 position: relative;
@@ -93,19 +160,25 @@ h5 {
         }
     }
     .modcontent {
-        padding: 10px;
+        padding: @modctpadding;
+        border-radius: @modctrad;
+        background-color: fade(@bgmodule, @bgmodalpha);
     }
 }
 
 /* General */
 .container {
-    background: @bgcontainer;
+    background-image: url("../../../../../images/template_rgaa/@{body-bg-ctimg}") ;
+    background-repeat:   @img-bg-ct-repeat;
+    background-position: @img-bg-ct-position;
+    background-color: fade(@bgcontainer, @bgcontaineralpha);
     margin-top: @mtopcontainer;
     padding-top: 10px;
     margin-bottom:10px;
     border: @containborder solid @containbordercolor;
-
+    border-radius: @containborderrad;
 }
+
 .readmore .btn {
     padding-left: 0;
 }
@@ -194,6 +267,142 @@ span.icon-calendar:before {
     box-shadow: none!important;
     color: #444!important;
 }
+
+/* Param menu style mega */
+
+
+.defaultmega {
+    .megadesc {
+        white-space: normal;
+        color: @meganavbar-default-txtclr;
+    }
+    .dropdown-menu {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    }
+    .nav > li {
+        position: inherit;
+    }
+    // Default navbar
+    &.navbar-default {
+      .navbar-nav {
+        > li > a {
+          color: @meganavbar-default-link-color;
+        }
+      }
+    }
+    &.navbar-default {
+        background-color: @meganavbar-default-bg;
+        border-color: @meganavbar-default-border;
+    }
+    .navbar-nav {
+        > li > a {
+          color: @meganavbar-default-link-color;
+
+          &:hover,
+          &:focus {
+            color: @meganavbar-default-link-hover-color;
+            background-color: @meganavbar-default-link-hover-bg;
+          }
+        }
+        > .active > a {
+            &,
+            &:hover,
+            &:focus {
+                color: @meganavbar-default-link-active-color;
+                background-color: @meganavbar-default-link-active-bg;
+            }
+        }
+    }
+    .dropdown-menu {
+        background-color: @megadropdown-bg;
+        border: 1px solid @megadropdown-border;
+     // Links within the dropdown menu
+        > li > a {
+        color: @megadropdown-link-color;
+        }
+    }
+    .dropdown-menu > li > a {
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: @megadropdown-link-hover-color;
+        background-color: @megadropdown-link-hover-bg;
+      }
+    }
+    .dropdown-menu > .active > a {
+    &,
+    &:hover,
+    &:focus {
+        color: @megadropdown-link-active-color;
+        text-decoration: none;
+        outline: 0;
+        background-color: @megadropdown-link-active-bg;
+        }
+    }
+}
+
+.defaultverti {
+    // Default navbar
+    &.navbar-default {
+      .navbar-nav {
+        > li > a {
+          color: @vertinavbar-default-link-color;
+        }
+      }
+    }
+    &.navbar-default {
+        background-color: @vertinavbar-default-bg;
+        border-color: @vertinavbar-default-border;
+    }
+    .nav {
+        > li > a {
+          color: @vertinavbar-default-link-color;
+
+          &:hover,
+          &:focus {
+            color: @vertinavbar-default-link-hover-color;
+            background-color: @vertinavbar-default-link-hover-bg;
+          }
+        }
+        > .active > a {
+            &,
+            &:hover,
+            &:focus {
+                color: @vertinavbar-default-link-active-color;
+                background-color: @vertinavbar-default-link-active-bg;
+            }
+        }
+    }
+    .dropdown-menu {
+        background-color: @vertidropdown-bg;
+        border: 1px solid @vertidropdown-border;
+     // Links within the dropdown menu
+        > li > a {
+        color: @vertidropdown-link-color;
+        }
+    }
+    .dropdown-menu > li > a {
+      &:hover,
+      &:focus {
+        text-decoration: none;
+        color: @vertidropdown-link-hover-color;
+        background-color: @vertidropdown-link-hover-bg;
+      }
+    }
+    .dropdown-menu > .active > a {
+    &,
+    &:hover,
+    &:focus {
+        color: @vertidropdown-link-active-color;
+        text-decoration: none;
+        outline: 0;
+        background-color: @vertidropdown-link-active-bg;
+        }
+    }
+}
+
 /* Menu (ajout a bootstrap pour menu a plusieurs niveaux dans joomla) */
 .moduletable .navbar {
     margin-bottom: 0px
@@ -317,11 +526,16 @@ a.noa11y {
 /* Joomla theme */
 body.tmpl-component {background: #FFFFFF}
 .colctre {
-    background: @main-bg;
-    padding: 1px 15px 15px 15px;
+    background-image: url("../../../../../images/template_rgaa/@{body-bg-colctreimg}") ;
+    background-repeat:   @img-bg-colctre-repeat;
+    background-position: @img-bg-colctre-position;
+    background-color: fade(@bgcolctre, @bgcolctrealpha);
+    padding: @colctrepadding;
     border: @colctreborder solid @colctreclrborder;
+    border-radius: @colctreradborder;
     margin-bottom: 15px;
 }
+.page-header {margin: @headcolctremarge}
 .checkbox .controls label.radio {margin-top: 5px}
 /* Affichage Article blog */
 .blog .items-row {margin-bottom:  25px}
@@ -333,6 +547,7 @@ body.tmpl-component {background: #FFFFFF}
 /* Intro article image */
 .item-image {
     transition: all 0.4s ease 0s;
+    overflow: hidden;
     &:hover img {
         transform: scale(1.2) translate3d(0px, 0px, 0px);
         transition: all 0.4s ease 0s;
@@ -354,14 +569,14 @@ body.tmpl-component {background: #FFFFFF}
         top: 50%;
         font-weight: bold;
     }
-    .item-image-bloc {
-        border-bottom: 5px solid @link-color;
-        height: 175px;
-        margin-bottom: 10px;
-        overflow: hidden;
-        width: 100%;
-        position: relative;
-    }
+}
+.item-image-bloc {
+    border-bottom: 5px solid @link-color;
+    //height: 160px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
 }
 
 /* Suffixe de module */
@@ -372,6 +587,7 @@ body.tmpl-component {background: #FFFFFF}
         border:0px
     }
 }
+
 /* Menu noburger */
 .noburger ul {margin: 0px}
 /* Menu vertical  */
@@ -379,14 +595,14 @@ body.tmpl-component {background: #FFFFFF}
     padding: 0px;
     li {}
     li.active a::before {
-        content: "\e250";
-        font-family: "Glyphicons Halflings";
-        height: 100%;
-        left: -6px;
-        overflow: hidden;
-        position: absolute;
-        top: 9px;
-        width: 10px;
+        //content: "\e250";
+        //font-family: "Glyphicons Halflings";
+        //height: 100%;
+        //left: -6px;
+        //overflow: hidden;
+        //position: absolute;
+        //top: 9px;
+        //width: 10px;
     }
     .dropdown-menu {
         position: relative;
@@ -413,7 +629,7 @@ dl.article-info dd:last-child:after {content: ""}
 ul.tags.inline {
     display: inline-block;
     list-style: outside none none;
-    margin: 0;
+    margin: 0 0 0 9px;
     padding: 0;
 }
 ul.tags.inline li {
@@ -441,17 +657,77 @@ ul.tags.inline li {
 }
 
 
-/* Partage et outils */
+/* placement Partage et outils general 
 .btn.btn-default.hasTooltip.opac-share {
     position: absolute;
     right: 20px;
-    top: 40px;
+    top: 20px;
 }
 .icons {
     position: absolute;
     right: 57px;
-    top: 40px;
+    top: 20px;
 }
+*/
+/* placement Partage et outils avec image d'intro 
+.hasimgart , .hasnoimgart {
+    .btn.btn-default.hasTooltip.opac-share {
+    position: absolute;
+    right: 20px;
+      top: 23px;
+    }
+}
+.hasnoimgart {
+    .btn.btn-default.hasTooltip.opac-share {
+    position: absolute;
+    right: 20px;
+      top: 23px;
+    }
+}
+.hasnoimgart {
+    .icons{
+    position: absolute;
+    right: 57px;
+    top: 23px;
+    }
+}
+.hasimgart {
+    .icons{
+    position: absolute;
+    right: 58px;
+    top: 23px;
+    }
+}
+*/
+.blog {
+    .opac-share {
+        position: absolute;
+        top: 18px;
+        right: 48px;
+    }
+    .icons {
+        position: absolute;
+        top: 18px;
+        right: 9px;
+    }
+}
+.item-page {
+    .opac-share {
+        position: absolute;
+        top: 0px;
+        right: 39px;
+    }
+    .icons {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+}
+.posinh {position: relative;}
+.posinh  {
+    .col-sm-9, .col-sm-12 {position: inherit;}
+}
+
 /* Tag */
 ul.tags.inline {
     margin-bottom: 20px;
@@ -490,6 +766,9 @@ ul.tags.inline {
 
 }
 /* Editor front end */
+.lien-sans-icone a[target="_blank"]::after {
+    content: "";
+}
 .edit.item-page {
     .btn-toolbar.pull-left.margetop.margebottom {
         float: none!important;

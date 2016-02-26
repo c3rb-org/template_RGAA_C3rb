@@ -13,8 +13,6 @@ JHtml::addIncludePath(JPATH_THEMES . '/' . JFactory::getApplication()->getTempla
 $canEdit = $displayData['params']->get('access-edit');
 
 ?>
-
-<div class="clearfix"></div>
 <div class="icons">
 	<?php if (empty($displayData['print'])) : ?>
 		<?php if ($canEdit || $displayData['params']->get('show_print_icon') || $displayData['params']->get('show_email_icon')) : ?>

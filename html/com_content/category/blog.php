@@ -65,10 +65,19 @@ JHtml::_('behavior.caption');
 
 	<?php $leadingcount = 0; ?>
 	<?php if (!empty($this->lead_items)) : ?>
-		<div class="items-leading row">
-			<div class="col-sm-12">
-				<?php foreach ($this->lead_items as &$item) : ?>
-					<div class="leading-<?php echo $leadingcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>"
+		<div class="items-leading row ">
+			<div class="col-sm-12 posinh">
+				<?php
+				foreach ($this->lead_items as &$item) :
+					$imgintro = json_decode($item->images, true);
+					if (!empty($imgintro['image_intro'])) {
+						$classimgart="hasimgart";
+					}
+					else {
+						$classimgart="hasnoimgart";
+					}
+				?>
+					<div class="leading-<?php echo $leadingcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?> <?php echo $classimgart; ?>"
 						itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 					<article role="main">
 						<?php
@@ -89,14 +98,23 @@ JHtml::_('behavior.caption');
 	?>
 
 	<?php if (!empty($this->intro_items)) : ?>
-		<?php foreach ($this->intro_items as $key => &$item) : ?>
+		<?php foreach ($this->intro_items as $key => &$item) :
+		$imgintro = json_decode($item->images, true);
+					if (!empty($imgintro['image_intro'])) {
+						$classimgart="hasimgart";
+					}
+					else {
+						$classimgart="hasnoimgart";
+					}
+		?>
+
 				<?php $rowcount = ((int) $key % (int) $this->columns) + 1; ?>
 				<?php if ($rowcount == 1) : ?>
 					<?php $row = $counter / $this->columns; ?>
 					<div class="items-row cols-<?php echo (int) $this->columns; ?> <?php echo 'row-' . $row; ?> row ">
 				<?php endif; ?>
-				<div class="col-sm-<?php echo round((12 / $this->columns)); ?>">
-					<div class="item column-<?php echo $rowcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?>"
+				<div class="col-sm-<?php echo round((12 / $this->columns)); ?> <?php echo $classimgart; ?> posinh">
+					<div class="item column-<?php echo $rowcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?> <?php echo $classimgart; ?>"
 						itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
 			<article role="article">
 						<?php

@@ -28,6 +28,7 @@ $paramtmpl_tmplevitlnkct 		= $params->get('tmplevitlnkct');
 $paramtmpl_tmplevitlnksearch	= $params->get('tmplevitlnksearch');
 $paramtmpl_tmplevitlnkmenu 		= $params->get('tmplevitlnkmenu');
 
+
 // Avance
 $paramtmpl_debug				= $params->get('tmplmodhelp');
 $paramtmpl_html					= $params->get('tmplhtmlhelp');
