@@ -2,3 +2,8 @@ Sources/Cmder.exe - Raccourci.lnk
 Local/_doc/
 Sources/node_modules/
 .semver
+
+
+/node_modules
+/bower_components
+/**/_*
