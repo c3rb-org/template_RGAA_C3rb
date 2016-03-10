@@ -181,12 +181,12 @@
                 <fieldset name="pro" label="TPL_C3RB_RGAA_PRO_FIELDSET_LABEL">
                     <field type="note" label="TPL_C3RB_RGAA_BOOTSTRAP_CUSTOM"></field>
                     <field name="tmplchoice" type="list" default="" label="TPL_C3RB_RGAA_TMPLCHXOPT_LABEL" description="TPL_C3RB_RGAA_TMPLCHXOPT_DESC">
-                        <option value="2">Paramètres des éléments généraux</option>
-                        <option value="0">Paramètres du cadre général (body)</option>
-                        <option value="1">Paramètres des cadres secondaires (container et col. centre)</option>
-                        <option value="3">Paramètres des modules</option>
-                        <option value="4">Paramètres des menus</option>
-                        <option value="5">Paramètres des suffixes de classe</option>
+                        <option value="2">Eléments généraux</option>
+                        <option value="0">Cadre général (body)</option>
+                        <option value="1">Cadres secondaires (container et col. centre)</option>
+                        <option value="3">Modules</option>
+                        <option value="4">Menus</option>
+                        <option value="5">Suffixes de classe</option>
                     </field>
 
                     <!-- Container / body -->
