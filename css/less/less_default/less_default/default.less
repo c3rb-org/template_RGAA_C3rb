@@ -635,6 +635,56 @@ ul.tags.inline {
 ul.tags.inline li {
     display: inline-block;
 }
+/* Page break article en onglet */
+dl.tabs {
+    .nav;
+    .nav-tabs;
+    dt {
+        &.tabs {
+            float: left;
+            margin-bottom: -1px;
+
+            &.closed {}
+        &.open {} 
+        &.open span h3 a {background: #FFFFFF}
+        }
+        span {            
+            display: block;
+            position: relative;
+            h3 {
+                a {
+            cursor: pointer;
+                    -moz-border-bottom-colors: none;
+                    -moz-border-left-colors: none;
+                    -moz-border-right-colors: none;
+                    -moz-border-top-colors: none;
+                    background-color: #F0F0F0;
+                    border-color: #ddd #ddd transparent;
+                    border-image: none;
+                    border-style: solid;
+                    border-width: 1px;
+                    color: #555;
+                    display: block;
+                    padding: 10px 15px;
+                    position: relative;
+                    border-radius: 4px 4px 0 0;
+                    line-height: 1.42857;
+                    margin-right: 2px;
+                    font-size: 17px;
+                    margin-bottom: -9px;
+                }
+            }
+        }
+    }
+    dd {}
+}
+div.current {
+    dd.tabs {
+        p {}
+        div {}
+    }
+}
+
 
 /* Liens evitements */
 .sr-only-focusable, .sr-only-focusable {
