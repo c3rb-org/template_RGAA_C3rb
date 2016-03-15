@@ -186,7 +186,22 @@ body.tmpl-component .container {background:#ffffff}
 /* images */
 p img {max-width: 100%} // pour les image administré, generalement dans un p insere par JCE
 img.fullimg {width: 100%}
+/* Image 'Styling Broken Images' http://bitsofco.de/styling-broken-images/ */
+img:after {  
+  content: "\f1c5" " Image manquante : " attr(alt);
+  font-size: 16px;
+  font-family: FontAwesome;
+  color: rgb(100, 100, 100);
 
+  display: block;
+  //position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+}
 /* form */
 input.invalid {border-color: red}
 
