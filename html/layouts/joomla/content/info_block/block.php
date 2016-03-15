@@ -12,6 +12,7 @@ defined('JPATH_BASE') or die;
 $blockPosition = $displayData['params']->get('info_block_position', 0);
 
 ?>
+
 <div class="col-sm-12">
 	<dl class="article-info muted clearfix">
 

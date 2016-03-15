@@ -10,6 +10,7 @@
 defined('JPATH_BASE') or die;
 
 ?>
+
 <dd class="createdby" itemprop="author" itemscope itemtype="http://schema.org/Person">
 	<?php $author = ($displayData['item']->created_by_alias ? $displayData['item']->created_by_alias : $displayData['item']->author); ?>
 	<?php $author = ':&nbsp;<span itemprop="name">' . $author . '</span>'; ?>

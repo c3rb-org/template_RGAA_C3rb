@@ -13,6 +13,8 @@
     <description><![CDATA[
         <style>
             .admin.com_templates h4 {background: #3071a9; padding:5px; margin: 0px; font-size: 17px ;color: #FFFFFF}
+            .alert h4 {color: #8a6d3b} 
+            .alert.alert-success H4 {color: #3c763d}
             .form-horizontal .control-label {width: 200px;}
             .admin span.spacer label {font-weight: bold!important; font-size: 14px;}
             .alert h4 {background: transparent!important; padding: 0!important}
@@ -194,7 +196,10 @@
                     <field showon="tmplchoice:0" type="spacer" label="TPL_C3RB_RGAA_IMAGCLR" ></field>
                     <field showon="tmplchoice:0" name="lessvar_body-bg" type="color" default="#FFFFFF" label="TPL_C3RB_RGAA_COLORBODY" description="TPL_C3RB_RGAA_COLORBODY_DESC"      />
                     <field showon="tmplchoice:0" type="spacer" label="TPL_C3RB_RGAA_IMAGCFG" ></field>
-                    <field showon="tmplchoice:0" name="lessvar_body-bg-img" type="imagelist" default="0" label="TPL_C3RB_RGAA_BGURL_LABEL" description="TPL_C3RB_RGAA_BGURL_DESC" directory="/images/template_rgaa/"  />
+                    
+                    <field showon="tmplchoice:0" name="lessvar_body-bg-img" type="imagelist" default="-1" label="TPL_C3RB_RGAA_BGURL_LABEL" description="TPL_C3RB_RGAA_BGURL_DESC" directory="/images/template_rgaa/" hide_none="true" hide_default="true"  >
+                        <option value="pasdimage.png"> - A FAIRE - </option>
+                    </field>
 
                     <field showon="tmplchoice:0" width="250px" name="lessvar_img-bg-gen-repeat" type="list" description="TPL_C3RB_RGAA_CHECK_BGREPEAT_DESC" label="TPL_C3RB_RGAA_CHECK_BGREPEAT_LABEL" default="0">
                         <option value="no-repeat">Pas de répétition</option>
@@ -300,11 +305,11 @@
                     <!-- Boutons  -->
                     <field showon="tmplchoice:2" type="spacer" label="TPL_C3RB_RGAA_CUSTOM_BUTTON"></field>
                     <field showon="tmplchoice:2" name="lessvar_btn-default-color"       type="color"    default="#333333"           label="TPL_C3RB_RGAA_BUTTONCLR"       description="TPL_C3RB_RGAA_BUTTONCLR_DESC"  />
-                    <field showon="tmplchoice:2" name="lessvar_btn-default-bg"          type="color"    default="#ffffff"           label="TPL_C3RB_RGAA_BUTTONBG"        description="TPL_C3RB_RGAA_BUTTONBG_DESC"   />
-                    <field showon="tmplchoice:2" name="lessvar_btn-default-border"      type="color"    default="#cccccc"           label="TPL_C3RB_RGAA_BUTTONBORD"      description="TPL_C3RB_RGAA_BUTTONBORD_DESC" />
-                    <field showon="tmplchoice:2" name="lessvar_btnhov-default-color"    type="color"    default="#333333"           label="TPL_C3RB_RGAA_HOVBUTTONCLR"    description="TPL_C3RB_RGAA_HOVBUTTONCLR_DESC"  />
-                    <field showon="tmplchoice:2" name="lessvar_btnhov-default-bg"       type="color"    default="#ffffff"           label="TPL_C3RB_RGAA_HOVBUTTONBG"     description="TPL_C3RB_RGAA_HOVBUTTONBG_DESC"   />
-                    <field showon="tmplchoice:2" name="lessvar_btnhov-default-border"   type="color"    default="#cccccc"           label="TPL_C3RB_RGAA_HOVBUTTONBORD"   description="TPL_C3RB_RGAA_HOVBUTTONBORD_DESC" />
+                    <field showon="tmplchoice:2" name="lessvar_btn-default-bg"          type="color"    default="#f0f0f0"           label="TPL_C3RB_RGAA_BUTTONBG"        description="TPL_C3RB_RGAA_BUTTONBG_DESC"   />
+                    <field showon="tmplchoice:2" name="lessvar_btn-default-border"      type="color"    default="#c0c0c0"           label="TPL_C3RB_RGAA_BUTTONBORD"      description="TPL_C3RB_RGAA_BUTTONBORD_DESC" />
+                    <field showon="tmplchoice:2" name="lessvar_btnhov-default-color"    type="color"    default="#222222"           label="TPL_C3RB_RGAA_HOVBUTTONCLR"    description="TPL_C3RB_RGAA_HOVBUTTONCLR_DESC"  />
+                    <field showon="tmplchoice:2" name="lessvar_btnhov-default-bg"       type="color"    default="#f9f9f9"           label="TPL_C3RB_RGAA_HOVBUTTONBG"     description="TPL_C3RB_RGAA_HOVBUTTONBG_DESC"   />
+                    <field showon="tmplchoice:2" name="lessvar_btnhov-default-border"   type="color"    default="#c0c0c0"           label="TPL_C3RB_RGAA_HOVBUTTONBORD"   description="TPL_C3RB_RGAA_HOVBUTTONBORD_DESC" />
                     <field showon="tmplchoice:2" name="lessvar_btnrad-default-border"   type="text"     default="0px 0px 0px 0px"   label="TPL_C3RB_RGAA_RADBLOCBORD"   description="TPL_C3RB_RGAA_RADBLOCBORD_DESC" />
 
                     <!-- Titre -->
