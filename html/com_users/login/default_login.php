@@ -40,9 +40,10 @@ JHtml::_('behavior.keepalive');
 	</div>
 	<?php endif; ?>
 
-	<form action="<?php echo JRoute::_('index.php?option=com_users&task=user.login'); ?>" method="post" class="form-validate form-horizontal well">
+	<form action="<?php echo JRoute::_('index.php?option=com_users&task=user.login'); ?>" method="post" class="form-validate form-horizontal">
 
 		<fieldset>
+		<legend class="sr-only">Champs de connexion</legend>
 			<?php foreach ($this->form->getFieldset('credentials') as $field) : ?>
 				<?php if (!$field->hidden) : ?>
 					<div class="control-group">
@@ -68,15 +69,17 @@ JHtml::_('behavior.keepalive');
 			<?php endif; ?>
 
 			<?php if (JPluginHelper::isEnabled('system', 'remember')) : ?>
-			<div  class="control-group">
-				<div class="control-label"><label><?php echo JText::_('COM_USERS_LOGIN_REMEMBER_ME') ?></label></div>
-				<div class="controls"><input id="remember" type="checkbox" name="remember" class="inputbox" value="yes"/></div>
+			<div  class="checkbox margebottom margetop">
+				<label>
+				<input id="remember" type="checkbox" name="remember" class="inputbox" value="yes"/>
+				<?php echo JText::_('COM_USERS_LOGIN_REMEMBER_ME') ?>
+				</label>
 			</div>
 			<?php endif; ?>
 
 			<div class="control-group">
 				<div class="controls">
-					<button type="submit" class="btn btn-primary">
+					<button type="submit" class="btn btn-default margetop">
 						<?php echo JText::_('JLOGIN'); ?>
 					</button>
 				</div>
@@ -88,7 +91,7 @@ JHtml::_('behavior.keepalive');
 	</form>
 </div>
 <div>
-	<ul class="nav nav-tabs nav-stacked">
+	<ul class="list-unstyled margetop">
 		<li>
 			<a href="<?php echo JRoute::_('index.php?option=com_users&view=reset'); ?>">
 			<?php echo JText::_('COM_USERS_LOGIN_RESET'); ?></a>

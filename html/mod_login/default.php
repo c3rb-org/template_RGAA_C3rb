@@ -83,17 +83,17 @@ JHtml::_('bootstrap.tooltip');
 			<input id="modlgn-remember" type="checkbox" name="remember" class="" value="yes" aria-labelledby="modlgn-remember-label"/>
 			<?php echo JText::_('MOD_LOGIN_REMEMBER_ME') ?>
 			</label>
-			
-			</div> 
+
+			</div>
 		</div>
 		<?php endif; ?>
 		<div class="clearfix"></div>
 		<div id="form-login-submit" class="form-group">
-				<button role="button" type="submit" tabindex="0" name="Submit" class="btn" aria-label="<?php echo JText::_('LABELENVOIFORMULAIRE') ?>"><?php echo JText::_('JLOGIN') ?></button>
+				<button role="button" type="submit" tabindex="0" name="Submit" class="btn btn-default" aria-label="<?php echo JText::_('LABELENVOIFORMULAIRE') ?>"><?php echo JText::_('JLOGIN') ?></button>
 		</div>
 		<?php
 			$usersConfig = JComponentHelper::getParams('com_users'); ?>
-			<ul class="unstyled"> 
+			<ul class="unstyled">
 			<?php if ($usersConfig->get('allowUserRegistration')) : ?>
 				<li>
 					<a href="<?php echo JRoute::_('index.php?option=com_users&view=registration&Itemid=' . UsersHelperRoute::getRegistrationRoute()); ?>">
