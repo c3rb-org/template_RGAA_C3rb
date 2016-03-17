@@ -167,6 +167,8 @@ h6 {
         background-color: fade(@bgmodule, @bgmodalpha);
     }
 }
+/* News feed */
+ul.newsfeed li {margin-top: 25px} 
 
 /* General */
 .container {
@@ -180,11 +182,15 @@ h6 {
     border: @containborder solid @containbordercolor;
     border-radius: @containborderrad;
 }
-
+iframe {
+    width: 100%;
+    min-height: 300px;
+}
 .readmore .btn {
     padding-left: 0;
 }
 body.tmpl-component .container {background:#ffffff}
+.label-default {background: #686868}
 /* images */
 p img {max-width: 100%} // pour les image administré, generalement dans un p insere par JCE
 img.fullimg {width: 100%}
@@ -284,10 +290,15 @@ span.icon-calendar:before {
     box-shadow: none!important;
     color: #444!important;
 }
+/* Com login joomla */
+.form-horizontal .control-label {
+    text-align: left;
+}
+.controls input {
+    .form-control;
+}
 
 /* Param menu style mega */
-
-
 .defaultmega {
     .megadesc {
         white-space: normal;
