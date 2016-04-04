@@ -59,13 +59,24 @@ select.form-control {
 
 
 //Variable add et gestion admin
+
+
+
+body {
+    & when (@body-bg-img = -1) {
+    background-image: none ;
+    }
+    & when not (@body-bg-img = -1) {
+    background-image: url("../../../../../images/template_rgaa/@{body-bg-img}") ;
+    }
+}
 body {
     //content: "@{img-bg-gen-yn}";
-    background-image: url("../../../../../images/template_rgaa/@{body-bg-img}") ;
     background-repeat:   @img-bg-gen-repeat;
     background-position: @img-bg-gen-position;
     background-color: @body-bg;
 }
+
 .container-fluid.tmpmodhn.firstcontainer {margin-top: 15px}
 .tmpl-header {
     background: transparent;
@@ -120,8 +131,15 @@ h6 {
 }
 
 /* Module */
+.moduletable {
+    & when (@body-bg-modimg = -1) {
+        background-image: none ;
+    }
+    & when not (@body-bg-modimg = -1) {
+        background-image: url("../../../../../images/template_rgaa/@{body-bg-modimg}") ;
+    }
+}
 .moduletable  {
-    background-image: url("../../../../../images/template_rgaa/@{body-bg-modimg}") ;
     background-repeat:   @img-bg-mod-repeat;
     background-position: @img-bg-mod-position;
     border-radius: @modfullrad;
@@ -132,7 +150,14 @@ h6 {
     margin-bottom: 15px;
     padding:  0px;
     h2 {
-        background-image: url("../../../../../images/template_rgaa/@{body-bg-modtitimg}") ;
+        & when (@body-bg-modtitimg = -1) {
+            background-image: none ;
+        }
+        & when not (@body-bg-modtitimg = -1) {
+            background-image: url("../../../../../images/template_rgaa/@{body-bg-modtitimg}") ;
+        }
+    }
+    h2 {
         background-repeat:   @img-bg-modtit-repeat;
         background-position: @img-bg-modtit-position;
         background-color: fade(@bgtitremodule, @bgtitremodalpha);
@@ -171,8 +196,16 @@ h6 {
 ul.newsfeed li {margin-top: 25px} 
 
 /* General */
+
 .container {
-    background-image: url("../../../../../images/template_rgaa/@{body-bg-ctimg}") ;
+    & when (@body-bg-ctimg = -1) {
+    background-image: none ;
+    }
+    & when not (@body-bg-ctimg = -1) {
+    background-image: url("../../../../../images/template_rgaa/@{body-bg-img}") ;
+    }
+}
+.container {
     background-repeat:   @img-bg-ct-repeat;
     background-position: @img-bg-ct-position;
     background-color: fade(@bgcontainer, @bgcontaineralpha);
@@ -554,7 +587,14 @@ a.noa11y {
 /* Joomla theme */
 body.tmpl-component {background: #FFFFFF}
 .colctre {
+    & when (@body-bg-colctreimg = -1) {
+    background-image: none ;
+    }
+    & when not (@body-bg-colctreimg = -1) {
     background-image: url("../../../../../images/template_rgaa/@{body-bg-colctreimg}") ;
+    }
+}
+.colctre {
     background-repeat:   @img-bg-colctre-repeat;
     background-position: @img-bg-colctre-position;
     background-color: fade(@bgcolctre, @bgcolctrealpha);
