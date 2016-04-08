@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  mod_menu
- * °version J! : 3.4.3 - MIR
+ * Â°version J! : 3.4.3 - MIR
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -25,7 +25,7 @@ if (!empty($item->anchor_title)) {
 	}
 } else {
 	if (!empty($is_active)) {
-	$title = 'title="'.$item->title.' - Page active"';
+	$title = 'aria-label="'.$item->title.' - Page active"';
 	} else {
 	$title = '';
 	}
@@ -36,7 +36,7 @@ if ($item->menu_image)
 	{
 		$item->params->get('menu_text', 1) ?
 		$linktype = '<img class="margeright" alt="" aria-hidden="true" src="' . $item->menu_image . '"  /><span class="image-title">' . $item->title . '</span> ' :
-		$linktype = '<img alt="" aria-hidden="true" src="' . $item->menu_image . '" /><span class="sr-only">' . $item->title . '</span> '; //Pas de 'alt' car image décorative
+		$linktype = '<img alt="" aria-hidden="true" src="' . $item->menu_image . '" /><span class="sr-only">' . $item->title . '</span> '; //Pas de 'alt' car image dÃ©corative
 }
 else
 {

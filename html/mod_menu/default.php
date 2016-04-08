@@ -14,7 +14,7 @@ JHtml::_('bootstrap.tooltip');
 <?php // The menu class is deprecated. Use nav instead. ?>
 <div class="navbar navbar-default " id="menu-lnk<?php echo $module->id; ?>">
   <div class="row-fluid ">
-    <!-- Brand and toggle get grouped for better mobile display -->
+    
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse<?php echo $module->id; ?>">
         <span class="sr-only"><?php echo JText::_('TPL_C3RB_RGAA_MOD_MENU_OUVRIR'); ?></span>
@@ -26,6 +26,7 @@ JHtml::_('bootstrap.tooltip');
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse menuhoryzontal" id="collapse<?php echo $module->id; ?>">
+	<nav aria-label="<?php echo $module->title; ?>">
 	<ul class="nav navbar-nav menu<?php echo $class_sfx;?>"<?php
 		$tag = '';
 
@@ -34,7 +35,7 @@ JHtml::_('bootstrap.tooltip');
 			$tag = $params->get('tag_id') . '';  
 			echo ' id="' . $tag . '"';
 		}
-		?> role="menubar">
+		?>>
 		<?php
 		foreach ($list as $i => &$item)
 		{
@@ -125,7 +126,9 @@ JHtml::_('bootstrap.tooltip');
 			echo '</li>';
 		}
 	}
-	?></ul>
+	?>
+	</ul>
+	</nav>
 		</div>
 	</div>
 	<div class="clearfix"></div>

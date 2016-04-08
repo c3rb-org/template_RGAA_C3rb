@@ -100,7 +100,6 @@ function getDebugInfos($moduleType, $params, $attribs)
 		<?php endif ?>
 
 		<?php if (($moduletype == 'mod_menu') || ($moduletype == 'mod_breadcrumbs')): ?>
-		<nav role="navigation" aria-labelledby="label<?php echo $module->id; ?>">
 		<?php endif; ?>
 
 	<?php else : ?>
@@ -176,7 +175,6 @@ function getDebugInfos($moduleType, $params, $attribs)
 		<?php endif ?>
 
 		<?php if (($moduletype == 'mod_menu') || ($moduletype == 'mod_breadcrumbs')): ?>
-		</nav>
 		<?php endif; ?>
 
 	<?php else : ?>
@@ -221,7 +219,6 @@ function modChrome_div($module, &$params, &$attribs)
 		<?php endif ?>
 
 		<?php if (($moduletype == 'mod_menu') || ($moduletype == 'mod_breadcrumbs')): ?>
-		<nav role="navigation" aria-labelledby="label<?php echo $module->id; ?>">
 		<?php endif; ?>
 
 	<?php else : ?>
@@ -264,7 +261,6 @@ function modChrome_div($module, &$params, &$attribs)
 		<?php endif ?>
 
 		<?php if (($moduletype == 'mod_menu') || ($moduletype == 'mod_breadcrumbs')): ?>
-		</nav>
 		<?php endif; ?>
 
 	<?php else : ?>
@@ -312,7 +308,6 @@ function modChrome_retractable($module, &$params, &$attribs)
 		<?php endif ?>
 
 		<?php if (($moduletype == 'mod_menu') || ($moduletype == 'mod_breadcrumbs')): ?>
-		<nav role="navigation" aria-labelledby="label<?php echo $module->id; ?>">
 		<?php endif; ?>
 
 	<?php else : ?>
@@ -393,7 +388,6 @@ function modChrome_retractable($module, &$params, &$attribs)
 		<?php endif ?>
 
 		<?php if (($moduletype == 'mod_menu') || ($moduletype == 'mod_breadcrumbs')): ?>
-		</nav>
 		<?php endif; ?>
 
 	<?php else : ?>
@@ -442,7 +436,6 @@ function modChrome_retractableferme($module, &$params, &$attribs)
 		<?php endif ?>
 
 		<?php if (($moduletype == 'mod_menu') || ($moduletype == 'mod_breadcrumbs')): ?>
-		<nav role="navigation" aria-labelledby="label<?php echo $module->id; ?>">
 		<?php endif; ?>
 
 	<?php else : ?>
@@ -523,7 +516,6 @@ function modChrome_retractableferme($module, &$params, &$attribs)
 		<?php endif ?>
 
 		<?php if (($moduletype == 'mod_menu') || ($moduletype == 'mod_breadcrumbs')): ?>
-		</nav>
 		<?php endif; ?>
 
 	<?php else : ?>
