@@ -93,7 +93,7 @@ JHtml::_('bootstrap.tooltip');
 			$class = ' class="' . trim($class) . '"';
 		}
 
-		echo '<li' . $class . ' role="menuitem">';
+		echo '<li' . $class . '>';
 
 		// Render the menu item.
 		switch ($item->type) :
