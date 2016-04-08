@@ -140,8 +140,6 @@
             <position>position-20</position>
             <position>debug</position>
         </positions>
-
-
         <config>
             <fields name="params">
                 <!-- ///////////////////// ONGLET PARAMETRE ////////////////////////// -->
@@ -190,17 +188,12 @@
                         <option value="4">Menus</option>
                         <option value="5">Suffixes de classe</option>
                     </field>
-
                     <!-- Container / body -->
                     <field showon="tmplchoice:0" type="note" label="TPL_C3RB_RGAA_CUSTOM_GENERAL"></field>
                     <field showon="tmplchoice:0" type="spacer" label="TPL_C3RB_RGAA_IMAGCLR" ></field>
                     <field showon="tmplchoice:0" name="lessvar_body-bg" type="color" default="#FFFFFF" label="TPL_C3RB_RGAA_COLORBODY" description="TPL_C3RB_RGAA_COLORBODY_DESC"      />
                     <field showon="tmplchoice:0" type="spacer" label="TPL_C3RB_RGAA_IMAGCFG" ></field>
-                    
-                    <field showon="tmplchoice:0" name="lessvar_body-bg-img" type="imagelist" default="-1" label="TPL_C3RB_RGAA_BGURL_LABEL" description="TPL_C3RB_RGAA_BGURL_DESC" directory="/images/template_rgaa/" hide_none="true" hide_default="true"  >
-                        <option value="pasdimage.png"> - A FAIRE - </option>
-                    </field>
-
+                    <field showon="tmplchoice:0" name="lessvar_body-bg-img" type="imagelist" default="-1" label="TPL_C3RB_RGAA_BGURL_LABEL" description="TPL_C3RB_RGAA_BGURL_DESC" directory="/images/template_rgaa/" hide_default="true"  />
                     <field showon="tmplchoice:0" width="250px" name="lessvar_img-bg-gen-repeat" type="list" description="TPL_C3RB_RGAA_CHECK_BGREPEAT_DESC" label="TPL_C3RB_RGAA_CHECK_BGREPEAT_LABEL" default="0">
                         <option value="no-repeat">Pas de répétition</option>
                         <option value="repeat-x">Répétition axe X</option>
@@ -218,7 +211,6 @@
                         <option value="center left">Au milieu a gauche</option>
                         <option value="center right">Au milieu a droite</option>
                     </field>
-
                     <!-- Container site -->
                     <field showon="tmplchoice:1" type="note" label="TPL_C3RB_RGAA_CUSTOM_SEC"></field>
                     <field showon="tmplchoice:1" type="spacer"  label="TPL_C3RB_RGAA_CONTENTBG" class="sscat"></field>
@@ -226,7 +218,7 @@
                     <field showon="tmplchoice:1" name="lessvar_bgcontainer"             type="color"         default="#CCCCCC"  label="TPL_C3RB_RGAA_BGCONTENTBOX_LABEL"          description="TPL_C3RB_RGAA_BGCONTENTBOX_DESC"         />
                     <field showon="tmplchoice:1" name="lessvar_bgcontaineralpha"        type="text"          default="100%"        label="TPL_C3RB_RGAA_BGCONTENTBOXALPHA_LABEL"     description="TPL_C3RB_RGAA_BGCONTENTBOXALPHA_DESC" class="input-mini"    />
                     <field showon="tmplchoice:1" type="spacer" label="TPL_C3RB_RGAA_IMAGCFG" ></field>
-                    <field showon="tmplchoice:1" name="lessvar_body-bg-ctimg" type="imagelist" default="0" label="TPL_C3RB_RGAA_BGURL_LABEL" description="TPL_C3RB_RGAA_BGURL_DESC" directory="/images/template_rgaa/"  />
+                    <field showon="tmplchoice:1" name="lessvar_body-bg-ctimg" type="imagelist" default="-1"  hide_default="true"  label="TPL_C3RB_RGAA_BGURL_LABEL" description="TPL_C3RB_RGAA_BGURL_DESC" directory="/images/template_rgaa/"  />
                     <field showon="tmplchoice:1" width="250px" name="lessvar_img-bg-ct-repeat" type="list" description="TPL_C3RB_RGAA_CHECK_BGREPEAT_DESC" label="TPL_C3RB_RGAA_CHECK_BGREPEAT_LABEL" default="0">
                         <option value="no-repeat">Pas de répétition</option>
                         <option value="repeat-x">Répétition axe X</option>
@@ -248,7 +240,6 @@
                     <field showon="tmplchoice:1" name="lessvar_containborder"           type="text"     default="1px"               label="TPL_C3RB_RGAA_BORDERMOD"              description="TPL_C3RB_RGAA_BORDERMOD_DESC" class="input-mini"  />
                     <field showon="tmplchoice:1" name="lessvar_containbordercolor"      type="color"    default="#555555"           label="TPL_C3RB_RGAA_COLORBORDERMOD"         description="TPL_C3RB_RGAA_COLORBORDERMOD_DESC"                />
                     <field showon="tmplchoice:1" name="lessvar_containborderrad"        type="text"     default="0px 0px 0px 0px"   label="TPL_C3RB_RGAA_RADBLOCBORD"            description="TPL_C3RB_RGAA_RADBLOCBORD_DESC"                />
-
                     <!-- Col centre -->
                     <field showon="tmplchoice:1" type="spacer"  label="" ></field>
                     <field showon="tmplchoice:1" type="spacer"  label="TPL_C3RB_RGAA_CTRE" class="sscat"></field>
@@ -256,7 +247,7 @@
                     <field showon="tmplchoice:1" name="lessvar_bgcolctre"             type="color"         default="#CCCCCC"     label="TPL_C3RB_RGAA_BGCONTENTBOX_LABEL"          description="TPL_C3RB_RGAA_BGCONTENTBOX_DESC"         />
                     <field showon="tmplchoice:1" name="lessvar_bgcolctrealpha"        type="text"          default="100%"        label="TPL_C3RB_RGAA_BGCONTENTBOXALPHA_LABEL"     description="TPL_C3RB_RGAA_BGCONTENTBOXALPHA_DESC" class="input-mini"    />
                     <field showon="tmplchoice:1" type="spacer" label="TPL_C3RB_RGAA_IMAGCFG" ></field>
-                    <field showon="tmplchoice:1" name="lessvar_body-bg-colctreimg" type="imagelist" default="0" label="TPL_C3RB_RGAA_BGURL_LABEL" description="TPL_C3RB_RGAA_BGURL_DESC" directory="/images/template_rgaa/"  />
+                    <field showon="tmplchoice:1" name="lessvar_body-bg-colctreimg" type="imagelist"  hide_default="true"  default="-1" label="TPL_C3RB_RGAA_BGURL_LABEL" description="TPL_C3RB_RGAA_BGURL_DESC" directory="/images/template_rgaa/"  />
                     <field showon="tmplchoice:1" width="250px" name="lessvar_img-bg-colctre-repeat" type="list" description="TPL_C3RB_RGAA_CHECK_BGREPEAT_DESC" label="TPL_C3RB_RGAA_CHECK_BGREPEAT_LABEL" default="0">
                         <option value="no-repeat">Pas de répétition</option>
                         <option value="repeat-x">Répétition axe X</option>
@@ -350,7 +341,7 @@
                     <field showon="tmplchoice:3" name="lessvar_bgtitremodule"                     type="color"    default="#FFFFFF"   label="TPL_C3RB_RGAA_COLORBGTITMOD"          description="TPL_C3RB_RGAA_COLORBODY_DESC"                               />
                     <field showon="tmplchoice:3" name="lessvar_bgtitremodalpha"        type="text"          default="100%"        label="TPL_C3RB_RGAA_BGCONTENTBOXALPHA_LABEL"     description="TPL_C3RB_RGAA_BGCONTENTBOXALPHA_DESC" class="input-mini"    />
                     <field showon="tmplchoice:3" type="spacer" label="TPL_C3RB_RGAA_IMAGCFG" ></field>
-                    <field showon="tmplchoice:3" name="lessvar_body-bg-modtitimg" type="imagelist" default="0" label="TPL_C3RB_RGAA_BGURL_LABEL" description="TPL_C3RB_RGAA_BGURL_DESC" directory="/images/template_rgaa/"  />
+                    <field showon="tmplchoice:3" name="lessvar_body-bg-modtitimg" type="imagelist"  hide_default="true"  default="-1" label="TPL_C3RB_RGAA_BGURL_LABEL" description="TPL_C3RB_RGAA_BGURL_DESC" directory="/images/template_rgaa/"  />
                     <field showon="tmplchoice:3" width="250px" name="lessvar_img-bg-modtit-repeat" type="list" description="TPL_C3RB_RGAA_CHECK_BGREPEAT_DESC" label="TPL_C3RB_RGAA_CHECK_BGREPEAT_LABEL" default="0">
                         <option value="no-repeat">Pas de répétition</option>
                         <option value="repeat-x">Répétition axe X</option>
@@ -379,7 +370,7 @@
                     <field showon="tmplchoice:3" name="lessvar_bgmodule"          type="color"    default="#FFFFFF"   label="TPL_C3RB_RGAA_COLORBGMOD"                  description="TPL_C3RB_RGAA_COLORBGMOD_DESC"                        />
                     <field showon="tmplchoice:3" name="lessvar_bgmodalpha"        type="text"     default="100%"      label="TPL_C3RB_RGAA_BGCONTENTBOXALPHA_LABEL"     description="TPL_C3RB_RGAA_BGCONTENTBOXALPHA_DESC" class="input-mini"    />
                     <field showon="tmplchoice:3" type="spacer" label="TPL_C3RB_RGAA_IMAGCFG" ></field>
-                    <field showon="tmplchoice:3" name="lessvar_body-bg-modimg" type="imagelist" default="0" label="TPL_C3RB_RGAA_BGURL_LABEL" description="TPL_C3RB_RGAA_BGURL_DESC" directory="/images/template_rgaa/"  />
+                    <field showon="tmplchoice:3" name="lessvar_body-bg-modimg" type="imagelist" default="-1"  hide_default="true"  label="TPL_C3RB_RGAA_BGURL_LABEL" description="TPL_C3RB_RGAA_BGURL_DESC" directory="/images/template_rgaa/"  />
                     <field showon="tmplchoice:3" width="250px" name="lessvar_img-bg-mod-repeat" type="list" description="TPL_C3RB_RGAA_CHECK_BGREPEAT_DESC" label="TPL_C3RB_RGAA_CHECK_BGREPEAT_LABEL" default="0">
                         <option value="no-repeat">Pas de répétition</option>
                         <option value="repeat-x">Répétition axe X</option>

@@ -17,6 +17,9 @@ Pour son bon fonctionnement, ce template nécessite l'installation du plugin : [
 Ce plugin permet la génération et le bon fonctionnement de Bootstrap3
 Il permet aussi d'activer un générateur LESS/CSS
 
+###Demo
+Voir la demo en ligne avec les donées d'exemple joomla en anglais : [A11Y template_RGAA_C3rb](http://192.168.2.107/joomlaA11Y/joomlaA11y_example_en/)
+
 ### License
 
 MIT, Voir [LICENSE](https://github.com/c3rb-org/template_RGAA_C3rb/blob/master/license)
