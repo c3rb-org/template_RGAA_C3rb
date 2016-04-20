@@ -41,7 +41,7 @@ lang="<?php $lang = explode('-', $this->language); echo strtolower($lang[0]); ?>
 		<?php //if ($params->get('tmplchoice') == 0): ?>
 		<body <?php if (!empty($pagecss)): ?>class="<?php echo $pagecss; ?>"<?php endif ; ?>>
 			<jdoc:include type="message" />
-			<div class="container<?php if ($paramtmpl_tmplfluidmod == 1) {echo "-fluid";}; ?> <?php	if ($paramtmpl_tmpltitmodforce == 1) {echo "tmpmodhn";} ?> firstcontainer <?php echo $pagecss; ?>">
+			<div class="container<?php if ($paramtmpl_tmplfluidmod == 1) {echo "-fluid";}; ?> <?php	if ($paramtmpl_tmpltitmodforce == 1) {echo "tmpmodhn";} ?> <?php if ($paramtmpl_tmpltheme != '0' ) {echo $params->get('tmpltheme');} ?> firstcontainer <?php echo $pagecss; ?>">
 				<?php
 				//Header du template
 				include_once JPATH_THEMES.'/'.$this->template.'/layout/header.php';

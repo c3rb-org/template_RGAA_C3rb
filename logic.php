@@ -27,6 +27,7 @@ $paramtmpl_tmplevitlnk 			= $params->get('tmplevitlnk');
 $paramtmpl_tmplevitlnkct 		= $params->get('tmplevitlnkct');
 $paramtmpl_tmplevitlnksearch	= $params->get('tmplevitlnksearch');
 $paramtmpl_tmplevitlnkmenu 		= $params->get('tmplevitlnkmenu');
+$paramtmpl_tmpltheme	 		= $params->get('tmpltheme');
 
 
 // Avance
