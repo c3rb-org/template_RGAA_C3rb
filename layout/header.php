@@ -1,13 +1,30 @@
 <?php defined( '_JEXEC' ) or die; ?>
 <?php 
 $paramtmpl_tmplevitlnkct = "#content-lnk";
+
 if ($paramtmpl_tmplevitlnk == 1) : ?>
-	<!-- lien evitement -->
-	<a class="sr-only sr-only-focusable evit-lnk" href="<?php echo $paramtmpl_tmplevitlnkct; ?>"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_CONTENT') ?></a>
-	<a class="sr-only sr-only-focusable evit-lnk" href="#Mod<?php echo $paramtmpl_tmplevitlnksearch; ?>"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_RECH') ?></a>
-	<a class="sr-only sr-only-focusable evit-lnk" href="#Mod<?php echo $paramtmpl_tmplevitlnkmenu; ?>"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_MENU') ?></a>
-	<!-- Fin lien evitement -->
+<!-- lien evitement -->
+	<nav role="navigation" aria-label="Lien d'évitement">
+	<ul class="list	list-unstyled nopadding nomarge">
+	<?php if (!empty($paramtmpl_tmplevitlnkct)): ?>
+	<li>
+		<a id="evitlnk_ct" class="sr-only sr-only-focusable evit-lnk" href="<?php echo $paramtmpl_tmplevitlnkct; ?>"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_CONTENT') ?></a>
+	</li>
+	<?php endif ?>
+	<?php if (!empty($paramtmpl_tmplevitlnksearch) ): ?>
+	<li>
+		<a id="evitlnk_search" class="sr-only sr-only-focusable evit-lnk" href="#Mod<?php echo $paramtmpl_tmplevitlnksearch; ?>"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_RECH') ?></a>
+	</li>
+	<?php endif ?>
+	<?php if (!empty($paramtmpl_tmplevitlnkmenu) ): ?>
+	<li>
+		<a id="evitlnk_menu" class="sr-only sr-only-focusable evit-lnk" href="#Mod<?php echo $paramtmpl_tmplevitlnkmenu; ?>"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_MENU') ?></a>
+	</li>
+	<?php endif ?>
+	</ul>
+	</nav>
 <?php endif; ?>
+<!-- Fin lien evitement -->
 <div class="row">
 	<div class="tmpl-header">
 		<header aria-label="<?php echo $titlesite; ?>" role="banner">

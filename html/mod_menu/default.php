@@ -26,7 +26,7 @@ JHtml::_('bootstrap.tooltip');
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse menuhoryzontal" id="collapse<?php echo $module->id; ?>">
-	<nav aria-label="<?php echo $module->title; ?>">
+	<nav aria-label="<?php echo $module->title; ?>" role="navigation">
 	<ul class="nav navbar-nav menu<?php echo $class_sfx;?>"<?php
 		$tag = '';
 
