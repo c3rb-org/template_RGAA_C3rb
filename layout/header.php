@@ -4,8 +4,13 @@ $paramtmpl_tmplevitlnkct = "#content-lnk";
 
 if ($paramtmpl_tmplevitlnk == 1) : ?>
 <!-- lien evitement -->
-	<nav role="navigation" aria-label="Lien d'évitement">
+	<nav role="navigation" aria-label="Accès direct">
 	<ul class="list	list-unstyled nopadding nomarge">
+	<?php if (!empty($paramtmpl_tmplevitlnkmenu) ): ?>
+	<li>
+		<a id="evitlnk_menu" class="sr-only sr-only-focusable evit-lnk" href="#Mod<?php echo $paramtmpl_tmplevitlnkmenu; ?>"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_MENU') ?></a>
+	</li>
+	<?php endif ?>
 	<?php if (!empty($paramtmpl_tmplevitlnkct)): ?>
 	<li>
 		<a id="evitlnk_ct" class="sr-only sr-only-focusable evit-lnk" href="<?php echo $paramtmpl_tmplevitlnkct; ?>"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_CONTENT') ?></a>
@@ -16,18 +21,25 @@ if ($paramtmpl_tmplevitlnk == 1) : ?>
 		<a id="evitlnk_search" class="sr-only sr-only-focusable evit-lnk" href="#Mod<?php echo $paramtmpl_tmplevitlnksearch; ?>"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_RECH') ?></a>
 	</li>
 	<?php endif ?>
-	<?php if (!empty($paramtmpl_tmplevitlnkmenu) ): ?>
+	
+	<?php if (!empty($paramtmpl_tmplevitlnklogin) ): ?>
 	<li>
-		<a id="evitlnk_menu" class="sr-only sr-only-focusable evit-lnk" href="#Mod<?php echo $paramtmpl_tmplevitlnkmenu; ?>"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_MENU') ?></a>
+	<?php if ($user->id) : ?>
+		<a id="evitlnk_login" class="sr-only sr-only-focusable evit-lnk" href="#Mod<?php echo $paramtmpl_tmplevitlnklogin; ?>"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_LOGININ') ?></a>
+	<?php else : ?>
+		<a id="evitlnk_login" class="sr-only sr-only-focusable evit-lnk" href="#Mod<?php echo $paramtmpl_tmplevitlnklogin; ?>"><?php echo JText::_('TPL_C3RB_RGAA_EVITEMENT_LOGIN') ?></a>
+	<?php endif ?>	
+
 	</li>
-	<?php endif ?>
+	<?php endif ?>	
+
 	</ul>
 	</nav>
 <?php endif; ?>
 <!-- Fin lien evitement -->
 <div class="row">
 	<div class="tmpl-header">
-		<header aria-label="<?php echo $titlesite; ?>" role="banner">
+		<header role="banner">
 			<?php if ($paramtmpl_tmpltitleaff == 1) : ?><!-- Param template affichage du titre -->
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<?php else : ?>

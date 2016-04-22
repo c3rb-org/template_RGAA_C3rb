@@ -23,7 +23,7 @@ jQuery(function ($) {
 
     // multi level menu nav bootstrap (Ajout MIR car non natif BS3)
     $("#target").click(function () {
-	alert("Handler for .click() called.");
+  alert("Handler for .click() called.");
     });
 
     //effet
@@ -34,56 +34,78 @@ jQuery(function ($) {
 
     //Génère le role alerte declenche le lecteur d'ecran
     $("#addrole").attr("role", "alert");
+    
+    // fonction target focus
+      var $evitlinkct     = $( "#evitlnk_ct" );
+  var $evitlnksearch  = $("#evitlnk_search");
+  var $evitlnkmenu    = $("#evitlnk_menu"); 
+
+  $evitlinkct.focusin(function() {
+    $("#content-lnk").addClass('target');
+  }).focusout(function() {
+    $("#content-lnk").removeClass('target');
+  });
+   $evitlnkmenu.focusin(function() {
+    $($( "#evitlnk_menu" ).attr('href')).addClass('target');
+  }).focusout(function() {
+    $($( "#evitlnk_menu" ).attr('href')).removeClass('target');
+  });
+   $evitlnksearch.focusin(function() {
+    $($( "#evitlnk_search" ).attr('href')).addClass('target');
+  }).focusout(function() {
+    $($( "#evitlnk_search" ).attr('href')).removeClass('target');
+  });  
 
 });
 
 function load_modal_iframe(selector)
 {
-	(function ($) {
-		$(selector).each(function () {
-			$(document).on('show.bs.modal', selector, function (event) {
-			    var url = $(this).attr('data-iframe');
-			    var modalBody = $(this).find('.modal-body');
-			    var button = $(event.relatedTarget);
-			    if (button.data('iframe'))
-				url = button.data('iframe');
-			    modalBody.find('iframe').remove();
-			    modalBody.prepend('<iframe style="border:none" src="' + url + '" width="' + $(this).attr('data-iframe-width') + '" height="' + $(this).attr('data-iframe-height') + '"></iframe>');
-			}).on('hide.bs.modal', function () {
-			    var modalBody = $(this).find('.modal-body');
-			    modalBody.find('iframe').remove();
-			});
-	    });
-	})(jQuery);
-	/*(function ($) {
-		$(selector).each(function () {
-			$(this).on('show.bs.modal', function (event) {
-			    var url = $(this).attr('data-iframe');
-			    var modalBody = $(this).find('.modal-body');
-			    var button = $(event.relatedTarget);
-			    if (button.data('iframe'))
-				url = button.data('iframe');
-			    modalBody.find('iframe').remove();
-			    modalBody.prepend('<iframe style="border:none" src="' + url + '" width="' + $(this).attr('data-iframe-width') + '" height="' + $(this).attr('data-iframe-height') + '"></iframe>');
-			}).on('hide.bs.modal', function () {
-			    var modalBody = $(this).find('.modal-body');
-			    modalBody.find('iframe').remove();
-			});
-	    });
-	})(jQuery);*/
+  (function ($) {
+    $(selector).each(function () {
+      $(document).on('show.bs.modal', selector, function (event) {
+          var url = $(this).attr('data-iframe');
+          var modalBody = $(this).find('.modal-body');
+          var button = $(event.relatedTarget);
+          if (button.data('iframe'))
+        url = button.data('iframe');
+          modalBody.find('iframe').remove();
+          modalBody.prepend('<iframe style="border:none" src="' + url + '" width="' + $(this).attr('data-iframe-width') + '" height="' + $(this).attr('data-iframe-height') + '"></iframe>');
+      }).on('hide.bs.modal', function () {
+          var modalBody = $(this).find('.modal-body');
+          modalBody.find('iframe').remove();
+      });
+      });
+  })(jQuery);
+  /*(function ($) {
+    $(selector).each(function () {
+      $(this).on('show.bs.modal', function (event) {
+          var url = $(this).attr('data-iframe');
+          var modalBody = $(this).find('.modal-body');
+          var button = $(event.relatedTarget);
+          if (button.data('iframe'))
+        url = button.data('iframe');
+          modalBody.find('iframe').remove();
+          modalBody.prepend('<iframe style="border:none" src="' + url + '" width="' + $(this).attr('data-iframe-width') + '" height="' + $(this).attr('data-iframe-height') + '"></iframe>');
+      }).on('hide.bs.modal', function () {
+          var modalBody = $(this).find('.modal-body');
+          modalBody.find('iframe').remove();
+      });
+      });
+  })(jQuery);*/
 }
 
 if (window.MooTools)
 {
     Element.implement({
-	hide: function () {
-	    return this;
-	},
-	show: function () {
-	    return this;
-	},
-	slide: function () {
-	    return this;
-	}
+  hide: function () {
+      return this;
+  },
+  show: function () {
+      return this;
+  },
+  slide: function () {
+      return this;
+  }
     });
 }
+

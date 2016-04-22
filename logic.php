@@ -27,6 +27,8 @@ $paramtmpl_tmplevitlnk 			= $params->get('tmplevitlnk');
 $paramtmpl_tmplevitlnkct 		= $params->get('tmplevitlnkct');
 $paramtmpl_tmplevitlnksearch	= $params->get('tmplevitlnksearch');
 $paramtmpl_tmplevitlnkmenu 		= $params->get('tmplevitlnkmenu');
+$paramtmpl_tmplevitlnklogin		= $params->get('tmplevitlnklogin');
+$paramtmpl_tmplevitlnktarget	= $params->get('tmplevitlnktarget');
 $paramtmpl_tmpltheme	 		= $params->get('tmpltheme');
 
 
@@ -50,9 +52,14 @@ if(array_key_exists($this->baseurl . '/media/jui/js/bootstrap.js', $doc->_script
 // Bootstrap
 $doc->setMetaData( 'viewport', 'width=device-width, initial-scale=1' );
 //$doc->setMetaData( 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' ); // Dans ce cas on n'autorise pas le zoom sur mobile
-
 // Force la derniere version de IE
 //$doc->setMetadata('x-ua-compatible','IE=edge,chrome=1'); Commente car pas valide w3c, sauf manipulation IIS remplacer par ligne90
+
+//Ajout du script target si actif dans l'admin
+if ($paramtmpl_tmplevitlnktarget == 1 ) {
+	$doc->addScript(''. $tmplpath .'/js/target.min.js');
+};	
+
 
 //Ajout des css : css template toujours en premier
 $tab_sheets = $doc->_styleSheets;

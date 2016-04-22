@@ -165,6 +165,12 @@
                     </field>
                     <field name="tmplevitlnksearch"   type="text"   default=""   label="TPL_C3RB_RGAA_EVITLNK_SEARCH_LABEL"    description="TPL_C3RB_RGAA_EVITLNK_SEARCH_DESC"   />
                     <field name="tmplevitlnkmenu"     type="text"   default=""   label="TPL_C3RB_RGAA_EVITLNK_MENU_LABEL"      description="TPL_C3RB_RGAA_EVITLNK_MENU_DESC"     />
+                    <field name="tmplevitlnklogin"    type="text"   default=""   label="TPL_C3RB_RGAA_EVITLNK_LOGIN_LABEL"      description="TPL_C3RB_RGAA_EVITLNK_LOGIN_DESC"     />
+                    <field name="tmplevitlnktarget" type="radio" description="TPL_C3RB_RGAA_EVITLINKTARGET_YN_DESC" label="TPL_C3RB_RGAA_EVITLINKTARGET_YN_LABEL" default="0" class="btn-group btn-group-yesno">
+                        <option value="0">JNO</option>
+                        <option value="1">JYES</option>
+                    </field>
+
                     <!-- Aide tmpl -->
                     <field type="spacer" label="TPL_C3RB_RGAA_TIT_AIDE"></field>
                     <field name="tmplmodhelp" type="radio" description="TPL_C3RB_RGAA_CHECK_TMPLMODHELP_DESC" label="TPL_C3RB_RGAA_CHECK_TMPLMODHELP_LABEL" default="0" class="btn-group btn-group-yesno">
