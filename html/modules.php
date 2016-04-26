@@ -41,18 +41,25 @@ function getDebugInfos($moduleType, $params, $attribs)
 		return '';
 	
 	$modposname = array_key_exists('name', $attribs) ? $attribs['name'] : 'Non spécifié';	
-	$nbmod 	= array_key_exists('nbmod', $attribs) ? $attribs['nbmod'] : 'Non spécifié';	
-	$modstyle = array_key_exists('style', $attribs) ? $attribs['style'] : 'Non spécifié';	
-	
-	$modbssize = $params->get('bootstrap_size');
-	
-	$infos 	=					
+	$nbmod 		= array_key_exists('nbmod', $attribs) ? $attribs['nbmod'] : 'Non spécifié';	
+	$modstyle 	= array_key_exists('style', $attribs) ? $attribs['style'] : 'Non spécifié';	
+	$modbssize 	= $params->get('bootstrap_size');
+	$suffixe 	= $params->get('moduleclass_sfx');
+	if (empty($suffixe)) {
+		$suffixecalc = "<span class='label label-danger'>aucun</span>";
+	} else {
+		$suffixecalcvar = $params->get('moduleclass_sfx');
+		$suffixecalc = "<span class='label label-info'>$suffixecalcvar</span>";
+	}
+
+	$infos 		=					
 	"
-		Nom de la positiondu module : <span class='label label-info'>$modposname</span><br />
-		Nbre de module dans la position : <span class='label label-info'>$nbmod</span><br />
-		Taille bootstrap dans l'admin : <span class='label label-info'>$modbssize</span><br />
-		Style du module : <span class='label label-info'>$modstyle</span><br />
-		Nom du module : <span class='label label-info'>$moduleType</span><br />
+		Nom de la positiondu module : <span class='label label-info'>$modposname</span><br style='margin-bottom:10px' />
+		Nbre de module dans la position : <span class='label label-info'>$nbmod</span><br style='margin-bottom:10px' />
+		Taille bootstrap dans l'admin : <span class='label label-info'>$modbssize</span><br style='margin-bottom:10px' />
+		Suffixe de classe : $suffixecalc <br style='margin-bottom:10px' />
+		Style du module : <span class='label label-info'>$modstyle</span><br style='margin-bottom:10px' />
+		Nom du module : <span class='label label-info'>$moduleType</span><br style='margin-bottom:10px' />
 	";
 	
 	$html = array();
