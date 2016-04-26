@@ -8,7 +8,6 @@
  */
 
 defined('JPATH_BASE') or die;
-
 ?>
 			<dd class="create">
 					<time datetime="<?php echo JHtml::_('date', $displayData['item']->created, 'c'); ?>" itemprop="dateCreated">

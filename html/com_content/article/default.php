@@ -105,8 +105,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 				<?php echo JHtml::_('icon.print_screen', $this->item, $params); ?>
 			</div>
 		<?php endif; ?>
-	<?php endif; ?>
-
+	<?php endif; ?> 
 	<?php if ($useDefList && ($info == 0 || $info == 2)) : ?>
 		<div class="row">
 			
