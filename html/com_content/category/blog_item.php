@@ -30,14 +30,21 @@ $info    = $params->get('info_block_position', 0);
 <?php // Todo Not that elegant would be nice to group the params ?>
 <?php $useDefList = ($params->get('show_modify_date') || $params->get('show_publish_date') || $params->get('show_create_date')
 	|| $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author') ); ?>
-<address class="sr-only"> <!-- Demande de EB pas de detail en affichage blog -->
-<div class="sr-only"> <!-- Demande de EB pas de detail en affichage blog -->
-<?php if ($useDefList && ($info == 0 || $info == 2)) : ?>
-	<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'above')); ?>
+<div class="row"> <!-- Demande de EB pas de detail en affichage blog reafiché le 26042016 suite fix  "Affichage et option tag article #60"  -->
+
+<?php if ($params->get('info_block_position') == 0) : ?>
+	<?php if ($params->get('show_tags', 1) && !empty($this->item->tags->itemTags)) : ?>
+			<?php echo JLayoutHelper::render('joomla.content.tags', $this->item->tags->itemTags); ?>
+	<?php endif; ?>
 <?php endif; ?>
+<?php if ($useDefList && ($info == 0 || $info == 2)) : ?>
+<address class=""> <!-- Demande de EB pas de detail en affichage blog -->
+	<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'above')); ?>
+</address>
+<?php endif; ?>
+
 <div class="clearfix"></div>
 </div>
-</address>
 </header>
 <div class="row">
 	<?php echo JLayoutHelper::render('joomla.content.intro_image', $this->item); ?>
@@ -74,11 +81,14 @@ $info    = $params->get('info_block_position', 0);
 	<?php endif; ?>
 	<?php echo $this->item->event->afterDisplayContent; ?>
 	</div>
+
 	<?php if ($useDefList && ($info == 1 ||  $info == 2)) : ?>
 		<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
+	<?php endif; ?>	
+	<?php if ($params->get('info_block_position') == 1 || $params->get('info_block_position') == 2 ) : ?>
 		<?php if ($params->get('show_tags', 1) && !empty($this->item->tags->itemTags)) : ?>
-			<?php echo JLayoutHelper::render('joomla.content.tags', $this->item->tags->itemTags); ?>
-						<?php endif; ?>
+				<?php echo JLayoutHelper::render('joomla.content.tags', $this->item->tags->itemTags); ?>
+		<?php endif; ?>
 	<?php endif; ?>
 </div>
 
