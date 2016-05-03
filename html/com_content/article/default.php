@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  com_content
- * °version 3.4.3 - MIR
+ * Â°version 3.4.3 - MIR
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -151,7 +151,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 			<?php echo $this->item->text; ?>
 		</div>
 	</div>
-	<?php if ($useDefList && ($info == 1 || $info == 2)) : ?>
+	<?php if ($info == 1 || $info == 2) : ?>
 		<?php echo JLayoutHelper::render('joomla.content.info_block.block', array('item' => $this->item, 'params' => $params, 'position' => 'below')); ?>
 			<?php if ($params->get('show_tags', 1) && !empty($this->item->tags->itemTags)) : ?>
 				<?php $this->item->tagLayout = new JLayoutFile('joomla.content.tags'); ?>
@@ -161,7 +161,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && !$this->item->
 	<?php endif; ?>
 	<?php
 if (!empty($this->item->pagination) && $this->item->pagination && $this->item->paginationposition && !$this->item->paginationrelative):
-	echo '<nav role="navigation">'; // role navigation est il bien nécessaire ... voir http://html5doctor.com/nav-element/ si on considere cela comme une pagination ou une des navigations principales de la page
+	echo '<nav role="navigation">'; // role navigation est il bien nÃ©cessaire ... voir http://html5doctor.com/nav-element/ si on considere cela comme une pagination ou une des navigations principales de la page
 	echo $this->item->pagination;
 	echo '</nav>';
 ?>
@@ -204,7 +204,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && $this->item->p
 
 	<?php
 if (!empty($this->item->pagination) && $this->item->pagination && $this->item->paginationposition && $this->item->paginationrelative) :
-	echo $this->item->pagination; //pagination entres articles a améliorer car pas assé explicite en therme d'accessibilité.
+	echo $this->item->pagination; //pagination entres articles a amÃ©liorer car pas assÃ© explicite en therme d'accessibilitÃ©.
 ?>
 	<?php endif; ?>
 	<?php echo $this->item->event->afterDisplayContent; ?>
