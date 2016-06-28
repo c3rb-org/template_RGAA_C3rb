@@ -18,7 +18,7 @@ Ce plugin permet la génération et le bon fonctionnement de Bootstrap3
 Il permet aussi d'activer un générateur LESS/CSS
 
 ###Demo
-Voir la demo en ligne avec les donées d'exemple joomla en anglais : [A11Y template_RGAA_C3rb](http://192.168.2.107/joomlaA11Y/joomlaA11y_example_en/)
+Voir la demo en ligne avec les donées d'exemple joomla en anglais : [A11Y template_RGAA_C3rb](http://a11y.orpheemedia.com/portail_a11y_en/)
 
 ### License
 
