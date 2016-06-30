@@ -36,8 +36,8 @@ if (!empty($item->anchor_title)) {
 if ($item->menu_image)
 {
 	$item->params->get('menu_text', 1) ?
-	$linktype = '<img alt="" class="margeright" aria-hidden="true" src="' . $item->menu_image . '" /><span class="image-title">' . $item->title . '</span> ' :  //Pas de 'alt' car image décorative
-	$linktype = '<img alt="" aria-hidden="true" src="' . $item->menu_image . '" /><span class="sr-only">' . $item->title . '</span> '; //Pas de 'alt' car image décorative
+	$linktype = '<img alt="" class="margeright" aria-hidden="true" src="' . $item->menu_image . '" /><span class="image-title">' . $item->title . '</span> ' :  //Pas de 'alt' car image d?orative
+	$linktype = '<img alt="" aria-hidden="true" src="' . $item->menu_image . '" /><span class="sr-only">' . $item->title . '</span> '; //Pas de 'alt' car image d?orative
 }
 else
 {
