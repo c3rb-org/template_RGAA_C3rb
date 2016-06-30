@@ -12,7 +12,7 @@ defined('_JEXEC') or die;
 //Gestion de la ClassCss
 if (!empty($item->anchor_css)) {
 $class = 'class=" '. $item->anchor_css .' "';
-} else {
+} else { 
 $class='';
 }
 
