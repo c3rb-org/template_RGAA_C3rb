@@ -141,7 +141,14 @@
             <position>debug</position>
         </positions>
         <config>
-            <fields name="params">
+            <fields name="params" addfieldpath="/templates/c3rb_rgaa/fields">
+		
+		<fieldset name="basic">
+		    <field name="note11" type="note" label="TPL_C3RB_RGAA_EXPORT_IMPORT_NOTE" />
+		    <field type="exportParams" label="TPL_C3RB_RGAA_EXPORT_LABEL" description="TPL_C3RB_RGAA_EXPORT_DESCRIPTION" />
+		    <field type="importParams" label="TPL_C3RB_RGAA_IMPORT_LABEL" description="TPL_C3RB_RGAA_IMPORT_DESCRIPTION" />
+		</fieldset>
+				
                 <!-- ///////////////////// ONGLET PARAMETRE ////////////////////////// -->
                 <fieldset name="params" label="TPL_C3RB_RGAA_PARAMS_FIELDSET_LABEL">
                     <field type="spacer" label="TPL_C3RB_RGAA_TIT_TITSYS" ></field>
@@ -506,7 +513,7 @@
                     <field showon="tmplchoice:10" name="lessvar_bg-linefullheader-modele01"              type="color"      default="#333333" label="TPL_C3RB_RGAA_COLORLINEHEADER_LABEL"      description="TPL_C3RB_RGAA_COLORLINEHEADER_DESC"          />
                     <field showon="tmplchoice:10" name="lessvar_color-mod-linefullheader-modele01"       type="color"      default="#FFFFFF" label="TPL_C3RB_RGAA_COLORTXTLINEHEADER_LABEL"      description="TPL_C3RB_RGAA_COLORTXTLINEHEADER_DESC"    />
                     -->
-            </fieldset>
+		</fieldset>
         </fields>
     </config>
 </extension>
