@@ -9,6 +9,12 @@ class JFormFieldImportparams extends JFormField
 	{
 		JFactory::getDocument()->addScript(JURI::root(true).'/templates/c3rb_rgaa/js/admin.js');
 		
+		JText::script('TPL_C3RB_RGAA_IMPORT_ERR');
+		JText::script('TPL_C3RB_RGAA_IMPORT_ERR_FILE_SELECT');
+		JText::script('TPL_C3RB_RGAA_IMPORT_ERR_FILE_CONFIG');
+		JText::script('TPL_C3RB_RGAA_IMPORT_CONFIRM');
+		JText::script('TPL_C3RB_RGAA_IMPORT_OK');
+		
 		$input = JFactory::getApplication()->input;
 		$templateId = $input->getInt('id',0);
 		
