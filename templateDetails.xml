@@ -3,7 +3,7 @@
 <extension version="3.3" type="template" client="site" method="upgrade">
     <!-- Version -->
     <name>c3rb_rgaa</name>
-    <version>v1.1.4 - 26 fevrier 2016</version>
+    <version>v1.1.5 - 26 avril 2016</version>
     <creationDate>20-01-2015</creationDate>
     <author>C3rb Informatique</author>
     <copyright>Copyright © 2015 C3rb-informatique</copyright>
@@ -320,12 +320,12 @@
                     <field showon="tmplchoice:2" name="lessvar_h2-color"       type="color"     default="#333333" label="TPL_C3RB_RGAA_COLORH2_LABEL"       description="TPL_C3RB_RGAA_COLORH2_DESC"     />
                     <field showon="tmplchoice:2" name="lessvar_h2a-color"      type="color"     default="#333333" label="TPL_C3RB_RGAA_COLORH2A_LABEL"      description="TPL_C3RB_RGAA_COLORH2A_DESC"     />
                     <field showon="tmplchoice:2" name="lessvar_h2ahov-color"   type="color"     default="#333333" label="TPL_C3RB_RGAA_COLORH2AHOV_LABEL"   description="TPL_C3RB_RGAA_COLORH2AHOV_DESC"     />
-                    <field showon="tmplchoice:2" name="lessvar_h3-color"       type="color"     default="#777777" label="TPL_C3RB_RGAA_COLORH3_LABEL"       description="TPL_C3RB_RGAA_COLORH3_DESC"     />
-                    <field showon="tmplchoice:2" name="lessvar_h3a-color"      type="color"     default="#777777" label="TPL_C3RB_RGAA_COLORH3A_LABEL"      description="TPL_C3RB_RGAA_COLORH3A_DESC"     />
-                    <field showon="tmplchoice:2" name="lessvar_h3ahov-color"   type="color"     default="#777777" label="TPL_C3RB_RGAA_COLORH3AHOV_LABEL"   description="TPL_C3RB_RGAA_COLORH3AHOV_DESC"     />
-                    <field showon="tmplchoice:2" name="lessvar_h4-color"       type="color"     default="#999999" label="TPL_C3RB_RGAA_COLORH4_LABEL"       description="TPL_C3RB_RGAA_COLORH4_DESC"     />
-                    <field showon="tmplchoice:2" name="lessvar_h4a-color"      type="color"     default="#999999" label="TPL_C3RB_RGAA_COLORH4A_LABEL"      description="TPL_C3RB_RGAA_COLORH4A_DESC"     />
-                    <field showon="tmplchoice:2" name="lessvar_h4ahov-color"   type="color"     default="#999999" label="TPL_C3RB_RGAA_COLORH4AHOV_LABEL"   description="TPL_C3RB_RGAA_COLORH4AHOV_DESC"     />
+                    <field showon="tmplchoice:2" name="lessvar_h3-color"       type="color"     default="#666666" label="TPL_C3RB_RGAA_COLORH3_LABEL"       description="TPL_C3RB_RGAA_COLORH3_DESC"     />
+                    <field showon="tmplchoice:2" name="lessvar_h3a-color"      type="color"     default="#666666" label="TPL_C3RB_RGAA_COLORH3A_LABEL"      description="TPL_C3RB_RGAA_COLORH3A_DESC"     />
+                    <field showon="tmplchoice:2" name="lessvar_h3ahov-color"   type="color"     default="#666666" label="TPL_C3RB_RGAA_COLORH3AHOV_LABEL"   description="TPL_C3RB_RGAA_COLORH3AHOV_DESC"     />
+                    <field showon="tmplchoice:2" name="lessvar_h4-color"       type="color"     default="#666666" label="TPL_C3RB_RGAA_COLORH4_LABEL"       description="TPL_C3RB_RGAA_COLORH4_DESC"     />
+                    <field showon="tmplchoice:2" name="lessvar_h4a-color"      type="color"     default="#666666" label="TPL_C3RB_RGAA_COLORH4A_LABEL"      description="TPL_C3RB_RGAA_COLORH4A_DESC"     />
+                    <field showon="tmplchoice:2" name="lessvar_h4ahov-color"   type="color"     default="#666666" label="TPL_C3RB_RGAA_COLORH4AHOV_LABEL"   description="TPL_C3RB_RGAA_COLORH4AHOV_DESC"     />
                     <field showon="tmplchoice:2" name="lessvar_h5-color"       type="color"     default="#333333" label="TPL_C3RB_RGAA_COLORH5_LABEL"       description="TPL_C3RB_RGAA_COLORH5_DESC"     />
                     <field showon="tmplchoice:2" name="lessvar_h5a-color"      type="color"     default="#333333" label="TPL_C3RB_RGAA_COLORH5A_LABEL"      description="TPL_C3RB_RGAA_COLORH5A_DESC"     />
                     <field showon="tmplchoice:2" name="lessvar_h5ahov-color"   type="color"     default="#333333" label="TPL_C3RB_RGAA_COLORH5AHOV_LABEL"   description="TPL_C3RB_RGAA_COLORH5AHOV_DESC"     />

@@ -211,9 +211,9 @@ function modChrome_div($module, &$params, &$attribs)
 ?>
 	<?php /* Taille BS dans l'admin du module */ ?>
 	<?php if ($modbssize != 0) : ?>
-	<div class="<?php echo $header_class; ?>">
+	<div class="col-xs-12 col-sm-<?php echo $modbssize; ?> col-md-<?php echo $modbssize; ?> col-lg-<?php echo $modbssize; ?> <?php echo $header_class; ?>">
 	<?php else : ?>
-	<div class="<?php echo $header_class; ?>">
+	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 <?php echo $header_class; ?>">
 	<?php endif; ?>
 	<?php /* Fin taille BS dans l'admin du module */ ?>
 
@@ -250,9 +250,12 @@ function modChrome_div($module, &$params, &$attribs)
 		<?php endif; ?>
 	<?php /* Fin fermeture Hn du module */ ?>
 		<?php else : ?>
-		<<?php echo $headerLvl; ?> class="sr-only">
+		<?php /*  A TESTER
+		<<?php echo $headerLvl; ?> class="">
 		<span id="label<?php echo $module->id; ?>"><?php echo JText::_( $module->title ); ?></span>
 		</<?php echo $headerLvl;  ?>>
+		*/
+		?>
 	<?php endif; ?>
 
 			<?php /* Content du module */ ?>

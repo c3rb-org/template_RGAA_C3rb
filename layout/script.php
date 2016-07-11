@@ -19,4 +19,5 @@ if(JDEBUG) : ?>
 	<script src="<?php echo $tmplpath; ?>/js/js_uncompress/js_c3rb/app.js" type="text/javascript" defer></script>
 <?php else : ?>
 		<script src="<?php echo $tmplpath; ?>/js/template.min.js" type="text/javascript" defer></script>
+		<script src="<?php echo $tmplpath; ?>/js/menutogleplessis.js" type="text/javascript" defer></script>
 <?php endif;?>
