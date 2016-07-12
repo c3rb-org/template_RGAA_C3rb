@@ -36,7 +36,7 @@
             <div class="span6">
                 <h2 style="text-align:left;">Description</h2>
                 <ul>
-                    <li>C3rb_Rgaa est un template réalisé par la société C3rb Informatique, il propose à la communauté un template de conception  accessible (référentiel RGAA3). Tests techniques réalisés avec Tanaguru.</li>
+                    <li>C3rb_Rgaa est un template réalisé par la société C3rb Informatique, il propose à la communauté un template de conception accessible (référentiel RGAA3). Tests techniques réalisés avec Tanaguru.</li>
                     <li>Ce template fonctionne avec les dépendances bootstrap 3 et fontawesome</li>
                 </ul>
                 <br />
@@ -59,24 +59,24 @@
 
             <div class="span6">
                 <h2 style="text-align:left;">Les Styles de modules</h2>
-                <p>Les style des modules peuvent etre choisis dans la configuration d'un module dans l'onglet <b>Paramètres avancés</b> option <b>Type de mise en page</b></p>
-                <p>Description des diférents styles par type de module :</p>
-                <dl><b>Module menu (Mod_menu)</b><br /> <em>Note : pour les menus a plusieurs niveaux : il est nécessaire que l'élément parent soit un séparateur, de plus, vous devez activer l'option "Afficher tous les liens" pour activer les sous menus</em>
+                <p>Les styles des modules peuvent être choisis dans la configuration d'un module dans l'onglet <b>Paramètres avancés</b> option <b>Type de mise en page</b></p>
+                <p>Description des différents styles par type de module :</p>
+                <dl><b>Module menu (Mod_menu)</b><br /> <em>Note : pour les menus à plusieurs niveaux : il est nécessaire que l'élément parent soit un séparateur, de plus, vous devez activer l'option "Afficher tous les liens" pour activer les sous menus</em>
                 <dt>default</dt>
-                <dd>Menu horyzontal, style bootstrap, permet l'agencement de menu à plusieurs niveau. (style actif par default)</em></dd>
+                <dd>Menu horizontal, style bootstrap, permet l'agencement de menu à plusieurs niveau. (style actif par default)</em></dd>
                 <dt>defaultmega</dt>
-                <dd>Menu horyzontal avec sous menu en pavé, il permet l'insertion de texte sous la zone de lien via le champ note du lien de menu. une image peut etre associé au lien pour un agencement complet</dd>
+                <dd>Menu horizontal avec sous menu en pavé, il permet l'insertion de texte sous la zone de lien via le champ note du lien de menu. Une image peut être associée au lien pour un agencement complet</dd>
                 <dt>vertical</dt>
-                <dd>Menu vertical généralement utilisé dans les colone droite (position-8) ou gauche (position-7) du template.</dd>
+                <dd>Menu vertical généralement utilisé dans les colonnes de droite (position-8) ou de gauche (position-7) du template.</dd>
                 <dt>verticalnostylenorwd</dt>
-                <dd>Menu vertical généralement utilisé en pied de page, restitu une liste structuré du menu sans style, sans réation responsive</dd>
+                <dd>Menu vertical généralement utilisé en pied de page, restitue une liste structurée du menu sans style, sans réaction responsive</dd>
             </dl>
             <hr/>
             <h2 style="text-align:left;">Les Class de modules</h2>
-            <p>Les class de modules peuvent etre saisi dans la configuration d'un module généralement dans l'onglet <b>Paramètres avancés</b> option <b>Suffixe de classe CSS</b></p>
+            <p>Les class de modules peuvent être saisies dans la configuration d'un module généralement dans l'onglet <b>Paramètres avancés</b> option <b>Suffixe de classe CSS</b></p>
             <dl>
                 <dt>nostyle</dt>
-                <dd>Permet de supprimer les élément de style du module (couleur de fond, bordure, ombre)</dd>
+                <dd>Permet de supprimer les éléments de style du module (couleur de fond, bordure, ombre)</dd>
             </dl>
             <hr/>
         </div>
