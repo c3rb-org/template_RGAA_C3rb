@@ -2,8 +2,8 @@
 /**
  * @package     Joomla.Site
  * @subpackage  mod_finder
- * °version J! : 3.4.3 - MIR
- * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
+ * version J! : 3.6 - MIR
+ * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -20,11 +20,13 @@ $lang = JFactory::getLanguage();
 $lang->load('com_finder', JPATH_SITE);
 
 $suffix = $params->get('moduleclass_sfx');
-$output = '<input type="text" name="q" id="mod-finder-searchword" class="form-control search-query input-medium" size="' . $params->get('field_size', 20) . '" value="' . htmlspecialchars(JFactory::getApplication()->input->get('q', '', 'string')) . '" /> ';
+$output = '<input type="text" name="q" id="mod-finder-searchword" class="search-query input-medium" size="'
+	. $params->get('field_size', 20) . '" value="' . htmlspecialchars(JFactory::getApplication()->input->get('q', '', 'string'), ENT_COMPAT, 'UTF-8') . '"'
+	. ' placeholder="' . JText::_('MOD_FINDER_SEARCH_VALUE') . '"/>';
 
-if ($params->get('show_label', 1))
-{
-	$label = '<label for="mod-finder-searchword" class="finder' . $suffix . ' sr-only">' . $params->get('alt_label', JText::_('JSEARCH_FILTER_SUBMIT')) . '</label>';
+$showLabel  = $params->get('show_label', 1);
+$labelClass = (!$showLabel ? 'element-invisible ' : '') . 'finder' . $suffix;
+$label      = '<label for="mod-finder-searchword" class="' . $labelClass . '">' . $params->get('alt_label', JText::_('JSEARCH_FILTER_SUBMIT')) . '</label>';
 
 	switch ($params->get('label_pos', 'left'))
 	{
@@ -72,24 +74,20 @@ if ($params->get('show_button'))
 	}
 }
 
-JHtml::stylesheet('com_finder/finder.css', false, true, false);
+JHtml::_('stylesheet', 'com_finder/finder.css', false, true, false);
 
 $script = "
 jQuery(document).ready(function() {
 	var value, searchword = jQuery('#mod-finder-searchword');
-
-		// Set the input value if not already set.
-		if (!searchword.val())
-		{
-			searchword.val('" . JText::_('MOD_FINDER_SEARCH_VALUE', true) . "');
-		}
 
 		// Get the current value.
 		value = searchword.val();
 
 		// If the current value equals the default value, clear it.
 		searchword.on('focus', function()
-		{	var el = jQuery(this);
+		{
+			var el = jQuery(this);
+
 			if (el.val() === '" . JText::_('MOD_FINDER_SEARCH_VALUE', true) . "')
 			{
 				el.val('');
@@ -98,22 +96,28 @@ jQuery(document).ready(function() {
 
 		// If the current value is empty, set the previous value.
 		searchword.on('blur', function()
-		{	var el = jQuery(this);
+		{
+			var el = jQuery(this);
+
 			if (!el.val())
 			{
 				el.val(value);
 			}
 		});
 
-		jQuery('#mod-finder-searchform').on('submit', function(e){
+		jQuery('#mod-finder-searchform').on('submit', function (e)
+		{
 			e.stopPropagation();
 			var advanced = jQuery('#mod-finder-advanced');
 			// Disable select boxes with no value selected.
 			if ( advanced.length)
 			{
-				advanced.find('select').each(function(index, el) {
+				advanced.find('select').each(function (index, el)
+				{
 					var el = jQuery(el);
-					if(!el.val()){
+
+					if (!el.val())
+					{
 						el.attr('disabled', 'disabled');
 					}
 				});
@@ -128,7 +132,7 @@ if ($params->get('show_autosuggest', 1))
 
 	$script .= "
 	var suggest = jQuery('#mod-finder-searchword').autocomplete({
-		serviceUrl: '" . JRoute::_('index.php?option=com_finder&task=suggestions.suggest&format=json&tmpl=component', false) . "',
+		serviceUrl: '" . JRoute::_('index.php?option=com_finder&task=suggestions.suggest&format=json&tmpl=component') . "',
 		paramName: 'q',
 		minChars: 1,
 		maxHeight: 400,

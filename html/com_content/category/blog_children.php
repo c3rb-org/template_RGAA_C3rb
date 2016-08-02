@@ -2,8 +2,8 @@
 /**
  * @package     Joomla.Site
  * @subpackage  com_content
- * °version J! : 3.4.3 - MIR
- * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
+ * °version J! : 3.6 - MIR
+ * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -11,8 +11,9 @@ defined('_JEXEC') or die;
 
 JHtml::_('bootstrap.tooltip');
 
-$lang	= JFactory::getLanguage();
 $class = ' class="first"';
+$lang	= JFactory::getLanguage();
+
 
 if (count($this->children[$this->category->id]) > 0 && $this->maxLevel != 0) : ?>
 
@@ -25,7 +26,7 @@ if (count($this->children[$this->category->id]) > 0 && $this->maxLevel != 0) : ?
 		?>
 		<div<?php echo $class; ?>>
 			<?php $class = ''; ?>
-			<?php if ($lang->isRTL()) : ?>
+			<?php if ($lang->isRtl()) : ?>
 			<h3 class="page-header item-title">
 				<?php if ( $this->params->get('show_cat_num_articles', 1)) : ?>
 					<span class="badge badge-info tip hasTooltip" title="<?php echo JHtml::tooltipText('COM_CONTENT_NUM_ITEMS'); ?>">
@@ -44,6 +45,7 @@ if (count($this->children[$this->category->id]) > 0 && $this->maxLevel != 0) : ?
 				<?php echo $this->escape($child->title); ?></a>
 				<?php if ( $this->params->get('show_cat_num_articles', 1)) : ?>
 					<span class="badge badge-info tip hasTooltip" title="<?php echo JHtml::tooltipText('COM_CONTENT_NUM_ITEMS'); ?>">
+						<?php echo JText::_('COM_CONTENT_NUM_ITEMS'); ?>&nbsp;
 						<?php echo $child->getNumItems(true); ?>
 					</span>
 				<?php endif; ?>
@@ -51,8 +53,8 @@ if (count($this->children[$this->category->id]) > 0 && $this->maxLevel != 0) : ?
 				<?php if (count($child->getChildren()) > 0 && $this->maxLevel > 1) : ?>
 					<a href="#category-<?php echo $child->id;?>" data-toggle="collapse" data-toggle="button" class="btn btn-mini pull-right"><span class="icon-plus"></span></a>
 				<?php endif;?>
-			<?php endif;?>
 			</h3>
+			<?php endif;?>
 
 			<?php if ($this->params->get('show_subcat_desc') == 1) : ?>
 			<?php if ($child->description) : ?>

@@ -2,26 +2,22 @@
 /**
  * @package     Joomla.Site
  * @subpackage  com_content
- * °version J! : 3.4.3 - MIR
- * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
+ * °version J! : 3.6 - MIR
+ * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
- *
- * Accessibility : trouver un systeme pour les aria-describedby="" de cette page de liste de categorie
- *
  */
-
 
 defined('_JEXEC') or die;
 
-$class = ' class="first"';
 JHtml::_('bootstrap.tooltip');
+$class = ' class="first"';
 $lang	= JFactory::getLanguage();
 
 if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) :
 ?>
 	<?php foreach($this->items[$this->parent->id] as $id => $item) : ?>
-		<div role="listitem" aria-describedby="<?php echo JText::_('categorieparente'); ?>">
-		<article role="article">
+		<div role="listitem" aria-describedby="<?php echo JText::_('categorieparente'); ?>"><!-- Ajout tmpl -->
+		<article role="article"><!-- Ajout tmpl -->
 			<?php
 			if ($this->params->get('show_empty_categories_cat') || $item->numitems || count($item->getChildren())) :
 			if (!isset($this->items[$this->parent->id][$id + 1]))
@@ -32,7 +28,7 @@ if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) :
 			<div <?php echo $class; ?> >
 			<?php $class = ''; ?>
 				<h3 class="page-header item-title">
-					<a href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($item->id));?>">
+				<a href="<?php echo JRoute::_(ContentHelperRoute::getCategoryRoute($item->id, $item->language));?>">
 					<?php echo $this->escape($item->title); ?></a>
 					<?php if ($this->params->get('show_cat_num_articles_cat') == 1) :?>
 						<span class="badge badge-info tip hasTooltip" title="<?php echo JHtml::tooltipText('COM_CONTENT_NUM_ITEMS'); ?>">
@@ -45,7 +41,7 @@ if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) :
 					<?php endif;?>
 				</h3>
 				<?php if ($this->params->get('show_description_image') && $item->getParams()->get('image')) : ?>
-					<img src="<?php echo $item->getParams()->get('image'); ?>" alt="<?php echo htmlspecialchars($item->getParams()->get('image_alt')); ?>" />
+				<img src="<?php echo $item->getParams()->get('image'); ?>" alt="<?php echo htmlspecialchars($item->getParams()->get('image_alt'), ENT_COMPAT, 'UTF-8'); ?>" />
 				<?php endif; ?>
 				<?php if ($this->params->get('show_subcat_desc_cat') == 1) :?>
 					<?php if ($item->description) : ?>
@@ -56,7 +52,7 @@ if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) :
 				<?php endif; ?>
 
 				<?php if (count($item->getChildren()) > 0 && $this->maxLevelcat > 1) :?>
-					<div class="collapse fade" id="category-<?php echo $item->id;?>" role="list" >
+					<div class="collapse fade" id="category-<?php echo $item->id;?>" role="list" ><!-- Ajout tmpl -->
 					<?php
 					$this->items[$item->id] = $item->getChildren();
 					$this->parent = $item;
@@ -69,7 +65,7 @@ if (count($this->items[$this->parent->id]) > 0 && $this->maxLevelcat != 0) :
 				<?php endif; ?>
 			</div>
 			<?php endif; ?>
-			</article>
-			</div>
+			</article><!-- Ajout tmpl -->
+			</div><!-- Ajout tmpl -->
 	<?php endforeach; ?>
 <?php endif; ?>

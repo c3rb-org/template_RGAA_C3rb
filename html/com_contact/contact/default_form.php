@@ -12,75 +12,55 @@ defined('_JEXEC') or die;
 JHtml::_('behavior.keepalive');
 JHtml::_('behavior.formvalidator');
 
+$captchaEnabled = false;
 /* On injecte des classes dans les input */
 $tab_input = array('contact_name','contact_email','contact_subject','contact_message');
 foreach($tab_input as $i)
 	$this->form->setFieldAttribute($i,'class','form-control');
 /* fin On injecte des classes dans les input */
 
+$captchaSet = $this->params->get('captcha', JFactory::getApplication()->get('captcha', '0'));
 
-
-if (isset($this->error)) : ?>
-	<div class="contact-error">
-		<?php echo $this->error; ?>
-	</div>
-<?php endif; ?>
-
+foreach (JPluginHelper::getPlugin('captcha') as $plugin)
+{
+	if ($captchaSet === $plugin->name)
+	{
+		$captchaEnabled = true;
+		break;
+	}
+}
+?>
 <div class="contact-form">
-	<form id="contact-form" action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate form-horizontal">
+	<form id="contact-form" action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate form-horizontal well">
+		<?php foreach ($this->form->getFieldsets() as $fieldset): ?>
+			<?php if ($fieldset->name === 'captcha' && !$captchaEnabled) : ?>
+				<?php continue; ?>
+<?php endif; ?>
+			<?php $fields = $this->form->getFieldset($fieldset->name); ?>
+			<?php if (count($fields)) : ?>
 		<fieldset>
-			<legend><?php echo JText::_('COM_CONTACT_FORM_LABEL'); ?></legend>
-			<div class="form-group">
-				<div class="col-xs-12 col-sm-2"><?php echo $this->form->getLabel('contact_name'); ?></div>
-				<div class="col-xs-12 col-sm-10"><?php echo $this->form->getInput('contact_name'); ?></div>
-			</div>
-			<div class="form-group">
-				<div class="col-xs-12 col-sm-2"><?php echo $this->form->getLabel('contact_email'); ?></div>
-				<div class="col-xs-12 col-sm-10"><?php echo $this->form->getInput('contact_email'); ?></div>
-			</div>
-			<div class="form-group">
-				<div class="col-xs-12 col-sm-2"><?php echo $this->form->getLabel('contact_subject'); ?></div>
-				<div class="col-xs-12 col-sm-10"><?php echo $this->form->getInput('contact_subject'); ?></div>
-			</div>
-			<div class="form-group">
-				<div class="col-xs-12 col-sm-2 "><?php echo $this->form->getLabel('contact_message'); ?></div>
-				<div class="col-xs-12 col-sm-10"><?php echo $this->form->getInput('contact_message'); ?></div>
-			</div>
-			<?php if ($this->params->get('show_email_copy')) : ?>
-				<div class="form-group">
-					<div class="col-sm-offset-2 col-xs-12 col-sm-1"><?php echo $this->form->getInput('contact_email_copy'); ?></div>
-					<div class="col-xs-12 col-sm-6"><?php echo $this->form->getLabel('contact_email_copy'); ?></div>
-				</div>
+					<?php if (isset($fieldset->label) && strlen($legend = trim(JText::_($fieldset->label)))) : ?>
+						<legend><?php echo $legend; ?></legend>
 			<?php endif; ?>
-			<?php // Dynamically load any additional fields from plugins. ?>
-			<?php foreach ($this->form->getFieldsets() as $fieldset) : ?>
-				<?php if ($fieldset->name != 'contact') : ?>
-					<?php $fields = $this->form->getFieldset($fieldset->name); ?>
 					<?php foreach ($fields as $field) : ?>
-						<div class="form-group">
-							<?php if ($field->hidden) : ?>
-								<div class="col-xs-12 col-sm-10">
-									<?php echo $field->input; ?>
-								</div>
-							<?php else: ?>
-									<div class="col-xs-12 col-sm-2 "><?php echo $field->label; ?></div>
-									<?php if (!$field->required && $field->type != "Spacer") : ?>
-										<span class="optional"><?php echo JText::_('COM_CONTACT_OPTIONAL'); ?></span>
+						<?php if ($field->name === 'contact_email_copy' && !$this->params->get('show_email_copy')) : ?>
+							<?php continue; ?>
 									<?php endif; ?>
-								<div class="col-xs-12 col-sm-10"><?php echo $field->input; ?></div>
-							<?php endif; ?>
-						</div>
+						<?php echo $field->renderField(); ?>
 					<?php endforeach; ?>
+				</fieldset>
 				<?php endif; ?>
 			<?php endforeach; ?>
-			<div class="form-actions text-right">
-				<button class="btn btn-primary validate" type="submit"><?php echo JText::_('COM_CONTACT_CONTACT_SEND'); ?></button>
+		<div class="control-group">
+			<div class="controls">
+				<button class="btn btn-primary validate margetop" type="submit"><?php echo JText::_('COM_CONTACT_CONTACT_SEND'); ?></button><!-- Ajout tmpl -->
+
 				<input type="hidden" name="option" value="com_contact" />
 				<input type="hidden" name="task" value="contact.submit" />
 				<input type="hidden" name="return" value="<?php echo $this->return_page; ?>" />
 				<input type="hidden" name="id" value="<?php echo $this->contact->slug; ?>" />
 				<?php echo JHtml::_('form.token'); ?>
 			</div>
-		</fieldset>
+		</div>
 	</form>
 </div>

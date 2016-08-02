@@ -2,8 +2,8 @@
 /**
  * @package     Joomla.Site
  * @subpackage  com_contact
- * °version J! : 3.4.3 - MIR
- * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
+ * version J! : 3.6 - MIR
+ * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -14,16 +14,18 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 // If the page class is defined, add to class as suffix.
 // It will be a separate class if the user starts it with a space
 ?>
-<article role="main">
+<article role="main"><!-- Ajout tmpl -->
 <div class="blog-featured<?php echo $this->pageclass_sfx;?>">
 <?php if ($this->params->get('show_page_heading') != 0 ) : ?>
-	<h2>
+	<h2><!-- Ajout tmpl -->
 	<?php echo $this->escape($this->params->get('page_heading')); ?>
-	</h2>
+	</h2><!-- Ajout tmpl -->
+<!-- modif tmpl -->
 <?php else: ?>
 	<h2 class="sr-only">
 	<?php echo $this->escape($this->params->get('page_heading')); ?>
 	</h2>
+<!-- FIN modif tmpl -->
 <?php endif; ?>
 
 <?php echo $this->loadTemplate('items'); ?>
@@ -38,5 +40,6 @@ JHtml::addIncludePath(JPATH_COMPONENT . '/helpers');
 				<?php echo $this->pagination->getPagesLinks(); ?>
 	</div>
 <?php endif; ?>
-</article>
+</article><!-- Ajout tmpl -->
+
 </div>

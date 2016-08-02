@@ -2,8 +2,8 @@
 /**
  * @package     Joomla.Site
  * @subpackage  com_content
- * °version J! : 3.4.3 - MIR
- * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
+ * version J! : 3.6 - MIR
+ * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -47,10 +47,17 @@ if (!empty($this->items))
 	<legend class="sr-only"><?php echo JText::_('TPL_C3RB_RGAA_ARTICLE_NBARTICLE_LEGEND'); ?></legend>
 		<?php if ($this->params->get('filter_field') != 'hide') :?>
 			<div class="btn-group">
+		        	<?php if ($this->params->get('filter_field') != 'tag') :?>
 				<label class="filter-search-lbl element-invisible" for="filter-search">
 					<?php echo JText::_('COM_CONTENT_'.$this->params->get('filter_field').'_FILTER_LABEL').'&#160;'; ?>
 				</label>
 				<input type="text" name="filter-search" id="filter-search" value="<?php echo $this->escape($this->state->get('list.filter')); ?>" class="inputbox" onchange="document.adminForm.submit();" title="<?php echo JText::_('COM_CONTENT_FILTER_SEARCH_DESC'); ?>" placeholder="<?php echo JText::_('COM_CONTENT_'.$this->params->get('filter_field').'_FILTER_LABEL'); ?>" />
+		        	<?php else :?>
+		    			<select name="filter_tag" id="filter_tag" onchange="document.adminForm.submit();" >
+		    				<option value=""><?php echo JText::_('JOPTION_SELECT_TAG'); ?></option>
+		    				<?php echo JHtml::_('select.options', JHtml::_('tag.options', true, true), 'value', 'text', $this->state->get('filter.tag')); ?>
+		    			</select>
+		        	<?php endif; ?>
 			</div>
 		<?php endif; ?>
 		<?php if ($this->params->get('show_pagination_limit')) : ?>
@@ -136,7 +143,7 @@ if (!empty($this->items))
 							$active		= $menu->getActive();
 							$itemId		= $active->id;
 							$link = new JUri(JRoute::_('index.php?option=com_users&view=login&Itemid=' . $itemId, false));
-							$link->setVar('return', base64_encode(JRoute::_(ContentHelperRoute::getArticleRoute($article->slug, $article->catid, $article->language), false)));
+							$link->setVar('return', base64_encode(ContentHelperRoute::getArticleRoute($article->slug, $article->catid, $article->language)));
 							?>
 							<a href="<?php echo $link; ?>" class="register">
 								<?php echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE'); ?>

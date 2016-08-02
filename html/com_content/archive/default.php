@@ -2,8 +2,8 @@
 /**
  * @package     Joomla.Site
  * @subpackage  com_content
- * °version 3.4.3 - MIR
- * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
+ * version 3.6 - MIR
+ * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -17,14 +17,16 @@ JHtml::_('behavior.caption');
 <div class="archive<?php echo $this->pageclass_sfx;?>">
 <?php if ($this->params->get('show_page_heading')) : ?>
 <div class="page-header">
-<h2>
+<h2><!-- modif tmpl -->
 	<?php echo $this->escape($this->params->get('page_heading')); ?>
-</h2>
+</h2><!-- modif tmpl -->
 </div>
+<!-- modif tmpl -->
 <?php else: ?>
 <h2 class="sr-only">
 	<?php echo $this->escape($this->params->get('page_heading')); ?>
 </h2>
+<!-- FIN modif tmpl -->
 <?php endif; ?>
 <form id="adminForm" action="<?php echo JRoute::_('index.php')?>" method="post" class="form-inline">
 	<div class="clearfix"></div>

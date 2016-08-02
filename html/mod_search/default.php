@@ -2,8 +2,8 @@
 /** 
  * @package     Joomla.Site
  * @subpackage  mod_search
- * �version J! : 3.4.3 - MIR
- * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
+ * version J! : 3.6 - MIR
+ * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -25,9 +25,8 @@ else
 	$width = '';
 }
 ?> 
-<!-- Des corrections sont a faire dans le cas ou les options droite gauche au bas sont choisies, par default btn a draoite sans image -->
-<div class="search<?php echo $moduleclass_sfx ?>" id="search-lnk">
-	<form action="<?php echo JRoute::_('index.php');?>" method="post" class="form-inline" role="search"><!-- Ajout du role C3rbrgaa -->
+<div class="search<?php echo $moduleclass_sfx ?>">
+	<form action="<?php echo JRoute::_('index.php');?>" method="post" class="form-inline">
 			<?php
 				$output = '<label for="mod-search-searchword" class="sr-only">' . $label . '</label> ';
 				$output .= '<input title="'. $label .'" name="searchword" id="mod-search-searchword" maxlength="' . $maxlength . '"  class="form-control" type="text" ' . $width . ' value="' . $text . '"  onblur="if (this.value==\'\') this.value=\'' . $text . '\';" onfocus="if (this.value==\'' . $text . '\') this.value=\'\';" />';
