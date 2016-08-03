@@ -1,0 +1,13 @@
+/* Contrast accessible */
+body.contrastrgaa {
+  background: red!important
+ }
+
+/* Font dyslexic */
+@font-face {
+  font-family: dyslexic;
+  src: url("modules/mod_c3rbrgaa_tools/asset/fonts/OpenDyslexic-Regular.woff");
+}
+body {
+  font-family: dyslexic!important
+}
