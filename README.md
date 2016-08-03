@@ -1,5 +1,5 @@
 ##C3rb - RGAA - haaaa!
-
+https://img.shields.io/badge/FontAwesome-4.6.1-green.svg
 ###Created by C3rb Informatique | c3rb.org.
 
 - Ruzafa Mikael @cr2a_graphique
