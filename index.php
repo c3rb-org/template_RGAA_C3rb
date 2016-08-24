@@ -31,7 +31,6 @@ $bodyClass['itemid'] =  $itemid?'itemid-'.$itemid:'';
 $bodyClass['direction'] = ($this->direction == 'rtl')?'direction-rtl':'direction-ltr';
 $bodyClass['suffixcss'] = $pagecss;
 ?>
-?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $codeLang; ?>" lang="<?php echo $codeLang; ?>" dir="<?php echo $this->direction; ?>">
 	<head>
