@@ -7,14 +7,30 @@ if(JFactory::getApplication()->input->getInt('test_tpl') == 1)
 }
 //variables du template
 include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
-if (is_object($active) && !empty($active->params)) {
-$pagecss =  $active->params->get('pageclass_sfx');
-}
-else {
-	$pagecss = '';
-}
+
 $codeLang = substr($this->language, 0, 2);
 JHtml::_('bootstrap.tooltip');
+
+$option   = $app->input->getCmd('option', '');
+$view     = $app->input->getCmd('view', '');
+$layout   = $app->input->getCmd('layout', '');
+$task     = $app->input->getCmd('task', '');
+$itemid   = $app->input->getCmd('Itemid', '');
+$sitename = $app->get('sitename');
+if (is_object($active) && !empty($active->params)) {
+	$pagecss = $active->params->get('pageclass_sfx', null);
+}
+
+$bodyClass = array();
+
+$bodyClass['option'] = $option;
+$bodyClass['view'] = 'view-'.$view;
+$bodyClass['layout'] =  $layout?'layout-'.$layout:'default';
+$bodyClass['task'] =  $task?'task-'.str_replace('.', '_', $task):'default';
+$bodyClass['itemid'] =  $itemid?'itemid-'.$itemid:'';
+$bodyClass['direction'] = ($this->direction == 'rtl')?'direction-rtl':'direction-ltr';
+$bodyClass['suffixcss'] = $pagecss;
+?>
 ?>
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $codeLang; ?>" lang="<?php echo $codeLang; ?>" dir="<?php echo $this->direction; ?>">
@@ -37,7 +53,7 @@ JHtml::_('bootstrap.tooltip');
 	<?php //endif ?>
 	<!-- Defaut customisable-->
 		<?php //if ($params->get('tmplchoice') == 0): ?>
-		<body <?php if (!empty($pagecss)): ?> class="<?php echo $pagecss; ?>" <?php endif ; ?>>
+		<body class="<?= implode(' ', $bodyClass) ?>">
 			<jdoc:include type="message" />
 			<div class="container<?php if ($paramtmpl_tmplfluidmod == 1) {echo "-fluid";}; ?> <?php	if ($paramtmpl_tmpltitmodforce == 1) {echo "tmpmodhn";} ?> <?php if ($paramtmpl_tmpltheme != '0' ) {echo $params->get('tmpltheme');} ?> firstcontainer <?php echo $pagecss; ?>">
 				<?php
