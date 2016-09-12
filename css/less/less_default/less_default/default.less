@@ -270,7 +270,30 @@ input.invalid {border-color: red}
 
 /* HR */
 hr.hrlight {margin-bottom: 10px; margin-top: 10px; }
-
+.hr {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: rgb(238, 238, 238) -moz-use-text-color -moz-use-text-color;
+    border-image: none;
+    border-style: solid none none;
+    border-width: 1px 0 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.hrlight {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: rgb(238, 238, 238) -moz-use-text-color -moz-use-text-color;
+    border-image: none;
+    border-style: solid none none;
+    border-width: 1px 0 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
 /* Liste */
 ul.unstyled {list-style-type: none;  padding: 0px}
 .a-list {
@@ -982,7 +1005,9 @@ span.icon-remove::before {
     .form-group.margebottom {min-height: 50px; margin: 0;}
 }
 .body-overlayed #sbox-window {padding: 0px}
-
+.thumbnail {
+    background: transparent !important;
+}
 
 
 /* fadeInUp */
