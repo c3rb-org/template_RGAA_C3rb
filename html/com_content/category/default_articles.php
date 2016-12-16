@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  com_content
- * version J! : 3.6 - MIR
+ * version J! : 3.6.5 - MIR
  * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -32,13 +32,6 @@ if (!empty($this->items))
 	}
 }
 ?>
-<?php if (empty($this->items)) : ?>
-
-	<?php if ($this->params->get('show_no_articles', 1)) : ?>
-	<p><?php echo JText::_('COM_CONTENT_NO_ARTICLES'); ?></p>
-	<?php endif; ?>
-
-<?php else : ?>
 
 <form action="<?php echo htmlspecialchars(JUri::getInstance()->toString()); ?>" method="post" name="adminForm" id="adminForm" class="form-inline">
 	<?php if ($this->params->get('show_headings') || $this->params->get('filter_field') != 'hide' || $this->params->get('show_pagination_limit')) :?>
@@ -76,7 +69,15 @@ if (!empty($this->items))
 	</fieldset>
 	<?php endif; ?>
 
-	<table class="category table table-striped table-bordered table-hover" role="list">
+<?php if (empty($this->items)) : ?>
+
+	<?php if ($this->params->get('show_no_articles', 1)) : ?>
+		<p><?php echo JText::_('COM_CONTENT_NO_ARTICLES'); ?></p>
+	<?php endif; ?>
+
+<?php else : ?>
+
+	<table class="category table table-striped table-bordered table-hover">
 		<?php
 		$headerTitle    = '';
 		$headerDate     = '';
@@ -225,5 +226,5 @@ if (!empty($this->items))
 		<?php echo $this->pagination->getPagesLinks(); ?>
 	</div>
 	<?php endif; ?>
-</form>
 <?php  endif; ?>
+</form>

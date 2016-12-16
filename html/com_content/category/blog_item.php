@@ -1,8 +1,8 @@
 <?php
 /**
  * @package     Joomla.Site
- * @subpackage  Layout
- * version J! : 3.6 - MIR
+ * @subpackage  com_content
+ * version J! : 3.6.5 - MIR
  * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */

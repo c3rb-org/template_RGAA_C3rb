@@ -2,14 +2,14 @@
 /**
  * @package     Joomla.Site
  * @subpackage  mod_banners
- * version J! : 3.6 - MIR
+ * version J! : 3.6.5 - MIR
  * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
 
-require_once JPATH_ROOT . '/components/com_banners/helpers/banner.php';
+JLoader::register('BannerHelper', JPATH_ROOT . '/components/com_banners/helpers/banner.php');
 $baseurl = JUri::base();
 ?>
 <div class="bannergroup<?php echo $moduleclass_sfx ?>">

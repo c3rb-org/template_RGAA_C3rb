@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  com_content
- * version J! : 3.6 - MIR
+ * version J! : 3.6.5 - MIR
  * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -35,7 +35,7 @@ JHtml::_('behavior.caption');
 <div class="items-leading clearfix">
 	<?php foreach ($this->lead_items as &$item) : ?>
 		<div class="leading-<?php echo $leadingcount; ?><?php echo $item->state == 0 ? ' system-unpublished' : null; ?> clearfix" 
-			itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+			itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
 			<?php
 				$this->item = &$item;
 				echo $this->loadTemplate('item');

@@ -2,7 +2,7 @@
 /**
  * @package     Joomla.Site
  * @subpackage  com_content
- * °version 3.6 - MIR
+ * version 3.6.5 - MIR
  * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
@@ -19,9 +19,6 @@ $canEdit = $params->get('access-edit');
 $user    = JFactory::getUser();
 $info    = $params->get('info_block_position', 0);
 JHtml::_('behavior.caption');
-$useDefList = ($params->get('show_modify_date') || $params->get('show_publish_date') || $params->get('show_create_date')
-	|| $params->get('show_hits') || $params->get('show_category') || $params->get('show_parent_category') || $params->get('show_author'));
-
 ?>
 <div class="item-page<?php echo $this->pageclass_sfx; ?>" itemscope itemtype="https://schema.org/Article">
 	<meta itemprop="inLanguage" content="<?php echo ($this->item->language === '*') ? JFactory::getConfig()->get('language') : $this->item->language; ?>" />
@@ -193,7 +190,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && $this->item->p
 		<?php
 		if ($attribs->alternative_readmore == null) :
 			echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
-		elseif ($readmore = $this->item->alternative_readmore) :
+		elseif ($readmore = $attribs->alternative_readmore) :
 			echo $readmore;
 			if ($params->get('show_readmore_title', 0) != 0) :
 				echo JHtml::_('string.truncate', ($this->item->title), $params->get('readmore_limit'));

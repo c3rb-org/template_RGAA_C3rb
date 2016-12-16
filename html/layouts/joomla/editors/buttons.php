@@ -2,12 +2,12 @@
 /**
  * @package     Joomla.Site
  * @subpackage  Layout
- * °version J! : 3.4.3 - MIR
+ * version J! : 3.6.5 - MIR
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-defined('_JEXEC') or die;
+defined('JPATH_BASE') or die;
 
 $buttons = $displayData;
 

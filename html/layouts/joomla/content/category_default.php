@@ -2,21 +2,26 @@
 /**
  * @package     Joomla.Site
  * @subpackage  Layout
- * °version J! : 3.4.3 - MIR
+ * version J! : 3.6.5 - MIR
  * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('JPATH_BASE') or die;
 
-// Note that this layout opens a div with the page class suffix. If you do not use the category children
-// layout you need to close this div either by overriding this file or in your main layout.
+/**
+ * Note that this layout opens a div with the page class suffix. If you do not use the category children
+ * layout you need to close this div either by overriding this file or in your main layout.
+ */
 $params  = $displayData->params;
 $extension = $displayData->get('category')->extension;
 $canEdit = $params->get('access-edit');
 $className = substr($extension, 4);
-// This will work for the core components but not necessarily for other components
-// that may have different pluralisation rules.
+
+/**
+ * This will work for the core components but not necessarily for other components
+ * that may have different pluralisation rules.
+ */
 if (substr($className, -1) == 's')
 {
 	$className = rtrim($className, 's');

@@ -2,8 +2,8 @@
 /**
  * @package     Joomla.Site
  * @subpackage  com_contact
- * °version J! : 3.4.3 - MIR
- * @copyright   Copyright (C) 2005 - 2015 Open Source Matters, Inc. All rights reserved.
+ * version J! : 3.6.5 - MIR
+ * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
@@ -33,7 +33,7 @@ foreach (JPluginHelper::getPlugin('captcha') as $plugin)
 <div class="contact-form">
 	<form id="contact-form" action="<?php echo JRoute::_('index.php'); ?>" method="post" class="form-validate form-horizontal well">
 		<?php foreach ($this->form->getFieldsets() as $fieldset): ?>
-			<?php if ($fieldset->name === 'captcha' && !$captchaEnabled) : ?>
+			<?php if ($fieldset->name === 'captcha' && !$this->captchaEnabled) : ?>
 				<?php continue; ?>
 <?php endif; ?>
 			<?php $fields = $this->form->getFieldset($fieldset->name); ?>

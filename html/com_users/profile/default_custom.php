@@ -2,14 +2,14 @@
 /**
  * @package     Joomla.Site
  * @subpackage  com_users
- *
+ * version J! : 3.6.5 - MIR
  * @copyright   Copyright (C) 2005 - 2016 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
 
-JLoader::register('JHtmlUsers', JPATH_COMPONENT . '/helpers/html/users.php');
+JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
 JHtml::register('users.spacer', array('JHtmlUsers', 'spacer'));
 
 $fieldsets = $this->form->getFieldsets();
