@@ -21,13 +21,18 @@
     }
 
     a[href]:after {
-        content: " (" attr(href) ")";
+        content: "";
     }
 
     abbr[title]:after {
         content: " (" attr(title) ")";
     }
-
+    img[src]:after {
+        content: "";
+    }
+    img[src]:before {
+        content: "";
+    }
     // Don't show links that are fragment identifiers,
     // or use the `javascript:` pseudo protocol
     a[href^="#"]:after,

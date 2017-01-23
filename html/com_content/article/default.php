@@ -174,7 +174,7 @@ if (!empty($this->item->pagination) && $this->item->pagination && $this->item->p
 	<?php echo $this->loadTemplate('links'); ?>
 	<?php endif; ?>
 	<?php // Optional teaser intro text for guests ?>
-	<?php elseif ($params->get('show_noauth') == true && $user->get('guest')) : ?>
+	<?php elseif ($params->get('show_noauth') == true && $user->guest) : ?>
 	<?php echo JLayoutHelper::render('joomla.content.intro_image', $this->item); ?>
 	<?php echo JHtml::_('content.prepare', $this->item->introtext); ?>	
 	<?php //Optional link to let them register to see the whole article. ?>
