@@ -6,6 +6,7 @@
 - Espié Vincent
 - Cabrol Cyril
 - Andurand Ariane @ArianeWebdesign  
+- Romain Bijakowski
 
 ###Description
 
