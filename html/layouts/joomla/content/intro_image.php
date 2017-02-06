@@ -43,3 +43,22 @@ $imgfloat = (empty($images->float_intro)) ? $params->get('float_intro') : $image
 	</div>
 	
 <?php endif; ?>
+<?php 
+// Utilisation de l'image de couverture du plg_content_opac_couv_article
+/* if (isset($images->image_couverture) && !empty($images->image_couverture)) : ?>
+	<?php if ($imgfloat == "left") : ?>
+		<div class="col-sm-3">
+	<?php endif; ?>
+	<?php if ($imgfloat == "right") : ?>
+		<div class="col-sm-3 pull-right">
+	<?php endif; ?>
+	<?php if ($imgfloat == "none") : ?>
+		<div class="col-sm-12">
+	<?php endif; ?>
+		<div class="item-image-bloc" aria-hidden="true">
+			<div class="item-image 	<?php if ($imgfloat == "none") : ?>imgcfgaucun<?php endif; ?>">
+				<?php echo base64_decode($images->image_couverture); ?>
+			</div>
+		</div>
+	</div>		
+<?php endif; */ ?>
