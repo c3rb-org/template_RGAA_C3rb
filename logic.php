@@ -65,7 +65,13 @@ if ($paramtmpl_tmplevitlnktarget == 1 ) {
 $tab_sheets = $doc->_styleSheets;
 $doc->_styleSheets = array();
 foreach($tab_sheets as $url => $val)
-	$doc->addStyleSheet($url,$val['mime'],$val['media'],$val['attribs']);
+{
+	if(isset($val['mime']) && isset($val['media']) && isset($val['attribs']))
+	{
+		$doc->addStyleSheet($url,$val['mime'],$val['media'],$val['attribs']);
+	}
+}
+
 if(JDEBUG)
 {
 	$doc->addStyleSheet( ''. $tmplpath .'/css/template.css');
