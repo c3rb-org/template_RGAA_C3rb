@@ -251,7 +251,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 				<button aria-label="Close" data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span></button>
-				<h2 id="modalchoixbibLabel" class="modal-title">Choix de la biliothèque</h2>
+				<h2 id="modalchoixbibLabel" class="modal-title">Choix de la bibliothèque</h2>
 			</div><div class="modal-body">
 		</div>
 	</div>

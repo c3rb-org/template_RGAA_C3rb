@@ -64,14 +64,17 @@ if ($paramtmpl_tmplevitlnktarget == 1 ) {
 //Ajout des css : css template toujours en premier
 $tab_sheets = $doc->_styleSheets;
 $doc->_styleSheets = array();
-foreach($tab_sheets as $url => $val)
-{
-	if(isset($val['mime']) && isset($val['media']) && isset($val['attribs']))
-	{
-		$doc->addStyleSheet($url,$val['mime'],$val['media'],$val['attribs']);
-	}
-}
 
+if (version_compare(JVERSION, '3.7', 'ge'))
+{
+	foreach($tab_sheets as $url => $val)
+		$doc->addStyleSheet($url,$val['options'], array('type'=>$val['type']));
+}
+else
+{
+	foreach($tab_sheets as $url => $val)
+		$doc->addStyleSheet($url,$val['mime'],$val['media'],$val['attribs']);
+}
 if(JDEBUG)
 {
 	$doc->addStyleSheet( ''. $tmplpath .'/css/template.css');
