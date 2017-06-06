@@ -7,7 +7,8 @@ if(JFactory::getApplication()->input->getInt('test_tpl') == 1)
 }
 //variables du template
 include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
-if (is_object($active) && !empty($active->params)) {
+
+if (!empty($active->params->get('pageclass_sfx'))) {
 $pagecss =  $active->params->get('pageclass_sfx');
 }
 else {
@@ -17,10 +18,11 @@ $codeLang = substr($this->language, 0, 2);
 JHtml::_('bootstrap.tooltip');
 ?>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $codeLang; ?>" lang="<?php echo $codeLang; ?>" dir="<?php echo $this->direction; ?>">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $codeLang; ?>" lang="<?php echo $codeLang; ?>" dir="<?php echo $this->direction; ?>">	
 	<head>
 	<?php include_once JPATH_THEMES.'/'.$this->template.'/layout/head.php';	?>
 	</head>
+
 	<?php if ( $paramtmpl_html == 1): ?><div class="debughtml"><?php endif; ?>
 	<?php
 	 	//$lessvar_bgimgbody				= $params->get('lessvar_bgimgbody');
