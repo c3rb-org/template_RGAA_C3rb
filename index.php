@@ -8,7 +8,7 @@ if(JFactory::getApplication()->input->getInt('test_tpl') == 1)
 //variables du template
 include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 
-if (!empty($active->params->get('pageclass_sfx'))) {
+if (!is_null($active) && !is_null($active->params) && !empty($active->params->get('pageclass_sfx'))) {
 $pagecss =  $active->params->get('pageclass_sfx');
 }
 else {
