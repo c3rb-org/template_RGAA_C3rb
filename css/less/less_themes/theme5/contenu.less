@@ -1,0 +1,149 @@
+// Thème de contenu
+/* ******************************************************************************************************** */
+
+.item-page, .library-schedules, .blog, .opac, .opac-detntc, .modal, .opac-adh, .opac-prets, .opac-resas, .opac-listesntcs, .opac-listentcsadh, .opac-listesntcsadh, .opac-liste-abo, #c3rbevenement-wrap, .excerpet, #osmap, .contact, .modal-open, .agents, .opac-listentcs, .opac-histopret, .opac-listesugg, #adminForm, .opac-liste-selections{
+    // Titres
+    h1, h2, h3, h4, h5, h6{
+        a{.fftitre;}
+    }
+    h2, h2 a{.ffsstitre; color: @couleur-principale;}
+    h3, h3 a{.ffsstitre; color: @couleur-principale;}
+    h4, h4 a{.ffsstitre; color: @couleur-tierce;}
+    h5, h5 a{.ffxtitre; color: @couleur-secondaire;}
+    h6, h6 a{.ffxtitre; color: @couleur-secondaire;}
+    // Liens
+    a{color: @couleur-principale;}
+    // Boutons
+    .btn.modal_{ color: @noir; background: @gris1;
+        &:hover, &:focus{color: @blanc; background: @gris4;}
+    }
+    .btn-default, label.btn{color: @blanc; background: @couleur-principale; border: 1px solid @couleur-principale; font-size: 15px; border-radius: 5px; .fftextebold;
+        &:hover, &:focus{color: @couleur-principale; background: @blanc; border-left: 1px solid @couleur-principale; border-top: 1px solid @couleur-principale; border-right: 1px solid @blanc; border-bottom: 1px solid @blanc; }
+    }
+    .btn-default.active, label.btn.active{color: @couleur-principale; background: @blanc; border-left: 1px solid @couleur-principale; border-top: 1px solid @couleur-principale; border-right: 1px solid @blanc; border-bottom: 1px solid @blanc; font-size: 15px;  .fftextebold;
+        &:hover, &:focus{}
+    }
+    .btn-link{color: @couleur-principale; background: @blanc; border: 1px solid @blanc;  .fftextebold;
+        &:hover, &:focus{color: @blanc; background: @couleur-principale; border: 1px solid @couleur-principale;}
+    }
+    .btn-xs{ padding: 0;
+        .glyphicon, .fa{color: @blanc; padding: 1px 5px;
+            &:hover, &:focus{color: @couleur-principale;}
+        }
+    }
+    // Onglets
+    dl.tabs {border: none;
+        dt span h3 a{text-decoration: none; text-transform: none; color: @blanc; background-color: @couleur-principale; border: 1px solid @couleur-principale; border-bottom: 1px solid @blanc; font-size: 18px; .fftextebold; border-radius: 0;
+            &:hover, &:focus{color: @blanc; background-color: @couleur-principale;}
+        }
+        dt.tabs.open span h3 a{color: @couleur-principale; background-color: @gris1; border: 1px solid @couleur-principale; border-bottom: 1px solid @gris1; font-size: 18px; border-radius: 0;
+            &:hover, &:focus{}
+        }
+    }
+    .nav-tabs {border: none;
+        li a{text-decoration: none; text-transform: none; color: @blanc; background-color: @couleur-principale; border: 1px solid @couleur-principale; border-bottom: 1px solid @blanc; border-radius: 0 ; .fftextebold; font-size: 18px;
+            &:hover, &:focus{color: @blanc; background-color: @couleur-principale;}
+        }
+        li.active a{color: @couleur-principale; background-color: @gris1; border: 1px solid @couleur-principale; border-bottom: 1px solid @gris1; border-radius: 0 ; .fftextebold; font-size: 18px;
+            &:hover, &:focus{}
+        }
+    }
+    #tabDynformContent{border: 1px solid @couleur-principale; border-radius: 0 ; background: @gris1;}
+    div.current, .tab-content{padding: 15px; border: 1px solid @couleur-principale; margin-top: -2px; border-radius: 0 ; background: @gris1;}
+    .ico-sup{color: @couleur-principale;}
+    div, p, li, tr, td, .detntc-content, select, label, input, span, .well{.fftexte;
+        span, a{.fftexte;}
+        .fa{.fficon;}
+        .glyphicon{.fficon2;}
+        [class^="ico-"], [class*=" ico-"]{.fficon3;}
+    }
+    .fa{.fficon;}
+    .glyphicon{.fficon2;}
+    [class^="ico-"], [class*=" ico-"]{.fficon3;}
+}
+
+// Opac
+.detntc-content, button, .vignette, .bloc-container{
+    .fa{.fficon;}
+     .glyphicon{.fficon2;}
+    [class^="ico-"], [class*=" ico-"]{.fficon3;}
+}
+.detntc-content span.ntc-champ-label{.fftextebold;}
+.media+div a{.fftexte;}
+.detntc-tit{.fftitre;}
+.rslt-modif{background: @blanc; border: 1px solid @couleur-principale;
+    h3{color: @couleur-secondaire;}
+    .btn{color: @blanc; background: @couleur-secondaire; border: 1px solid @couleur-secondaire;
+        &:hover, &:focus{color: @couleur-secondaire; background: @blanc; border-top: 1px solid @couleur-secondaire; border-left: 1px solid @couleur-principale; border-right: 1px solid @blanc; border-bottom: 1px solid @blanc;}
+    }
+}
+.opac-suggorphee .table{
+    &>thead, &>tbody{
+        &>tr>th, &>tr>td{border: none;}
+    }
+}
+#page_tri_nb, .tri-totalslt{.fftexte;}
+.packc3rb .badge{background-color: @couleur-principale;}
+.opac-adh td label{.fftextebold;}
+.blocselections{margin-top: 75px;}
+.comut .btn{padding-bottom: 7px;}
+.comut .btn.active::before{width: 0;}
+
+// FAQ
+#accordion1.lightnessfaq.headerbackground .accordionfaqheader{background: @blanc; border: 1px solid @couleur-principale; border-radius: 0; box-shadow: none;
+    a{color: @couleur-principale;}
+    span.accordionfaqicon{background-image: none;
+        &::before{content: "\f0a9"; .fficon; color: @couleur-principale;}
+    }
+    &:hover, &:focus{color: @blanc; background: @couleur-principale; border: 1px solid @couleur-principale;
+        a{color: @blanc; background: @couleur-principale;}
+        span.accordionfaqicon{background-image: none;
+            &::before{content: "\f0ab"; .fficon; color: @blanc;}
+        }
+    }
+    &.selected{color: @blanc; background: @couleur-principale; border: 1px solid @couleur-principale;
+        a{color: @blanc !important; background: @couleur-principale !important;}
+        span.accordionfaqicon{background-image: none;
+            &::before{content: "\f0ab"; .fficon; color: @blanc;}
+        }
+    }
+}
+#accordion1.lightnessfaq.contentbackground div.accordionfaqitem{background-color: @blanc; border: 1px solid @couleur-principale; border-radius: 0;}
+.vignette{background-color: @gris1;}
+.detntc-ligne-btn{background-color: @gris2;}
+
+// C3rb événement
+// Résultat de recherche
+#c3rbevenement-wrap{
+    h4{.ffsstitre; color: @couleur-principale;
+        .accordion-toggle{font-size: 14px; color: @noir;}
+    }
+    #events-wrap .item{/* width: 32%; margin-right: 1%; float: left; */ margin-bottom: 25px;}
+    .col-lg-4{float: none; display: inline-block; vertical-align: top; width: 32% !important;
+        .image-event{color: @couleur-principale; border-radius: 0; border-bottom: 5px solid @couleur-principale; background-color: @couleur-principale; margin-bottom: 15px;}
+    }
+    .item-image{
+            a{color: @couleur-principale;}
+            .fxfadeInUp{color: @blanc; background-color: @couleur-principale; border: 1px solid @couleur-principale; border-radius: 0;}
+    }
+    .tags{.cache;}
+}
+// Ajout d'un événement
+#toolbar-publish, #toolbar-unpublish, #toolbar-checkin, #toolbar-delete{
+    .btn-small{ color: @noir; background: @gris1;
+        &:hover, &:focus{color: @blanc; background: @gris4;}
+    }
+}
+
+.icons, .aide-opac-btn, .pagination-page, .navnotice{
+    .fa{.fficon;}
+    .glyphicon{.fficon2;}
+    [class^="ico-"], [class*=" ico-"]{.fficon3;}
+}
+.open .btn-default{border: 1px solid @couleur-principale; .fftexte; font-size: 15px; color: @couleur-principale; background: @blanc;}
+.media-heading {.fftitre;}
+
+// Tags
+.tag-category{
+    .filters.btn-toolbar{.cache;}
+}

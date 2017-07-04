@@ -1,0 +1,460 @@
+// Thème Modules
+/* ******************************************************************************************************** */
+.packc3rb .moduletable{box-shadow: none; background: @blanc; border: none; border-radius: 0;
+    h2{background: @blanc; border: none; border-radius: 0; color: @noir; text-align: center; text-transform: normal; margin: 0 5px 15px; padding: 0; border-bottom: 5px solid @couleur-secondaire; .fftitremodule; overflow: hidden; text-overflow: ellipsis; max-width: 100%;}
+    .modcontent{background-color: @blanc; border: none; border-radius: 0;
+        // Boutons
+        .btn-default{color: @blanc; background: @couleur-principale; border: 1px solid @couleur-principale;
+            &:hover, &:focus{color: @couleur-principale; background: @blanc;}
+        }
+        .btn-link{color: @couleur-principale; background: @blanc; border: 1px solid @blanc;
+            &:hover, &:focus{color: @blanc; background: @couleur-principale; border: 1px solid @couleur-principale;}
+        }
+    }
+}
+
+// Identification
+#Mod91{background: none;
+    .modcontent{background: none;}
+}
+
+// Accès rapide infos pratiques
+// Infos pratiques
+.packc3rb .infospratiques{.reset;
+    .modcontent{background: none; border: none;
+        .navbar-default{ background: none; border: none;
+            .navbar-nav{width: 100%; margin-top: 32px;
+                &>li{min-width: 15%; float: none; margin-bottom: 5px;
+                    &>a{color: @noir; background: none; border: none; .fftextebold; font-size: 25px; padding-top: 5px; padding-bottom: 5px; text-align: center;
+                        &:before{content: "\f05a"; .fficon; margin-right: 5px; .fficon; margin-right: 5px;}
+                    }
+                    &:hover, &:focus{
+                        a{background: @blanc; color: @noir; text-decoration: underline;}
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Recherche rapide
+.packc3rb .modrechrapide{background: none;
+    .modcontent{background: none;
+        .mod-opac-rech-rapide{
+            .form-inline .input-group{
+                &>.form-control{width: 90%; display: inline-block; min-height: 60px; font-size: 25px;}
+                .input-group-btn{width: 10%; display: inline-block;
+                    .btn-default{display: block; width: 100%; min-height: 60px; font-size: 30px;
+                        .glyphicon-search{top: 3px;}
+                        &:hover, &:focus{}
+                    }
+                }
+            }
+            a{
+                &:hover, &:focus{}
+            }
+        }
+    }
+}
+
+// Liens de recherche
+// Menu
+.liensrecherche{margin-bottom: 0; background: none !important;
+   .modcontent{padding-bottom: 0; background: none !important; border: none !important;
+       .navbar-default{padding-right: 0; margin-top: -20px; min-height: 15px; border: none; background: none;
+            .navbar-nav{width: 100%;
+                &>li:first-child a{padding-left: 0;}
+                &>li{
+                    &>a{text-align: center; color: @couleur-principale; text-decoration: underline; background: none; border: none; padding-top: 5px; padding-bottom: 5px; .fftextebold;
+                    }
+                    &.current, &.active{
+                        a{color: @couleur-secondaire; text-decoration: underline; background: none; border: none;}
+                    }
+                    &:hover, &:focus{
+                        a{color: @couleur-secondaire; text-decoration: underline; background: none; border: none;}
+                    }
+                }
+                .parent a::after{font-size: 25px;}
+           }
+        }
+    }
+}
+.accueil .liensrecherche .navbar-default{margin-left: 33.3333%; padding-left: 15px; margin-top: -35px;}
+.accueil.mdctype1 .liensrecherche .navbar-default{margin-left: 0; padding-left: 0;}
+
+// Diaporama
+.packc3rb .moduletable.diaporama .modcontent{padding: 0;
+    .slick-slide{margin: 0; padding: 0;
+        .informations{border-radius: 0; background-color: @gris1;
+			.dates{color: @noir;}
+            h3{font-size: 30px; text-transform: none; text-align: center; color: @noir !important; border-bottom: 5px solid @couleur-principale; margin: 0 5px 15px; padding: 0; .fftitre;
+                &:hover, &:focus{color: @noir;}
+                a{color: @noir !important;
+                    &:hover, &:focus{color: @noir;}
+                }
+            }
+            .description{color: @noir; .fftexte;}
+        }
+    }
+    .slick-prev, .slick-next{background-color: @blanc; border: none; border-radius: 0; padding-top: 9px; padding-bottom: 9px;
+        &:before{color: @couleur-principale;}
+    }
+    .slick-prev{background: none; border: 0 solid @blanc; border-radius: 0;
+        &:before{color: @couleur-principale;}
+    }
+    .slick-next{background: none; border: 0 solid @blanc; border-radius: 0;
+        &:before{color: @couleur-principale;}
+    }
+    .slick-dots{
+        li{margin: 0 1px;
+            button:hover::before{color: @couleur-secondaire;}
+            button::before{color: @couleur-principale;}
+        }
+        &.slick-active{
+            button::before{color: @couleur-principale;}
+        }
+    }
+    .c3rbevenement-slideshow-playpause{
+        .c3rbe-play, .c3rbe-pause{color: @couleur-principale; background: none; border: 0 solid @blanc; border-radius: 0;
+            &:hover, &:focus{color: @couleur-secondaire; background-color: @blanc; border: 0 solid @blanc;}
+        }
+    }
+}
+
+
+// Diaporama spécificité MDCtype1 / MDCtype3
+.mdctype1, .mdctype3{
+    .packc3rb .moduletable.diaporama .modcontent{
+        .slick-slide{margin: 0; padding: 0;
+            .informations{width: 25%; top: 0; right: 0; bottom: 0; left: 75%;}
+        }
+        .slick-prev{top: 87%; left: 75%;}
+        .slick-next{top: 87%; left: 96%;}
+        .slick-dots{top: 90%; right: 4%; text-align: right; position: absolute;}
+        .c3rbevenement-slideshow-playpause{position: absolute; top: 98%; left: 79%;}
+    }
+}
+
+// Diaporama spécificité MDCtype2
+.mdctype2 .packc3rb .moduletable.diaporama .modcontent{
+    .slick-slide{margin: 0; padding: 0;
+        .informations{width: 34%; top: 0; right: 0; bottom: 0; left: 66%;}
+    }
+    .slick-prev{top: 87%; left: 66%;}
+    .slick-next{top: 87%; left: 94%;}
+    .slick-dots{top: 89%; right: 5%; text-align: right; position: absolute;}
+    .c3rbevenement-slideshow-playpause{position: absolute; top: 95%; left: 70%;}
+}
+
+// Fil d'ariane
+#breadcrumblabel{padding-top: 20px;}
+.breadcrumbs{padding-top: 20px;
+    .modcontent{padding: 0 5px 10px !important;
+        p, span{.fftexte;}
+        a{color: @couleur-principale; .fftexte;
+            &:hover, &:focus{color: @couleur-principale; text-decoration: underline;}
+        }
+    }
+}
+
+// Horaires
+.c3rbevenement_schedules-module-wrap{
+    .informations, .business-hours{.fftexte; font-size: 16px;}
+    h3.informations, h3.schedules{.fftitre; color: @gris4; font-size: 24px;}
+    p, a, span{.fftexte; font-size: 16px;}
+    a{color: @couleur-principale;}
+    .fa{.fficon; color: @couleur-principale;}
+    .glyphicon{.fficon2; color: @couleur-principale;}
+    [class^="ico-"], [class*=" ico-"]{.fficon3; color: @couleur-principale;}
+}
+
+// Calendrier - c3rb événement
+.packc3rb .moduletable .modcontent .c3rbevenement_calendar-module-wrap{
+    // Boutons
+    .btn-default{color: @blanc; background: @couleur-secondaire; border: 1px solid @couleur-secondaire;
+        &:hover, &:focus{color: @couleur-secondaire; background: @blanc;}
+    }
+    .btn-link{color: @couleur-secondaire; background: @blanc; border: 1px solid @blanc;
+        &:hover, &:focus{color: @blanc; background: @couleur-secondaire; border: 1px solid @couleur-secondaire;}
+    }
+    span[data-cal-date]{margin-top: 5px; float: left !important; margin-left: 5px; opacity: 1;}
+    .cal-day-today{background: none !important;}
+    .cal-month-box .cal-day-today span[data-cal-date]{font-size: 1.2em; margin-top: 5px; color: @couleur-secondaire;}
+    .cal-month-day{height: 40px; .fftexte;}
+    .cal-year-box [class*="span"], .cal-month-box [class*="cal-cell"]{min-height: 40px;}
+    .cal-day-weekend span[data-cal-date]{color: @gris3; opacity: 1;}
+    .cal-day-holiday span[data-cal-date]{color: @gris3; opacity: 1; opacity: 1;}
+    .cal-year-box [class*="span"], .cal-month-box [class*="cal-cell"]{border: @gris3;}
+    .cal-year-box .row-fluid, .cal-month-box .cal-row-fluid{border: @gris3;}
+    .cal-month-box, .cal-year-box, .cal-week-box{background: @blanc;}
+    .month-events a{color: @couleur-secondaire; text-align: center; display: block; .fftexte;}
+    .event{background-color: @couleur-secondaire; box-shadow: none;}
+    #cal-slide-content{
+        background-color: @couleur-secondaire; box-shadow: none;
+        &:hover, &:focus{background-color: @couleur-secondaire;}
+        .event{background-color: @blanc; box-shadow: none;}
+        a.event-item{color: @blanc;}
+    }
+    .cal-day-outmonth span[data-cal-date]{opacity: 0.1;}
+}
+
+// Tags
+.packc3rb .moduletable .modcontent .filtrage-tag{
+    .tags>li{ margin: 2px; background-color: @couleur-secondaire; border: 1px solid @couleur-secondaire; border-radius: 0; color: @blanc; padding: 3px;
+            a{color: @blanc;
+                &:hover, &:focus{color: @couleur-secondaire; text-decoration: none;}
+            }
+        .badge{color: @couleur-secondaire; background-color: @blanc; border: 1px solid @blanc; border-radius: 10px;}
+        &:hover, &:focus{background-color: @blanc; color: @couleur-secondaire;
+            a{color: @couleur-secondaire !important;}
+            .badge{color: @blanc; background: @couleur-secondaire;}
+        }
+    }
+}
+
+// Notices les plus empruntés - statistiques
+.packc3rb .moduletable .modcontent .statntc-vignette{
+    .vignette a{color: @couleur-secondaire;
+        &:hover, &:focus{color: @couleur-secondaire;}
+    }
+    .detail-vign a{color: @couleur-secondaire;
+        &:hover, &:focus{color: @couleur-secondaire;}
+    }
+    a, p, span{.fftexte;}
+    .fa{.fficon;}
+    .glyphicon{.fficon2;}
+    [class^="ico-"], [class*=" ico-"]{.fficon3;}
+    .btnlist .btn{white-space: unset;}
+    .btn-default{color: @blanc; background: @couleur-secondaire; border: 1px solid @couleur-secondaire;
+        &:hover, &:focus{color: @couleur-secondaire; background: @blanc;}
+    }
+    .btn-link{color: @couleur-secondaire; background: @blanc; border: 1px solid @blanc;
+        &:hover, &:focus{color: @blanc; background: @couleur-secondaire; border: 1px solid @couleur-secondaire;}
+    }
+}
+
+// Filtres facettes
+#mod-opac-filtres-facettes-droite{
+    h3{.fftitre; color: @couleur-secondaire;}
+    .panel-heading{.ffxtitre; background-color: @gris1; font-size: 16px;}
+    a{color: @couleur-secondaire; .fftexte;
+        &:hover, &:focus{color: @couleur-secondaire; text-decoration: underline;}
+    }
+    .badge{background-color: @couleur-secondaire;}
+}
+
+// Accès rapides
+#menu-lnk113{
+    li{width: 15%; margin-right: 1%; display: inline-block; text-align: center; margin-bottom: 5px;
+        a{color: @noir; border-bottom: 5px solid @couleur-principale; min-height: 75px; .ffmenu;
+                &:hover, &:focus{color: @blanc;}
+        }
+        &:nth-child(1) a{border-bottom: 5px solid @couleur1;
+            &:hover, &:focus{background: @couleur1;}
+        }
+        &:nth-child(2) a{border-bottom: 5px solid @couleur2;
+            &:hover, &:focus{background: @couleur2;}
+        }
+        &:nth-child(3) a{border-bottom: 5px solid @couleur3;
+            &:hover, &:focus{background: @couleur3;}
+        }
+        &:nth-child(4) a{border-bottom: 5px solid @couleur4;
+            &:hover, &:focus{background: @couleur4;}
+        }
+        &:nth-child(5) a{border-bottom: 5px solid @couleur5;
+            &:hover, &:focus{background: @couleur5;}
+        }
+        &:nth-child(6) a{border-bottom: 5px solid @couleur6;
+            &:hover, &:focus{background: @couleur6;}
+        }
+        &:nth-child(7) a{border-bottom: 5px solid @couleur7;
+            &:hover, &:focus{background: @couleur7;}
+        }
+        &:nth-child(8) a{border-bottom: 5px solid @couleur1;
+            &:hover, &:focus{background: @couleur1;}
+        }
+        &:nth-child(9) a{border-bottom: 5px solid @couleur2;
+            &:hover, &:focus{background: @couleur2;}
+        }
+        &:nth-child(10) a{border-bottom: 5px solid @couleur3;
+            &:hover, &:focus{background: @couleur3;}
+        }
+        &:nth-child(11) a{border-bottom: 5px solid @couleur4;
+            &:hover, &:focus{background: @couleur4;}
+        }
+        &:nth-child(12) a{border-bottom: 5px solid @couleur5;
+            &:hover, &:focus{background: @couleur5;}
+        }
+        &:nth-child(13) a{border-bottom: 5px solid @couleur6;
+            &:hover, &:focus{background: @couleur6;}
+        }
+        &:nth-child(14) a{border-bottom: 5px solid @couleur7;
+            &:hover, &:focus{background: @couleur7;}
+        }
+        &:nth-child(15) a{border-bottom: 5px solid @couleur1;
+            &:hover, &:focus{background: @couleur1;}
+        }
+        &:nth-child(16) a{border-bottom: 5px solid @couleur2;
+            &:hover, &:focus{background: @couleur2;}
+        }
+        &:nth-child(17) a{border-bottom: 5px solid @couleur3;
+            &:hover, &:focus{background: @couleur3;}
+        }
+        &:nth-child(18) a{border-bottom: 5px solid @couleur4;
+            &:hover, &:focus{background: @couleur4;}
+        }
+        &:nth-child(19) a{border-bottom: 5px solid @couleur5;
+            &:hover, &:focus{background: @couleur5;}
+        }
+        &:nth-child(20) a{border-bottom: 5px solid @couleur6;
+            &:hover, &:focus{background: @couleur6;}
+        }
+        &:nth-child(21) a{border-bottom: 5px solid @couleur7;
+            &:hover, &:focus{background: @couleur7;}
+        }
+        &:nth-child(22) a{border-bottom: 5px solid @couleur1;
+            &:hover, &:focus{background: @couleur1;}
+        }
+        &:nth-child(23) a{border-bottom: 5px solid @couleur2;
+            &:hover, &:focus{background: @couleur2;}
+        }
+        &:nth-child(24) a{border-bottom: 5px solid @couleur3;
+            &:hover, &:focus{background: @couleur3;}
+        }
+        &:nth-child(25) a{border-bottom: 5px solid @couleur4;
+            &:hover, &:focus{background: @couleur4;}
+        }
+        &:nth-child(26) a{border-bottom: 5px solid @couleur5;
+            &:hover, &:focus{background: @couleur5;}
+        }
+        &:nth-child(27) a{border-bottom: 5px solid @couleur6;
+            &:hover, &:focus{background: @couleur6;}
+        }
+        &:nth-child(28) a{border-bottom: 5px solid @couleur7;
+            &:hover, &:focus{background: @couleur7;}
+        }
+        &:nth-child(29) a{border-bottom: 5px solid @couleur1;
+            &:hover, &:focus{background: @couleur1;}
+        }
+        &:nth-child(30) a{border-bottom: 5px solid @couleur2;
+            &:hover, &:focus{background: @couleur2;}
+        }
+        &:nth-child(31) a{border-bottom: 5px solid @couleur3;
+            &:hover, &:focus{background: @couleur3;}
+        }
+        &:nth-child(32) a{border-bottom: 5px solid @couleur4;
+            &:hover, &:focus{background: @couleur4;}
+        }
+        &:nth-child(33) a{border-bottom: 5px solid @couleur5;
+            &:hover, &:focus{background: @couleur5;}
+        }
+        &:nth-child(34) a{border-bottom: 5px solid @couleur6;
+            &:hover, &:focus{background: @couleur6;}
+        }
+        &:nth-child(35) a{border-bottom: 5px solid @couleur7;
+            &:hover, &:focus{background: @couleur7;}
+        }
+        &:nth-child(36) a{border-bottom: 5px solid @couleur1;
+            &:hover, &:focus{background: @couleur1;}
+        }
+        &:nth-child(37) a{border-bottom: 5px solid @couleur2;
+            &:hover, &:focus{background: @couleur2;}
+        }
+        &:nth-child(38) a{border-bottom: 5px solid @couleur3;
+            &:hover, &:focus{background: @couleur3;}
+        }
+        &:nth-child(39) a{border-bottom: 5px solid @couleur4;
+            &:hover, &:focus{background: @couleur4;}
+        }
+        &:nth-child(40) a{border-bottom: 5px solid @couleur5;
+            &:hover, &:focus{background: @couleur5;}
+        }
+        &:nth-child(41) a{border-bottom: 5px solid @couleur6;
+            &:hover, &:focus{background: @couleur6;}
+        }
+        &:nth-child(42) a{border-bottom: 5px solid @couleur7;
+            &:hover, &:focus{background: @couleur7;}
+        }
+    }
+}
+
+// Accès rapides type 1
+#Mod113{border: none;
+    .modcontent{padding: 0;
+            .navbar-nav{width: 100%;
+                &>li{width: 11%; margin-left: 0.5%; margin-bottom: 5px; display: inline-block;
+                    a{
+                        &::before{.fficon3; display: block; width: 100%; font-size: 65px; margin-top: 10px; margin-bottom: 10px;  margin-left: 10px;font-weight: normal;}
+                        &:hover, &:focus{}
+                    }
+                    &:nth-child(1) a{border-bottom: 5px solid @couleur-principale;
+                        &::before{content: "\f00e"; .fficon; font-size: 45px; margin: 10px 0;}
+                        &:hover, &:focus{ background: @couleur-principale;}
+                    }
+					&:nth-child(2) a{border-bottom: 5px solid @couleur1;
+                        &::before{content: "\e60d";}
+                        &:hover, &:focus{ background: @couleur1;}
+                    }
+                    &:nth-child(3) a{border-bottom: 5px solid @couleur2;
+                        &::before{content: "\e60e";}
+                        &:hover, &:focus{ background: @couleur2;}
+                    }
+                    &:nth-child(4) a{border-bottom: 5px solid @couleur3;
+                        &::before{content: "\e616";}
+                        &:hover, &:focus{ background: @couleur3;}
+                    }
+                    &:nth-child(5) a{border-bottom: 5px solid @couleur4;
+                        &::before{content: "\e624";}
+                        &:hover, &:focus{ background: @couleur4;}
+                    }
+                    &:nth-child(6) a{border-bottom: 5px solid @couleur5;
+                        &::before{content: "\e62b";}
+                        &:hover, &:focus{ background: @couleur5;}
+                    }
+                    &:nth-child(7) a{border-bottom: 5px solid @couleur6;
+                        &::before{content: "\e625";}
+                        &:hover, &:focus{ background: @couleur6;}
+                    }
+					&:nth-child(8) a{border-bottom: 5px solid @couleur7;
+                        &::before{content: "\f005"; .fficon;  font-size: 45px; margin: 10px 0;}
+                        &:hover, &:focus{ background: @couleur7;}
+                    }
+                }
+            }
+    }
+}
+
+// Carrousel
+.packc3rb .carrouselselection{background: @blanc;
+    h2{margin-top: 0; background: none;}
+    .modcontent{background: none;
+        .slick-prev, .slick-next{background: @couleur-tierce !important; border-radius: 0; border: 5px solid @blanc;
+            &:hover, &:focus{}
+        }
+        a, .vignette span.ico-sup, .ligne-item span.ico-sup{color: @couleur-principale;
+        }
+    }
+}
+
+// Newsflash
+.newsflash-title{
+    margin-bottom: 5px; margin-top: 5px;
+}
+
+// C3rb événement à venir
+.media-heading{margin-bottom: 5px; margin-top: 5px;}
+
+// Sélection des usagers
+#Mod120 .navbar-nav {display: block; width: 100%;
+    li {display: block; width: 100%;
+        a {
+            background-color: @couleur-secondaire;
+            background-image: url('../../../images/template/bgi-selection-usagers.png');
+            background-size: 100% auto;
+            display: block;
+            font-size: 0;
+            line-height: 85px;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,269 @@
+// Invariants
+/* ******************************************************************************************************** */
+.reset{background: none; border: none; box-shadow: none;}
+.cache{position: absolute; left: -9999px;}
+
+/* Modifications occasionnelles */
+// Couleurs neutres
+// (rangées du + clair au plus foncé)
+@blanc: #FFFFFF;
+@gris1: #fbfbfb;
+@gris2: #C9C9C9;
+@gris3: #B2B2B2;
+@gris4: #939393;
+@gris5: #727272;
+@noir: #000000;
+@transparent: rgba(255, 255, 255, 0);
+@couleur-masque: @gris1;
+
+// Label et alert
+@couleur-success: #03A678;
+@couleur-info: #009FD4;
+@couleur-warning: #E65722;
+@couleur-danger: #DC143C;
+
+
+// Détails
+/* ******************************************************************************************************** */
+
+.pos-2 {
+    .col-lg-3{position: absolute; right: 15px; top: 15px;
+        .moduletable, .modcontent{.reset; padding: 0 !important;
+            button{position: relative; z-index: 9999; float: right;}
+        }
+    }
+}
+.pos-3, .pos-6{.col-xs-12 .moduletable{margin-bottom: 0;}}
+.moduletable.entete{margin-bottom: -3px; .reset;
+        .modcontent{.reset;}
+}
+.accueil.mdctype1 .colctre{
+    min-height: 0;
+}
+
+// Hover des image format blog et événements
+.item-image {
+	max-height: 161px;
+	.fxfadeInUp {display: inline-block; font-size: 50px; font-weight: bold; left: 50%; margin-left: -32px; margin-top: -30px; opacity: 0; padding: 0 20px; position: absolute; top: 50%;
+	}
+}
+.fxfadeInUp {
+	transition: all 1s
+}
+.item-image {
+	position: relative;
+	img {z-index: 1}
+	.masqimg {z-index:2 }
+	.fxfadeInUp {z-index:3 }
+}
+.table-striped > tbody > tr:nth-of-type(2n+1){background-color: @gris1;
+    &:hover, &:focus{background-color: inherit;}
+}
+.panel-default>.panel-heading{background-color: @gris1; border-color: @gris3;}
+
+// C3rb événement
+#c3rbevenement-wrap{
+	.item{ width: 32%; display: inline-block; vertical-align: top; margin-left: 1%;}
+}
+#events-wrap .fa-arrow-right::before{content: "";}
+// Détail d'un événement
+.excerpet{
+    h3{.fftitre; margin-top: 15px;}
+    h4{.ffsstitre; color: @couleur-principale;
+        .accordion-toggle{font-size: 14px; color: @noir;}
+    }
+    .thumbnail{background: none; border: none; padding: 0;}
+    .author, .meta-event-label{.cache;}
+    .col-sm-8, .col-sm-4{width: 100%;}
+    .list-group-item{border: none; padding: 0;}
+    .panel-collapse{padding: 5px;
+        time, span{.fftexte;}
+    }
+    .label-info{background-color: @couleur-principale; border: 1px solid @couleur-principale; color: @blanc;
+        &:hover, &:focus{color: @couleur-principale !important; background: @blanc; border: 1px solid @couleur-principale;}
+    }
+    .description{
+        p{.fftexte;}
+    }
+}
+
+#contact-form{.reset;}
+.packc3rb .colctre{min-height: 0 !important;}
+
+// Alert
+.alert{.fftexte;
+	a{text-decoration: underline;
+		&:hover, &:focus{text-decoration: none;}
+	}
+}
+// Alert-info
+.alert-info{background-color: @couleur-info; border: 1px solid @couleur-info; color: @blanc;
+    a, p, span{color: @blanc !important;}
+}
+
+// Alert-success
+.alert-success{background-color: @couleur-success; border: 1px solid @couleur-success; color: @blanc;
+    a, p, span{color: @blanc !important;}
+}
+
+// Alert-warning
+.alert-warning{background-color: @couleur-warning; border: 1px solid @couleur-warning; color: @blanc;
+    a, p, span{color: @blanc !important;}
+}
+
+// Alert-danger
+.alert-danger{background-color: @couleur-danger; border: 1px solid @couleur-danger; color: @blanc;
+    a, p, span{color: @blanc !important;}
+}
+
+// Bouton info - success - warning - danger
+// Bouton Info
+.packc3rb .btn-info{color: @blanc; background-color: @couleur-info; border: 1px solid @couleur-info; border-radius: 0; .fftexte;
+    &:hover, &:focus{color: @couleur-info; background-color: @blanc; border: 1px solid @couleur-info;}
+}
+// Bouton success
+.packc3rb .btn-success{color: @blanc; background-color: @couleur-success; border: 1px solid @couleur-success; border-radius: 0; .fftexte;
+    &:hover, &:focus{color: @couleur-success; background-color: @blanc; border: 1px solid @couleur-success;}
+}
+// Bouton warning
+.packc3rb .btn-warning{color: @blanc; background-color: @couleur-warning; border: 1px solid @couleur-warning; border-radius: 0; .fftexte;
+    &:hover, &:focus{color: @couleur-warning; background-color: @blanc; border: 1px solid @couleur-warning;}
+}
+// Bouton danger
+.packc3rb .btn-danger{color: @blanc; background-color: @couleur-danger; border: 1px solid @couleur-danger; border-radius: 0; .fftexte;
+    &:hover, &:focus{color: @couleur-danger; background-color: @blanc; border: 1px solid @couleur-danger;}
+}
+// Boutons primary
+.packc3rb .btn-primary{color: @blanc; background-color: @couleur-success; border: 1px solid @couleur-success; border-radius: 0; .fftexte;
+    &:hover, &:focus{color: @couleur-success; background-color: @blanc; border: 1px solid @couleur-success;}
+}
+
+.pret-retard{background: @couleur-danger; border: 1px solid @couleur-danger;}
+.pret-prol{background: @couleur-success; border: 1px solid @couleur-success;}
+.pret-resa{background: @couleur-info; border: 1px solid @couleur-info;}
+
+// Label
+.label{.fftextebold; color: @blanc; border-radius: 5px; font-size: 14px;}
+.label-nouveaute{background-color: @couleur-principale; border: 1px solid @couleur-principale; color: @blanc !important;}
+.label-nav{background-color: @gris1; border: 1px solid @gris1; color: @couleur-principale;}
+.label-clr1{background-color: @couleur-principale; border: 1px solid @couleur-principale; color: @blanc;}
+.label-clr2{background-color: @couleur-secondaire !important; border: 1px solid @couleur-secondaire !important; color: @blanc !important;}
+.label.label-clr3, .pret-resa, .rsv-transit{background-color: @couleur-tierce !important; border: 1px solid @couleur-tierce !important; color: @blanc !important;}
+.label-success{background-color: @couleur-success; border: 1px solid @couleur-success; color: @blanc;
+    &:hover, &:focus{color: @couleur-success; background: @blanc; border: 1px solid @couleur-success;}
+}
+.label-info{background-color: @couleur-info; border: 1px solid @couleur-info; color: @blanc;
+    &:hover, &:focus{color: @couleur-info; background: @blanc; border: 1px solid @couleur-info;}
+}
+.label-warning{background-color: @couleur-warning; border: 1px solid @couleur-warning; color: @blanc;
+    &:hover, &:focus{color: @couleur-warning; background: @blanc; border: 1px solid @couleur-warning;}
+}
+.label-danger{background-color: @couleur-danger; border: 1px solid @couleur-danger; color: @blanc;
+    &:hover, &:focus{color: @couleur-danger; background: @blanc; border: 1px solid @couleur-danger;}
+}
+.packc3rb{
+    .type1, .formation-type-1{background-color: @couleur1 !important;}
+    .type2, .formation-type-2{background-color: @couleur2 !important;}
+    .type3, .formation-type-3{background-color: @couleur3 !important;}
+    .type4, .formation-type-4{background-color: @couleur4 !important;}
+    .type5, .formation-type-5{background-color: @couleur5 !important;}
+    .type6, .formation-type-6{background-color: @couleur6 !important;}
+    .type7, .formation-type-7{background-color: @couleur7 !important;}
+}
+
+.navnotice .label-transp a{color: @noir;}
+
+.tags a {color: @blanc !important;}
+
+// Cookies
+.cadre_texte{
+    max-width: 1170px;
+    p{text-align: left; .fftexte;}
+}
+#cadre_alert_cookies .cadre_inner_alert_cookies{box-shadow: 1px 10px 50px #6c6c6c; z-index: 9999; padding: 10px;
+    .col-md-6{width: 10%;}
+    .btn{border-radius: 0;}
+    .btn-inverse{color: @blanc; background: @couleur-info; border: 1px solid @couleur-info; border-radius: 0; .fftexte;
+        &:hover, &:focus{color: @couleur-info; background: @blanc; border: 1px solid @couleur-info;}
+    }
+}
+
+.mdctype3 {
+    .icons{.cache; right: 9999px;}
+    .c3rbevenement_nextevents-module-wrap.ongletaccueil .media{width: 32%; margin-right: 1%; display: inline-block; vertical-align: top; margin-top: 0;
+        .media-left, .media-right, .media-body{display: block;}
+    }
+    .media-body{width: auto;}
+}
+
+.packc3rb .moduletable.diaporama{
+    padding-top: 0;
+}
+.mod-opac-login .modalmustlogin{
+	button{position: relative; top: 0; right: 0; background: @couleur-principale; border: 1px solid @couleur-principale;}
+	a{color: @couleur-principale;}
+}
+.modal-open{background: none !important;}
+.sel-orphee a{font-size: 18px;
+	&::before{content:  "\f03a"; .fficon; margin-right: 5px; font-size: 14px;}
+}
+.tmpl-component .adminform .nav{margin-bottom: 0;}
+.chzn-container-multi .chzn-choices li.search-field input[type="text"]{height: 25px;}
+.tmpl-component .adminform .radio.btn-group input[type="radio"]{display: none !important;}
+.tmpl-component .adminform{
+	ul, ol{margin: 0;}
+}
+#moduleList a.btn{color: @blanc;}
+.diaporama .slick-list.draggable{height: 395px;
+	.informations{height: 395px;}
+}
+.mdctype1{
+	.diaporama .slick-list.draggable{height: 296px;
+		.informations{height: 296px;}
+	}
+}
+.excerpet{
+	.col-sm-4{margin-top: 10px;}
+}
+.detntc-tit{margin-right: 5px;}
+.detntc-content  br+.label-clr3{position: relative; display: inline-block;}
+
+// image dans édition d'article
+#jform_urls_urla-lbl,
+#jform_urls_urlatext-lbl,
+jform_urls_urlatext-lbl,
+#jform_urls_urlatext,
+#jform_urls_urla,
+#jform_urls_urlb-lbl,
+#jform_urls_urlbtext-lbl,
+jform_urls_urlbtext-lbl,
+#jform_urls_urlbtext,
+#jform_urls_urlb,
+#jform_urls_urlc-lbl,
+#jform_urls_urlctext-lbl,
+jform_urls_urlctext-lbl,
+#jform_urls_urlctext,
+#jform_urls_urlc
+{.cache;}
+
+.opac-rslt .page-header h2{.cache;}
+#table_frontend_user_article_list tfoot tr+tr{.cache;}
+
+#jform_repetitions_manage_iframe{min-height: 1290px !important;}
+
+// recalage font bug Fontawesome
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('@{fa-font-path}/fontawesome-webfont.eot?v=@{fa-version}');
+  src: url('@{fa-font-path}/fontawesome-webfont.eot?#iefix&v=@{fa-version}') format('embedded-opentype'),
+  url('@{fa-font-path}/fontawesome-webfont.woff2?v=@{fa-version}') format('woff2'),
+  url('@{fa-font-path}/fontawesome-webfont.woff?v=@{fa-version}') format('woff'),
+  url('@{fa-font-path}/fontawesome-webfont.ttf?v=@{fa-version}') format('truetype'),
+  url('@{fa-font-path}/fontawesome-webfont.svg?v=@{fa-version}#fontawesomeregular') format('svg');
+//  src: url('@{fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
+font-weight: normal;
+font-style: normal;
+}
+@fa-font-path:              "/../../fonts";
+// Bootstrap fontpath
+@icon-font-path:            "/../../fonts/";

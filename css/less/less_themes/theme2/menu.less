@@ -1,0 +1,263 @@
+#Mod1{background: none;
+.modcontent{background: none;}
+    .navbar-default{ border: none; background: none;
+        .navbar-collapse{background: none;
+            .navbar-nav{width: 100%; background: none;
+                &>li{min-width: 11%; margin-left: 1%;
+                    &>a{text-align: center; color: @blanc; .ffmenu; margin: 0; border-radius: 0 0 10px 0;
+                        &:before{margin-right: 5px; .fficon;}
+                    }
+                    &.current, &.active, &.open{
+                        a{color: @noir; background: @blanc;}
+                        ul{
+                            li{
+                                a{background: none !important;}
+                            }
+                        }
+                    }
+                    &:hover, &:focus{
+                        a{color: @noir; background: @blanc;}
+                    }
+                    ul{border-radius: 0 0 10px; background: @blanc;
+                        li{width: 23%; margin-left: 1%; margin-right: 1%; display: inline-block; margin-bottom: 10px;
+                            a{color: @noir; padding-top: 15px; padding-bottom: 15px; border-radius: 0 0 10px; background: none;
+                                &:before{margin-right: 5px; .fficon;}
+                            }
+                            &.current, &.active{
+                                a{}
+                            }
+                            &:hover, &:focus{
+                                a{}
+                            }
+                        }
+                    }
+                }
+                .parent a::after{}
+                // Accueil
+                .item-101{
+                    a{border: 2px solid @couleur1; background: @couleur1;
+                        &:before{/* content: "\f015"; */}
+                    }
+                    &.current, &.active, &.open{
+                        a{
+                        }
+                    }
+                    &:hover, &:focus{
+                        a{
+                        }
+                    }
+                    ul{border-right: 2px solid @couleur1; border-bottom: 2px solid @couleur1;
+                        li{
+                            a{ border-right: 1px solid @couleur1; border-left: 1px solid @blanc; border-top: 1px solid @blanc; border-bottom: 1px solid @blanc; background: none;
+                                &:before{color: @couleur1;}
+                            }
+                            &.current, &.active{
+                                a{border: 1px solid @couleur1;}
+                            }
+                            &:hover, &:focus{
+                                a{border: 1px solid @couleur1;}
+                            }
+                        }
+                    }
+                }
+                // Infos pratiques
+                .item-337, .item-427{
+                    a{border: 2px solid @couleur2; background: @couleur2;
+                        &:before{/* content: "\f05a"; */}
+                    }
+                    &.current, &.active, &.open{
+                        a{
+                        }
+                    }
+                    &:hover, &:focus{
+                        a{
+                        }
+                    }
+                    ul{border-right: 2px solid @couleur2; border-bottom: 2px solid @couleur2;
+                        li{
+                            a{border-right: 1px solid @couleur2; border-left: 1px solid @blanc; border-top: 1px solid @blanc; border-bottom: 1px solid @blanc; background: none;
+                                &:before{color: @couleur2;}
+                            }
+                            &.current, &.active{
+                                a{border: 1px solid @couleur2;}
+                            }
+                            &:hover, &:focus{
+                                a{border: 1px solid @couleur2;}
+                            }
+                        }
+                        // Sous menu Infos pratiques
+                        .item-505 a::before{content: "\f05a";}
+                        .item-482 a::before{content: "\f279";}
+                        .item-488 a::before{content: "\f0c0";}
+                        .item-490 a::before{content: "\f059";}
+                        .item-540 a::before{content: "\f256";} // Services Mdc3
+                        .item-585 a::before{content: "\f040";} // Emprunt et inscription Mdc3
+                    }
+                }
+                // Services Mdc2 // Réseau Mdc3
+                .item-481{
+                    a{border: 2px solid @couleur3; background: @couleur3;
+                        &:before{/* content: "\f0c0"; */}
+                    }
+                    &.current, &.active, &.open{
+                        a{
+                        }
+                    }
+                    &:hover, &:focus{
+                        a{
+                        }
+                    }
+                    ul{border-right: 2px solid @couleur3; border-bottom: 2px solid @couleur3;
+                        li{
+                            a{border-right: 1px solid @couleur3; border-left: 1px solid @blanc; border-top: 1px solid @blanc; border-bottom: 1px solid @blanc; background: none;
+                                &:before{color: @couleur3;}
+                            }
+                            &.current, &.active{
+                                a{border: 1px solid @couleur3;}
+                            }
+                            &:hover, &:focus{
+                                a{border: 1px solid @couleur3;}
+                            }
+                        }
+                        // Sous menu Services
+                        .item-491 a::before{content: "\f1ad";}
+                        .item-492 a::before{content: "\f207";}
+                        .item-493 a::before{content: "\f108";}
+                        
+                        // Sous menu Réseau
+                        .item-537 a::before{content: "\f19c";}
+                        .item-538 a::before{content: "\f279";}
+                        .item-488 a::before{content: "\f0c0";}
+                        .item-539 a::before{content: "\f0e7";}
+                    }
+                }
+                // Agenda
+                .item-339{
+                    a{border: 2px solid @couleur4; background: @couleur4;
+                        &:before{/* content: "\f073"; */}
+                    }
+                    &.current, &.active, &.open{
+                        a{
+                        }
+                    }
+                    &:hover, &:focus{
+                        a{
+                        }
+                    }
+                    ul{border-right: 2px solid @couleur4; border-bottom: 2px solid @couleur4;
+                        li{
+                            a{border-right: 1px solid @couleur4; border-left: 1px solid @blanc; border-top: 1px solid @blanc; border-bottom: 1px solid @blanc; background: none;
+                                &:before{color: @couleur4;}
+                            }
+                            &.current, &.active{
+                                a{border: 1px solid @couleur4;}
+                            }
+                            &:hover, &:focus{
+                                a{border: 1px solid @couleur4;}
+                            }
+                        }
+                        // Sous menu Agenda
+                        .item-502 a::before{content: "\f271";}
+                        .item-503 a::before{content: "\f273";}
+                        .item-501 a::before{content: "\f1da";}
+                    }
+                }
+                // Besoin d'idée?
+                .item-338{
+                    a{border: 2px solid @couleur5; background: @couleur5;
+                        &:before{/* content: "\f0eb"; */}
+                    }
+                    &.current, &.active, &.open{
+                        a{
+                        }
+                    }
+                    &:hover, &:focus{
+                        a{
+                        }
+                    }
+                    ul{border-right: 2px solid @couleur5; border-bottom: 2px solid @couleur5;
+                        li{
+                            a{border-right: 1px solid @couleur5; border-left: 1px solid @blanc; border-top: 1px solid @blanc; border-bottom: 1px solid @blanc; background: none;
+                                &:before{color: @couleur5;}
+                            }
+                            &.current, &.active{
+                                a{border: 1px solid @couleur5;}
+                            }
+                            &:hover, &:focus{
+                                a{border: 1px solid @couleur5;}
+                            }
+                        }
+                        // Sous menu Besoin d'idée ?
+                        .item-494 a::before{content: "\f004";}
+                        .item-500 a::before{content: "\f219";}
+                        .item-504 a::before{content: "\f06e";}
+                        .item-496 a::before{content: "\f046";}
+                        .item-495 a::before{content: "\f0e5";}
+                        .item-541 a::before{content: "\f03a";}
+                    }
+                }
+                // En ligne 24h/24
+                .item-340{
+                    a{border: 2px solid @couleur6; background: @couleur6;
+                        &:before{/* content: "\f0ac"; */}
+                    }
+                    &.current, &.active, &.open{
+                        a{
+                        }
+                    }
+                    &:hover, &:focus{
+                        a{
+                        }
+                    }
+                    ul{border-right: 2px solid @couleur6; border-bottom: 2px solid @couleur6;
+                        li{
+                            a{border-right: 1px solid @couleur6; border-left: 1px solid @blanc; border-top: 1px solid @blanc; border-bottom: 1px solid @blanc; background: none;
+                                &:before{color: @couleur6;}
+                            }
+                            &.current, &.active{
+                                a{border: 1px solid @couleur6;}
+                            }
+                            &:hover, &:focus{
+                                a{border: 1px solid @couleur6;}
+                            }
+                        }
+                        // Sous menu En ligne 24h/24
+                        .item-497 a::before{content: "\f02d";}
+                        .item-498 a::before{content: "\f001";}
+                        .item-499 a::before{content: "\f008";}
+                    }
+                }
+                // Espace pro
+                .item-409{
+                    a{border: 2px solid @couleur7; background: @couleur7;
+                        &:before{/* content: "\f085"; */}
+                    }
+                    &.current, &.active, &.open{
+                        a{
+                        }
+                    }
+                    &:hover, &:focus{
+                        a{
+                        }
+                    }
+                    ul{border-right: 2px solid @couleur7; border-bottom: 2px solid @couleur7;
+                        li{
+                            a{border-right: 1px solid @couleur7; border-left: 1px solid @blanc; border-top: 1px solid @blanc; border-bottom: 1px solid @blanc; background: none;
+                                &:before{color: @couleur7;}
+                            }
+                            &.current, &.active{
+                                a{border: 1px solid @couleur7;}
+                            }
+                            &:hover, &:focus{
+                                a{border: 1px solid @couleur7;}
+                            }
+                        }
+                        // Sous menu Espace pro
+                        .item-411 a::before{content: "\f044";}
+                        .item-410 a::before{content: "\f274";}
+                    }
+                }
+            }
+        }
+    }
+}

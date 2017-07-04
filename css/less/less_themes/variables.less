@@ -1,0 +1,52 @@
+// MDC - type1 - type2 - type3
+
+// Couleurs
+// Couleur génériques
+@couleur-principale: @violet11;
+@couleur-secondaire: @violet12;
+@couleur-tierce: @violet37;
+@couleur-fond: @violet12; // change la couleur de fond du body
+
+// Multicolore
+// (ne sert que pour un thème multicolore, sinon mettre la même couleur pour les couleurs 1 à 7)
+
+@couleur1: @orange2;
+@couleur2: @orange2;
+@couleur3: @orange2;
+@couleur4: @orange2;
+@couleur5: @orange2;
+@couleur6: @orange2;
+@couleur7: @orange2;
+
+
+// Thèmes CSS
+/* ******************************************************************************************************** */
+// Modifier le chiffre du thème pour le modifier
+// (Pour le clé en main tous les chiffres doivent être identiques)
+// (Pour le kit vous pouvez avoir des chiffres différents au dossier thème)
+@import "theme5/typographie.less"; // Attention lorsque le thème de typo est changé, il faut décommenter le theme dans layout/head.php et commenter le theme qui n'est plus utilisé
+@import "theme5/fond.less";
+@import "theme5/contenu.less";
+@import "theme5/bandeau.less";
+@import "theme5/menu.less";
+@import "theme5/module.less";
+@import "theme5/titre.less";
+@import "theme5/blog.less";
+@import "theme5/footer.less";
+
+// Images d'illustrations
+/* ******************************************************************************************************** */
+// (change les images de fond)
+// (que si le thème fait appel à des images de fond)
+@illustrations: illustrations2;
+@bandeau-container: bandeau-container1; // 1140px de largeur 250px de haut
+@bandeau-fullscreen: bandeau-fullscreen1; // 2100px de largeur 250px de haut
+@fond-body-fixe-haut: fond-body-fixe-haut1; // 2100px de largeur 1200px de haut
+@fond-body-fixe-bas: fond-body-fixe-bas1; // 2100px de largeur 1200px de haut
+@fond-body-scoll: fond-body-scroll1; // 2100px de largeur 850px de haut
+@fond-gauche: fond-gauche1; // 2100px de largeur 850px de haut
+@fond-droite: fond-droite1; // 2100px de largeur 850px de haut
+@fond-menu: fond-menu1; // 2100px de largeur 55px de haut
+@titre: titre1; // 16px de largeur 16px de haut
+@texture: texture1; // largeur et hauteur variable
+@decoupe: decoupe1; // largeur et hauteur variable

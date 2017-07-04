@@ -1,0 +1,51 @@
+// Thème pied de page
+/* ******************************************************************************************************** */
+// Logo pied de page
+.packc3rb .moduletable.logo-footer{background: none; min-height: 150px; padding-top: 50px;
+    .modcontent{background: none;
+        img{}
+        a[target="_blank"]::after{content: "";}
+    }
+}
+
+// Adresse
+ .packc3rb .moduletable.adresse-footer{background: none; min-height: 210px; padding-top: 50px;
+    .modcontent{ border: none; background: none;
+        p, a, span, li{.fftexte;}
+        a{color: @blanc; text-decoration: underline;}
+        p{color: @blanc;}
+    }
+}
+
+// Menu
+.packc3rb  .moduletable.menu-footer{background: none; min-height: 150px; padding-top: 50px;
+    .modcontent{ border: none; background: none;
+        .navbar-default{border-left: 1px solid @blanc; border-right: 1px solid @blanc; border-top: none; border-bottom: none; background: none; border-radius: 0;
+            .navbar-nav{width: 100%;
+                &>li{min-width: 15%; float: none; margin-bottom: 5px;
+                    &>a{text-align: center; color: @blanc; background: none; border: 0 solid @couleur-tierce; .fftexte; padding-top: 2px; padding-bottom: 2px; .fftexte;}
+                    &.current, &.active{
+                        a{color: @couleur-tierce; border: 0 solid @blanc; background: @blanc;}
+                    }
+                    &:hover, &:focus{
+                        a{color: @couleur-tierce; border: 0 solid @blanc; background: @blanc;}
+                    }
+                }
+                &>li:last-child{margin-bottom: 0;}
+            }
+        }
+    }
+}
+
+// Newsletter
+.packc3rb .moduletable.newsletter-footer{background: none; min-height: 150px; padding-top: 50px;
+     h2{font-size: 23px; color: @blanc; border: none; background: none; border-radius: 0; text-align: center;}
+    .modcontent{border: none; background: none;
+        .acyfield_name, .acyfield_email{
+            input{padding: 5px; border: 1px solid #cccccc; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset; color: #555555;}
+        }
+        .button{color: @blanc; background-color: @couleur-principale; border: 1px solid @couleur-principale; border-radius: 0; .fftexte;
+            &:hover, &:focus{color: @couleur-principale; background-color: @blanc; border: 1px solid @couleur-principale;}
+        }
+    }
+}

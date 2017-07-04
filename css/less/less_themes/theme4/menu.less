@@ -1,0 +1,316 @@
+#Mod1{
+    .navbar-default{ border: none;
+        .navbar-collapse{background: @couleur-principale;
+            .navbar-nav{width: 100%; background: none;
+                &>li{min-width: 12%; margin-left: 1%; background: @blanc; border-top: 5px solid @couleur-principale; border-bottom: 5px solid @couleur-principale;
+                    &>a{text-align: center; color: @blanc; .ffmenu; margin: 0; border-radius: 0; font-size: 17px; background: @couleur-principale; margin: 1px 0 0 1px;
+                        &:before{margin-right: 5px; .fficon;}
+                        &:after{background: @couleur-principale; padding: 0 5px; border-radius: 11px;}
+                    }
+                    &.current, &.active, &.open{
+                        a{background: @blanc; .ffmenu;
+                            &:after{color: @blanc;}
+                        }
+                    }
+                    &:hover, &:focus{
+                        a{background: @blanc; .ffmenu;
+                            &:after{color: @blanc;}
+                        }
+                    }
+                    ul{background: @blanc;
+                        li{width: 23%; margin-left: 1%; margin-right: 1%; display: inline-block; margin-bottom: 10px;
+                            a{color: @blanc; padding-top: 15px; padding-bottom: 15px;
+                                &:before{.fficon; margin-right: 5px;}
+                            }
+                            &.current, &.active{
+                                a{text-decoration: underline;
+                                    &:before{}
+                                }
+                            }
+                            &:hover, &:focus{
+                                a{text-decoration: underline;
+                                    &:before{}
+                                }
+                            }
+                        }
+                    }
+                }
+                .parent a::after{}
+                // Accueil
+                .item-101{
+                    a{ 
+                        &:before{/* content: "\f015"; */}
+                        &:after{}
+                    }
+                    &.current, &.active, &.open{
+                        a{color: @couleur1;
+                        &:after{background: @couleur1;}
+                        }
+                    }
+                    &:hover, &:focus{
+                        a{color: @couleur1;
+                        &:after{background: @couleur1;}
+                        }
+                    }
+                    ul{border: 1px solid @couleur1;
+                        li{
+                            a{
+                                &:before{color: @couleur1; background: @blanc;}
+                            }
+                            &.current, &.active{
+                                a{background: @blanc;
+                                    &:before{}
+                                }
+                            }
+                            &:hover, &:focus{
+                                a{background: @blanc;
+                                    &:before{}
+                                }
+                            }
+                        }
+                    }
+                }
+                // Infos pratiques
+                .item-337, .item-427{
+                    a{ 
+                        &:before{/* content: "\f05a"; */}
+                        &:after{}
+                    }
+                    &.current, &.active, &.open{
+                        a{color: @couleur2;
+                        &:after{background: @couleur2;}
+                        }
+                    }
+                    &:hover, &:focus{
+                        a{color: @couleur2;
+                        &:after{background: @couleur2;}
+                        }
+                    }
+                    ul{border: 1px solid @couleur2;
+                        li{ 
+                            a{
+                                &:before{color: @couleur2; background: @blanc;}
+                            }
+                            &.current, &.active{
+                                a{background: @blanc;
+                                    &:before{}
+                                }
+                            }
+                            &:hover, &:focus{
+                                a{background: @blanc;
+                                    &:before{}
+                                }
+                            }
+                        }
+                        // Sous menu Infos pratiques
+                    .item-505 a::before{content: "\f05a";}
+                        .item-482 a::before{content: "\f279";}
+                        .item-488 a::before{content: "\f0c0";}
+                        .item-490 a::before{content: "\f059";}
+                        .item-540 a::before{content: "\f256";} // Services Mdc3
+                        .item-585 a::before{content: "\f040";} // Emprunt et inscription Mdc3
+                    }
+                }
+                // Services mdc2  // Réseau mdc3
+                .item-481{
+                    a{
+                        &:before{/* content: "\f0c0"; */}
+                        &:after{}
+                    }
+                    &.current, &.active, &.open{
+                        a{color: @couleur3;
+                        &:after{background: @couleur3;}
+                        }
+                    }
+                    &:hover, &:focus{
+                        a{color: @couleur3;
+                        &:after{background: @couleur3;}
+                        }
+                    }
+                    ul{border: 1px solid @couleur3;
+                        li{
+                            a{
+                                &:before{color: @couleur3; background: @blanc;}
+                            }
+                            &.current, &.active{
+                                a{background: @blanc;
+                                    &:before{}
+                                }
+                            }
+                            &:hover, &:focus{
+                                a{background: @blanc;
+                                    &:before{}
+                                }
+                            }
+                            
+                        }
+                        // Sous menu Services
+                        .item-491 a::before{content: "\f1ad";}
+                        .item-492 a::before{content: "\f207";}
+                        .item-493 a::before{content: "\f108";}
+                        
+                        // Sous menu Réseau
+                        .item-537 a::before{content: "\f19c";}
+                        .item-538 a::before{content: "\f279";}
+                        .item-488 a::before{content: "\f0c0";}
+                        .item-539 a::before{content: "\f0e7";}
+                    }
+                }
+                // Agenda
+                .item-339{
+                    a{
+                        &:before{/* content: "\f073"; */}
+                        &:after{}
+                    }
+                    &.current, &.active, &.open{
+                        a{color: @couleur4;
+                        &:after{background: @couleur4;}
+                        }
+                    }
+                    &:hover, &:focus{
+                        a{color: @couleur4;
+                        &:after{background: @couleur4;}
+                        }
+                    }
+                    ul{border: 1px solid @couleur4;
+                        li{
+                            a{
+                                &:before{color: @couleur4; background: @blanc;}
+                            }
+                            &.current, &.active{
+                                a{background: @blanc;
+                                    &:before{}
+                                }
+                            }
+                            &:hover, &:focus{
+                                a{background: @blanc;
+                                    &:before{}
+                                }
+                            }
+                        }
+                        // Sous menu Agenda
+                        .item-502 a::before{content: "\f271";}
+                        .item-503 a::before{content: "\f273";}
+                        .item-501 a::before{content: "\f1da";}
+                    }
+                }
+                // Besoin d'idée?
+                .item-338{
+                    a{
+                        &:before{/* content: "\f0eb"; */}
+                        &:after{}
+                    }
+                    &.current, &.active, &.open{
+                        a{color: @couleur5;
+                        &:after{background: @couleur5;}
+                        }
+                    }
+                    &:hover, &:focus{
+                        a{color: @couleur5;
+                        &:after{background: @couleur5;}
+                        }
+                    }
+                    ul{border: 1px solid @couleur5;
+                        li{
+                            a{
+                                &:before{color: @couleur5; background: @blanc;}
+                            }
+                            &.current, &.active{
+                                a{background: @blanc;
+                                    &:before{}
+                                }
+                            }
+                            &:hover, &:focus{
+                                a{background: @blanc;
+                                    &:before{}
+                                }
+                            }
+                        }
+                        // Sous menu Besoin d'idée ?
+                        .item-494 a::before{content: "\f004";}
+                        .item-500 a::before{content: "\f219";}
+                        .item-504 a::before{content: "\f06e";}
+                        .item-496 a::before{content: "\f046";}
+                        .item-495 a::before{content: "\f0e5";}
+                        .item-541 a::before{content: "\f03a";}
+                    }
+                }
+                // En ligne 24h/24
+                .item-340{
+                    a{
+                        &:before{/* content: "\f0ac"; */}
+                        &:after{}
+                    }
+                    &.current, &.active, &.open{
+                        a{color: @couleur6;
+							&:after{background: @couleur6;}
+                        }
+                    }
+                    &:hover, &:focus{
+                        a{color: @couleur6;
+							&:after{background: @couleur6;}
+                        }
+                    }
+                    ul{border: 1px solid @couleur6;
+                        li{
+                            a{
+                                &:before{color: @couleur6; background: @blanc;}
+                            }
+                            &.current, &.active{
+                                a{background: @blanc;
+                                    &:before{}
+                                }
+                            }
+                            &:hover, &:focus{
+                                a{background: @blanc;
+                                    &:before{}
+                                }
+                            }
+                        }
+                        // Sous menu En ligne 24h/24
+                        .item-497 a::before{content: "\f02d";}
+                        .item-498 a::before{content: "\f001";}
+                        .item-499 a::before{content: "\f008";}
+                    }
+                }
+                // Espace pro
+                .item-409{
+                    a{
+                        &:before{/* content: "\f085"; */}
+                        &:after{}
+                    }
+                    &.current, &.active, &.open{
+                        a{color: @couleur7;
+							&:after{background: @couleur7;}
+                        }
+                    }
+                    &:hover, &:focus{
+                        a{color: @couleur7;
+							&:after{background: @couleur7;}
+                        }
+                    }
+                    ul{border: 1px solid @couleur7;
+                        li{
+                            a{
+                                &:before{color: @couleur7; background: @blanc;}
+                            }
+                            &.current, &.active{
+                                a{background: @blanc;
+                                    &:before{}
+                                }
+                            }
+                            &:hover, &:focus{
+                                a{background: @blanc;
+                                    &:before{}
+                                }
+                            }
+                        }
+                        // Sous menu Espace pro
+                        .item-411 a::before{content: "\f044";}
+                        .item-410 a::before{content: "\f274";}
+                    }
+                }
+            }
+        }
+    }
+}
