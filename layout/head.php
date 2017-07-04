@@ -23,6 +23,14 @@
 <meta name="msapplication-config" content="<?php echo $tmplpath ?>/images/template/favicon/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 
+<!-- lien vers la google font à changer -->
+<!--  Theme 1  --> <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600|Josefin+Slab:400,600" rel="stylesheet">
+<!--  Theme 2  --> <link href="https://fonts.googleapis.com/css?family=Maven+Pro:400,500|Righteous" rel="stylesheet">
+<!--  Theme 3  --> <link href="https://fonts.googleapis.com/css?family=Gabriela|Nixie+One|Open+Sans:400,600" rel="stylesheet">
+<!--  Theme 4  --> <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Buda:300|Dosis:400,600" rel="stylesheet"> 
+<!--  Theme 5  --> <link href="https://fonts.googleapis.com/css?family=Lemonada:400,700|Maven+Pro:400,700" rel="stylesheet"> 
+<!-- FIN lien vers la google font à changer -->
+
 <!--[if ie]>
 <meta content='IE=8' http-equiv='X-UA-Compatible'/>
 <![endif]-->
