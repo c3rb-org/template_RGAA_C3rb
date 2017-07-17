@@ -1,6 +1,6 @@
-##C3rb - RGAA - haaaa!
+## C3rb - RGAA - haaaa!
 ![](https://img.shields.io/badge/FontAwesome-4.6.1-green.svg) ![](https://img.shields.io/badge/BootStrap-v3.3.6-green.svg)
-###Created by C3rb Informatique | c3rb.org.
+### Created by C3rb Informatique | c3rb.org.
 
 - Ruzafa Mikael @cr2a_graphique
 - Espié Vincent
@@ -8,7 +8,7 @@
 - Andurand Ariane @ArianeWebdesign  
 - Romain Bijakowski
 
-###Description
+### Description
 
 C3rb_Rgaa est un template réalisé par la société C3rb Informatique, il propose à la communauté un template de conception accessible (référentiel RGAA3).
 Ce template fonctionne avec les dépendances bootstrap 3 et fontawesome dont les versions sont données plus haut.
