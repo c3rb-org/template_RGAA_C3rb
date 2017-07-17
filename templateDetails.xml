@@ -2,11 +2,11 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "https://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.3" type="template" client="site" method="upgrade">
     <!-- Version -->
-    <name>c3rb_rgaa</name>
-    <version>v1.1.5 - 26 avril 2016</version>
-    <creationDate>20-01-2015</creationDate>
+    <name>TPL_C3RB_RGAA</name>
+    <version>1.1.8</version>
+    <creationDate>17/07/2017</creationDate>
     <author>C3rb Informatique</author>
-    <copyright>Copyright © 2015 C3rb-informatique</copyright>
+    <copyright>Copyright © 2017 C3rb-informatique</copyright>
     <authorEmail>orphee@c3rb.fr</authorEmail>
     <authorUrl>http://www.c3rb.org</authorUrl>
     <license>MIT</license>
@@ -516,6 +516,9 @@
 		</fieldset>
         </fields>
     </config>
+    <updateservers>
+	<server type="extension" priority="1" name="C3rb - RGAA - haaaa!">http://update.c3rb.org/joomla3/tpl_c3rb_rgaa.xml</server>
+    </updateservers>
 </extension>
 
 
