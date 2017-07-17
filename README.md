@@ -18,7 +18,7 @@ Pour son fonctionnement, ce template nécessite l'installation du plugin : [plg_
 Ce plugin permet la génération et le bon fonctionnement de Bootstrap3.
 Il permet aussi d'activer un générateur LESS/CSS. Lors de la conecption vous pouvez le laisser activer et le désactiver si le site ne nécessite plus de retouche. Vous gagnerez en performance.
 
-###Demo
+### Demo
 Voir la demo en ligne avec les données d'exemple joomla en anglais : [A11Y template_RGAA_C3rb](http://a11y.orpheemedia.com/portail_a11y_en/)
 
 ### License
