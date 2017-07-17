@@ -3,7 +3,7 @@
 <extension version="3.3" type="template" client="site" method="upgrade">
     <!-- Version -->
     <name>TPL_C3RB_RGAA</name>
-    <version>1.1.9</version>
+    <version>1.1.10</version>
     <creationDate>17/07/2017</creationDate>
     <author>C3rb Informatique</author>
     <copyright>Copyright © 2017 C3rb-informatique</copyright>
