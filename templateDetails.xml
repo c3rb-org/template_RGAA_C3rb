@@ -2,7 +2,7 @@
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "https://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.3" type="template" client="site" method="upgrade">
     <!-- Version -->
-    <name>TPL_C3RB_RGAA</name>
+    <name>c3rb_rgaa</name>
     <version>1.1.10</version>
     <creationDate>17/07/2017</creationDate>
     <author>C3rb Informatique</author>
