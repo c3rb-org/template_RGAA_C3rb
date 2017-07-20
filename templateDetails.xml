@@ -517,7 +517,7 @@
         </fields>
     </config>
     <updateservers>
-	<server type="extension" priority="1" name="C3rb_rgaa">http://update.c3rb.org/joomla3/tpl_c3rb_rgaa.xml</server>
+	<server type="extension" priority="1" name="c3rb_rgaa">http://update.c3rb.org/joomla3/tpl_c3rb_rgaa.xml</server>
     </updateservers>
 </extension>
 
