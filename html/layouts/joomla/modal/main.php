@@ -10,6 +10,9 @@
 
 defined('JPATH_BASE') or die;
 
+// Améliore les performances...
+$use_modal_layout = false;
+
 extract($displayData);
 /**
  * Layout variables
@@ -80,19 +83,63 @@ if (isset($params['url']))
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 	<?php
+	
 		// Header
 		if (!isset($params['closeButton']) || isset($params['title']) || $params['closeButton'])
 		{
-			echo JLayoutHelper::render('joomla.modal.header', $displayData);
+			if($use_modal_layout)
+			{
+				echo JLayoutHelper::render('joomla.modal.header', $displayData);
+			}
+			else 
+			{
+			?>
+				<div class="modal-header">
+					<?php if (!isset($params['closeButton']) || $params['closeButton']) : ?>
+				        <button type="button" class="close" data-dismiss="modal" aria-label="<?php echo JText::_('TPL_C3RB_RGAA_LABEL_FERMER_MODALE'); ?>"><span aria-hidden="true">&times;</span></button>
+					<?php endif; ?>
+					<?php if (isset($params['title'])) : ?>
+				        <h2 class="modal-title" id="<?php echo $selector; ?>Label"><?php echo $params['title']; ?></h2>
+					<?php endif; ?>
+				</div>
+				<?php 
+			}
 		}
 
 		// Body
-		echo JLayoutHelper::render('joomla.modal.body', $displayData);
-
+		if($use_modal_layout)
+		{
+			echo JLayoutHelper::render('joomla.modal.body', $displayData);
+		}
+		else 
+		{
+			$bodyClass = 'modal-body';
+			
+			$bodyHeight = isset($params['bodyHeight']) ? round((int) $params['bodyHeight'], -1) : '';
+			
+			if ($bodyHeight && $bodyHeight >= 20 && $bodyHeight < 90)
+			{
+				$bodyClass .= ' jviewport-height' . $bodyHeight;
+			}
+			?>
+			<div class="<?php echo $bodyClass; ?>">
+				<?php echo $body; ?>
+			</div>
+					
+<?php 	}
 		// Footer
 		if (isset($params['footer']))
 		{
-			echo JLayoutHelper::render('joomla.modal.footer', $displayData);
+			if($use_modal_layout)
+			{
+				echo JLayoutHelper::render('joomla.modal.footer', $displayData);
+			}
+			else
+			{ ?>
+				<div class="modal-footer">
+					<?php echo $params['footer']; ?>
+				</div>
+<?php 		}
 		}
 	?>
 		</div>
