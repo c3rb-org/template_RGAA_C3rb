@@ -104,11 +104,24 @@ JFactory::getDocument()->addScriptDeclaration("
 						<?php echo $this->form->renderField('image_fulltext_alt', 'images'); ?>
 						<?php echo $this->form->renderField('image_fulltext_caption', 'images'); ?>
 						<?php echo $this->form->renderField('float_fulltext', 'images'); ?>
+						
+						<?php if(JComponentHelper::getComponent('com_c3rbevenement', true)->enabled && JPluginHelper::getPlugin('content', 'c3rbevenement_slideshow')): ?>
+						<?php echo $this->form->renderField('spacer_slideshow', 'images'); ?>
+						<?php echo $this->form->renderField('image_slideshow', 'images'); ?>
+						<?php echo $this->form->renderField('image_slideshow_alt', 'images'); ?>
+						<?php echo $this->form->renderField('image_slideshow_caption', 'images'); ?>
+						<?php echo $this->form->renderField('spacer_carrousel', 'images'); ?>
+						<?php echo $this->form->renderField('image_carrousel', 'images'); ?>
+						<?php echo $this->form->renderField('image_carrousel_alt', 'images'); ?>
+						<?php echo $this->form->renderField('image_carrousel_caption', 'images'); ?>
+						<?php endif; ?>
+						
 						<?php if(JComponentHelper::getComponent('com_opac', true)->enabled && JPluginHelper::getPlugin('content', 'opac_couv_article')): ?>
 						<?php echo $this->form->renderField('btn_couv_article', 'images'); ?>
 						<?php echo $this->form->renderField('text_no_couv', 'images'); ?>
 						<?php echo $this->form->renderField('image_couverture', 'images'); ?>
 						<?php endif; ?>
+						
 						<?php echo $this->form->renderField('urla', 'urls'); ?>
 						<?php echo $this->form->renderField('urlatext', 'urls'); ?>
 						<div class="form-group">
