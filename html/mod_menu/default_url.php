@@ -44,7 +44,7 @@ else
 }
 
 $flink = $item->flink;
-$flink = JFilterOutput::ampReplace(htmlspecialchars($flink));
+$flink = JFilterOutput::ampReplace(htmlspecialchars($flink, ENT_COMPAT, 'UTF-8', false));
 
 switch ($item->browserNav) :
 	default:
