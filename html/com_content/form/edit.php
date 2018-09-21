@@ -63,6 +63,10 @@ JFactory::getDocument()->addScriptDeclaration("
 			<?php endif; ?>
 		</div>
 		<hr class="hrlight" />
+                <?php if ($this->captchaEnabled) : ?>
+                <?php echo $this->form->renderField('captcha'); ?>
+                <?php endif; ?>
+                <hr class="hrlight" />
 		<fieldset>
 			<div role="tabpanel">
 				<ul class="nav nav-tabs" role="tablist">
