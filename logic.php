@@ -75,12 +75,21 @@ else
 	foreach($tab_sheets as $url => $val)
 		$doc->addStyleSheet($url,$val['mime'],$val['media'],$val['attribs']);
 }
-if(JDEBUG)
-{
-	$doc->addStyleSheet( ''. $tmplpath .'/css/template.css');
-	//$doc->addStyleSheet( 'http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css');
+//Vérifie si le template d'admin est déjà chargé
+$cssFiles = array_keys($tab_sheets);
+$hasAdminTemplate = false;
+foreach ($cssFiles as $file) {
+	if(strpos($file, 'isis/css/template.css'))
+		$hasAdminTemplate = true;
 }
-else
-	$doc->addStyleSheet( ''. $tmplpath .'/css/template.min.css' );
-
+if(!$hasAdminTemplate)
+{
+	if(JDEBUG)
+	{
+		$doc->addStyleSheet( ''. $tmplpath .'/css/template.css');
+		//$doc->addStyleSheet( 'http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css');
+	}
+	else
+		$doc->addStyleSheet( ''. $tmplpath .'/css/template.min.css' );
+}
 ?>
