@@ -76,6 +76,11 @@ JFactory::getDocument()->addScriptDeclaration("
 					<li role="presentation" >
 					<a aria-controls="nom*du*lien" href="#images" data-toggle="tab" aria-expanded="false"><?php echo JText::_('COM_CONTENT_IMAGES_AND_URLS') ?></a></li>
 					<?php endif; ?>
+                                        <?php if($this->form->getFieldXml('interets')) : ?>
+                                        <li role="presentation" >
+					<a aria-controls="nom*du*lien" href="#enrichedContent" data-toggle="tab" aria-expanded="false">Contenus enrichis</a></li>
+                                        <?php endif; ?>
+					<li role="presentation" >
 					<li role="presentation" >
 					<a aria-controls="nom*du*lien" href="#publishing" data-toggle="tab" aria-expanded="false"><?php echo JText::_('COM_CONTENT_PUBLISHING') ?></a></li>
 					<li role="presentation" >
@@ -149,6 +154,15 @@ JFactory::getDocument()->addScriptDeclaration("
 						</div>
 					</div>
 					<?php endif; ?>
+                                    
+                                        <?php if($this->form->getFieldXml('interets')) : ?>
+                                        <div role="tabpanel" class="tab-pane-noconflictchosen fade" id="enrichedContent">
+                                            <div class="margetop margebottom">
+						<?php echo $this->form->renderField('interets'); ?>
+                                            </div>
+                                        </div>
+                                        <?php endif; ?>
+                                    
 					<div role="tabpanel" class="tab-pane-noconflictchosen fade" id="publishing">
 					<div class="row margetop margebottom">
 						<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
