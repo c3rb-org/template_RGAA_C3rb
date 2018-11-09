@@ -2,7 +2,7 @@ jQuery(function ($) {
 	
     // Initialise les tooltip Bs
     //$('[data-toggle="tooltip"]').tooltip();
-	$(document).tooltip({selector:'[data-toggle="tooltip"]'});
+	$(document).tooltip({selector:'[data-toggle="tooltip"]',trigger:'hover'});
 
   //Suppression des title vide générés par les tooltips
     $('[data-original-title][title=""]').removeAttr('title');
