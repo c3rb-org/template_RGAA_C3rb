@@ -68,7 +68,7 @@ abstract class JHtmlJGrid
             $html[] = ' href="javascript:void(0);" onclick="return listItemTask(\'' . $checkbox . $i . '\',\'' . $prefix . $task . '\')"';
             $html[] = $tip ? ' title="' . $title . '"' : '';
             $html[] = '>';
-            $html[] = '<span class="fa fa-' . $active_class . '"></span>';
+            $html[] = '<span class="fa fa-' . ($active_class == 'checkedout' ? 'lock' : $active_class) . '"></span>';
             $html[] = '</a>';
         }
         else
