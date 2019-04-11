@@ -8,7 +8,7 @@ abstract class JHtmlRgaaicon
 		$base     = $uri->toString(array('scheme', 'host', 'port'));
 		$template = JFactory::getApplication()->getTemplate();
                 
-                if($article->repetitions)
+                if(isset($article->repetitions))
                 {
                         JLoader::register('C3rbevenementHelperRoute', JPATH_ROOT . '/components/com_c3rbevenement/helpers/route.php');
                         $link = $base . JRoute::_(C3rbevenementHelperRoute::getEventRoute($article->id.':'.$article->alias, $article->catid, $article->language), false);
@@ -48,7 +48,7 @@ abstract class JHtmlRgaaicon
 		$input = $app->input;
 		$request = $input->request;
                 
-                if($article->repetitions)
+                if(isset($article->repetitions))
                 {
                         JLoader::register('C3rbevenementHelperRoute', JPATH_ROOT . '/components/com_c3rbevenement/helpers/route.php');
                         $url = C3rbevenementHelperRoute::getEventRoute($article->id.':'.$article->alias, $article->catid, $article->language);
