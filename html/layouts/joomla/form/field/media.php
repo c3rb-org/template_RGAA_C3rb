@@ -48,7 +48,7 @@ if ($showPreview)
 	}
 	else
 	{
-		$src = JText::_('JLIB_FORM_MEDIA_PREVIEW_EMPTY');
+		$src = null;
 	}
 }
 
@@ -71,10 +71,9 @@ echo JHtml::_('bootstrap.renderModal',
 );
 
 ?>
-
 <div class="input-group input-group-sm">
 	<?php if ($showPreview && $showAsTooltip) : ?>
-    <a href="javasccript:void(0)" class="input-group-addon" data-toggle="tooltip" data-html="true" title="<?php echo htmlentities('<img src="'.$src.'" />'); ?>">
+    <a href="javasccript:void(0)" class="input-group-addon" data-toggle="tooltip" data-html="true" title="<?php echo !is_null($src) ? htmlentities('<img src="'.$src.'" />') :  JText::_('JLIB_FORM_MEDIA_PREVIEW_EMPTY'); ?>">
         <span class="fa fa-eye" aria-hidden="true"></span>
     </a>
     <?php endif; ?>
@@ -96,5 +95,5 @@ echo JHtml::_('bootstrap.renderModal',
 </div>
 
 <?php if ($showPreview && !$showAsTooltip) : ?>
-<img src="<?php echo $src; ?>" style="height: 200px" />
+<?php if(!is_null($src)): ?><img src="<?php echo $src; ?>" style="height: 200px" /><?php endif; ?>
 <?php endif; ?>
