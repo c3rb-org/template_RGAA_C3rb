@@ -17,15 +17,15 @@ $canEdit = $displayData['params']->get('access-edit');
 	<?php if (empty($displayData['print'])) : ?>
 		<?php if ($canEdit || $displayData['params']->get('show_print_icon') || $displayData['params']->get('show_email_icon')) : ?>
 			<div class="btn-group pull-right">
-				<a title="<?php echo JText::_('TPL_C3RB_RGAA_ARTICLE_OUTIL_OPEN'); ?>" class="btn btn-default dropdown-toggle hasTooltip" data-toggle="dropdown" href="#">
+				<a title="<?php echo JText::_('TPL_C3RB_RGAA_ARTICLE_OUTIL'); ?>" class="btn btn-default dropdown-toggle hasTooltip" data-toggle="dropdown" href="#">
 				<span class="glyphicon glyphicon-cog"></span>
-				<span class="sr-only"><?php echo JText::_('TPL_C3RB_RGAA_ARTICLE_OUTIL'); ?></span>
+				<span class="sr-only"><?php echo JText::_('TPL_C3RB_RGAA_ARTICLE_OUTIL_OPEN'); ?></span>
 				</a>
 
 				<?php // Note the actions class is deprecated. Use dropdown-menu instead. ?>
 				<ul class="dropdown-menu">
 					<?php if ($displayData['params']->get('show_print_icon')) : ?>
-						<li class="print-icon"> 
+						<li class="print-icon">
 						<?php //joomla code -- echo JHtml::_('icon.print_popup', $displayData['item'], $displayData['params']); ?>
 						<?php echo JHtml::_('rgaaicon.print_popup', $displayData['item'], $displayData['params']); ?>
 						</li>
@@ -36,7 +36,9 @@ $canEdit = $displayData['params']->get('access-edit');
 						</li>
 					<?php endif; ?>
 					<?php if ($canEdit) : ?>
-						<li class="edit-icon"> <?php echo JHtml::_('icon.edit', $displayData['item'], $displayData['params']); ?> </li>
+						<li class="edit-icon">
+							<?php echo JHtml::_('icon.edit', $displayData['item'], $displayData['params'], array()); ?>
+                        </li>
 					<?php endif; ?>
 				</ul>
 			</div>

@@ -28,7 +28,7 @@ abstract class JHtmlRgaaicon
 			}
 			else
 			{
-				$text = '<span class="icon-envelope"></span>' . JText::_('JGLOBAL_EMAIL');
+				$text = '<span class="glyphicon glyphicon-envelope"></span> ' . JText::_('JGLOBAL_EMAIL');
 			}
 		}
 		else
@@ -44,22 +44,22 @@ abstract class JHtmlRgaaicon
 	
 	public static function print_popup($article, $params, $attribs = array(), $legacy = false)
 	{
-                $app = JFactory::getApplication();
-		$input = $app->input;
+		$app     = JFactory::getApplication();
+		$input   = $app->input;
 		$request = $input->request;
-                
-                if(isset($article->repetitions))
-                {
-                        JLoader::register('C3rbevenementHelperRoute', JPATH_ROOT . '/components/com_c3rbevenement/helpers/route.php');
-                        $url = C3rbevenementHelperRoute::getEventRoute($article->id.':'.$article->alias, $article->catid, $article->language);
-                        $url .= '&tmpl=component&print=1';
-                }
-                else
-                {
-                        $url  = ContentHelperRoute::getArticleRoute($article->slug, $article->catid, $article->language);
-                        $url .= '&tmpl=component&print=1&layout=default&page=' . @ $request->limitstart;
-                }
-                
+
+		if (isset($article->repetitions))
+		{
+			JLoader::register('C3rbevenementHelperRoute', JPATH_ROOT . '/components/com_c3rbevenement/helpers/route.php');
+			$url = C3rbevenementHelperRoute::getEventRoute($article->id . ':' . $article->alias, $article->catid, $article->language);
+			$url .= '&tmpl=component&print=1';
+		}
+		else
+		{
+			$url = ContentHelperRoute::getArticleRoute($article->slug, $article->catid, $article->language);
+			$url .= '&tmpl=component&print=1&layout=default&page=' . @ $request->limitstart;
+		}
+
 		$status = 'status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no';
 		// Checks template image directory for image, if non found default are loaded
 		if ($params->get('show_icons'))
@@ -70,7 +70,7 @@ abstract class JHtmlRgaaicon
 			}
 			else
 			{
-				$text = '<span class="icon-print"></span>' . JText::_('JGLOBAL_PRINT');
+				$text = '<span class="glyphicon glyphicon-print"></span> ' . JText::_('JGLOBAL_PRINT');
 			}
 		}
 		else
@@ -80,8 +80,7 @@ abstract class JHtmlRgaaicon
 		$attribs['title']   = JText::_('TPL_C3RB_RGAA_ARTICLE_PRINT_TITLE');
 		$attribs['onclick'] = "window.open(this.href,'win2','" . $status . "'); return false;";
 		$attribs['rel']     = 'nofollow';
+
 		return JHtml::_('link', JRoute::_($url), $text, $attribs);
 	}
-	
-	
 }
