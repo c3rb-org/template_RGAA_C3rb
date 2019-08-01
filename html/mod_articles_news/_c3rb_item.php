@@ -3,8 +3,6 @@ defined('_JEXEC') or die;
 
 $item_heading = $params->get('item_heading', 'h4');
 ?>
-<div class="<?php echo $colDef[$nbCols]; ?>">
-
 <div class="item-articlenews">
     <?php foreach($orderInfos as $infos): ?>
     <?php
@@ -80,6 +78,4 @@ $item_heading = $params->get('item_heading', 'h4');
         }
         ?>
     <?php endforeach; ?>
-</div>
-
 </div>
