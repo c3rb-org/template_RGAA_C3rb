@@ -12,6 +12,7 @@ include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 
 /* Ajout classes css au body en fonction de la vue */
 $pagecss = array();
+$pageClassSfx = '';
 if (!is_null($active) && !is_null($active->params) && !empty($active->params->get('pageclass_sfx')))
 {
 	$pagecss[] = $active->params->get('pageclass_sfx');
