@@ -1,5 +1,6 @@
 <?php
 defined( '_JEXEC' ) or die;
+
 if(JFactory::getApplication()->input->getInt('test_tpl') == 1)
 {
 	include_once JPATH_THEMES.'/'.$this->template.'/index2.php';
@@ -14,6 +15,7 @@ $pagecss = array();
 if (!is_null($active) && !is_null($active->params) && !empty($active->params->get('pageclass_sfx')))
 {
 	$pagecss[] = $active->params->get('pageclass_sfx');
+	$pageClassSfx = $active->params->get('pageclass_sfx');
 }
 if(JFactory::getApplication()->input->getString('view', null) != null)
 {
@@ -53,7 +55,7 @@ JHtml::_('bootstrap.tooltip');
 		<?php //if ($params->get('tmplchoice') == 0): ?>
 		<body class="<?php echo count($pagecss) ? implode(' ', $pagecss) : ''; ?>">
 			<jdoc:include type="message" />
-			<div class="container<?php if ($paramtmpl_tmplfluidmod == 1) {echo "-fluid";}; ?> <?php	if ($paramtmpl_tmpltitmodforce == 1) {echo "tmpmodhn";} ?> <?php if ($paramtmpl_tmpltheme != '0' ) {echo $params->get('tmpltheme');} ?> firstcontainer <?php echo $pagecss; ?>">
+			<div class="container<?php if ($paramtmpl_tmplfluidmod == 1) {echo "-fluid";}; ?> <?php	if ($paramtmpl_tmpltitmodforce == 1) {echo "tmpmodhn";} ?> <?php if ($paramtmpl_tmpltheme != '0' ) {echo $params->get('tmpltheme');} ?> firstcontainer <?php echo $pageClassSfx; ?>">
 				<?php
 				//Header du template
 				include_once JPATH_THEMES.'/'.$this->template.'/layout/header.php';
