@@ -5,16 +5,28 @@ if(JFactory::getApplication()->input->getInt('test_tpl') == 1)
 	include_once JPATH_THEMES.'/'.$this->template.'/index2.php';
 	return;
 }
-//variables du template
+
+/* Variables du template */
 include_once JPATH_THEMES.'/'.$this->template.'/logic.php';
 
-if (!is_null($active) && !is_null($active->params) && !empty($active->params->get('pageclass_sfx'))) {
-$pagecss =  $active->params->get('pageclass_sfx');
+/* Ajout classes css au body en fonction de la vue */
+$pagecss = array();
+if (!is_null($active) && !is_null($active->params) && !empty($active->params->get('pageclass_sfx')))
+{
+	$pagecss[] = $active->params->get('pageclass_sfx');
 }
-else {
-	$pagecss = '';
+if(JFactory::getApplication()->input->getString('view', null) != null)
+{
+	$pagecss[] = 'view-'.JFilterOutput::stringURLSafe(JFactory::getApplication()->input->getString('view', null));
+
+	if(JFactory::getApplication()->input->getString('layout', null) != null)
+	{
+		$pagecss[] = 'layout-' .  JFilterOutput::stringURLSafe(JFactory::getApplication()->input->getString('layout', null));
+	}
 }
+
 $codeLang = substr($this->language, 0, 2);
+
 JHtml::_('bootstrap.tooltip');
 ?>
 <!DOCTYPE html>
@@ -39,7 +51,7 @@ JHtml::_('bootstrap.tooltip');
 	<?php //endif ?>
 	<!-- Defaut customisable-->
 		<?php //if ($params->get('tmplchoice') == 0): ?>
-		<body <?php if (!empty($pagecss)): ?> class="<?php echo $pagecss; ?>" <?php endif ; ?>>
+		<body class="<?php echo count($pagecss) ? implode(' ', $pagecss) : ''; ?>">
 			<jdoc:include type="message" />
 			<div class="container<?php if ($paramtmpl_tmplfluidmod == 1) {echo "-fluid";}; ?> <?php	if ($paramtmpl_tmpltitmodforce == 1) {echo "tmpmodhn";} ?> <?php if ($paramtmpl_tmpltheme != '0' ) {echo $params->get('tmpltheme');} ?> firstcontainer <?php echo $pagecss; ?>">
 				<?php
