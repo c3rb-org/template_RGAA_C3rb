@@ -35,14 +35,12 @@ abstract class JHtmlActionsDropdown
     {
         $html = array();
 
-        //$html[] = '<div class="btn-group">';
-            $html[] = '<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdwon" aria-haspopup="true" aria-expanded="false">';
-                $html[] = '<span class="caret"></span>';
-            $html[] = '</button>';
-            $html[] = '<ul class="dropdown-menu">';
-                $html[] = implode('', static::$dropDownList);
-            $html[] = '<ul>';
-        //$html[] = '</div>';
+        $html[] = '<button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">';
+	    $html[] = '<span class="caret"></span>';
+	    $html[] = '</button>';
+	    $html[] = '<ul class="dropdown-menu">';
+	    $html[] = implode('', static::$dropDownList);
+	    $html[] = '<ul>';
 
         static::$dropDownList = null;
 
