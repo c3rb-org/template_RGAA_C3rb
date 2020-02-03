@@ -13,18 +13,17 @@ $cparams = JComponentHelper::getParams('com_media');
 $tparams = $this->params;
 jimport('joomla.html.html.bootstrap');
 ?>
-<article role="main"><!-- Ajout tmpl -->
+<article>
 
 <div class="contact<?php echo $this->pageclass_sfx?>" itemscope itemtype="https://schema.org/Person">
 	<?php if ($this->params->get('show_page_heading')) : ?>
-		<div class="page-header"><!-- Ajout tmpl -->
-			<h2><!-- modif tmpl -->
+		<div class="page-header">
+			<h2>
 				<?php echo $this->escape($this->params->get('page_heading')); ?>
-			</h2><!-- modif tmpl -->
-		</div><!-- Ajout tmpl -->
+			</h2>
+		</div>
 	<?php endif; ?>
 	<?php if ($this->contact->name && $this->params->get('show_name')) : ?>
-	<!-- Ajout tmpl niveau de titre c3tb rgaa -->
 		<?php if ($this->params->get('show_page_heading')) : ?>
 		<div class="page-header ssheader">
 			<h3>
@@ -35,7 +34,6 @@ jimport('joomla.html.html.bootstrap');
 			</h3>
 		</div>
 	<?php else: ?>
-	<!-- FIN Ajout tmpl -->
 		<div class="page-header">
 			<h2>
 				<?php if ($this->item->published == 0) : ?>
@@ -45,7 +43,7 @@ jimport('joomla.html.html.bootstrap');
 			</h2>
 		</div>
 	<?php endif;  ?>
-	<?php endif;  ?><!-- modif tmpl -->
+	<?php endif;  ?>
 
 	<?php $show_contact_category = $tparams->get('show_contact_category'); ?>
 
@@ -92,7 +90,7 @@ jimport('joomla.html.html.bootstrap');
 
 	<?php if ($this->contact->image && $tparams->get('show_image')) : ?>
 		<div class="thumbnail pull-right">
-			<?php echo JHtml::_('image', $this->contact->image, $this->contact->name, array('align' => 'middle', 'itemprop' => 'image')); ?>
+			<?php echo JHtml::_('image', $this->contact->image, $this->contact->name, array('itemprop' => 'image')); ?>
 		</div>
 	<?php endif; ?>
 
@@ -218,4 +216,4 @@ jimport('joomla.html.html.bootstrap');
 	<?php endif; ?>
 	<?php echo $this->item->event->afterDisplayContent; ?>
 </div>
-</article><!-- Ajout tmpl -->
+</article>
