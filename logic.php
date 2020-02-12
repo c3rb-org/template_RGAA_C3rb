@@ -84,12 +84,6 @@ foreach ($cssFiles as $file) {
 }
 if(!$hasAdminTemplate)
 {
-	if(JDEBUG)
-	{
-		$doc->addStyleSheet( ''. $tmplpath .'/css/template.css');
-		//$doc->addStyleSheet( 'http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.css');
-	}
-	else
-		$doc->addStyleSheet( ''. $tmplpath .'/css/template.min.css' );
+	$doc->addStyleSheet( ''. $tmplpath .'/css/template.min.css' );
 }
 ?>
