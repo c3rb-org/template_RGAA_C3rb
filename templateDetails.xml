@@ -138,6 +138,7 @@
             <position>position-18</position>
             <position>position-19</position>
             <position>position-20</position>
+            <position>position-fullwidthFixed</position>
             <position>debug</position>
         </positions>
         <config>

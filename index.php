@@ -55,6 +55,7 @@ JHtml::_('bootstrap.tooltip');
 	<!-- Defaut customisable-->
 		<?php //if ($params->get('tmplchoice') == 0): ?>
 		<body class="<?php echo count($pagecss) ? implode(' ', $pagecss) : ''; ?>">
+		    <?php include_once JPATH_THEMES.'/'.$this->template.'/layout/fullwidthFixed.php'; ?>
 			<jdoc:include type="message" />
 			<div class="container<?php if ($paramtmpl_tmplfluidmod == 1) {echo "-fluid";}; ?> <?php	if ($paramtmpl_tmpltitmodforce == 1) {echo "tmpmodhn";} ?> <?php if ($paramtmpl_tmpltheme != '0' ) {echo $params->get('tmpltheme');} ?> firstcontainer <?php echo $pageClassSfx; ?>">
 				<?php
