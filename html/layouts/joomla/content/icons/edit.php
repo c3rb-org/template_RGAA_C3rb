@@ -1,12 +1,4 @@
 <?php
-/**
- * @package     Joomla.Site
- * @subpackage  Layout
- *
- * @copyright   Copyright (C) 2005 - 2019 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
-
 defined('JPATH_BASE') or die;
 JHtml::_('bootstrap.tooltip');
 
@@ -39,6 +31,8 @@ else
 <?php if ($legacy) : ?>
 	<?php echo JHtml::_('image', 'system/' . $icon, JText::_('JGLOBAL_EDIT'), null, true); ?>
 <?php else : ?>
+    <?php if($article->params->get('show_icons')): ?>
 	<span class="hasTooltip glyphicon glyphicon-<?php echo $icon; ?> tip" title="<?php echo JHtml::tooltipText(JText::_('COM_CONTENT_EDIT_ITEM'), $overlib, 0, 0); ?>"></span>
+    <?php endif; ?>
 	<?php echo JText::_('JGLOBAL_EDIT'); ?>
 <?php endif; ?>
