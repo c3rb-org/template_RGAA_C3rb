@@ -38,6 +38,7 @@ JFactory::getDocument()->addScriptDeclaration("
 		}
 	}
 ");
+
 ?>
 
 <div class="edit item-page<?php echo $this->pageclass_sfx; ?>">
@@ -76,10 +77,10 @@ JFactory::getDocument()->addScriptDeclaration("
 					<li role="presentation" >
 					<a aria-controls="nom*du*lien" href="#images" data-toggle="tab" aria-expanded="false"><?php echo JText::_('COM_CONTENT_IMAGES_AND_URLS') ?></a></li>
 					<?php endif; ?>
-                                        <?php if($this->form->getFieldXml('interets')) : ?>
-                                        <li role="presentation" >
-					<a aria-controls="nom*du*lien" href="#enrichedContent" data-toggle="tab" aria-expanded="false">Contenus enrichis</a></li>
-                                        <?php endif; ?>
+                    <?php if($this->form->getFieldXml('interets')) : ?>
+                    <li role="presentation" >
+<a aria-controls="nom*du*lien" href="#enrichedContent" data-toggle="tab" aria-expanded="false">Contenus enrichis</a></li>
+                    <?php endif; ?>
 					<li role="presentation" >
 					<li role="presentation" >
 					<a aria-controls="nom*du*lien" href="#publishing" data-toggle="tab" aria-expanded="false"><?php echo JText::_('COM_CONTENT_PUBLISHING') ?></a></li>
@@ -87,6 +88,15 @@ JFactory::getDocument()->addScriptDeclaration("
 					<a aria-controls="nom*du*lien" href="#language" data-toggle="tab" aria-expanded="false"><?php echo JText::_('JFIELD_LANGUAGE_LABEL') ?></a></li>
 					<li role="presentation" >
 					<a aria-controls="nom*du*lien" href="#metadata" data-toggle="tab" aria-expanded="false"><?php echo JText::_('COM_CONTENT_METADATA') ?></a></li>
+                    <?php
+                        /* Ajout pour champs personnalisés Joomla */
+                        $fieldsets = $this->form->getFieldsets('com_fields');
+                        foreach ($fieldsets as $fieldset) :
+                    ?>
+                    <li role="presentation" >
+                        <a aria-controls="<?php echo $fieldset->name ?>" href="#<?php echo $fieldset->name ?>" data-toggle="tab" aria-expanded="false"><?php echo JText::_($fieldset->label) ?></a>
+                    </li>
+                    <?php endforeach; ?>
 				</ul>
 
 				<div class="tab-content">
@@ -154,6 +164,7 @@ JFactory::getDocument()->addScriptDeclaration("
 						</div>
 					</div>
 					<?php endif; ?>
+
                                     
                                         <?php if($this->form->getFieldXml('interets')) : ?>
                                         <div role="tabpanel" class="tab-pane-noconflictchosen fade" id="enrichedContent">
@@ -203,14 +214,32 @@ JFactory::getDocument()->addScriptDeclaration("
 					<div class="margetop margebottom">
 						<?php echo $this->form->renderField('metadesc'); ?>
 						<?php echo $this->form->renderField('metakey'); ?>
-
-						<input type="hidden" name="task" value="" />
+                        <input type="hidden" name="task" value="" />
 						<input type="hidden" name="return" value="<?php echo $this->return_page; ?>" />
 						<?php if ($this->params->get('enable_category', 0) == 1) :?>
 						<input type="hidden" name="jform[catid]" value="<?php echo $this->params->get('catid', 1); ?>" />
 						<?php endif; ?>
 					</div>
-				</div>
+                    </div>
+
+					<?php
+					/* Ajout pour champs personnalisés Joomla */
+					$fieldsets = $this->form->getFieldsets('com_fields');
+					foreach ($fieldsets as $fieldset) :
+					?>
+                    <div role="tabpanel" class="tab-pane-noconflictchosen fade" id="<?php echo $fieldset->name; ?>">
+                        <div class="margetop margebottom">
+                            <?php
+                                $fieldsetArr = $this->form->getFieldSet($fieldset->name);
+                                foreach($fieldsetArr as $a)
+                                {
+	                                echo $this->form->renderField($a->fieldname, 'com_fields');
+                                }
+                            ?>
+                        </div>
+                    </div>
+					<?php endforeach; ?>
+
 				</div>
 				<?php echo JHtml::_('form.token'); ?>
 			</div>
