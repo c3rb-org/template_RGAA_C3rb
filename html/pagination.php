@@ -8,8 +8,9 @@ function pagination_list_footer($list)
 	$html[] = '<div class="pagination">';
 	$html[] = $list['pageslinks'];
 	$html[] = '<input type="hidden" name="'.$list['prefix'].'limitstart" value="'.$list['limitstart'].'" />';
-	$html[] = '</nav>';
 	$html[] = '</div>';
+	$html[] = '</nav>';
+
 	return implode('',$html);
 }
 
@@ -45,7 +46,7 @@ function pagination_list_render($list)
 	$html[] = '</ul></div>';
 	$html[] = $list['next']['data'];
 	$html[] = $list['end']['data'];
-	$html[] = '</div></nav>';
+	$html[] = '</nav></div>';
 	$html[] = '</div>';
 	$html[] = '</div>';
 	return implode('',$html);
