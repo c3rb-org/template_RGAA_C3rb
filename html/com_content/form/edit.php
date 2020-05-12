@@ -135,7 +135,10 @@ JFactory::getDocument()->addScriptDeclaration("
 						<?php echo $this->form->renderField('image_carrousel_caption', 'images'); ?>
 						<?php endif; ?>
 						
-						<?php if(JComponentHelper::getComponent('com_opac', true)->enabled && JPluginHelper::getPlugin('content', 'opac_couv_article')): ?>
+						<?php if(JComponentHelper::getComponent('com_opac', true)->enabled
+                            && JPluginHelper::getPlugin('content', 'opac')
+                            && $this->form->getFieldXml('btn_couv_article', 'images')): ?>
+                        <?php echo $this->form->renderField('spacer_couv_article', 'images'); ?>
 						<?php echo $this->form->renderField('btn_couv_article', 'images'); ?>
 						<?php echo $this->form->renderField('text_no_couv', 'images'); ?>
 						<?php echo $this->form->renderField('image_couverture', 'images'); ?>
