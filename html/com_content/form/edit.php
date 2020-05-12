@@ -133,6 +133,12 @@ JFactory::getDocument()->addScriptDeclaration("
 						<?php echo $this->form->renderField('image_carrousel', 'images'); ?>
 						<?php echo $this->form->renderField('image_carrousel_alt', 'images'); ?>
 						<?php echo $this->form->renderField('image_carrousel_caption', 'images'); ?>
+                        <?php if(JModuleHelper::isEnabled('mod_c3rbevenement_bgsliders')): ?>
+                            <?php echo $this->form->renderField('spacer_bgslider', 'images'); ?>
+                            <?php echo $this->form->renderField('image_bgslider', 'images'); ?>
+                            <?php echo $this->form->renderField('image_bgslider_caption', 'images'); ?>
+                            <?php echo $this->form->renderField('image_bgslider_link_title', 'images'); ?>
+                            <?php endif; ?>
 						<?php endif; ?>
 						
 						<?php if(JComponentHelper::getComponent('com_opac', true)->enabled
